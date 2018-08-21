@@ -1984,3 +1984,232 @@ INFO: 2018-08-21 21:14:53,973: mongo_db: 0.0096759796142578 seconds to find 0 wi
 INFO: 2018-08-21 21:14:53,983: mongo_db: 0.0078120231628418 seconds to find 0 with indexed= True
 INFO: 2018-08-21 21:14:53,999: mysql_db: 0.008807897567749023 seconds to select indexed
 INFO: 2018-08-21 21:14:54,012: mysql_db: 0.0071849822998046875 seconds to select indexed
+INFO: 2018-08-21 21:16:39,240: root: PERFORMING OP 1: Bulk Insert Test Suite
+INFO: 2018-08-21 21:16:40,047: mongo_db: 0.6065142154693604 seconds to bulk insert 4.89MB
+INFO: 2018-08-21 21:16:40,854: mongo_db: 0.6033380031585693 seconds to bulk insert 4.89MB
+INFO: 2018-08-21 21:16:41,574: mysql_db: 0.41846752166748047 seconds to bulk insert universal 4.89MB
+INFO: 2018-08-21 21:16:42,224: mysql_db: 0.40331554412841797 seconds to bulk insert universal 4.89MB
+INFO: 2018-08-21 21:16:43,818: mysql_db: 1.2526776790618896 seconds to bulk insert normalized 4.89MB
+INFO: 2018-08-21 21:16:45,439: mysql_db: 1.2887580394744873 seconds to bulk insert normalized 4.89MB
+INFO: 2018-08-21 21:16:49,208: root: PERFORMING OP 2: Insert Index Test Suite
+INFO: 2018-08-21 21:16:50,351: mongo_db: 0.5664448738098145 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:16:51,545: mongo_db: 0.5687198638916016 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:16:52,377: mongo_db: 0.6222109794616699 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:16:53,222: mongo_db: 0.610684871673584 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:17:47,391: root: PERFORMING OP 2: Insert Index Test Suite
+INFO: 2018-08-21 21:17:48,563: mongo_db: 0.5318002700805664 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:17:49,598: mongo_db: 0.5695679187774658 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:17:50,348: mongo_db: 0.5608119964599609 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:17:51,156: mongo_db: 0.6019260883331299 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:17:52,033: mysql_db: 0.00043201446533203125 seconds to universal_insert_one_with_indexing
+INFO: 2018-08-21 21:17:52,754: mysql_db: 0.00038909912109375 seconds to universal_insert_one_with_indexing
+INFO: 2018-08-21 21:17:53,716: mysql_db: 0.00048804283142089844 seconds to universal_insert_one_without_indexing
+INFO: 2018-08-21 21:17:54,614: mysql_db: 0.00031375885009765625 seconds to universal_insert_one_without_indexing
+INFO: 2018-08-21 21:18:06,839: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 21:18:06,850: mongo_db: 0.0087809562683105 seconds to find 0 with indexed= True
+INFO: 2018-08-21 21:18:06,861: mongo_db: 0.0085656642913818 seconds to find 0 with indexed= True
+INFO: 2018-08-21 21:18:06,870: mysql_db: 0.003912925720214844 seconds to select indexed
+INFO: 2018-08-21 21:18:06,876: mysql_db: 0.004093170166015625 seconds to select indexed
+INFO: 2018-08-21 21:20:50,071: mongo_db: 0.6251492500305176 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:20:51,120: mongo_db: 0.5658597946166992 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:21:33,745: mongo_db: 0.5851447582244873 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:21:34,798: mongo_db: 0.5872719287872314 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:25:16,482: mongo_db: 0.5553538799285889 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:25:17,543: mongo_db: 0.56911301612854 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:25:57,531: mongo_db: 0.5320940017700195 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:25:58,577: mongo_db: 0.5891520977020264 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:26:21,651: mongo_db: 0.5685789585113525 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:26:22,721: mongo_db: 0.5620760917663574 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:26:33,897: mongo_db: 0.595247745513916 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:26:34,885: mongo_db: 0.5552246570587158 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:26:45,136: mongo_db: 0.5710620880126953 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:26:46,181: mongo_db: 0.5839767456054688 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:27:29,777: mongo_db: 0.5694050788879395 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:27:30,843: mongo_db: 0.5578601360321045 seconds to insert one with indexing 0.01MB
+INFO: 2018-08-21 21:27:50,235: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 21:27:50,248: mongo_db: 0.0104320049285889 seconds to find 0 with indexed= True
+INFO: 2018-08-21 21:27:50,258: mongo_db: 0.0088622570037842 seconds to find 0 with indexed= True
+INFO: 2018-08-21 21:27:50,270: mysql_db: 0.006168842315673828 seconds to select indexed
+INFO: 2018-08-21 21:27:50,279: mysql_db: 0.004235744476318359 seconds to select indexed
+INFO: 2018-08-21 21:30:29,822: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 21:30:29,841: mongo_db: 0.0149130821228027 seconds to find 0 with indexed= True
+INFO: 2018-08-21 21:30:29,851: mongo_db: 0.0074501037597656 seconds to find 0 with indexed= True
+INFO: 2018-08-21 21:30:29,878: mysql_db: 0.008040904998779297 seconds to select indexed
+INFO: 2018-08-21 21:30:29,885: mysql_db: 0.004242897033691406 seconds to select indexed
+INFO: 2018-08-21 21:31:03,673: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 21:31:03,684: mongo_db: 0.0090990066528320 seconds to find 0 with indexed= True
+INFO: 2018-08-21 21:31:03,694: mongo_db: 0.0078680515289307 seconds to find 0 with indexed= True
+INFO: 2018-08-21 21:31:03,719: mysql_db: 0.005721092224121094 seconds to select indexed
+INFO: 2018-08-21 21:31:03,727: mysql_db: 0.005280017852783203 seconds to select indexed
+INFO: 2018-08-21 21:34:18,688: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 21:34:18,706: mongo_db: 0.0159938335418701 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:34:18,725: mongo_db: 0.0146450996398926 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:34:18,752: mysql_db: 0.010705232620239258 seconds to select indexed
+INFO: 2018-08-21 21:34:18,775: mysql_db: 0.017174720764160156 seconds to select indexed
+INFO: 2018-08-21 21:35:41,537: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 21:35:41,554: mongo_db: 0.0143239498138428 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:35:41,569: mongo_db: 0.0126478672027588 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:35:41,584: mysql_db: 0.006379127502441406 seconds to select indexed
+INFO: 2018-08-21 21:35:41,592: mysql_db: 0.005355119705200195 seconds to select indexed
+INFO: 2018-08-21 21:36:27,548: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 21:36:27,566: mongo_db: 0.0155220031738281 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:36:27,588: mongo_db: 0.0189640522003174 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:36:27,610: mysql_db: 0.007380962371826172 seconds to select indexed
+INFO: 2018-08-21 21:36:27,623: mysql_db: 0.009258031845092773 seconds to select indexed
+INFO: 2018-08-21 21:36:52,848: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 21:36:52,865: mongo_db: 0.0149741172790527 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:36:52,879: mongo_db: 0.0129489898681641 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:36:52,899: mysql_db: 0.004893779754638672 seconds to select indexed
+INFO: 2018-08-21 21:36:52,906: mysql_db: 0.003590822219848633 seconds to select indexed
+INFO: 2018-08-21 21:46:53,210: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 21:46:53,229: mongo_db: 0.0158979892730713 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:46:53,244: mongo_db: 0.0127720832824707 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:46:53,268: mysql_db: 0.014084100723266602 seconds to select indexed
+INFO: 2018-08-21 21:46:53,306: mysql_db: 0.03488492965698242 seconds to select indexed
+INFO: 2018-08-21 21:56:26,747: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 21:56:26,765: mongo_db: 0.0160281658172607 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:56:26,781: mongo_db: 0.0142738819122314 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:56:26,817: mysql_db: 0.026339054107666016 seconds to select indexed
+INFO: 2018-08-21 21:56:26,859: mysql_db: 0.03926491737365723 seconds to select indexed
+INFO: 2018-08-21 21:57:24,773: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 21:57:24,843: mongo_db: 0.0668752193450928 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:57:24,893: mongo_db: 0.0383949279785156 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:57:24,978: mysql_db: 0.05078721046447754 seconds to select indexed
+INFO: 2018-08-21 21:57:25,054: mysql_db: 0.06172585487365723 seconds to select indexed
+INFO: 2018-08-21 21:59:08,273: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 21:59:08,292: mongo_db: 0.0162889957427979 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:59:08,306: mongo_db: 0.0129220485687256 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:59:08,338: mysql_db: 0.02208399772644043 seconds to select indexed
+INFO: 2018-08-21 21:59:08,387: mysql_db: 0.046279191970825195 seconds to select indexed
+INFO: 2018-08-21 21:59:29,360: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 21:59:29,378: mongo_db: 0.0161168575286865 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:59:29,396: mongo_db: 0.0149052143096924 seconds to find 55 with indexed= True
+INFO: 2018-08-21 21:59:29,451: mysql_db: 0.032431840896606445 seconds to select indexed
+INFO: 2018-08-21 21:59:29,504: mysql_db: 0.0391840934753418 seconds to select indexed
+INFO: 2018-08-21 22:00:30,378: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:00:30,395: mongo_db: 0.0152499675750732 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:00:30,410: mongo_db: 0.0135421752929688 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:00:30,449: mysql_db: 0.028187990188598633 seconds to select indexed
+INFO: 2018-08-21 22:00:30,486: mysql_db: 0.031932830810546875 seconds to select indexed
+INFO: 2018-08-21 22:01:04,748: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:01:04,764: mongo_db: 0.0145411491394043 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:01:04,780: mongo_db: 0.0133039951324463 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:01:17,091: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:01:17,108: mongo_db: 0.0152859687805176 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:01:17,123: mongo_db: 0.0135200023651123 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:01:48,938: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:01:48,956: mongo_db: 0.0157198905944824 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:01:48,975: mongo_db: 0.0171360969543457 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:02:19,090: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:02:19,118: mongo_db: 0.0254220962524414 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:02:19,157: mongo_db: 0.0367119312286377 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:02:19,264: mysql_db: 0.0791769027709961 seconds to select indexed
+INFO: 2018-08-21 22:02:19,334: mysql_db: 0.05278301239013672 seconds to select indexed
+INFO: 2018-08-21 22:03:12,715: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:03:12,742: mongo_db: 0.0241868495941162 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:03:12,822: mongo_db: 0.0734457969665527 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:03:12,926: mysql_db: 0.08097219467163086 seconds to select indexed
+INFO: 2018-08-21 22:03:13,006: mysql_db: 0.06874227523803711 seconds to select indexed
+INFO: 2018-08-21 22:05:51,643: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:05:51,663: mongo_db: 0.0174589157104492 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:05:51,684: mongo_db: 0.0188498497009277 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:06:24,202: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:06:24,223: mongo_db: 0.0181448459625244 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:06:24,252: mongo_db: 0.0263948440551758 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:06:24,320: mysql_db: 0.04215669631958008 seconds to select indexed
+INFO: 2018-08-21 22:06:24,388: mysql_db: 0.05494880676269531 seconds to select indexed
+INFO: 2018-08-21 22:06:40,024: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:06:40,056: mongo_db: 0.0284180641174316 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:06:40,082: mongo_db: 0.0231711864471436 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:06:40,115: mysql_db: 0.021492958068847656 seconds to select indexed
+INFO: 2018-08-21 22:06:40,141: mysql_db: 0.022087812423706055 seconds to select indexed
+INFO: 2018-08-21 22:07:19,758: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:07:19,783: mongo_db: 0.0224869251251221 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:07:19,812: mongo_db: 0.0264277458190918 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:07:19,877: mysql_db: 0.04617190361022949 seconds to select indexed
+INFO: 2018-08-21 22:07:19,936: mysql_db: 0.03913307189941406 seconds to select indexed
+INFO: 2018-08-21 22:08:08,568: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:08:08,586: mongo_db: 0.0148110389709473 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:08:08,600: mongo_db: 0.0128703117370605 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:08:08,631: mysql_db: 0.02201676368713379 seconds to select indexed
+INFO: 2018-08-21 22:08:08,665: mysql_db: 0.027346134185791016 seconds to select indexed
+INFO: 2018-08-21 22:08:38,430: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:08:38,447: mongo_db: 0.0152120590209961 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:08:38,463: mongo_db: 0.0136079788208008 seconds to find 55 with indexed= True
+INFO: 2018-08-21 22:08:38,497: mysql_db: 0.018140077590942383 seconds to select 80 onjects indexed
+INFO: 2018-08-21 22:08:38,529: mysql_db: 0.028945207595825195 seconds to select 80 onjects indexed
+INFO: 2018-08-21 22:14:49,535: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:14:49,553: mongo_db: 0.0152900218963623 seconds to find 1500 with indexed= True
+INFO: 2018-08-21 22:14:49,569: mongo_db: 0.0139369964599609 seconds to find 1500 with indexed= True
+INFO: 2018-08-21 22:14:49,602: mysql_db: 0.02088785171508789 seconds to select 80 objects indexed
+INFO: 2018-08-21 22:14:49,630: mysql_db: 0.025645017623901367 seconds to select 80 objects indexed
+INFO: 2018-08-21 22:15:16,295: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:15:16,313: mongo_db: 0.0156300067901611 seconds to find 289 with indexed= True
+INFO: 2018-08-21 22:15:16,329: mongo_db: 0.0135390758514404 seconds to find 289 with indexed= True
+INFO: 2018-08-21 22:15:16,361: mysql_db: 0.02185201644897461 seconds to select 80 objects indexed
+INFO: 2018-08-21 22:15:16,389: mysql_db: 0.025465011596679688 seconds to select 80 objects indexed
+INFO: 2018-08-21 22:16:31,863: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:16:31,883: mongo_db: 0.0172092914581299 seconds to find 289 with indexed= True
+INFO: 2018-08-21 22:16:31,905: mongo_db: 0.0204050540924072 seconds to find 289 with indexed= True
+INFO: 2018-08-21 22:16:31,950: mysql_db: 0.02862405776977539 seconds to select 1515 objects indexed
+INFO: 2018-08-21 22:16:31,980: mysql_db: 0.02474808692932129 seconds to select 1515 objects indexed
+INFO: 2018-08-21 22:16:42,426: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:16:42,443: mongo_db: 0.0153052806854248 seconds to find 289 with indexed= True
+INFO: 2018-08-21 22:16:42,458: mongo_db: 0.0136029720306396 seconds to find 289 with indexed= True
+INFO: 2018-08-21 22:16:42,479: mysql_db: 0.011767864227294922 seconds to select 289 objects indexed
+INFO: 2018-08-21 22:16:42,503: mysql_db: 0.018793106079101562 seconds to select 289 objects indexed
+INFO: 2018-08-21 22:19:49,837: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:19:49,858: mongo_db: 0.0185856819152832 seconds to find 351 with indexed= True
+INFO: 2018-08-21 22:19:49,879: mongo_db: 0.0193381309509277 seconds to find 351 with indexed= True
+INFO: 2018-08-21 22:19:49,916: mysql_db: 0.0007388591766357422 seconds to select 351 objects indexed
+INFO: 2018-08-21 22:19:49,954: mysql_db: 0.0006031990051269531 seconds to select 351 objects indexed
+INFO: 2018-08-21 22:20:07,712: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:20:07,733: mongo_db: 0.0194261074066162 seconds to find 351 with indexed= True
+INFO: 2018-08-21 22:20:07,755: mongo_db: 0.0195429325103760 seconds to find 351 with indexed= True
+INFO: 2018-08-21 22:20:07,794: mysql_db: 0.0015459060668945312 seconds to select 351 objects indexed
+INFO: 2018-08-21 22:20:07,825: mysql_db: 0.0005340576171875 seconds to select 351 objects indexed
+INFO: 2018-08-21 22:20:12,447: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 22:20:12,468: mongo_db: 0.0189027786254883 seconds to find 351 with indexed= True
+INFO: 2018-08-21 22:20:12,490: mongo_db: 0.0199689865112305 seconds to find 351 with indexed= True
+INFO: 2018-08-21 22:20:12,537: mysql_db: 0.0036058425903320312 seconds to select 351 objects indexed
+INFO: 2018-08-21 22:20:12,563: mysql_db: 0.0005841255187988281 seconds to select 351 objects indexed
+INFO: 2018-08-21 22:21:00,856: root: PERFORMING OP 4: Scan Index Test Suite
+INFO: 2018-08-21 22:21:00,899: mongo_db: 0.0410068035125732 seconds to find 351 with indexed= False
+INFO: 2018-08-21 22:21:00,959: mongo_db: 0.0556070804595947 seconds to find 351 with indexed= False
+INFO: 2018-08-21 22:21:01,221: mysql_db:  0.24693989753723145 seconds to scan 1001 objects from universal table
+INFO: 2018-08-21 22:21:01,463: mysql_db:  0.23680901527404785 seconds to scan 1001 objects from universal table
+INFO: 2018-08-21 22:22:01,912: root: PERFORMING OP 4: Scan Test Suite
+INFO: 2018-08-21 22:22:01,959: mongo_db: 0.0421550273895264 seconds to find 351 with indexed= False
+INFO: 2018-08-21 22:22:02,013: mongo_db: 0.0507800579071045 seconds to find 351 with indexed= False
+INFO: 2018-08-21 22:22:02,307: mysql_db:  0.27225804328918457 seconds to scan 1001 objects from universal table
+INFO: 2018-08-21 22:22:02,552: mysql_db:  0.2406320571899414 seconds to scan 1001 objects from universal table
+INFO: 2018-08-21 22:23:01,799: root: PERFORMING OP 4: Scan Test Suite
+INFO: 2018-08-21 22:23:01,830: mongo_db: 0.0294742584228516 seconds to find 351 with indexed= False
+INFO: 2018-08-21 22:23:01,893: mongo_db: 0.0604047775268555 seconds to find 351 with indexed= False
+INFO: 2018-08-21 22:23:02,191: mysql_db:  0.2764852046966553 seconds to scan 1001 objects from universal table
+INFO: 2018-08-21 22:23:02,444: mysql_db:  0.2487030029296875 seconds to scan 1001 objects from universal table
+INFO: 2018-08-21 22:23:05,408: root: PERFORMING OP 4: Scan Test Suite
+INFO: 2018-08-21 22:23:05,441: mongo_db: 0.0306031703948975 seconds to find 351 with indexed= False
+INFO: 2018-08-21 22:23:05,480: mongo_db: 0.0380101203918457 seconds to find 351 with indexed= False
+INFO: 2018-08-21 22:23:05,781: mysql_db:  0.2768580913543701 seconds to scan 1001 objects from universal table
+INFO: 2018-08-21 22:23:06,023: mysql_db:  0.23734807968139648 seconds to scan 1001 objects from universal table
+INFO: 2018-08-21 22:23:41,593: root: PERFORMING OP 4: Scan Test Suite
+INFO: 2018-08-21 22:23:41,600: mongo_db: 0.0043299198150635 seconds to scan 1001 objects
+INFO: 2018-08-21 22:23:41,604: mongo_db: 0.0028910636901855 seconds to scan 1001 objects
+INFO: 2018-08-21 22:23:41,880: mysql_db:  0.2707703113555908 seconds to scan 1001 objects from universal table
+INFO: 2018-08-21 22:23:42,125: mysql_db:  0.23983120918273926 seconds to scan 1001 objects from universal table
+INFO: 2018-08-21 22:23:47,259: root: PERFORMING OP 4: Scan Test Suite
+INFO: 2018-08-21 22:23:47,265: mongo_db: 0.0043239593505859 seconds to scan 1001 objects
+INFO: 2018-08-21 22:23:47,271: mongo_db: 0.0036201477050781 seconds to scan 1001 objects
+INFO: 2018-08-21 22:23:47,556: mysql_db:  0.27020907402038574 seconds to scan 1001 objects from universal table
+INFO: 2018-08-21 22:23:47,799: mysql_db:  0.23853206634521484 seconds to scan 1001 objects from universal table
+INFO: 2018-08-21 22:24:00,986: root: PERFORMING OP 4: Scan Test Suite
+INFO: 2018-08-21 22:24:00,992: mongo_db: 0.0043740272521973 seconds to scan 1001 objects
+INFO: 2018-08-21 22:24:00,997: mongo_db: 0.0031290054321289 seconds to scan 1001 objects
+INFO: 2018-08-21 22:24:01,268: mysql_db:  0.25444626808166504 seconds to scan 1001 objects from universal table
+INFO: 2018-08-21 22:24:01,517: mysql_db:  0.2343580722808838 seconds to scan 1001 objects from universal table
+INFO: 2018-08-21 22:25:01,726: root: PERFORMING OP 4: Scan Test Suite
+INFO: 2018-08-21 22:25:01,735: mongo_db: 0.0050950050354004 seconds to scan 1001 objects
+INFO: 2018-08-21 22:25:01,740: mongo_db: 0.0032651424407959 seconds to scan 1001 objects
+INFO: 2018-08-21 22:25:02,041: mysql_db:  0.2896430492401123 seconds to scan 1001 objects from universal table
+INFO: 2018-08-21 22:25:02,302: mysql_db:  0.25661683082580566 seconds to scan 1001 objects from universal table

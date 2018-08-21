@@ -354,7 +354,7 @@ def test_6():
     t1 = []
 
     # perform multiple test iterations
-    for i in range(ITERATIONS): t1.append(mongo_db.find(indexed=False))
+    for i in range(ITERATIONS): t1.append(mongo_db.scan_all())
 
     log = 'test_6: mongo_db.scan_all(), time_mean={}'
     print(log.format(statistics.mean(t1)))
@@ -397,7 +397,7 @@ def test_9():
     t1 = []
 
     # perform multiple test iterations
-    for runs in range(ITERATIONS): t1.append(mysql_db.universal_insert_one_with_indexing())
+    for runs in range(ITERATIONS): t1.append(mysql_db.universal_insert_one_with_indexing_2())
 
     log = 'test_9: mysql_db.universal_insert_one_with_indexing(), time_mean={}'
     print(log.format(statistics.mean(t1)))
@@ -410,7 +410,7 @@ def test_10():
     t1 = []
 
     # perform multiple test iterations
-    for runs in range(ITERATIONS): t1.append(mysql_db.universal_insert_one_without_indexing())
+    for runs in range(ITERATIONS): t1.append(mysql_db.universal_insert_one_without_indexing_2())
 
     log = 'test_10: mysql_db.universal_insert_one_without_indexing(), time_mean={}'
     print(log.format(statistics.mean(t1)))
@@ -479,7 +479,7 @@ if args.test == '3':
     logger.info("PERFORMING OP 3: Find Index Test Suite")
     find_index_test_suite_2()
 if args.test == '4':
-    logger.info("PERFORMING OP 4: Scan Index Test Suite")
+    logger.info("PERFORMING OP 4: Scan Test Suite")
     scan_test_suite_2()
 
 if args.manual == '1': test_1()
@@ -500,7 +500,6 @@ if args.manual == '13': test_13()
 if __name__ == "__main__":
     # call main setup
     setup()
-
     #bulk_insert_test_suite_2()
 
     # test connection to databases

@@ -92,7 +92,6 @@ def scan_all():
     cursor = conn.cursor()
 
     sql = "SELECT * FROM universal;"
-    table = "universal"
 
     start = time.time()
     cursor.execute(sql)
@@ -101,7 +100,7 @@ def scan_all():
     cursor.fetchall()
     count = cursor.rowcount
 
-    logger.info(" %s seconds to scan %d objects from %s table", run, count, table)
+    logger.info(" %s seconds to scan %d objects from universal table", run, count)
 
     return run
 
@@ -110,16 +109,41 @@ def universal_select_with_indexing():
     conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     cursor = conn.cursor()
 
-    sql1 = "SELECT COUNT(*) FROM universal_indexed WHERE ' tweets.id' = '995403410492067840';"
-    sql2 = "SELECT COUNT(*) FROM universal_indexed WHERE ' user.id' = '995403410492067840';"
+    sql1 = "SELECT COUNT(*) from universal_indexed where `users.location` = 'London';"
+    sql2 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.friends_count`>1000;"
+    sql3 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.followers_count`>1000;"
 
-    start = time.time()
-    for i in range(5): cursor.execute(sql1)
-    for i in range(5): cursor.execute(sql2)
-    run = time.time() - start
+    num = 0
+    sql_time = 0
 
-    logger.info("{} seconds to select indexed".format(run))
-    return run
+    for i in range(5):
+        start = time.time()
+        cursor.execute(sql1)
+        sql_time = time.time() - start
+
+        res = cursor.fetchone()
+        for row in res: num=row
+
+    for i in range(5):
+        start = time.time()
+
+        cursor.execute(sql2)
+        sql_time = time.time() - start
+
+        res = cursor.fetchone()
+        for row in res: num = row
+
+    for i in range(5):
+        start = time.time()
+
+        cursor.execute(sql3)
+        sql_time = time.time() - start
+
+        res = cursor.fetchone()
+        for row in res: num = row
+
+    logger.info("{} seconds to select {} objects indexed".format(sql_time, num))
+    return sql_time
 
 
 def universal_select_without_indexing():

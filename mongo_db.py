@@ -48,9 +48,6 @@ def connect(host=HOST, port=PORT):
 
 def create_indexes(db):
     coll = db.get_collection(COLLECTION)
-
-    coll.drop_indexes()
-
     coll.create_index([("id", pymongo.ASCENDING)], name='tweet_id_index')
     coll.create_index([("user.id", pymongo.ASCENDING)], name='user.id_index')
     coll.create_index([("user.followers_count", pymongo.ASCENDING)], name='user.follower_count_index')
@@ -59,21 +56,22 @@ def create_indexes(db):
 
 
 
-def insert_one_indexed(drop=True):
+def insert_one_indexed(drop):
     """Inserts a single document to the indexed benchmark_db database
     Parameters:
     Returns:
     """
 
     if drop: drop_database('benchmark_db_indexed')
+    client = MongoClient(HOST, PORT)
+    database = client.get_database('benchmark_db_indexed')
+    coll = database.get_collection(COLLECTION)
 
-    db = connect().get_database(DATABASE_INDEXED)
 
-    coll = db.get_collection(COLLECTION)
 
     # create indexes
+    create_indexes(database)
 
-    create_indexes(db)
 
     document = open(DOCUMENT_DICT, 'r')
     document = json.load(document)
@@ -178,9 +176,12 @@ def find(indexed):
     res = 0
 
     start = time.time()
-    for i in range(5): res += coll.find({'id': {"$gt": 995403410492060000}}).count()
-    for i in range(5): res += coll.find({'user.id': {"$gt": 995403410492060000}}).count()
+    for i in range(5): res = coll.find({'user.location': 'London'}).count()
+    for i in range(5): res = coll.find({'user.friends_count':{'$gt':1000}}).count()
+    for i in range(5): res = coll.find({'user.followers_count':{'$gt':1000}}).count()
+
     run = time.time() - start
+
 
     count = coll.count()
     #for x in coll.find():
@@ -197,10 +198,11 @@ def scan_all():
     coll = db.get_collection(COLLECTION)
 
     start = time.time()
-    coll.find({})
+    coll.find({}).count()
     run = time.time() - start
 
     count = coll.count()
+
     logger.info("%.16f seconds to scan %d objects", run, count)
     return run
 
