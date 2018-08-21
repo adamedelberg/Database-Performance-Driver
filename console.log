@@ -1979,3 +1979,8 @@ INFO: 2018-08-21 21:05:00,989: mongo_db: 0.0167481899261475 seconds to find 0 wi
 INFO: 2018-08-21 21:05:01,007: mongo_db: 0.0149009227752686 seconds to find 0 with indexed= True
 INFO: 2018-08-21 21:05:01,077: mysql_db: 0.037751197814941406 seconds to select indexed
 INFO: 2018-08-21 21:05:01,109: mysql_db: 0.014990806579589844 seconds to select indexed
+INFO: 2018-08-21 21:14:53,957: root: PERFORMING OP 3: Find Index Test Suite
+INFO: 2018-08-21 21:14:53,973: mongo_db: 0.0096759796142578 seconds to find 0 with indexed= True
+INFO: 2018-08-21 21:14:53,983: mongo_db: 0.0078120231628418 seconds to find 0 with indexed= True
+INFO: 2018-08-21 21:14:53,999: mysql_db: 0.008807897567749023 seconds to select indexed
+INFO: 2018-08-21 21:14:54,012: mysql_db: 0.0071849822998046875 seconds to select indexed

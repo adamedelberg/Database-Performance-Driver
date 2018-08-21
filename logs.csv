@@ -35,3 +35,5 @@ test_9: mysql_db.universal_insert_one_with_indexing(),0.020714998245239258,0.021
 test_10: mysql_db.universal_insert_one_without_indexing(),0.0004642009735107422,0.0073239803314208984
 test_4: mongo_db.find(indexed=True),0.01674818992614746,0.014900922775268555
 test_11: mysql_db.universal_select_with_indexing(),0.037751197814941406,0.014990806579589844
+test_4: mongo_db.find(indexed=True),0.009675979614257812,0.007812023162841797
+test_11: mysql_db.universal_select_with_indexing(),0.008807897567749023,0.0071849822998046875
