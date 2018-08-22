@@ -41,3 +41,7 @@ test_10: mysql_db.universal_insert_one_without_indexing(),0.0003399848937988281,
 "test_2: mongo_db.insert_one_indexed(drop=True), doc_size=0.01MB",0.0017442703247070312,0.0015881061553955078
 "test_14: mongo_db.bulk_insert_collections(), doc_size=4.89MB",1.5191802978515625,1.4832406044006348
 "test_2: mongo_db.insert_one_indexed(drop=True), doc_size=0.01MB",0.0019009113311767578,0.0016391277313232422
+"test_1: mongo_db.bulk_insert(), doc_size=4.89MB",0.7993428707122803,0.6444363594055176
+"test_1: mongo_db.bulk_insert(), doc_size=4.89MB",0.6633820533752441,0.5642781257629395
+"test_1: mongo_db.bulk_insert(), doc_size=4.89MB",0.7806122303009033,0.6508698463439941
+"test_1: mongo_db.bulk_insert(), doc_size=4.89MB",0.6086399555206299,0.5832138061523438

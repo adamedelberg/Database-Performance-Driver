@@ -33,8 +33,8 @@ def connect(host=HOST, port=PORT):
     """Connect to the MongoDB Server
 
     Parameters:
-        host - server host [default = 'localhost']
-        port - server port [default = 27017]
+        host - see configs - server host [default = 'localhost']
+        port - see configs - server port [default = 27017]
     Returns:
         client - MongoClient object"""
 
@@ -47,17 +47,27 @@ def connect(host=HOST, port=PORT):
     return client
 
 
-def create_indexes(db):
+def create_indexes(database):
     """Create indexes
 
+    The following five indexes get dropped and recreated at each insert test where relevant.
+
     Parameters:
+        db - the database where indexes will be created
+
     """
-    coll = db.get_collection(COLLECTION)
-    coll.create_index([("id", pymongo.ASCENDING)], name='tweet_id_index')
-    coll.create_index([("user.id", pymongo.ASCENDING)], name='user.id_index')
-    coll.create_index([("user.followers_count", pymongo.ASCENDING)], name='user.follower_count_index')
-    coll.create_index([("user.friends_count", pymongo.ASCENDING)], name='user.friends_count_index')
-    coll.create_index([("location", pymongo.ASCENDING)], name='location_index')
+    try:
+        coll = database.get_collection(COLLECTION)
+    except Exception:
+        logger.warning("ERROR ON COLLECTION! see: create_indexes()")
+    try:
+        coll.create_index([("id", pymongo.ASCENDING)], name='tweet_id_index')
+        coll.create_index([("user.id", pymongo.ASCENDING)], name='user.id_index')
+        coll.create_index([("user.followers_count", pymongo.ASCENDING)], name='user.follower_count_index')
+        coll.create_index([("user.friends_count", pymongo.ASCENDING)], name='user.friends_count_index')
+        coll.create_index([("location", pymongo.ASCENDING)], name='location_index')
+    except Exception:
+        logger.warning("ERROR ON INDEXES! see: create_indexes()")
 
 
 def insert_one_indexed(drop):
@@ -249,8 +259,8 @@ def bulk_insert_collections():
     coll_tweets.create_index([("id", pymongo.ASCENDING)], name='tweet.id index', unique=True)
     coll_users.create_index([("id", pymongo.ASCENDING)], name='user.id index', unique=True)
 
-    doc1 = open('doc1.json', 'w')
-    doc2 = open('doc2.json', 'w')
+    doc1 = open('../doc1.json', 'w')
+    doc2 = open('../doc2.json', 'w')
     doc1.write('['), doc2.write('[')
 
     count = 0
@@ -288,7 +298,7 @@ def bulk_insert_collections():
     doc1.write(']'), doc2.write(']')
     doc1.close(), doc2.close()
 
-    document = open('doc1.json', 'r')
+    document = open('../doc1.json', 'r')
     document = json.load(document)
 
     start = time.time()
@@ -298,7 +308,7 @@ def bulk_insert_collections():
         print('hi')
     exec += time.time() - start
 
-    document = open('doc2.json', 'r')
+    document = open('../doc2.json', 'r')
     document = json.load(document)
 
     start = time.time()

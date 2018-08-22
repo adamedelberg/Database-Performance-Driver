@@ -29,7 +29,7 @@ def load_docs(documents):
 
 # Create JSON docs newline
 def create_docs(lines, indent, sort):
-    source = '../raw_data/Eurovision10.json'
+    source = '../raw_data/big.json'
     data_parsed = "../parsed_data/e{}-{}.json".format(source[22:-5], lines)
 
     # for making space and comma delimited json files
@@ -112,9 +112,8 @@ def join_files():
 if __name__ == '__main__':
     print("Creating...")
 
-    #create_docs(210000,None,False)
-
-    create_docs_d(3,None,False)
+    create_docs(1500000,None,False)
+    create_docs_d(1500000,None,False)
 
     # join_files()
 

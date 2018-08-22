@@ -90,6 +90,10 @@ def ts_find_index():
     test_4()
     #  test_11: MySQL Select Indexed
     test_11()
+    #  test_5: MonogDB Find Non Indexed  #
+    test_5()
+    #  test_12: MySQL Select Non Indexed
+    test_12()
 
 
 def ts_scan():
@@ -320,9 +324,25 @@ parser.add_argument('-d', '--debug', help='Debugger verbosity.', required=False,
                     choices=['INFO', 'DEBUG'])
 parser.add_argument('-s', '--size', help='doc size {1=5MB, 2=50MB, 3=100MB, 4=500MB, 5=1GB, 6=MaxGB }', type=int,
                     required=False, choices=[1, 2, 3, 4, 5, 6])
-parser.add_argument('-i', '--iterations', help='Number of iterations.', required=False)
+parser.add_argument('-i', '--iterations', help='Number of iterations.', type=int, required=False)
+
 
 args = parser.parse_args()
+
+if args.size ==1:
+    logger.info("size=5MB")
+    data = '../parsed_data/e3-5MB.json'
+
+if args.size ==2:
+    data = '../parsed_data/e3-50MB.json'
+
+if args.size ==3:
+    data = '../parsed_data/e3-100MB.json'
+if args.size ==4:
+    data = '../parsed_data/e3-500MB.json'
+if args.size ==5:
+    data = '../parsed_data/e3-1GB.json'
+
 
 if args.test == 1:
     logger.info("PERFORMING OP 1: Bulk Insert Test Suite")
@@ -355,6 +375,7 @@ if args.manual == 14: test_14()
 if __name__ == "__main__":
     # call main setup
     setup()
+    #mongo_db.bulk_insert_collections()
 
 
 class DatabaseThreads(threading.Thread):
