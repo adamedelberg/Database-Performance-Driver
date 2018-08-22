@@ -459,7 +459,7 @@ def test_13():
 #TODO: finish proper argument
 parser = argparse.ArgumentParser(description='DBD - Database Benchmark Driver')
 parser.add_argument('-t', '--test', help='Test suite to perform.', required=False, choices=['1', '2', '3', '4'])
-parser.add_argument('-m', '--manual', help='Manual test to perform.', required=False)
+parser.add_argument('-m', '--manual', help='Manual test to perform.', required=False, choices=['1','2','3','4','5','6','7','8','9','10','11','12','13'])
 parser.add_argument('-d', '--debug', help='Debugger verbosity.', required=False, default='INFO',
                     choices=['INFO', 'DEBUG'])
 
