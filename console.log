@@ -2245,3 +2245,8 @@ INFO: 2018-08-22 10:24:18,162: mysql_db: 8.65805172920227 seconds to bulk insert
 INFO: 2018-08-22 10:24:52,007: mysql_db: 8.305372714996338 seconds to bulk insert universal 98.08MB
 INFO: 2018-08-22 10:25:03,577: mysql_db: 7.836123943328857 seconds to bulk insert universal 98.08MB
 INFO: 2018-08-22 10:25:18,795: mysql_db: 11.068909406661987 seconds to bulk insert universal 98.08MB
+INFO: 2018-08-22 10:25:39,605: mysql_db: 16.28780508041382 seconds to bulk insert universal 98.08MB
+INFO: 2018-08-22 10:26:31,811: mysql_db: 7.462393522262573 seconds to bulk insert universal 98.08MB
+INFO: 2018-08-22 10:26:43,492: mysql_db: 7.838071346282959 seconds to bulk insert universal 98.08MB
+INFO: 2018-08-22 10:26:55,082: mysql_db: 7.700856685638428 seconds to bulk insert universal 98.08MB
+INFO: 2018-08-22 10:27:08,850: mysql_db: 9.169066667556763 seconds to bulk insert universal 98.08MB

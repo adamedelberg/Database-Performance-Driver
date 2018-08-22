@@ -7,3 +7,6 @@
 "test_7: mysql_db.bulk_insert_universal(), doc_size=98.08MB",8.357405424118042
 "test_7: mysql_db.bulk_insert_universal(), doc_size=98.08MB",8.65805172920227
 "test_7: mysql_db.bulk_insert_universal(), doc_size=98.08MB",8.305372714996338,7.836123943328857
+"test_7: mysql_db.bulk_insert_universal(), doc_size=98.08MB",11.068909406661987,16.28780508041382
+"test_7: mysql_db.bulk_insert_universal(), doc_size=98.08MB",7.462393522262573,7.838071346282959
+"test_7: mysql_db.bulk_insert_universal(), doc_size=98.08MB",7.700856685638428,9.169066667556763

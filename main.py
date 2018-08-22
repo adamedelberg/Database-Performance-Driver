@@ -501,7 +501,7 @@ if __name__ == "__main__":
     # call main setup
     setup()
     #bulk_insert_test_suite_2()
-    test_7()
+    #test_7()
     # test connection to databases
     mongo_db.connect()
     mysql_db.connect()
