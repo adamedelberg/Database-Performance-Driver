@@ -2250,3 +2250,12 @@ INFO: 2018-08-22 10:26:31,811: mysql_db: 7.462393522262573 seconds to bulk inser
 INFO: 2018-08-22 10:26:43,492: mysql_db: 7.838071346282959 seconds to bulk insert universal 98.08MB
 INFO: 2018-08-22 10:26:55,082: mysql_db: 7.700856685638428 seconds to bulk insert universal 98.08MB
 INFO: 2018-08-22 10:27:08,850: mysql_db: 9.169066667556763 seconds to bulk insert universal 98.08MB
+INFO: 2018-08-22 10:31:06,635: mysql_db: 8.28314733505249 seconds to bulk insert universal 98.08MB
+INFO: 2018-08-22 10:31:18,204: mysql_db: 7.469289064407349 seconds to bulk insert universal 98.08MB
+INFO: 2018-08-22 10:32:17,970: mysql_db: 6.917933940887451 seconds to bulk insert universal 98.08MB
+INFO: 2018-08-22 10:32:28,880: mysql_db: 6.88827657699585 seconds to bulk insert universal 98.08MB
+INFO: 2018-08-22 10:32:37,624: root: PERFORMING OP 1: Bulk Insert Test Suite
+INFO: 2018-08-22 10:32:53,653: mongo_db: 13.055094718933105 seconds to bulk insert 98.08MB
+INFO: 2018-08-22 10:33:08,909: mongo_db: 12.352046012878418 seconds to bulk insert 98.08MB
+INFO: 2018-08-22 10:33:19,580: mysql_db: 6.519442319869995 seconds to bulk insert universal 98.08MB
+INFO: 2018-08-22 10:33:37,166: mysql_db: 13.188258409500122 seconds to bulk insert universal 98.08MB

@@ -10,3 +10,7 @@
 "test_7: mysql_db.bulk_insert_universal(), doc_size=98.08MB",11.068909406661987,16.28780508041382
 "test_7: mysql_db.bulk_insert_universal(), doc_size=98.08MB",7.462393522262573,7.838071346282959
 "test_7: mysql_db.bulk_insert_universal(), doc_size=98.08MB",7.700856685638428,9.169066667556763
+"test_7: mysql_db.bulk_insert_universal(), doc_size=98.08MB",8.28314733505249,7.469289064407349
+"test_7: mysql_db.bulk_insert_universal(), doc_size=98.08MB",6.917933940887451,6.88827657699585
+"test_1: mongo_db.bulk_insert(), doc_size=98.08MB",13.055094718933105,12.352046012878418
+"test_7: mysql_db.bulk_insert_universal(), doc_size=98.08MB",6.519442319869995,13.188258409500122
