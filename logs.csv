@@ -16,3 +16,13 @@
 "test_7: mysql_db.bulk_insert_universal(), doc_size=98.08MB",6.519442319869995,13.188258409500122
 "test_8: mysql_db.bulk_insert_normalized(), doc_size=98.08MB",28.343729972839355,26.037941217422485
 "test_7: mysql_db.bulk_insert_universal(), doc_size=476.12MB",41.42841386795044,40.379249572753906
+"test_14: mongo_db.bulk_insert_collections(), doc_size=4.89MB",2.213102340698242,1.5796995162963867
+"test_14: mongo_db.bulk_insert_collections(), doc_size=4.89MB",1.9037621021270752,2.101991653442383
+"test_14: mongo_db.bulk_insert_collections(), doc_size=4.89MB",1.255469560623169,0.9942960739135742
+"test_14: mongo_db.bulk_insert_collections(), doc_size=4.89MB",0.003726959228515625,0.004056453704833984
+"test_14: mongo_db.bulk_insert_collections(), doc_size=4.89MB",0.0010323524475097656,0.0008144378662109375
+"test_14: mongo_db.bulk_insert_collections(), doc_size=4.89MB",1.6701068878173828,1.574089765548706
+"test_14: mongo_db.bulk_insert_collections(), doc_size=4.89MB",0.6837713718414307,0.7441635131835938
+"test_14: mongo_db.bulk_insert_collections(), doc_size=4.89MB",0.0946505069732666,0.09589076042175293
+"test_14: mongo_db.bulk_insert_collections(), doc_size=4.89MB",0.4669623374938965,0.41700077056884766
+"test_14: mongo_db.bulk_insert_collections(), doc_size=4.89MB",1.57639479637146,1.5609703063964844

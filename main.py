@@ -76,170 +76,18 @@ def graph_results(points):
 #   TEST SUITES
 #######################
 
-def bulk_insert_test_suite():
-    # accumulate timing
-    t1, t2, t3 = [], [], []
-
-    # count inserted documents
-    d1, d2, d3 = [], [], []
-
-    # test names
-    tests = ['mongo_bulk_insert', 'mysql_bulk_insert_u', 'mysql_bulk_insert_n']
-
-    ###############################
-    #  TEST 1: Mongo Bulk Insert  #
-    ###############################
-    for i in range(ITERATIONS):
-        t, docs = mongo_db.bulk_insert()
-        t1.append(t), d1.append(docs)
-
-    ################################
-    #  TEST 2: MySQL Bulk Insert U #
-    ################################
-    for i in range(ITERATIONS):
-        t, docs = mysql_db.bulk_insert_universal_2()
-        t2.append(t), d2.append(docs)
-
-    ################################
-    #  TEST 3: MySQL Bulk Insert N #
-    ################################
-    for i in range(ITERATIONS):
-        t, docs = mysql_db.bulk_insert_normalized_2()
-        t3.append(t), d3.append(docs)
-
-    # result printout
-
-    print("{} {}    mean({})={}".format(tests[0], d1.pop(), len(t1), statistics.mean(t1)))
-    print("{} {}    mean({})={}".format(tests[1], d2.pop(), len(t2), statistics.mean(t2)))
-    print("{} {}    mean({})={}".format(tests[2], d3.pop(), len(t3), statistics.mean(t3)))
-
-    # log test times
-
-    log_results("{}_{}".format(tests[0], d1.pop()), t1)
-    log_results("{}_{}".format(tests[1], d2.pop()), t2)
-    log_results("{}_{}".format(tests[2], d3.pop()), t3)
-
-
-def insert_index_test_suite():
-    # accumulate timing
-    t1, t2, t3, t4 = [], [], [], []
-
-    # test names
-    tests = ['mongo_insert_indexed', 'mongo_insert_non_indexed', 'mysql_insert_indexed', 'mysql_insert_non_indexed']
-
-    ########################################
-    #  TEST 1: MonogDB Insert One Indexed  #
-    ########################################
-    for i in range(ITERATIONS): t1.append(mongo_db.insert_one_indexed(drop=True))
-
-    ############################################
-    #  TEST 2: MongoDB Insert One Non-Indexed  #
-    ############################################
-    for i in range(ITERATIONS): t2.append(mongo_db.insert_one_non_indexed(drop=True))
-
-    #######################################
-    #  TEST 3: MySQL Insert One Indexed   #
-    #######################################
-    for i in range(ITERATIONS): t3.append(mysql_db.universal_insert_one_with_indexing_2())
-
-    ###########################################
-    #  TEST 4: MySQL Insert One Non-Indexed   #
-    ###########################################
-    for i in range(ITERATIONS): t4.append(mysql_db.universal_insert_one_without_indexing_2())
-
-    # result printout
-
-    print("{}          mean={}".format(tests[0], statistics.mean(t1)))
-    print("{}          mean={}".format(tests[1], statistics.mean(t2)))
-    print("{}          mean={}".format(tests[2], statistics.mean(t3)))
-    print("{}          mean={}".format(tests[3], statistics.mean(t4)))
-
-    # log test times
-
-    log_results(tests[0], t1)
-    log_results(tests[1], t2)
-    log_results(tests[2], t3)
-    log_results(tests[3], t4)
-
-
-def find_index_test_suite():
-    # accumulate timing
-    t1, t2, t3, t4 = [], [], [], []
-
-    # test names
-    tests = ['mongo_find_indexed', 'mongo_find_non_indexed', 'mysql_find_indexed', 'mysql_find_non_indexed']
-
-    ########################################
-    #  TEST 1: MonogDB Find Indexed  #
-    ########################################
-    for i in range(ITERATIONS): t1.append(mongo_db.find(True))
-
-    ############################################
-    #  TEST 2: MongoDB Find Non-Indexed  #
-    ############################################
-    #for i in range(ITERATIONS): t2.append(mongo_db.find(False))
-
-    #######################################
-    #  TEST 3: MySQL Find Indexed   #
-    #######################################
-    for i in range(ITERATIONS): t3.append(mysql_db.universal_select_with_indexing())
-
-    ###########################################
-    #  TEST 4: MySQL Find Non-Indexed   #
-    ###########################################
-    #for i in range(ITERATIONS): t4.append(mysql_db.universal_select_without_indexing())
-
-    # result printout
-
-    print("{}          mean={}".format(tests[0], statistics.mean(t1)))
-    #print("{}          mean={}".format(tests[1], statistics.mean(t2)))
-    print("{}          mean={}".format(tests[2], statistics.mean(t3)))
-   # print("{}          mean={}".format(tests[3], statistics.mean(t4)))
-
-    # log test times
-
-    log_results(tests[0], t1)
-    #log_results(tests[1], t2)
-    log_results(tests[2], t3)
-    #log_results(tests[3], t4)
-
-
-def scan_test_suite():
-    # accumulate timing
-    t1, t2 = [], []
-
-    # test names
-    tests = ['mongo_scan', 'mysql_scan']
-
-    ####################################
-    #  TEST 1: MongoDB Scan  #
-    ####################################
-
-    for runs in range(ITERATIONS): t1.append(mongo_db.scan_all())
-
-    ####################################
-    #  TEST 2: MySQL Scan  #
-    ####################################
-
-    for runs in range(ITERATIONS): t2.append(mysql_db.scan_all())
-    # result printout
-
-    print("{}          mean={}".format(tests[0], statistics.mean(t1)))
-    print("{}          mean={}".format(tests[1], statistics.mean(t2)))
-
-    # log test times
-
-    log_results(tests[0], t1)
-    log_results(tests[0], t2)
 
 
 def bulk_insert_test_suite_2():
     #  test_1: Mongo Bulk Insert
     test_1()
+    #  test_14: Mongo Bulk Insert Collections
+    test_14()
     #  test_7: MySQL Bulk Insert Universal
     test_7()
     #  test_8: MySQL Bulk Insert Normalized
     test_8()
+
 
 
 def insert_index_test_suite_2():
@@ -458,6 +306,23 @@ def test_13():
     print(log.format(statistics.mean(t1)))
     log_results(log[:-14].format(), t1)
 
+# test_14: mongo_db.bulk_insert_collections()
+def test_14():
+    # times for each insert
+    t1 = []
+
+    # size(s) of docs
+    d = []
+
+    # perform multiple test iterations
+    for i in range(ITERATIONS):
+        t, size = mongo_db.bulk_insert_collections()
+        t1.append(t), d.append(size)
+
+    log = 'test_14: mongo_db.bulk_insert_collections(), doc_size={}, time_mean={}'
+    print(log.format(size, statistics.mean(t1)))
+    log_results(log[:-14].format(size), t1)
+
 
 #TODO: finish proper argument
 parser = argparse.ArgumentParser(description='DBD - Database Benchmark Driver')
@@ -508,7 +373,7 @@ if __name__ == "__main__":
     mongo_db.connect()
     mysql_db.connect()
 
-    mongo_db.bulk_insert_collections()
+    test_14()
 
 class DatabaseThreads(threading.Thread):
     def __init__(self, thread_id, database):
@@ -526,3 +391,163 @@ class DatabaseThreads(threading.Thread):
         elif self.database == 2:
             mysql_db_live.main(THREADS)
             print('hi')
+
+
+
+#DEPRECATED
+
+def bulk_insert_test_suite():
+    # accumulate timing
+    t1, t2, t3 = [], [], []
+
+    # count inserted documents
+    d1, d2, d3 = [], [], []
+
+    # test names
+    tests = ['mongo_bulk_insert', 'mysql_bulk_insert_u', 'mysql_bulk_insert_n']
+
+    ###############################
+    #  TEST 1: Mongo Bulk Insert  #
+    ###############################
+    for i in range(ITERATIONS):
+        t, docs = mongo_db.bulk_insert()
+        t1.append(t), d1.append(docs)
+
+    ################################
+    #  TEST 2: MySQL Bulk Insert U #
+    ################################
+    for i in range(ITERATIONS):
+        t, docs = mysql_db.bulk_insert_universal_2()
+        t2.append(t), d2.append(docs)
+
+    ################################
+    #  TEST 3: MySQL Bulk Insert N #
+    ################################
+    for i in range(ITERATIONS):
+        t, docs = mysql_db.bulk_insert_normalized_2()
+        t3.append(t), d3.append(docs)
+
+    # result printout
+
+    print("{} {}    mean({})={}".format(tests[0], d1.pop(), len(t1), statistics.mean(t1)))
+    print("{} {}    mean({})={}".format(tests[1], d2.pop(), len(t2), statistics.mean(t2)))
+    print("{} {}    mean({})={}".format(tests[2], d3.pop(), len(t3), statistics.mean(t3)))
+
+    # log test times
+
+    log_results("{}_{}".format(tests[0], d1.pop()), t1)
+    log_results("{}_{}".format(tests[1], d2.pop()), t2)
+    log_results("{}_{}".format(tests[2], d3.pop()), t3)
+
+
+def insert_index_test_suite():
+    # accumulate timing
+    t1, t2, t3, t4 = [], [], [], []
+
+    # test names
+    tests = ['mongo_insert_indexed', 'mongo_insert_non_indexed', 'mysql_insert_indexed', 'mysql_insert_non_indexed']
+
+    ########################################
+    #  TEST 1: MonogDB Insert One Indexed  #
+    ########################################
+    for i in range(ITERATIONS): t1.append(mongo_db.insert_one_indexed(drop=True))
+
+    ############################################
+    #  TEST 2: MongoDB Insert One Non-Indexed  #
+    ############################################
+    for i in range(ITERATIONS): t2.append(mongo_db.insert_one_non_indexed(drop=True))
+
+    #######################################
+    #  TEST 3: MySQL Insert One Indexed   #
+    #######################################
+    for i in range(ITERATIONS): t3.append(mysql_db.universal_insert_one_with_indexing_2())
+
+    ###########################################
+    #  TEST 4: MySQL Insert One Non-Indexed   #
+    ###########################################
+    for i in range(ITERATIONS): t4.append(mysql_db.universal_insert_one_without_indexing_2())
+
+    # result printout
+
+    print("{}          mean={}".format(tests[0], statistics.mean(t1)))
+    print("{}          mean={}".format(tests[1], statistics.mean(t2)))
+    print("{}          mean={}".format(tests[2], statistics.mean(t3)))
+    print("{}          mean={}".format(tests[3], statistics.mean(t4)))
+
+    # log test times
+
+    log_results(tests[0], t1)
+    log_results(tests[1], t2)
+    log_results(tests[2], t3)
+    log_results(tests[3], t4)
+
+
+def find_index_test_suite():
+    # accumulate timing
+    t1, t2, t3, t4 = [], [], [], []
+
+    # test names
+    tests = ['mongo_find_indexed', 'mongo_find_non_indexed', 'mysql_find_indexed', 'mysql_find_non_indexed']
+
+    ########################################
+    #  TEST 1: MonogDB Find Indexed  #
+    ########################################
+    for i in range(ITERATIONS): t1.append(mongo_db.find(True))
+
+    ############################################
+    #  TEST 2: MongoDB Find Non-Indexed  #
+    ############################################
+    #for i in range(ITERATIONS): t2.append(mongo_db.find(False))
+
+    #######################################
+    #  TEST 3: MySQL Find Indexed   #
+    #######################################
+    for i in range(ITERATIONS): t3.append(mysql_db.universal_select_with_indexing())
+
+    ###########################################
+    #  TEST 4: MySQL Find Non-Indexed   #
+    ###########################################
+    #for i in range(ITERATIONS): t4.append(mysql_db.universal_select_without_indexing())
+
+    # result printout
+
+    print("{}          mean={}".format(tests[0], statistics.mean(t1)))
+    #print("{}          mean={}".format(tests[1], statistics.mean(t2)))
+    print("{}          mean={}".format(tests[2], statistics.mean(t3)))
+   # print("{}          mean={}".format(tests[3], statistics.mean(t4)))
+
+    # log test times
+
+    log_results(tests[0], t1)
+    #log_results(tests[1], t2)
+    log_results(tests[2], t3)
+    #log_results(tests[3], t4)
+
+
+def scan_test_suite():
+    # accumulate timing
+    t1, t2 = [], []
+
+    # test names
+    tests = ['mongo_scan', 'mysql_scan']
+
+    ####################################
+    #  TEST 1: MongoDB Scan  #
+    ####################################
+
+    for runs in range(ITERATIONS): t1.append(mongo_db.scan_all())
+
+    ####################################
+    #  TEST 2: MySQL Scan  #
+    ####################################
+
+    for runs in range(ITERATIONS): t2.append(mysql_db.scan_all())
+    # result printout
+
+    print("{}          mean={}".format(tests[0], statistics.mean(t1)))
+    print("{}          mean={}".format(tests[1], statistics.mean(t2)))
+
+    # log test times
+
+    log_results(tests[0], t1)
+    log_results(tests[0], t2)

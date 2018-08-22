@@ -28,7 +28,7 @@ COLLECTION = config.collection
 DOCUMENT = config.document
 DOCUMENT_DICT = config.document_dict
 DOCUMENT_SINGLE = config.document_single
-
+DATABASE_COLLECTION = config.collection_database
 
 def connect(host=HOST, port=PORT):
     """Connect to the MongoDB Server
@@ -68,11 +68,8 @@ def insert_one_indexed(drop):
     database = client.get_database('benchmark_db_indexed')
     coll = database.get_collection(COLLECTION)
 
-
-
     # create indexes
     create_indexes(database)
-
 
     document = open(DOCUMENT_DICT, 'r')
     document = json.load(document)
@@ -90,7 +87,7 @@ def insert_one_indexed(drop):
     coll.insert_one(document)
     run2 = time.time() - start
 
-    size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE)/1024/1024, 2))
+    size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
     logger.info("{} seconds to insert one with indexing {}".format(run, size))
 
     return run2, size
@@ -106,7 +103,7 @@ def insert_one_non_indexed(drop=True):
     document = open(DOCUMENT_DICT, 'r')
     document = json.load(document)
 
-    #coll.drop_indexes()
+    # coll.drop_indexes()
     start = time.time()
 
     coll.insert_many(document)
@@ -121,10 +118,10 @@ def insert_one_non_indexed(drop=True):
     coll.insert_one(document)
     run2 = time.time() - start
 
-    size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE)/1024/1024, 2))
+    size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
     logger.info("{} seconds to insert one with indexing {}".format(run, size))
 
-    return run2,size
+    return run2, size
 
 
 def bulk_insert(indexed=False):
@@ -158,7 +155,7 @@ def bulk_insert(indexed=False):
         coll2.insert_many(document)
 
     count = coll.count()
-    size = "{}MB".format(round(os.path.getsize(DOCUMENT)/1024/1024, 2))
+    size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
     logger.info("{} seconds to bulk insert {}".format(run, size))
 
     return run, size
@@ -178,18 +175,17 @@ def find(indexed):
 
     start = time.time()
     for i in range(5): res = coll.find({'user.location': 'London'}).count()
-    for i in range(5): res = coll.find({'user.friends_count':{'$gt':1000}}).count()
-    for i in range(5): res = coll.find({'user.followers_count':{'$gt':1000}}).count()
+    for i in range(5): res = coll.find({'user.friends_count': {'$gt': 1000}}).count()
+    for i in range(5): res = coll.find({'user.followers_count': {'$gt': 1000}}).count()
 
     run = time.time() - start
 
-
     count = coll.count()
-    #for x in coll.find():
+    # for x in coll.find():
     #    print(x)
-    #print(coll.find({'id': {"$regex": '995'}}).count())
+    # print(coll.find({'id': {"$regex": '995'}}).count())
 
-    logger.info("%.16f seconds to find %d with indexed= %s", run, res,indexed)
+    logger.info("%.16f seconds to find %d with indexed= %s", run, res, indexed)
     return run
 
 
@@ -210,9 +206,9 @@ def scan_all():
 
 def drop_database(database):
     try:
-        #client = MongoClient(HOST, PORT)
+        # client = MongoClient(HOST, PORT)
         connect().drop_database(database)
-        #client.drop_database(database)
+        # client.drop_database(database)
         logger.debug("DROPPED {}!".format(database))
 
     except pymongo.errors as e:
@@ -232,10 +228,10 @@ def drop_databases():
 
 
 def bulk_insert_collections():
-    drop_database(DATABASE)
+    drop_database(DATABASE_COLLECTION)
 
     client = MongoClient(HOST, PORT)
-    db = client.get_database(DATABASE)
+    db = client.get_database(DATABASE_COLLECTION)
     coll_users = db.get_collection('coll_users')
     coll_tweets = db.get_collection('coll_tweets')
 
@@ -243,23 +239,23 @@ def bulk_insert_collections():
     document = json.load(document)
 
     users = []
-    tweets =[]
+    tweets = []
+
     exec = 0
 
     coll_tweets.create_index([("id", pymongo.ASCENDING)], name='tweet.id index', unique=True)
-
     coll_users.create_index([("id", pymongo.ASCENDING)], name='user.id index', unique=True)
-
-    count=0
 
     for doc in document:
         try:
             doc['user_id'] = doc['user']['id']
-            #print(doc['user']['id'])
             del doc['user']
             start = time.time()
+            tweets.append(doc)
+
             coll_tweets.insert_one(doc)
-            exec += time.time()-start
+
+            exec += time.time() - start
         except pymongo.errors.DuplicateKeyError:
             continue
 
@@ -267,21 +263,13 @@ def bulk_insert_collections():
     document = json.load(document)
 
     for doc in document:
-            try:
-                start = time.time()
-                print(doc['user'])
-                coll_users.insert_one(doc['user'])
-                exec += time.time() - start
-            except pymongo.errors.DuplicateKeyError:
-                continue
-
-        #exec+=time.time()-start
-       # del doc['user']
-        #start = time.time()
-        #tweets.append(doc)
-        #coll_tweets.insert_one(doc)
-        #exec+=time.time()-start
-           # coll_users.insert_one(doc['user'])
+        try:
+            start = time.time()
+            users.append(doc['user'])
+            coll_users.insert_one(doc['user'])
+            exec += time.time() - start
+        except pymongo.errors.DuplicateKeyError:
+            continue
 
 
     size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))

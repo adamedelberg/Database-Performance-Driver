@@ -38,6 +38,7 @@ indexes = [[('id', pymongo.ASCENDING)], [('user.id', pymongo.ASCENDING)]]
 
 database = 'benchmark_db'
 indexed_database = 'benchmark_db_indexed'
+collection_database = 'benchmark_db_collection'
 collection = 'benchmark_coll'
 
 # Test data paths
