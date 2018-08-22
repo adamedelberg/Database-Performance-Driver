@@ -370,9 +370,9 @@ def test_7():
     for runs in range(ITERATIONS):
         t, size = mysql_db.bulk_insert_universal_2()
         t1.append(t), d.append(size)
-    log = 'test_7: mysql_db.bulk_insert_universal(), time_mean={}'
-    print(log.format(statistics.mean(t1)))
-    log_results(log[:-14].format(), t1)
+    log = 'test_7: mysql_db.bulk_insert_universal(), doc_size={}, time_mean={}'
+    print(log.format(size,statistics.mean(t1)))
+    log_results(log[:-14].format(size), t1)
 
 
 # test_8: mysql_db.bulk_insert_normalized()
@@ -386,9 +386,9 @@ def test_8():
         t, size = mysql_db.bulk_insert_normalized_2()
         t1.append(t), d.append(size)
 
-    log = 'test_8: mysql_db.bulk_insert_normalized(), time_mean={}'
-    print(log.format(statistics.mean(t1)))
-    log_results(log[:-14].format(), t1)
+    log = 'test_8: mysql_db.bulk_insert_normalized(), doc_size={}, time_mean={}'
+    print(log.format(size,statistics.mean(t1)))
+    log_results(log[:-14].format(size), t1)
 
 
 # test_9: mysql_db.universal_insert_one_with_indexing()

@@ -2213,3 +2213,26 @@ INFO: 2018-08-21 22:25:01,735: mongo_db: 0.0050950050354004 seconds to scan 1001
 INFO: 2018-08-21 22:25:01,740: mongo_db: 0.0032651424407959 seconds to scan 1001 objects
 INFO: 2018-08-21 22:25:02,041: mysql_db:  0.2896430492401123 seconds to scan 1001 objects from universal table
 INFO: 2018-08-21 22:25:02,302: mysql_db:  0.25661683082580566 seconds to scan 1001 objects from universal table
+INFO: 2018-08-22 09:55:16,995: mongo_db: 0.9436841011047363 seconds to bulk insert 4.89MB
+INFO: 2018-08-22 09:55:18,067: mongo_db: 0.8575868606567383 seconds to bulk insert 4.89MB
+INFO: 2018-08-22 09:55:22,684: root: PERFORMING OP 1: Bulk Insert Test Suite
+INFO: 2018-08-22 09:55:23,535: mongo_db: 0.6476318836212158 seconds to bulk insert 4.89MB
+INFO: 2018-08-22 09:55:24,362: mongo_db: 0.6523220539093018 seconds to bulk insert 4.89MB
+INFO: 2018-08-22 09:55:25,416: mysql_db: 0.5295779705047607 seconds to bulk insert universal 4.89MB
+INFO: 2018-08-22 09:55:26,227: mysql_db: 0.5468771457672119 seconds to bulk insert universal 4.89MB
+INFO: 2018-08-22 09:55:27,926: mysql_db: 1.319594383239746 seconds to bulk insert normalized 4.89MB
+INFO: 2018-08-22 09:55:29,556: mysql_db: 1.3111186027526855 seconds to bulk insert normalized 4.89MB
+INFO: 2018-08-22 09:57:42,173: root: PERFORMING OP 1: Bulk Insert Test Suite
+INFO: 2018-08-22 09:57:43,126: mongo_db: 0.7196938991546631 seconds to bulk insert 4.89MB
+INFO: 2018-08-22 09:57:44,126: mongo_db: 0.7830979824066162 seconds to bulk insert 4.89MB
+INFO: 2018-08-22 09:57:44,966: mysql_db: 0.4992809295654297 seconds to bulk insert universal 4.89MB
+INFO: 2018-08-22 09:57:45,727: mysql_db: 0.4870026111602783 seconds to bulk insert universal 4.89MB
+INFO: 2018-08-22 09:57:47,355: mysql_db: 1.2858171463012695 seconds to bulk insert normalized 4.89MB
+INFO: 2018-08-22 09:57:48,992: mysql_db: 1.2919418811798096 seconds to bulk insert normalized 4.89MB
+INFO: 2018-08-22 09:59:28,081: root: PERFORMING OP 1: Bulk Insert Test Suite
+INFO: 2018-08-22 09:59:28,914: mongo_db: 0.6517329216003418 seconds to bulk insert 4.89MB
+INFO: 2018-08-22 09:59:29,762: mongo_db: 0.6706380844116211 seconds to bulk insert 4.89MB
+INFO: 2018-08-22 09:59:30,702: mysql_db: 0.6362345218658447 seconds to bulk insert universal 4.89MB
+INFO: 2018-08-22 09:59:31,391: mysql_db: 0.4386632442474365 seconds to bulk insert universal 4.89MB
+INFO: 2018-08-22 09:59:33,162: mysql_db: 1.4275195598602295 seconds to bulk insert normalized 4.89MB
+INFO: 2018-08-22 09:59:34,817: mysql_db: 1.2831380367279053 seconds to bulk insert normalized 4.89MB
