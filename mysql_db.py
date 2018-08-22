@@ -187,31 +187,52 @@ def bulk_insert_normalized_2():
 
     for sql in tweet_stmts:
         start = time.time()
-        cursor.execute(sql)
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            pass
         run += time.time() - start
     for sql in user_stmts:
         start = time.time()
-        cursor.execute(sql)
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            pass
         run += time.time() - start
     for sql in hashtags_stmts:
         start = time.time()
-        cursor.execute(sql)
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            pass
         run += time.time() - start
     for sql in media_stmts:
         start = time.time()
-        cursor.execute(sql)
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            pass
         run += time.time() - start
     for sql in user_mention_stmts:
         start = time.time()
-        cursor.execute(sql)
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            pass
         run += time.time() - start
     for sql in url_stmts:
         start = time.time()
-        cursor.execute(sql)
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            pass
         run += time.time() - start
     for sql in symbols_stmts:
         start = time.time()
-        cursor.execute(sql)
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            pass
         run += time.time() - start
 
     cursor.close()
