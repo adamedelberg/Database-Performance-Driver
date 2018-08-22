@@ -463,7 +463,7 @@ parser.add_argument('-m', '--manual', help='Manual test to perform.', required=F
 parser.add_argument('-d', '--debug', help='Debugger verbosity.', required=False, default='INFO',
                     choices=['INFO', 'DEBUG'])
 
-parser.add_argument('-s', '--size', help='doc size {1=5MB, 2=50MB, 3=100MB, 4=500MB, }', required=False, choices=['1', '2', '3', '4'])
+parser.add_argument('-s', '--size', help='doc size {1=5MB, 2=50MB, 3=100MB, 4=500MB, 5=1GB, 6=MaxGB }', required=False, choices=['1', '2', '3', '4', '5', '6'])
 parser.add_argument('-i', '--iterations', help='Number of iterations.', required=False)
 
 args = parser.parse_args()
