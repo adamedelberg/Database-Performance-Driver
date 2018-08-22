@@ -365,10 +365,15 @@ def get_statements(table, doc=DOCUMENT):
             place_name = str(data['place']['name']) if 'country' in data else None
             place_place_type = str(data['place']['place_type']) if 'country' in data else None
             place_url = str(data['place']['url']) if 'country' in data else None
+
             quoted_status_id = str(data['quoted_status_id']) if 'quoted_status_id' in data else None
             quoted_status_id_str = str(data['quoted_status_id_str']) if 'quoted_status_id' in data else None
-            quoted_status = str(data['quoted_status']['text']).replace("\'",
-                                                                       "\\'") if 'quoted_status_id' in data else None
+
+            quoted_status = str(data['quoted_status']['text']).replace("\'","\\'") if 'quoted_status' in data else None
+
+            3print(quoted_status)
+
+
             possibly_sensitive = str(data['possibly_sensitive']) if 'possibly_sensitive' in data else None
             retweeted_status = str(data['retweeted_status']['id']) if 'retweeted_status' in data else None
 
