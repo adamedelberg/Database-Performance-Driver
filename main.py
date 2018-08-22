@@ -26,7 +26,6 @@ import timeit
 # console logging
 logging_format = '%(levelname)s: %(asctime)s: %(name)s: %(message)s'
 logging.basicConfig(level=logging.INFO, format=logging_format)
-# #formatter = logging.Formatter(logging_format)
 handler = logging.FileHandler('console.log')
 handler.setFormatter(logging.Formatter(logging_format))
 logger = logging.getLogger()
@@ -34,10 +33,6 @@ logger.addHandler(handler)
 
 ITERATIONS = config.iterations
 THREADS = config.threads
-
-
-# ITERATIONS = args.iterations
-# THREADS = args.threads
 
 
 def setup():
@@ -60,22 +55,9 @@ def log_results(test_name, data):
         print()
 
 
-def print_console():
-    msg = "Database Benchmark Driver Application v1 \n" \
-          "----------------------------------------------------------------\n" \
-          "MongoDB | 1: Insert   2: Find    3: Scan   4: Run*   5: Run*Live \n" \
-          "MySQL   | 6: Insert   7: Select  8: Scan   9: Run*  10: Run*Live"
-    print(u"\u2500" * 64, msg, u"\u2500" * 64, sep='\n')
-
-
-def graph_results(points):
-    print("nO!")
-
-
-#######################
-#   TEST SUITES
-#######################
-
+############################################################
+#                   TEST SUITE PROCEDURES                  #
+############################################################
 
 
 def bulk_insert_test_suite_2():
@@ -87,7 +69,6 @@ def bulk_insert_test_suite_2():
     test_7()
     #  test_8: MySQL Bulk Insert Normalized
     test_8()
-
 
 
 def insert_index_test_suite_2():
@@ -114,9 +95,9 @@ def scan_test_suite_2():
     #  test_13: MySQL Scan
     test_13()
 
-#######################
-#   TEST PROCEDURES
-#######################
+############################################################
+#                  MANUAL TEST PROCEDURES                  #
+############################################################
 
 
 # test_1: mongo_db.bulk_insert()
@@ -305,6 +286,7 @@ def test_13():
     log = 'test_13: mysql_db.scan_all(), time_mean={}'
     print(log.format(statistics.mean(t1)))
     log_results(log[:-14].format(), t1)
+
 
 # test_14: mongo_db.bulk_insert_collections()
 def test_14():
