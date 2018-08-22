@@ -13,7 +13,7 @@ DEBUGGING_LEVEL = logging.DEBUG
 #DEBUGGING_LEVEL = logging.INFO
 
 
-iterations = 1
+iterations = 2
 threads = 10
 
 #  MongoDB Configs

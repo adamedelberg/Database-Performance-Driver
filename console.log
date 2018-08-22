@@ -2240,3 +2240,8 @@ INFO: 2018-08-22 10:13:06,922: root: PERFORMING OP 1: Bulk Insert Test Suite
 INFO: 2018-08-22 10:13:22,230: mongo_db: 12.34129524230957 seconds to bulk insert 98.08MB
 INFO: 2018-08-22 10:20:01,863: mysql_db: 9.15825891494751 seconds to bulk insert universal 98.08MB
 INFO: 2018-08-22 10:20:20,592: mysql_db: 8.858193635940552 seconds to bulk insert universal 98.08MB
+INFO: 2018-08-22 10:24:05,415: mysql_db: 8.357405424118042 seconds to bulk insert universal 98.08MB
+INFO: 2018-08-22 10:24:18,162: mysql_db: 8.65805172920227 seconds to bulk insert universal 98.08MB
+INFO: 2018-08-22 10:24:52,007: mysql_db: 8.305372714996338 seconds to bulk insert universal 98.08MB
+INFO: 2018-08-22 10:25:03,577: mysql_db: 7.836123943328857 seconds to bulk insert universal 98.08MB
+INFO: 2018-08-22 10:25:18,795: mysql_db: 11.068909406661987 seconds to bulk insert universal 98.08MB
