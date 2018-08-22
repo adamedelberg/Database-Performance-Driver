@@ -2,7 +2,8 @@
 """
 MongoDB Database Driver
 
-    description
+    This class contains all the accessor methods for manipulating MongoDB databases.
+    The default host is assigned as: localhost, port 27017. These settings can be adjusted in config.py.
 
 """
 
@@ -12,9 +13,6 @@ import logging
 import pymongo
 from pymongo import MongoClient
 import os
-
-from pymysql.constants.FIELD_TYPE import JSON
-
 import config
 
 logger = logging.getLogger(__name__)
@@ -29,6 +27,7 @@ DOCUMENT = config.document
 DOCUMENT_DICT = config.document_dict
 DOCUMENT_SINGLE = config.document_single
 DATABASE_COLLECTION = config.collection_database
+
 
 def connect(host=HOST, port=PORT):
     """Connect to the MongoDB Server
@@ -49,6 +48,10 @@ def connect(host=HOST, port=PORT):
 
 
 def create_indexes(db):
+    """Create indexes
+
+    Parameters:
+    """
     coll = db.get_collection(COLLECTION)
     coll.create_index([("id", pymongo.ASCENDING)], name='tweet_id_index')
     coll.create_index([("user.id", pymongo.ASCENDING)], name='user.id_index')
@@ -238,39 +241,72 @@ def bulk_insert_collections():
     document = open(DOCUMENT_DICT, 'r')
     document = json.load(document)
 
-    users = []
-    tweets = []
+    # users = []
+    # tweets = []
 
     exec = 0
 
     coll_tweets.create_index([("id", pymongo.ASCENDING)], name='tweet.id index', unique=True)
     coll_users.create_index([("id", pymongo.ASCENDING)], name='user.id index', unique=True)
 
+    doc1 = open('doc1.json', 'w')
+    doc2 = open('doc2.json', 'w')
+    doc1.write('['), doc2.write('[')
+
+    count = 0
+
     for doc in document:
-        try:
-            doc['user_id'] = doc['user']['id']
-            del doc['user']
-            start = time.time()
-            tweets.append(doc)
+        doc['user_id'] = doc['user']['id']
+        del doc['user']
 
-            coll_tweets.insert_one(doc)
-
-            exec += time.time() - start
-        except pymongo.errors.DuplicateKeyError:
-            continue
+        if count == (len(document) - 1):
+            doc1.write(json.dumps(doc))
+        else:
+            doc1.write(json.dumps(doc))
+            doc1.write(',\n')
+            count += 1
+        # start = time.time()
+        # coll_tweets.insert_one(doc)
+        # exec += time.time() - start
 
     document = open(DOCUMENT_DICT, 'r')
     document = json.load(document)
+    count = 0
 
     for doc in document:
-        try:
-            start = time.time()
-            users.append(doc['user'])
-            coll_users.insert_one(doc['user'])
-            exec += time.time() - start
-        except pymongo.errors.DuplicateKeyError:
-            continue
+        if count == (len(document) - 1):
+            doc2.write(json.dumps(doc['user']))
+        else:
+            doc2.write(json.dumps(doc['user']))
+            doc2.write(',\n')
+            count += 1
 
+        # start = time.time()
+        # coll_users.insert_one(doc['user'])
+        # exec += time.time() - start
+
+    doc1.write(']'), doc2.write(']')
+    doc1.close(), doc2.close()
+
+    document = open('doc1.json', 'r')
+    document = json.load(document)
+
+    start = time.time()
+    try:
+        coll_tweets.insert_many(document, ordered=False)
+    except Exception:
+        print('hi')
+    exec += time.time() - start
+
+    document = open('doc2.json', 'r')
+    document = json.load(document)
+
+    start = time.time()
+    try:
+        coll_users.insert_many(document, ordered=False)
+    except Exception:
+        print()
+    exec += time.time() - start
 
     size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
     logger.info("{} seconds to bulk insert into collections {}".format(exec, size))
