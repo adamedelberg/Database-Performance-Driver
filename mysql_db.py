@@ -237,7 +237,10 @@ def bulk_insert_universal_2():
 
     for sql in stmts:
         start = time.time()
-        cursor.execute(sql)
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            pass
         run += time.time() - start
 
     cursor.close()
@@ -260,7 +263,10 @@ def bulk_insert_universal_indexed_2():
     run=0
     for sql in stmts:
         start = time.time()
-        cursor.execute(sql)
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            pass
         run += time.time() - start
 
     cursor.close()

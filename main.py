@@ -241,6 +241,7 @@ def bulk_insert_test_suite_2():
     #  test_8: MySQL Bulk Insert Normalized
     test_8()
 
+
 def insert_index_test_suite_2():
     #  test_2: MongoDB Insert One Indexed
     test_2()
@@ -251,11 +252,13 @@ def insert_index_test_suite_2():
     #  test_10 MySQL Insert One Non-Indexed
     test_10()
 
+
 def find_index_test_suite_2():
     #  test_4: MonogDB Find Indexed  #
     test_4()
     #  test_11: MySQL Select Indexed
     test_11()
+
 
 def scan_test_suite_2():
     #  test_6: MongoDB Scan
@@ -505,7 +508,8 @@ if __name__ == "__main__":
     mongo_db.connect()
     mysql_db.connect()
 
-    mongo_db.bulk_insert_collections()
+   # mongo_db.bulk_insert_collections()
+    test_7()
 
 class DatabaseThreads(threading.Thread):
     def __init__(self, thread_id, database):

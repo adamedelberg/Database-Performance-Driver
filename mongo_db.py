@@ -243,21 +243,24 @@ def bulk_insert_collections():
     tweets =[]
     exec = 0;
 
+    coll_users.create_index([("user.id", pymongo.ASCENDING)], name='location_index',unique=True)
+
+    #coll_users.ensure_index({"user.id": pymongo.ASCENDING}, {"unique": "true"})
     for doc in document:
-        print(len(document))
-        start = time.time()
-        users.append(doc['user'])
-        exec+=time.time()-start
+        #start = time.time()
+        #users.append(doc['user'])
+        print(type(doc))
+        users.append(json.load(doc['user']))
+
+        #exec+=time.time()-start
         del doc['user']
-        start = time.time()
+        #start = time.time()
         tweets.append(doc)
         #coll_tweets.insert_one(doc)
-        exec+=time.time()-start
+        #exec+=time.time()-start
 
+    coll_users.insert_many(users)
 
-
-    print(len(users))
-    print(len(tweets))
 
     size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
     logger.info("{} seconds to bulk insert into collections {}".format(exec, size))
