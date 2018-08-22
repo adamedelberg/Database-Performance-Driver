@@ -65,6 +65,7 @@ def create_docs_d(lines, indent, sort):
     count = 1
 
     dst_dict = open(data_parsed_dict, 'w')
+
     dst_dict.write('[')
 
     loop = True
@@ -112,7 +113,7 @@ if __name__ == '__main__':
 
     #create_docs(210000,None,False)
 
-    create_docs_d(210000,None,False)
+    create_docs_d(3,None,False)
 
     # join_files()
 

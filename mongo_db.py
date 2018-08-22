@@ -55,7 +55,6 @@ def create_indexes(db):
     coll.create_index([("location", pymongo.ASCENDING)], name='location_index')
 
 
-
 def insert_one_indexed(drop):
     """Inserts a single document to the indexed benchmark_db database
     Parameters:
@@ -228,3 +227,38 @@ def drop_databases():
 
     except pymongo.errors as e:
         logger.warning("DROP ERROR: " + e)
+
+
+def bulk_insert_collections():
+    drop_database(DATABASE)
+
+    client = MongoClient(HOST, PORT)
+    db = client.get_database(DATABASE)
+    coll_users = db.get_collection('coll_users')
+    coll_tweets = db.get_collection('coll_tweets')
+
+    document = open(DOCUMENT_DICT, 'r')
+    document = json.load(document)
+    users = []
+    tweets =[]
+    exec = 0;
+
+    for doc in document:
+        print(len(document))
+        start = time.time()
+        users.append(doc['user'])
+        exec+=time.time()-start
+        del doc['user']
+        start = time.time()
+        tweets.append(doc)
+        #coll_tweets.insert_one(doc)
+        exec+=time.time()-start
+
+
+
+    print(len(users))
+    print(len(tweets))
+
+    size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
+    logger.info("{} seconds to bulk insert into collections {}".format(exec, size))
+    return exec, size
