@@ -41,7 +41,7 @@ indexed_database = 'benchmark_db_indexed'
 collection = 'benchmark_coll'
 
 # Test data paths
-document = '../parsed_data/e3-500MB.json'
+document = '../parsed_data/e3-5MB.json'
 document_dict = "{}-d.json".format(document[:-5])
 
 

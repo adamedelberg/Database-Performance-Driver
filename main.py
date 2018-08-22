@@ -508,8 +508,7 @@ if __name__ == "__main__":
     mongo_db.connect()
     mysql_db.connect()
 
-   # mongo_db.bulk_insert_collections()
-    test_7()
+    mongo_db.bulk_insert_collections()
 
 class DatabaseThreads(threading.Thread):
     def __init__(self, thread_id, database):

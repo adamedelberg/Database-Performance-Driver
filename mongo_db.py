@@ -13,6 +13,8 @@ import pymongo
 from pymongo import MongoClient
 import os
 
+from pymysql.constants.FIELD_TYPE import JSON
+
 import config
 
 logger = logging.getLogger(__name__)
@@ -239,29 +241,50 @@ def bulk_insert_collections():
 
     document = open(DOCUMENT_DICT, 'r')
     document = json.load(document)
+
     users = []
     tweets =[]
-    exec = 0;
+    exec = 0
 
-    coll_users.create_index([("user.id", pymongo.ASCENDING)], name='location_index',unique=True)
+    coll_tweets.create_index([("id", pymongo.ASCENDING)], name='tweet.id index', unique=True)
 
-    #coll_users.ensure_index({"user.id": pymongo.ASCENDING}, {"unique": "true"})
+    coll_users.create_index([("id", pymongo.ASCENDING)], name='user.id index', unique=True)
+
+    count=0
+
     for doc in document:
-        #start = time.time()
-        #users.append(doc['user'])
-        print(type(doc))
-        users.append(json.load(doc['user']))
+        try:
+            doc['user_id'] = doc['user']['id']
+            #print(doc['user']['id'])
+            del doc['user']
+            start = time.time()
+            coll_tweets.insert_one(doc)
+            exec += time.time()-start
+        except pymongo.errors.DuplicateKeyError:
+            continue
+
+    document = open(DOCUMENT_DICT, 'r')
+    document = json.load(document)
+
+    for doc in document:
+            try:
+                start = time.time()
+                print(doc['user'])
+                coll_users.insert_one(doc['user'])
+                exec += time.time() - start
+            except pymongo.errors.DuplicateKeyError:
+                continue
 
         #exec+=time.time()-start
-        del doc['user']
+       # del doc['user']
         #start = time.time()
-        tweets.append(doc)
+        #tweets.append(doc)
         #coll_tweets.insert_one(doc)
         #exec+=time.time()-start
-
-    coll_users.insert_many(users)
+           # coll_users.insert_one(doc['user'])
 
 
     size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
     logger.info("{} seconds to bulk insert into collections {}".format(exec, size))
+
     return exec, size
