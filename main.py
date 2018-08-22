@@ -40,6 +40,9 @@ def setup():
     # logger.debug('VIRTUAL: %s' % (psutil.Process(os.getpid()).memory_info().vms))
     # logger.debug(psutil.virtual_memory().available)
     # logger.debug((psutil.virtual_memory().total))
+    # test connection to databases
+    mongo_db.connect()
+    mysql_db.connect()
     print()
 
 
@@ -94,6 +97,7 @@ def scan_test_suite_2():
     test_6()
     #  test_13: MySQL Scan
     test_13()
+
 
 ############################################################
 #                  MANUAL TEST PROCEDURES                  #
@@ -203,7 +207,7 @@ def test_7():
         t, size = mysql_db.bulk_insert_universal_2()
         t1.append(t), d.append(size)
     log = 'test_7: mysql_db.bulk_insert_universal(), doc_size={}, time_mean={}'
-    print(log.format(size,statistics.mean(t1)))
+    print(log.format(size, statistics.mean(t1)))
     log_results(log[:-14].format(size), t1)
 
 
@@ -211,7 +215,7 @@ def test_7():
 def test_8():
     # times for each insert
     t1 = []
-    d=[]
+    d = []
 
     # perform multiple test iterations
     for runs in range(ITERATIONS):
@@ -219,7 +223,7 @@ def test_8():
         t1.append(t), d.append(size)
 
     log = 'test_8: mysql_db.bulk_insert_normalized(), doc_size={}, time_mean={}'
-    print(log.format(size,statistics.mean(t1)))
+    print(log.format(size, statistics.mean(t1)))
     log_results(log[:-14].format(size), t1)
 
 
@@ -306,57 +310,52 @@ def test_14():
     log_results(log[:-14].format(size), t1)
 
 
-#TODO: finish proper argument
+# TODO: finish proper argument
 parser = argparse.ArgumentParser(description='DBD - Database Benchmark Driver')
-parser.add_argument('-t', '--test', help='Test suite to perform.', required=False, choices=['1', '2', '3', '4'])
-parser.add_argument('-m', '--manual', help='Manual test to perform.', required=False, choices=['1','2','3','4','5','6','7','8','9','10','11','12','13'])
+parser.add_argument('-t', '--test', help='Select a test suite to perform.', required=False, type=int,
+                    choices=[1, 2, 3, 4])
+parser.add_argument('-m', '--manual', help='Select a manual test to perform.', required=False, type=int,
+                    choices=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
 parser.add_argument('-d', '--debug', help='Debugger verbosity.', required=False, default='INFO',
                     choices=['INFO', 'DEBUG'])
-
-parser.add_argument('-s', '--size', help='doc size {1=5MB, 2=50MB, 3=100MB, 4=500MB, 5=1GB, 6=MaxGB }', required=False, choices=['1', '2', '3', '4', '5', '6'])
+parser.add_argument('-s', '--size', help='doc size {1=5MB, 2=50MB, 3=100MB, 4=500MB, 5=1GB, 6=MaxGB }', type=int,
+                    required=False, choices=[1, 2, 3, 4, 5, 6])
 parser.add_argument('-i', '--iterations', help='Number of iterations.', required=False)
 
 args = parser.parse_args()
 
-
-if args.test == '1':
+if args.test == 1:
     logger.info("PERFORMING OP 1: Bulk Insert Test Suite")
     bulk_insert_test_suite_2()
-if args.test == '2':
+if args.test == 2:
     logger.info("PERFORMING OP 2: Insert Index Test Suite")
     insert_index_test_suite_2()
-if args.test == '3':
+if args.test == 3:
     logger.info("PERFORMING OP 3: Find Index Test Suite")
     find_index_test_suite_2()
-if args.test == '4':
+if args.test == 4:
     logger.info("PERFORMING OP 4: Scan Test Suite")
     scan_test_suite_2()
 
-if args.manual == '1': test_1()
-if args.manual == '2': test_2()
-if args.manual == '3': test_3()
-if args.manual == '4': test_4()
-if args.manual == '5': test_5()
-if args.manual == '6': test_6()
-if args.manual == '7': test_7()
-if args.manual == '8': test_8()
-if args.manual == '9': test_9()
-if args.manual == '10': test_10()
-if args.manual == '11': test_11()
-if args.manual == '12': test_12()
-if args.manual == '13': test_13()
-if args.manual == '14': test_14()
-
+if args.manual == 1: test_1()
+if args.manual == 2: test_2()
+if args.manual == 3: test_3()
+if args.manual == 4: test_4()
+if args.manual == 5: test_5()
+if args.manual == 6: test_6()
+if args.manual == 7: test_7()
+if args.manual == 8: test_8()
+if args.manual == 9: test_9()
+if args.manual == 10: test_10()
+if args.manual == 11: test_11()
+if args.manual == 12: test_12()
+if args.manual == 13: test_13()
+if args.manual == 14: test_14()
 
 if __name__ == "__main__":
     # call main setup
     setup()
 
-    # test connection to databases
-    mongo_db.connect()
-    mysql_db.connect()
-
-    test_14()
 
 class DatabaseThreads(threading.Thread):
     def __init__(self, thread_id, database):
@@ -374,8 +373,3 @@ class DatabaseThreads(threading.Thread):
         elif self.database == 2:
             mysql_db_live.main(THREADS)
             print('hi')
-
-
-
-#DEPRECATED
-

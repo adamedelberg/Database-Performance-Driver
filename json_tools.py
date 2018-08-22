@@ -56,6 +56,7 @@ def create_docs(lines, indent, sort):
 
 
 # Create JSON docs dictionary
+
 def create_docs_d(lines, indent, sort):
     source = '../raw_data/Eurovision10.json'
     data_parsed_dict = "../parsed_data/e{}-{}d.json".format(source[22:-5], lines)
