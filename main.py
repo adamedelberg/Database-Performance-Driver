@@ -63,7 +63,7 @@ def log_results(test_name, data):
 ############################################################
 
 
-def bulk_insert_test_suite_2():
+def ts_bulk_insert():
     #  test_1: Mongo Bulk Insert
     test_1()
     #  test_14: Mongo Bulk Insert Collections
@@ -74,7 +74,7 @@ def bulk_insert_test_suite_2():
     test_8()
 
 
-def insert_index_test_suite_2():
+def ts_insert_index():
     #  test_2: MongoDB Insert One Indexed
     test_2()
     #  test_3 MongoDB Insert One Non-Indexed
@@ -85,14 +85,14 @@ def insert_index_test_suite_2():
     test_10()
 
 
-def find_index_test_suite_2():
+def ts_find_index():
     #  test_4: MonogDB Find Indexed  #
     test_4()
     #  test_11: MySQL Select Indexed
     test_11()
 
 
-def scan_test_suite_2():
+def ts_scan():
     #  test_6: MongoDB Scan
     test_6()
     #  test_13: MySQL Scan
@@ -326,16 +326,16 @@ args = parser.parse_args()
 
 if args.test == 1:
     logger.info("PERFORMING OP 1: Bulk Insert Test Suite")
-    bulk_insert_test_suite_2()
+    ts_bulk_insert()
 if args.test == 2:
     logger.info("PERFORMING OP 2: Insert Index Test Suite")
-    insert_index_test_suite_2()
+    ts_insert_index()
 if args.test == 3:
     logger.info("PERFORMING OP 3: Find Index Test Suite")
-    find_index_test_suite_2()
+    ts_find_index()
 if args.test == 4:
     logger.info("PERFORMING OP 4: Scan Test Suite")
-    scan_test_suite_2()
+    ts_scan()
 
 if args.manual == 1: test_1()
 if args.manual == 2: test_2()
