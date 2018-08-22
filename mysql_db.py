@@ -371,7 +371,7 @@ def get_statements(table, doc=DOCUMENT):
 
             quoted_status = str(data['quoted_status']['text']).replace("\'","\\'") if 'quoted_status' in data else None
 
-            3print(quoted_status)
+            #print(quoted_status)
 
 
             possibly_sensitive = str(data['possibly_sensitive']) if 'possibly_sensitive' in data else None
