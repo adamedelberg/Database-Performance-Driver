@@ -383,7 +383,7 @@ if __name__ == "__main__":
     # call main setup
     setup()
 
-    test_3()
+    #test_3()
 
 
 class DatabaseThreads(threading.Thread):
