@@ -382,8 +382,8 @@ if args.test == 14: test_14()
 if __name__ == "__main__":
     # call main setup
     setup()
-    #mongo_db.bulk_insert_collections()
-#    test_14()
+
+    test_3()
 
 
 class DatabaseThreads(threading.Thread):
