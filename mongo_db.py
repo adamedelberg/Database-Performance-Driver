@@ -305,7 +305,7 @@ def bulk_insert_collections():
     try:
         coll_tweets.insert_many(document, ordered=False)
     except Exception:
-        print('hi')
+        print()
     exec += time.time() - start
 
     document = open('../doc2.json', 'r')

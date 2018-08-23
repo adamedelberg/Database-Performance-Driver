@@ -13,7 +13,7 @@ DEBUGGING_LEVEL = logging.DEBUG
 #DEBUGGING_LEVEL = logging.INFO
 
 
-iterations = 2
+iterations = 5
 threads = 10
 
 #  MongoDB Configs
@@ -42,7 +42,7 @@ collection_database = 'benchmark_db_collection'
 collection = 'benchmark_coll'
 
 # Test data paths
-document = '../parsed_data/e3-5MB.json'
+document = '../parsed_data/e3-100MB.json'
 document_dict = "{}-d.json".format(document[:-5])
 
 # do not change unless necessary

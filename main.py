@@ -334,19 +334,19 @@ parser.add_argument('-d', '--debug', help='Debugger verbosity.', required=False,
 
 args = parser.parse_args()
 
-ITERATIONS=args.iterations
+#ITERATIONS=args.iterations
 
-if args.size ==1:
-    logger.info("size=5MB")
-if args.size ==2:
-    logger.info("size=50MB")
-    data = '../parsed_data/e3-500MB.json'
-if args.size ==3:
-    data = '../parsed_data/e3-500MB.json'
-if args.size ==4:
-    data = '../parsed_data/e3-500MB.json'
-if args.size ==5:
-    data = '../parsed_data/e3-1GB.json'
+# if args.size ==1:
+#     logger.info("size=5MB")
+# if args.size ==2:
+#     logger.info("size=50MB")
+#     data = '../parsed_data/e3-500MB.json'
+# if args.size ==3:
+#     data = '../parsed_data/e3-500MB.json'
+# if args.size ==4:
+#     data = '../parsed_data/e3-500MB.json'
+# if args.size ==5:
+#     data = '../parsed_data/e3-1GB.json'
 
 
 if args.test_suite == 1:
@@ -381,6 +381,7 @@ if __name__ == "__main__":
     # call main setup
     setup()
     #mongo_db.bulk_insert_collections()
+    test_14()
 
 
 class DatabaseThreads(threading.Thread):
