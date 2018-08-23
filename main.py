@@ -381,7 +381,7 @@ if __name__ == "__main__":
     # call main setup
     setup()
     #mongo_db.bulk_insert_collections()
-    test_14()
+#    test_14()
 
 
 class DatabaseThreads(threading.Thread):
@@ -407,8 +407,7 @@ class App:
     "username": "",
     "password": "",
     "MYSQL_PORT": 3306,
-    "MYSQL_DATABASE": 'mydb',
-    "MYSQL_DATABASE_TABLES": ['tb_users', 'tb_groups']
+
   }
   __setters = ["username", "password"]
 

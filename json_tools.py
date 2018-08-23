@@ -30,7 +30,7 @@ def load_docs(documents):
 # Create JSON docs newline
 def create_docs(lines, indent, sort):
     source = '../raw_data/big.json'
-    data_parsed = "../parsed_data/e{}-{}.json".format(source[22:-5], lines)
+    data_parsed = "../parsed_data/{}-{}.json".format(source[12:-5], lines)
 
     # for making space and comma delimited json files
 
@@ -53,13 +53,11 @@ def create_docs(lines, indent, sort):
                     break
 
 
-
-
 # Create JSON docs dictionary
 
 def create_docs_d(lines, indent, sort):
-    source = '../raw_data/Eurovision10.json'
-    data_parsed_dict = "../parsed_data/e{}-{}d.json".format(source[22:-5], lines)
+    source = '../raw_data/big.json'
+    data_parsed_dict = "../parsed_data/{}-{}d.json".format(source[12:-5], lines)
 
     # for making space and comma delimited json files
 
@@ -76,14 +74,12 @@ def create_docs_d(lines, indent, sort):
 
                 if count == (lines-1):
                     print(count)
-                    print('1')
                     dst_dict.write(json.dumps(doc, indent=indent, sort_keys=sort))
                     count += 1
 
                 elif count == lines:
                     dst_dict.write(']')
                     print(count)
-                    print('2')
                     loop=False
                     break
 
@@ -91,7 +87,7 @@ def create_docs_d(lines, indent, sort):
                     dst_dict.write(json.dumps(doc, indent=indent, sort_keys=sort))
                     dst_dict.write(',\n')
                     count += 1
-                print(count)
+                    print(count)
     dst_dict.close()
 
 
@@ -112,8 +108,8 @@ def join_files():
 if __name__ == '__main__':
     print("Creating...")
 
-    create_docs(1500000,None,False)
-    create_docs_d(1500000,None,False)
+    create_docs(1350000,None,False)
+    create_docs_d(1350000,None,False)
 
     # join_files()
 

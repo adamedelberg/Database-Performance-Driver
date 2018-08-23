@@ -77,6 +77,7 @@ def insert_one_indexed(drop):
     """
 
     if drop: drop_database('benchmark_db_indexed')
+
     client = MongoClient(HOST, PORT)
     database = client.get_database('benchmark_db_indexed')
     coll = database.get_collection(COLLECTION)
@@ -158,6 +159,41 @@ def bulk_insert(indexed=False):
 
     start = time.time()
     coll.insert_many(document)
+    run = time.time() - start
+
+    if indexed:
+        db2 = connect().get_database(DATABASE_INDEXED)
+        coll2 = db2.get_collection(COLLECTION)
+        drop_database(DATABASE_INDEXED)
+        create_indexes(db2)
+        coll2.insert_many(document)
+
+    count = coll.count()
+    size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
+    logger.info("{} seconds to bulk insert {}".format(run, size))
+
+    return run, size
+
+
+def bulk_insert_one(indexed=False):
+    """Bulk insert one into MongoDB database
+
+    DO NOT USE IN BENCHMARKING!
+
+    """
+
+    # drop database
+    drop_database(DATABASE)
+
+    db = connect().get_database(DATABASE)
+    coll = db.get_collection(COLLECTION)
+
+    document = open(DOCUMENT_DICT, 'r')
+    document = json.load(document)
+
+    start = time.time()
+    for doc in document:
+        coll.insert_one(doc)
     run = time.time() - start
 
     if indexed:
