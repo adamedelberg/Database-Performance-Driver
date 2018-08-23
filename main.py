@@ -142,7 +142,7 @@ def test_2():
 
     log = 'test_2: mongo_db.insert_one_indexed(drop=True), db_size= {}, doc_size={}, time_mean={}'
     print(log.format(size2, size, statistics.mean(t1)))
-    log_results(log[:-14].format(size), t1)
+    log_results(log[:-14].format(size2, size), t1)
 
 
 # test_3: mongo_db.insert_one_non_indexed(drop=True)

@@ -101,12 +101,12 @@ def insert_one_indexed(drop):
     coll.insert_one(document)
     run2 = time.time() - start
 
-    size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
-    size2 = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
+    single_size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
+    db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
 
-    logger.info("{} seconds to insert one with indexing, db_size={} doc_size={}".format(run, size, size2))
+    logger.info("{} seconds to insert one with indexing, db_size={} doc_size={}".format(run, db_size, single_size))
 
-    return run2, size, size2
+    return run2, single_size, db_size
 
 
 def insert_one_non_indexed(drop=True):
