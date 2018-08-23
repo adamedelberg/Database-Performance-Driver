@@ -2440,3 +2440,5 @@ INFO: 2018-08-23 11:19:26,554: root: size=5MB
 INFO: 2018-08-23 11:19:52,496: mongo_db: 13.370235681533813 seconds to bulk insert into collections 98.08MB
 INFO: 2018-08-23 11:20:19,800: mongo_db: 12.911355257034302 seconds to bulk insert into collections 98.08MB
 INFO: 2018-08-23 11:20:43,135: mongo_db: 11.634511947631836 seconds to bulk insert into collections 98.08MB
+INFO: 2018-08-23 11:21:08,171: mongo_db: 13.680458545684814 seconds to bulk insert into collections 98.08MB
+INFO: 2018-08-23 11:21:31,738: mongo_db: 11.641844272613525 seconds to bulk insert into collections 98.08MB
