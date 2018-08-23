@@ -15,7 +15,6 @@ import mongo_db_live
 import mysql_db_live
 import statistics
 import config
-
 # import matplotlib.pyplot as plt
 import psutil
 import time
@@ -316,61 +315,67 @@ def test_14():
 
 # TODO: finish proper argument
 parser = argparse.ArgumentParser(description='DBD - Database Benchmark Driver')
-parser.add_argument('-t', '--test', help='Select a test suite to perform.', required=False, type=int,
+
+parser.add_argument('-ts', '--test_suite', help='Select a test suite to perform.', required=False, type=int,
                     choices=[1, 2, 3, 4])
-parser.add_argument('-m', '--manual', help='Select a manual test to perform.', required=False, type=int,
+
+parser.add_argument('-t', '--test', help='Select a manual test to perform.', required=False, type=int,
                     choices=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
-parser.add_argument('-d', '--debug', help='Debugger verbosity.', required=False, default='INFO',
-                    choices=['INFO', 'DEBUG'])
-parser.add_argument('-s', '--size', help='doc size {1=5MB, 2=50MB, 3=100MB, 4=500MB, 5=1GB, 6=MaxGB }', type=int,
-                    required=False, choices=[1, 2, 3, 4, 5, 6])
-parser.add_argument('-i', '--iterations', help='Number of iterations.', type=int, required=False)
+
+parser.add_argument('-s', '--size', help='doc size {1=5MB, 2=50MB, 3=100MB, 4=500MB, 5=1GB, 6=MaxGB }', default=1, type=int,
+                    required=True, choices=[1, 2, 3, 4, 5, 6])
+
+parser.add_argument('-i', '--iterations', help='Number of iterations.', type=int, required=True, default=1)
+
+
+parser.add_argument('-d', '--debug', help='Debugger verbosity.', required=False, default='v',
+                    choices=['v', 'vv', 'vvv'])
 
 
 args = parser.parse_args()
 
+ITERATIONS=args.iterations
+
 if args.size ==1:
     logger.info("size=5MB")
-    data = '../parsed_data/e3-5MB.json'
-
 if args.size ==2:
-    data = '../parsed_data/e3-50MB.json'
-
+    logger.info("size=50MB")
+    data = '../parsed_data/e3-500MB.json'
 if args.size ==3:
-    data = '../parsed_data/e3-100MB.json'
+    data = '../parsed_data/e3-500MB.json'
 if args.size ==4:
     data = '../parsed_data/e3-500MB.json'
 if args.size ==5:
     data = '../parsed_data/e3-1GB.json'
 
 
-if args.test == 1:
+if args.test_suite == 1:
     logger.info("PERFORMING OP 1: Bulk Insert Test Suite")
     ts_bulk_insert()
-if args.test == 2:
+if args.test_suite == 2:
     logger.info("PERFORMING OP 2: Insert Index Test Suite")
     ts_insert_index()
-if args.test == 3:
+if args.test_suite == 3:
     logger.info("PERFORMING OP 3: Find Index Test Suite")
     ts_find_index()
-if args.test == 4:
+if args.test_suite == 4:
     logger.info("PERFORMING OP 4: Scan Test Suite")
     ts_scan()
 
-if args.manual == 1: test_1()
-if args.manual == 2: test_2()
-if args.manual == 3: test_3()
-if args.manual == 4: test_4()
-if args.manual == 5: test_5()
-if args.manual == 6: test_6()
-if args.manual == 7: test_7()
-if args.manual == 8: test_8()
-if args.manual == 9: test_9()
-if args.manual == 10: test_10()
-if args.manual == 11: test_11()
-if args.manual == 12: test_12()
-if args.manual == 13: test_13()
-if args.manual == 14: test_14()
+if args.test == 1: test_1()
+if args.test == 2: test_2()
+if args.test == 3: test_3()
+if args.test == 4: test_4()
+if args.test == 5: test_5()
+if args.test == 6: test_6()
+if args.test == 7: test_7()
+if args.test == 8: test_8()
+if args.test == 9: test_9()
+if args.test == 10: test_10()
+if args.test == 11: test_11()
+if args.test == 12: test_12()
+if args.test == 13: test_13()
+if args.test == 14: test_14()
 
 if __name__ == "__main__":
     # call main setup
@@ -394,3 +399,25 @@ class DatabaseThreads(threading.Thread):
         elif self.database == 2:
             mysql_db_live.main(THREADS)
             print('hi')
+
+
+class App:
+  __conf = {
+    "username": "",
+    "password": "",
+    "MYSQL_PORT": 3306,
+    "MYSQL_DATABASE": 'mydb',
+    "MYSQL_DATABASE_TABLES": ['tb_users', 'tb_groups']
+  }
+  __setters = ["username", "password"]
+
+  @staticmethod
+  def config(name):
+    return App.__conf[name]
+
+  @staticmethod
+  def set(name, value):
+    if name in App.__setters:
+      App.__conf[name] = value
+    else:
+      raise NameError("Name not accepted in set() method")
