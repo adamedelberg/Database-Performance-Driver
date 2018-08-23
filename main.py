@@ -132,14 +132,16 @@ def test_2():
 
     # size(s) of docs
     d = []
+    d2 = []
 
     # perform multiple test iterations
     for i in range(ITERATIONS):
-        t, size = mongo_db.insert_one_indexed(drop=True)
-        t1.append(t), d.append(size)
+        t, size, size2 = mongo_db.insert_one_indexed(drop=True)
+        t1.append(t)
+        #d.append(size), d2.append(size2)
 
-    log = 'test_2: mongo_db.insert_one_indexed(drop=True), doc_size={}, time_mean={}'
-    print(log.format(size, statistics.mean(t1)))
+    log = 'test_2: mongo_db.insert_one_indexed(drop=True), db_size= {}, doc_size={}, time_mean={}'
+    print(log.format(size2, size, statistics.mean(t1)))
     log_results(log[:-14].format(size), t1)
 
 

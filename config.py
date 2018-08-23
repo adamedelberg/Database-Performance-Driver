@@ -42,7 +42,13 @@ collection_database = 'benchmark_db_collection'
 collection = 'benchmark_coll'
 
 # Test data paths
-document = '../parsed_data/e3-50MB.json'
+document = '../parsed_data/e3-5MB.json'
+#document = '../parsed_data/e3-50MB.json'
+#document = '../parsed_data/e3-100MB.json'
+#document = '../parsed_data/e3-500MB.json'
+#document = '../parsed_data/e10-1GB.json'
+
+
 document_dict = "{}-d.json".format(document[:-5])
 
 # do not change unless necessary

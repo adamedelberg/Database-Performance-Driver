@@ -87,8 +87,8 @@ def insert_one_indexed(drop):
 
     document = open(DOCUMENT_DICT, 'r')
     document = json.load(document)
-    start = time.time()
 
+    start = time.time()
     coll.insert_many(document)
     run = time.time() - start
 
@@ -102,9 +102,11 @@ def insert_one_indexed(drop):
     run2 = time.time() - start
 
     size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
-    logger.info("{} seconds to insert one with indexing {}".format(run, size))
+    size2 = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
 
-    return run2, size
+    logger.info("{} seconds to insert one with indexing, db_size={} doc_size={}".format(run, size, size2))
+
+    return run2, size, size2
 
 
 def insert_one_non_indexed(drop=True):
