@@ -323,9 +323,9 @@ parser.add_argument('-t', '--test', help='Select a manual test to perform.', req
                     choices=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
 
 parser.add_argument('-s', '--size', help='doc size {1=5MB, 2=50MB, 3=100MB, 4=500MB, 5=1GB, 6=MaxGB }', default=1, type=int,
-                    required=True, choices=[1, 2, 3, 4, 5, 6])
+                    required=False, choices=[1, 2, 3, 4, 5, 6])
 
-parser.add_argument('-i', '--iterations', help='Number of iterations.', type=int, required=True, default=1)
+parser.add_argument('-i', '--iterations', help='Number of iterations.', type=int, required=False, default=1)
 
 
 parser.add_argument('-d', '--debug', help='Debugger verbosity.', required=False, default='v',
