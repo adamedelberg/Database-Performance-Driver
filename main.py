@@ -389,7 +389,7 @@ if args.test == 14: test_14()
 if __name__ == "__main__":
     # call main setup
     setup()
-    #test_9()
+    test_9()
     #test_3()
 
 

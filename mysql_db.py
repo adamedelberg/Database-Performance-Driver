@@ -305,11 +305,14 @@ def universal_insert_one_with_indexing_2():
     connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
 
     cursor = connector.cursor()
-
+    run = 0
     for sql in stmts:
         start = time.time()
-        cursor.execute(sql)
-        run = time.time() - start
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            pass
+        run += time.time() - start
 
     stmts = get_statements(table='universal_indexed', doc=DOCUMENT_SINGLE)
 
@@ -339,11 +342,14 @@ def universal_insert_one_without_indexing_2():
     connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
 
     cursor = connector.cursor()
-
+    run=0
     for sql in stmts:
         start = time.time()
-        cursor.execute(sql)
-        run = time.time() - start
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            pass
+        run += time.time() - start
 
     stmts = get_statements(table='universal', doc=DOCUMENT_SINGLE)
 
