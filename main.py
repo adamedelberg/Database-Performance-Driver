@@ -254,11 +254,15 @@ def test_10():
     t1 = []
 
     # perform multiple test iterations
-    for runs in range(ITERATIONS): t1.append(mysql_db.universal_insert_one_without_indexing_2())
+    for runs in range(ITERATIONS):
+        t, size, size2 = mysql_db.universal_insert_one_without_indexing_2()
+        t1.append(t)
+    #t1.append(mysql_db.universal_insert_one_without_indexing_2())
 
-    log = 'test_10: mysql_db.universal_insert_one_without_indexing(), time_mean={}'
-    print(log.format(statistics.mean(t1)))
-    log_results(log[:-14].format(), t1)
+    log = 'test_10: mysql_db.universal_insert_one_without_indexing(), db_size= {}, doc_size={}, time_mean={}'
+    print(log.format(size2, size, statistics.mean(t1)))
+    log_results(log[:-14].format(size2, size), t1)
+
 
 
 # test_11: mysql_db.universal_select_with_indexing()
@@ -385,7 +389,7 @@ if args.test == 14: test_14()
 if __name__ == "__main__":
     # call main setup
     setup()
-
+    test_9()
     #test_3()
 
 

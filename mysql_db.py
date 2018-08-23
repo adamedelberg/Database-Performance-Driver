@@ -347,15 +347,20 @@ def universal_insert_one_without_indexing_2():
 
     stmts = get_statements(table='universal', doc=DOCUMENT_SINGLE)
 
+    start = time.time()
     cursor.execute(stmts.pop())
+    run2 = time.time() - start
 
     cursor.close()
     connector.commit()
     connector.close()
+    single_size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
+    db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
 
-    logger.info("{} seconds to universal_insert_one_without_indexing".format(run))
+    #logger.info("{} seconds to universal_insert_one_without_indexing".format(run))
+    logger.info("{} seconds to universal insert one without indexing, db_size={} doc_size={}".format(run2, db_size, single_size))
 
-    return run
+    return run2, single_size, db_size
 
 
 #############################
