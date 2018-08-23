@@ -156,7 +156,7 @@ def test_3():
     # perform multiple test iterations
     for i in range(ITERATIONS):
         t, size, size2 = mongo_db.insert_one_non_indexed(drop=True)
-        #t1.append(t), d.append(size)
+        t1.append(t)#, d.append(size)
 
     log = 'test_3: mongo_db.insert_one_non_indexed(drop=True), db_size= {}, doc_size={}, time_mean={}'
     print(log.format(size2, size, statistics.mean(t1)))
