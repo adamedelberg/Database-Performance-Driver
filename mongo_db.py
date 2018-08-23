@@ -43,7 +43,7 @@ def connect(host=HOST, port=PORT):
         client = MongoClient(host, port)
         logger.debug("CONNECTED ON: {}:{}".format(client.HOST, client.PORT))
     except pymongo.errors.ConnectionFailure as err:
-        logger.warning("CONNECTION FAILED! ERROR: {}".format(err))
+        logger.info("CONNECTION FAILED! ERROR: {}".format(err))
     return client
 
 

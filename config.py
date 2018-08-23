@@ -45,7 +45,5 @@ collection = 'benchmark_coll'
 document = '../parsed_data/e3-5MB.json'
 document_dict = "{}-d.json".format(document[:-5])
 
-
 # do not change unless necessary
 document_single = '../parsed_data/single.json'
-

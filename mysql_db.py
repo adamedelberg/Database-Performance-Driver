@@ -45,7 +45,7 @@ def connect(host=HOST, port=PORT, user=USER, password=PASS, db=DATABASE):
         client = pymysql.connect(user=user, password=password, host=host, db=db, port=port, autocommit=False)
         logger.debug("CONNECTED ON: {}:{}".format(client.host, client.port))
     except mysql.connector.errorcode as err:
-        logger.debug("CONNECTION FAILED: " + err)
+        logger.info("CONNECTION FAILED: " + err)
     return client
 
 
