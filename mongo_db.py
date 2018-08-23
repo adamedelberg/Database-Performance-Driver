@@ -104,7 +104,7 @@ def insert_one_indexed(drop):
     single_size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
     db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
 
-    logger.info("{} seconds to insert one with indexing, db_size={} doc_size={}".format(run, db_size, single_size))
+    logger.info("{} seconds to insert one with indexing, db_size={} doc_size={}".format(run2, db_size, single_size))
 
     return run2, single_size, db_size
 
@@ -136,7 +136,7 @@ def insert_one_non_indexed(drop=True):
 
     single_size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
     db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
-    logger.info("{} seconds to insert one without indexing, db_size={} doc_size={}".format(run, db_size, single_size))
+    logger.info("{} seconds to insert one without indexing, db_size={} doc_size={}".format(run2, db_size, single_size))
     return run2, single_size, db_size
 
 def bulk_insert(indexed=False):
