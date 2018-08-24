@@ -94,10 +94,10 @@ def ts_insert_index():
 
 def ts_find_index():
     mongo_db.bulk_insert(doc_path=DOCUMENT_DICT,indexed=True)
-    mysql_db.bulk_insert_universal_2(doc_path=DOCUMENT, indexed=True)
+    mysql_db.bulk_insert_universal(doc_path=DOCUMENT, indexed=True)
 
     mongo_db.bulk_insert(doc_path=DOCUMENT_DICT, indexed=False)
-    mysql_db.bulk_insert_universal_2(doc_path=DOCUMENT, indexed=False)
+    mysql_db.bulk_insert_universal(doc_path=DOCUMENT, indexed=False)
 
     #  test_4: MonogDB Find Indexed  #
     t4_mongo_db_find_indexed()
@@ -113,7 +113,8 @@ def ts_find_index():
 
 def ts_scan():
     mongo_db.bulk_insert(doc_path=DOCUMENT_DICT,indexed=False)
-    mysql_db.bulk_insert_universal_2(doc_path=DOCUMENT, indexed=False)
+
+    mysql_db.bulk_insert_universal(doc_path=DOCUMENT, indexed=False)
 
     #  test_6: MongoDB Scan
     t6_mongo_db_scan()
@@ -257,7 +258,7 @@ def t7_mysql_db_bulk_insert_universal():
     d = []
     # perform multiple test iterations
     for runs in range(ITERATIONS):
-        t, size = mysql_db.bulk_insert_universal_2()
+        t, size = mysql_db.bulk_insert_universal()
         t1.append(t), d.append(size)
     log = 'test_7: mysql_db.bulk_insert_universal(), doc_size={}, time_mean={}'
     print(log.format(size, statistics.mean(t1)))
@@ -272,7 +273,7 @@ def t8_mysql_db_bulk_insert_normalized():
 
     # perform multiple test iterations
     for runs in range(ITERATIONS):
-        t, size = mysql_db.bulk_insert_normalized_2()
+        t, size = mysql_db.bulk_insert_normalized()
         t1.append(t), d.append(size)
 
     log = 'test_8: mysql_db.bulk_insert_normalized(), doc_size={}, time_mean={}'
@@ -311,31 +312,6 @@ def t10_mysql_db_insert_one_non_indexed():
     print(log.format(size2, size, statistics.mean(t1)))
     log_results(log[:-14].format(size2, size), t1)
 
-
-# test_11: mysql_db.universal_select_with_indexing()
-def t11_mysql_db_universal_select_indexed_1():
-    # times for each insert
-    t1 = []
-
-    # perform multiple test iterations
-    for i in range(ITERATIONS): t1.append(mysql_db.universal_select_with_indexing())
-
-    log = 'test_11: mysql_db.universal_select_with_indexing(), time_mean={}'
-    print(log.format(statistics.mean(t1)))
-    log_results(log[:-14].format(), t1)
-
-
-# test_12: mysql_db.universal_select_without_indexing()
-def t12_mysql_db_universal_select_non_indexed_1():
-    # times for each insert
-    t1 = []
-
-    # perform multiple test iterations
-    for i in range(ITERATIONS): t1.append(mysql_db.universal_select_without_indexing())
-
-    log = 'test_12: mysql_db.universal_select_without_indexing(), time_mean={}'
-    print(log.format(statistics.mean(t1)))
-    log_results(log[:-14].format(), t1)
 
 
 
