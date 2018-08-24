@@ -94,7 +94,10 @@ def ts_insert_index():
 
 def ts_find_index():
     mongo_db.bulk_insert(doc_path=DOCUMENT_DICT,indexed=True)
-    mysql_db.bulk_insert_universal_2(doc_path=DOCUMENT)
+    mysql_db.bulk_insert_universal_2(doc_path=DOCUMENT, indexed=True)
+
+    mongo_db.bulk_insert(doc_path=DOCUMENT_DICT, indexed=False)
+    mysql_db.bulk_insert_universal_2(doc_path=DOCUMENT, indexed=False)
 
     #  test_4: MonogDB Find Indexed  #
     t4_mongo_db_find_indexed()

@@ -146,7 +146,6 @@ def universal_select_with_indexing():
     return sql_time
 
 
-
 def universal_select(indexed, doc_path):
     conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     cursor = conn.cursor()
@@ -156,7 +155,7 @@ def universal_select(indexed, doc_path):
         sql2 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.friends_count`>1000;"
         sql3 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.followers_count`>1000;"
     else:
-        sql1 = "SELECT COUNT(*) from universal where `users.location` = 'London';"
+        sql1 = "SELECT COUNT(*) from universal WHERE `users.location` = 'London';"
         sql2 = "SELECT COUNT(*) FROM universal WHERE `users.friends_count`>1000;"
         sql3 = "SELECT COUNT(*) FROM universal WHERE `users.followers_count`>1000;"
 
@@ -318,10 +317,15 @@ def bulk_insert_normalized_2():
     return run, size
 
 
-def bulk_insert_universal_2(doc_path):
-    stmts = get_statements(table='universal', doc=doc_path)
+def bulk_insert_universal_2(doc_path, indexed=False):
 
-    delete_from_table('universal')
+    if indexed:
+        stmts=get_statements(table='universal_indexed',doc=doc_path)
+        delete_from_table(table='universal_indexed')
+
+    else:
+        stmts = get_statements(table='universal', doc=doc_path)
+        delete_from_table('universal')
 
     #connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     connector = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
