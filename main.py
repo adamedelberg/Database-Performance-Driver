@@ -107,8 +107,8 @@ def ts_find_index():
     #t11_mysql_db_universal_select_indexed()
     #  test_12: MySQL Select Non Indexed
     #t12_mysql_db_universal_select_non_indexed()
-    t15_mysql_db_universal_select_indexed()
-    t16_mysql_db_universal_select_non_indexed()
+    t11_mysql_db_universal_select_indexed()
+    t12_mysql_db_universal_select_non_indexed()
 
 
 def ts_scan():
@@ -275,7 +275,7 @@ def t9_mysql_db_insert_one_indexed():
 
 
 # test_10: mysql_db.universal_insert_one_without_indexing()
-def t10_mysql_db_insert_one_non_indexed():
+def t10_mysql_db_insert_one_non_indexed_1():
     # times for each insert
     t1 = []
 
@@ -291,7 +291,7 @@ def t10_mysql_db_insert_one_non_indexed():
 
 
 # test_11: mysql_db.universal_select_with_indexing()
-def t11_mysql_db_universal_select_indexed():
+def t11_mysql_db_universal_select_indexed_1():
     # times for each insert
     t1 = []
 
@@ -347,7 +347,7 @@ def t14_mongo_db_bulk_insert_collections():
     log_results(log[:-14].format(size), t1)
 
 
-def t15_mysql_db_universal_select_indexed():
+def t11_mysql_db_universal_select_indexed():
     # times for each insert
     t1 = []
 
@@ -361,7 +361,8 @@ def t15_mysql_db_universal_select_indexed():
     print(log.format(size, statistics.mean(t1)))
     log_results(log[:-14].format(size), t1)
 
-def t16_mysql_db_universal_select_non_indexed():
+
+def t12_mysql_db_universal_select_non_indexed():
     # times for each insert
     t1 = []
 
