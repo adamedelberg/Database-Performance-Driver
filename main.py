@@ -275,7 +275,7 @@ def t9_mysql_db_insert_one_indexed():
 
 
 # test_10: mysql_db.universal_insert_one_without_indexing()
-def t10_mysql_db_insert_one_non_indexed_1():
+def t10_mysql_db_insert_one_non_indexed():
     # times for each insert
     t1 = []
 
@@ -304,7 +304,7 @@ def t11_mysql_db_universal_select_indexed_1():
 
 
 # test_12: mysql_db.universal_select_without_indexing()
-def t12_mysql_db_universal_select_non_indexed():
+def t12_mysql_db_universal_select_non_indexed_1():
     # times for each insert
     t1 = []
 
