@@ -113,6 +113,7 @@ def ts_find_index():
 
 def ts_scan():
     mongo_db.bulk_insert(doc_path=DOCUMENT_DICT,indexed=False)
+    mysql_db.bulk_insert_universal_2(doc_path=DOCUMENT, indexed=False)
 
     #  test_6: MongoDB Scan
     t6_mongo_db_scan()
@@ -216,6 +217,9 @@ def t5_mongo_db_find_non_indexed():
     print(log.format(size, statistics.mean(t1)))
     log_results(log[:-14].format(size), t1)
 
+####################
+# OP 4: Scan Tests
+####################
 
 # test_6: mongo_db.scan_all()
 def t6_mongo_db_scan():
@@ -228,6 +232,22 @@ def t6_mongo_db_scan():
     log = 'test_6: mongo_db.scan_all(), time_mean={}, doc_path={}'
     print(log.format(statistics.mean(t1),DOCUMENT_DICT))
     log_results(log.format(statistics.mean(t1), DOCUMENT_DICT), t1)
+
+
+# test_13: mysql_db.scan_all()
+def t13_mysql_db_scan():
+    # times for each insert
+    t1 = []
+
+    for i in range(ITERATIONS): t1.append(mysql_db.scan_all())
+
+    log = 'test_13: mysql_db.scan_all(), time_mean={}, doc_path={}'
+    print(log.format(statistics.mean(t1),DOCUMENT_DICT))
+    log_results(log.format(statistics.mean(t1), DOCUMENT_DICT), t1)
+
+
+
+
 
 
 # test_7: mysql_db.bulk_insert_universal()
@@ -318,17 +338,7 @@ def t12_mysql_db_universal_select_non_indexed_1():
     log_results(log[:-14].format(), t1)
 
 
-# test_13: mysql_db.scan_all()
-def t13_mysql_db_scan():
-    # times for each insert
-    t1 = []
 
-    # perform multiple test iterations
-    for i in range(ITERATIONS): t1.append(mysql_db.scan_all())
-
-    log = 'test_13: mysql_db.scan_all(), time_mean={}'
-    print(log.format(statistics.mean(t1)))
-    log_results(log[:-14].format(), t1)
 
 
 # test_14: mongo_db.bulk_insert_collections()

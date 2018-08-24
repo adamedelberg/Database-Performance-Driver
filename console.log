@@ -3112,3 +3112,47 @@ INFO: 2018-08-24 15:46:14,940: mysql_db:  0.2248060703277588 seconds to scan 100
 INFO: 2018-08-24 15:46:15,162: mysql_db:  0.21396493911743164 seconds to scan 1000 objects from universal table
 INFO: 2018-08-24 15:46:15,409: mysql_db:  0.233428955078125 seconds to scan 1000 objects from universal table
 INFO: 2018-08-24 15:46:15,629: mysql_db:  0.2156689167022705 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:48:20,993: mongo_db: 0.6258978843688965 seconds to bulk insert 4.89MB
+INFO: 2018-08-24 15:48:22,023: mysql_db: 0.7119309902191162 seconds to bulk insert universal 4.89MB
+INFO: 2018-08-24 15:48:22,028: mongo_db: 0.003328084945678711 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:48:22,033: mongo_db: 0.0030798912048339844 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:48:22,037: mongo_db: 0.0028378963470458984 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:48:22,042: mongo_db: 0.0029659271240234375 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:48:22,047: mongo_db: 0.0030701160430908203 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:48:22,051: mongo_db: 0.0028841495513916016 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:48:22,056: mongo_db: 0.0030117034912109375 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:48:22,060: mongo_db: 0.002719879150390625 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:48:22,065: mongo_db: 0.0033261775970458984 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:48:22,070: mongo_db: 0.00302886962890625 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:48:22,442: mysql_db:  0.3682060241699219 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:48:22,816: mysql_db:  0.3692920207977295 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:48:23,076: mysql_db:  0.25095510482788086 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:48:23,304: mysql_db:  0.2237999439239502 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:48:23,692: mysql_db:  0.3808019161224365 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:48:23,977: mysql_db:  0.2637181282043457 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:48:24,218: mysql_db:  0.2282559871673584 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:48:24,437: mysql_db:  0.2143411636352539 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:48:24,679: mysql_db:  0.22854089736938477 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:48:24,903: mysql_db:  0.21866965293884277 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:49:59,883: mongo_db: 0.6501920223236084 seconds to bulk insert 4.89MB
+INFO: 2018-08-24 15:50:00,699: mysql_db: 0.49434900283813477 seconds to bulk insert universal 4.89MB
+INFO: 2018-08-24 15:50:00,704: mongo_db: 0.003013134002685547 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:50:00,709: mongo_db: 0.002874135971069336 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:50:00,713: mongo_db: 0.002804994583129883 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:50:00,717: mongo_db: 0.002892732620239258 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:50:00,722: mongo_db: 0.0027747154235839844 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:50:00,726: mongo_db: 0.0028841495513916016 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:50:00,731: mongo_db: 0.0028951168060302734 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:50:00,735: mongo_db: 0.002835988998413086 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:50:00,740: mongo_db: 0.0027878284454345703 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:50:00,744: mongo_db: 0.0028798580169677734 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-24 15:50:00,974: mysql_db:  0.22599101066589355 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:50:01,211: mysql_db:  0.23250317573547363 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:50:01,445: mysql_db:  0.22989606857299805 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:50:01,694: mysql_db:  0.24090814590454102 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:50:01,905: mysql_db:  0.207366943359375 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:50:02,181: mysql_db:  0.26381587982177734 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:50:02,401: mysql_db:  0.21582508087158203 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:50:02,671: mysql_db:  0.25473618507385254 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:50:02,889: mysql_db:  0.2133030891418457 seconds to scan 1000 objects from universal table
+INFO: 2018-08-24 15:50:03,161: mysql_db:  0.2552492618560791 seconds to scan 1000 objects from universal table
