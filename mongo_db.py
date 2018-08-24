@@ -151,7 +151,7 @@ def insert_one_non_indexed(doc_path, drop_database=True):
     return run2, single_size, db_size
 
 
-def bulk_insert(doc_path, indexed=False):
+def bulk_insert(doc_path, indexed):
     """Bulk insert into MongoDB database
 
     Parameters:
