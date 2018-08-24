@@ -182,7 +182,7 @@ def bulk_insert(doc_path, indexed=False):
         coll2.insert_many(document)
 
     count = coll.count()
-    size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
+    size = "{}MB".format(round(os.path.getsize(doc_path) / 1024 / 1024, 2))
     logger.info("{} seconds to bulk insert {}".format(run, size))
 
     return run, size
@@ -229,15 +229,17 @@ def find(indexed, doc_path):
 
     if indexed:
         db = client.get_database(DATABASE_INDEXED)
-        bulk_insert(doc_path=doc_path,indexed=True)
+        #bulk_insert(doc_path=doc_path,indexed=True)
         coll = db.get_collection(COLLECTION)
 
     else:
         db = client.get_database(DATABASE)
-        bulk_insert(doc_path=doc_path,indexed=False)
+        #bulk_insert(doc_path=doc_path,indexed=False)
         coll = db.get_collection(COLLECTION)
 
     res = 0
+
+    run=0
 
     start = time.time()
     for i in range(5): res = coll.find({'user.location': 'London'}).count()
@@ -247,8 +249,10 @@ def find(indexed, doc_path):
 
     count = coll.count()
 
-    logger.info("%.16f seconds to find %d with indexed= %s", run, res, indexed)
-    return run
+    size = "{}MB".format(round(os.path.getsize(doc_path) / 1024 / 1024, 2))
+    logger.info("{} seconds to find {} with indexed={}, doc_size={}".format(run, res, indexed, size))
+
+    return run, size
 
 
 def scan_all():

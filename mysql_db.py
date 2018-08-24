@@ -119,7 +119,7 @@ def universal_select_with_indexing():
     for i in range(5):
         start = time.time()
         cursor.execute(sql1)
-        sql_time = time.time() - start
+        sql_time += time.time() - start
 
         res = cursor.fetchone()
         for row in res: num=row
@@ -128,7 +128,7 @@ def universal_select_with_indexing():
         start = time.time()
 
         cursor.execute(sql2)
-        sql_time = time.time() - start
+        sql_time += time.time() - start
 
         res = cursor.fetchone()
         for row in res: num = row
@@ -137,7 +137,7 @@ def universal_select_with_indexing():
         start = time.time()
 
         cursor.execute(sql3)
-        sql_time = time.time() - start
+        sql_time += time.time() - start
 
         res = cursor.fetchone()
         for row in res: num = row
@@ -146,7 +146,52 @@ def universal_select_with_indexing():
     return sql_time
 
 
-def universal_select_without_indexing():
+
+def universal_select(indexed, doc_path):
+    conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    cursor = conn.cursor()
+
+    if indexed:
+        sql1 = "SELECT COUNT(*) from universal_indexed where `users.location` = 'London';"
+        sql2 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.friends_count`>1000;"
+        sql3 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.followers_count`>1000;"
+    else:
+        sql1 = "SELECT COUNT(*) from universal where `users.location` = 'London';"
+        sql2 = "SELECT COUNT(*) FROM universal WHERE `users.friends_count`>1000;"
+        sql3 = "SELECT COUNT(*) FROM universal WHERE `users.followers_count`>1000;"
+
+    num = 0
+    sql_time = 0
+
+    for i in range(5):
+        start = time.time()
+        cursor.execute(sql1)
+        sql_time += time.time() - start
+        res = cursor.fetchone()
+        for row in res: num=row
+
+    for i in range(5):
+        start = time.time()
+        cursor.execute(sql2)
+        sql_time += time.time() - start
+        res = cursor.fetchone()
+        for row in res: num = row
+
+    for i in range(5):
+        start = time.time()
+        cursor.execute(sql3)
+        sql_time += time.time() - start
+        res = cursor.fetchone()
+        for row in res: num = row
+
+    size = "{}MB".format(round(os.path.getsize(doc_path) / 1024 / 1024, 2))
+    logger.info("{} seconds to select {} objects indexed={}, doc_size={}".format(sql_time, num, indexed,size))
+
+    return sql_time, size
+
+
+
+def universal_select_without_indexing(doc_path):
     conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     cursor = conn.cursor()
 
@@ -184,6 +229,11 @@ def universal_select_without_indexing():
         for row in res: num = row
 
     logger.info("{} seconds to select {} objects non indexed".format(sql_time, num))
+
+    size = "{}MB".format(round(os.path.getsize(doc_path) / 1024 / 1024, 2))
+
+    logger.info("{} seconds to find {} with indexed={}, doc_size={}".format(run, res, indexed, size))
+
     return sql_time
 
 ####################################################
@@ -268,8 +318,8 @@ def bulk_insert_normalized_2():
     return run, size
 
 
-def bulk_insert_universal_2():
-    stmts = get_statements(table='universal')
+def bulk_insert_universal_2(doc_path):
+    stmts = get_statements(table='universal', doc=doc_path)
 
     delete_from_table('universal')
 

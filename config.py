@@ -13,7 +13,7 @@ DEBUGGING_LEVEL = logging.DEBUG
 #DEBUGGING_LEVEL = logging.INFO
 
 
-iterations = 3
+iterations = 10
 threads = 10
 
 #  MongoDB Configs
@@ -47,6 +47,8 @@ document = '../parsed_data/e3-5MB.json'
 #document = '../parsed_data/e3-100MB.json'
 #document = '../parsed_data/e3-500MB.json'
 #document = '../parsed_data/e10-1GB.json'
+#document = '../parsed_data/big-5GB.json'
+
 
 
 document_dict = "{}-d.json".format(document[:-5])

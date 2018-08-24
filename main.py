@@ -93,14 +93,18 @@ def ts_insert_index():
 
 
 def ts_find_index():
+    mongo_db.bulk_insert(doc_path=DOCUMENT_DICT,indexed=True)
+    mysql_db.bulk_insert_universal_2(doc_path=DOCUMENT)
     #  test_4: MonogDB Find Indexed  #
     t4_mongo_db_find_indexed()
     #  test_5: MonogDB Find Non Indexed  #
     t5_mongo_db_find_non_indexed()
     #  test_11: MySQL Select Indexed
-    t11_mysql_db_universal_select_indexed()
+    #t11_mysql_db_universal_select_indexed()
     #  test_12: MySQL Select Non Indexed
-    t12_mysql_db_universal_select_non_indexed()
+    #t12_mysql_db_universal_select_non_indexed()
+    t15_mysql_db_universal_select_indexed()
+    t16_mysql_db_universal_select_non_indexed()
 
 
 def ts_scan():
@@ -177,11 +181,18 @@ def t4_mongo_db_find_indexed():
     t1 = []
 
     # perform multiple test iterations
-    for i in range(ITERATIONS): t1.append(mongo_db.find(doc_path=DOCUMENT_DICT, indexed=True))
+    for i in range(ITERATIONS):
+        t, size = mongo_db.find(doc_path=DOCUMENT_DICT, indexed=True)
+        t1.append(t)
 
-    log = 'test_4: mongo_db.find(indexed=True), time_mean={}'
-    print(log.format(statistics.mean(t1)))
-    log_results(log[:-14].format(), t1)
+    #log = 'test_4: mongo_db.find(indexed=True), time_mean={}'
+
+    log = 'test_4: mongo_db.find(indexed=True), db_size= {}, time_mean={}'
+    print(log.format(size, statistics.mean(t1)))
+    log_results(log[:-14].format(size), t1)
+
+    #print(log.format(statistics.mean(t1)))
+    #log_results(log[:-14].format(), t1)
 
 
 # test_5: mongo_db.find(indexed=False)
@@ -190,11 +201,14 @@ def t5_mongo_db_find_non_indexed():
     t1 = []
 
     # perform multiple test iterations
-    for i in range(ITERATIONS): t1.append(mongo_db.find(doc_path=DOCUMENT_DICT, indexed=False))
-
+    for i in range(ITERATIONS):
+        t, size = mongo_db.find(doc_path=DOCUMENT_DICT, indexed=False)
+        t1.append(t)
     log = 'test_5: mongo_db.find(indexed=False), time_mean={}'
-    print(log.format(statistics.mean(t1)))
-    log_results(log[:-14].format(), t1)
+    log = 'test_5: mongo_db.find(indexed=False), db_size= {}, time_mean={}'
+
+    print(log.format(size, statistics.mean(t1)))
+    log_results(log[:-14].format(size), t1)
 
 
 # test_6: mongo_db.scan_all()
@@ -329,6 +343,36 @@ def t14_mongo_db_bulk_insert_collections():
     log_results(log[:-14].format(size), t1)
 
 
+def t15_mysql_db_universal_select_indexed():
+    # times for each insert
+    t1 = []
+
+    # perform multiple test iterations
+    for i in range(ITERATIONS):
+        t, size= mysql_db.universal_select(indexed=True, doc_path=DOCUMENT)
+        t1.append(t)
+
+    log = 'test_15: mysql_db.universal_select(indexed=True), db_size= {}, time_mean={}'
+
+    print(log.format(size, statistics.mean(t1)))
+    log_results(log[:-14].format(size), t1)
+
+def t16_mysql_db_universal_select_non_indexed():
+    # times for each insert
+    t1 = []
+
+    # perform multiple test iterations
+    for i in range(ITERATIONS):
+        t, size= mysql_db.universal_select(indexed=False, doc_path=DOCUMENT)
+        t1.append(t)
+
+    log = 'test_16: mysql_db.universal_select(indexed=True), db_size= {}, time_mean={}'
+
+    print(log.format(size, statistics.mean(t1)))
+    log_results(log[:-14].format(size), t1)
+
+
+
 # TODO: finish proper argument
 parser = argparse.ArgumentParser(description='DBD - Database Benchmark Driver')
 
@@ -400,7 +444,6 @@ if __name__ == "__main__":
     #ts_insert_index()
     ts_find_index()
     #ts_scan()
-
 
 class DatabaseThreads(threading.Thread):
     def __init__(self, thread_id, database):
