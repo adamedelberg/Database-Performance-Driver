@@ -241,11 +241,25 @@ def find(indexed, doc_path):
 
     run=0
 
-    start = time.time()
-    for i in range(5): res = coll.find({'user.location': 'London'}).count()
-    for i in range(5): res = coll.find({'user.friends_count': {'$gt': 1000}}).count()
-    for i in range(5): res = coll.find({'user.followers_count': {'$gt': 1000}}).count()
-    run = time.time() - start
+    #start = time.time()
+    for i in range(5):
+        start = time.time()
+        res = coll.find({'user.location': 'London'}).count()
+        run += time.time() - start
+
+    for i in range(5):
+        start = time.time()
+
+        res = coll.find({'user.friends_count': {'$gt': 1000}}).count()
+        run += time.time() - start
+
+    for i in range(5):
+        start = time.time()
+
+        res = coll.find({'user.followers_count': {'$gt': 1000}}).count()
+        run += time.time() - start
+
+    #run = time.time() - start
 
     count = coll.count()
 
