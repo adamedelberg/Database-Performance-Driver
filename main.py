@@ -112,6 +112,8 @@ def ts_find_index():
 
 
 def ts_scan():
+    mongo_db.bulk_insert(doc_path=DOCUMENT_DICT,indexed=False)
+
     #  test_6: MongoDB Scan
     t6_mongo_db_scan()
     #  test_13: MySQL Scan
@@ -221,11 +223,11 @@ def t6_mongo_db_scan():
     t1 = []
 
     # perform multiple test iterations
-    for i in range(ITERATIONS): t1.append(mongo_db.scan_all())
+    for i in range(ITERATIONS): t1.append(mongo_db.scan_all(doc_path=DOCUMENT_DICT))
 
-    log = 'test_6: mongo_db.scan_all(), time_mean={}'
-    print(log.format(statistics.mean(t1)))
-    log_results(log[:-14].format(), t1)
+    log = 'test_6: mongo_db.scan_all(), time_mean={}, doc_path={}'
+    print(log.format(statistics.mean(t1),DOCUMENT_DICT))
+    log_results(log.format(statistics.mean(t1), DOCUMENT_DICT), t1)
 
 
 # test_7: mysql_db.bulk_insert_universal()
@@ -447,8 +449,8 @@ if __name__ == "__main__":
     setup()
     #ts_bulk_insert()
     #ts_insert_index()
-    ts_find_index()
-    #ts_scan()
+    #ts_find_index()
+    ts_scan()
 
 class DatabaseThreads(threading.Thread):
     def __init__(self, thread_id, database):

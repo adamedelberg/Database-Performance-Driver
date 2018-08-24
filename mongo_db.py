@@ -269,7 +269,7 @@ def find(indexed, doc_path):
     return run, size
 
 
-def scan_all():
+def scan_all(doc_path):
     client = MongoClient(HOST, PORT)
     db = client.get_database(DATABASE)
     coll = db.get_collection(COLLECTION)
@@ -280,7 +280,10 @@ def scan_all():
 
     count = coll.count()
 
-    logger.info("%.16f seconds to scan %d objects", run, count)
+    size = "{}MB".format(round(os.path.getsize(doc_path) / 1024 / 1024, 2))
+    logger.info("{} seconds to scan {} db_size={}".format(run, count, size))
+
+    #logger.info("%.16f seconds to scan %d objects", run, count)
     return run
 
 
