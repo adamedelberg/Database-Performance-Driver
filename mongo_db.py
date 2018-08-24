@@ -284,7 +284,7 @@ def scan_all(doc_path):
     logger.info("{} seconds to scan {} db_size={}".format(run, count, size))
 
     #logger.info("%.16f seconds to scan %d objects", run, count)
-    return run
+    return run, count
 
 
 def drop_database(database):

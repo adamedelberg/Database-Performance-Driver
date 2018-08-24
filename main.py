@@ -182,6 +182,9 @@ def t3_mongo_db_insert_one_non_indexed():
     print(log.format(size2, size, statistics.mean(t1)))
     log_results(log[:-14].format(size2, size), t1)
 
+####################
+# OP 3: Find Indexed Tests
+####################
 
 # test_4: mongo_db.find(indexed=True)
 def t4_mongo_db_find_indexed():
@@ -228,11 +231,13 @@ def t6_mongo_db_scan():
     t1 = []
 
     # perform multiple test iterations
-    for i in range(ITERATIONS): t1.append(mongo_db.scan_all(doc_path=DOCUMENT_DICT))
+    for i in range(ITERATIONS):
+        t, scanned = mongo_db.scan_all(doc_path=DOCUMENT_DICT)
+        t1.append(t)
 
-    log = 'test_6: mongo_db.scan_all(), time_mean={}, doc_path={}'
-    print(log.format(statistics.mean(t1),DOCUMENT_DICT))
-    log_results(log.format(statistics.mean(t1), DOCUMENT_DICT), t1)
+    log = 'test_6: mongo_db.scan_all(), time_mean={}, doc_path={}, scanned={}'
+    print(log.format(statistics.mean(t1),DOCUMENT_DICT,scanned))
+    log_results(log.format(statistics.mean(t1), DOCUMENT_DICT, scanned), t1)
 
 
 # test_13: mysql_db.scan_all()
@@ -240,11 +245,13 @@ def t13_mysql_db_scan():
     # times for each insert
     t1 = []
 
-    for i in range(ITERATIONS): t1.append(mysql_db.scan_all())
+    for i in range(ITERATIONS):
+        t, scanned = mysql_db.scan_all()
+        t1.append(t)
 
-    log = 'test_13: mysql_db.scan_all(), time_mean={}, doc_path={}'
-    print(log.format(statistics.mean(t1),DOCUMENT_DICT))
-    log_results(log.format(statistics.mean(t1), DOCUMENT_DICT), t1)
+    log = 'test_13: mysql_db.scan_all(), time_mean={}, doc_path={}, scanned={}'
+    print(log.format(statistics.mean(t1),DOCUMENT_DICT, scanned))
+    log_results(log.format(statistics.mean(t1), DOCUMENT_DICT, scanned), t1)
 
 
 

@@ -102,7 +102,7 @@ def scan_all():
 
     logger.info(" %s seconds to scan %d objects from universal table", run, count)
 
-    return run
+    return run, count
 
 
 def universal_select_with_indexing():
