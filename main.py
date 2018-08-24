@@ -33,6 +33,14 @@ logger.addHandler(handler)
 ITERATIONS = config.iterations
 THREADS = config.threads
 
+DATABASE = config.database
+DATABASE_INDEXED = config.indexed_database
+COLLECTION = config.collection
+DOCUMENT = config.document
+DOCUMENT_DICT = config.document_dict
+DOCUMENT_SINGLE = config.document_single
+DATABASE_COLLECTION = config.collection_database
+
 
 def setup():
     # logger.debug('MEMORY USING: %s'% (psutil.Process(os.getpid()).memory_info().rss))
@@ -64,42 +72,42 @@ def log_results(test_name, data):
 
 def ts_bulk_insert():
     #  test_1: Mongo Bulk Insert
-    test_1()
+    t1_mongo_db_bulk_insert()
     #  test_14: Mongo Bulk Insert Collections
-    test_14()
+    t14_mongo_db_bulk_insert_collections()
     #  test_7: MySQL Bulk Insert Universal
-    test_7()
+    t7_mysql_db_bulk_insert_universal()
     #  test_8: MySQL Bulk Insert Normalized
-    test_8()
+    t8_mysql_db_bulk_insert_normalized()
 
 
 def ts_insert_index():
     #  test_2: MongoDB Insert One Indexed
-    test_2()
+    t2_mongo_db_insert_one_indexed()
     #  test_3 MongoDB Insert One Non-Indexed
-    test_3()
+    t3_mongo_db_insert_one_non_indexed()
     #  test_9: MySQL Insert One Indexed
-    test_9()
+    t9_mysql_db_insert_one_indexed()
     #  test_10 MySQL Insert One Non-Indexed
-    test_10()
+    t10_mysql_db_insert_one_non_indexed()
 
 
 def ts_find_index():
     #  test_4: MonogDB Find Indexed  #
-    test_4()
-    #  test_11: MySQL Select Indexed
-    test_11()
+    t4_mongo_db_find_indexed()
     #  test_5: MonogDB Find Non Indexed  #
-    test_5()
+    t5_mongo_db_find_non_indexed()
+    #  test_11: MySQL Select Indexed
+    t11_mysql_db_universal_select_indexed()
     #  test_12: MySQL Select Non Indexed
-    test_12()
+    t12_mysql_db_universal_select_non_indexed()
 
 
 def ts_scan():
     #  test_6: MongoDB Scan
-    test_6()
+    t6_mongo_db_scan()
     #  test_13: MySQL Scan
-    test_13()
+    t13_mysql_db_scan()
 
 
 ############################################################
@@ -108,7 +116,7 @@ def ts_scan():
 
 
 # test_1: mongo_db.bulk_insert()
-def test_1():
+def t1_mongo_db_bulk_insert():
     # times for each insert
     t1 = []
 
@@ -117,7 +125,7 @@ def test_1():
 
     # perform multiple test iterations
     for i in range(ITERATIONS):
-        t, size = mongo_db.bulk_insert()
+        t, size = mongo_db.bulk_insert(doc_path=DOCUMENT_DICT)
         t1.append(t), d.append(size)
 
     log = 'test_1: mongo_db.bulk_insert(), doc_size={}, time_mean={}'
@@ -126,7 +134,7 @@ def test_1():
 
 
 # test_2: mongo_db.insert_one_indexed(drop=True)
-def test_2():
+def t2_mongo_db_insert_one_indexed():
     # times for each insert
     t1 = []
 
@@ -136,7 +144,7 @@ def test_2():
 
     # perform multiple test iterations
     for i in range(ITERATIONS):
-        t, size, size2 = mongo_db.insert_one_indexed(drop=True)
+        t, size, size2 = mongo_db.insert_one_indexed(drop=True, doc_path=DOCUMENT_DICT)
         t1.append(t)
         #d.append(size), d2.append(size2)
 
@@ -146,7 +154,7 @@ def test_2():
 
 
 # test_3: mongo_db.insert_one_non_indexed(drop=True)
-def test_3():
+def t3_mongo_db_insert_one_non_indexed():
     # times for each insert
     t1 = []
 
@@ -155,7 +163,7 @@ def test_3():
 
     # perform multiple test iterations
     for i in range(ITERATIONS):
-        t, size, size2 = mongo_db.insert_one_non_indexed(drop=True)
+        t, size, size2 = mongo_db.insert_one_non_indexed(drop_database=True, doc_path=DOCUMENT_DICT)
         t1.append(t)#, d.append(size)
 
     log = 'test_3: mongo_db.insert_one_non_indexed(drop=True), db_size= {}, doc_size={}, time_mean={}'
@@ -164,12 +172,12 @@ def test_3():
 
 
 # test_4: mongo_db.find(indexed=True)
-def test_4():
+def t4_mongo_db_find_indexed():
     # times for each
     t1 = []
 
     # perform multiple test iterations
-    for i in range(ITERATIONS): t1.append(mongo_db.find(indexed=True))
+    for i in range(ITERATIONS): t1.append(mongo_db.find(doc_path=DOCUMENT_DICT, indexed=True))
 
     log = 'test_4: mongo_db.find(indexed=True), time_mean={}'
     print(log.format(statistics.mean(t1)))
@@ -177,12 +185,12 @@ def test_4():
 
 
 # test_5: mongo_db.find(indexed=False)
-def test_5():
+def t5_mongo_db_find_non_indexed():
     # times for each
     t1 = []
 
     # perform multiple test iterations
-    for i in range(ITERATIONS): t1.append(mongo_db.find(indexed=False))
+    for i in range(ITERATIONS): t1.append(mongo_db.find(doc_path=DOCUMENT_DICT, indexed=False))
 
     log = 'test_5: mongo_db.find(indexed=False), time_mean={}'
     print(log.format(statistics.mean(t1)))
@@ -190,7 +198,7 @@ def test_5():
 
 
 # test_6: mongo_db.scan_all()
-def test_6():
+def t6_mongo_db_scan():
     # times for each
     t1 = []
 
@@ -203,7 +211,7 @@ def test_6():
 
 
 # test_7: mysql_db.bulk_insert_universal()
-def test_7():
+def t7_mysql_db_bulk_insert_universal():
     # times for each insert
     t1 = []
     d = []
@@ -217,7 +225,7 @@ def test_7():
 
 
 # test_8: mysql_db.bulk_insert_normalized()
-def test_8():
+def t8_mysql_db_bulk_insert_normalized():
     # times for each insert
     t1 = []
     d = []
@@ -233,7 +241,7 @@ def test_8():
 
 
 # test_9: mysql_db.universal_insert_one_with_indexing()
-def test_9():
+def t9_mysql_db_insert_one_indexed():
     # times for each insert
     t1 = []
 
@@ -249,7 +257,7 @@ def test_9():
 
 
 # test_10: mysql_db.universal_insert_one_without_indexing()
-def test_10():
+def t10_mysql_db_insert_one_non_indexed():
     # times for each insert
     t1 = []
 
@@ -264,9 +272,8 @@ def test_10():
     log_results(log[:-14].format(size2, size), t1)
 
 
-
 # test_11: mysql_db.universal_select_with_indexing()
-def test_11():
+def t11_mysql_db_universal_select_indexed():
     # times for each insert
     t1 = []
 
@@ -279,7 +286,7 @@ def test_11():
 
 
 # test_12: mysql_db.universal_select_without_indexing()
-def test_12():
+def t12_mysql_db_universal_select_non_indexed():
     # times for each insert
     t1 = []
 
@@ -292,7 +299,7 @@ def test_12():
 
 
 # test_13: mysql_db.scan_all()
-def test_13():
+def t13_mysql_db_scan():
     # times for each insert
     t1 = []
 
@@ -305,7 +312,7 @@ def test_13():
 
 
 # test_14: mongo_db.bulk_insert_collections()
-def test_14():
+def t14_mongo_db_bulk_insert_collections():
     # times for each insert
     t1 = []
 
@@ -314,7 +321,7 @@ def test_14():
 
     # perform multiple test iterations
     for i in range(ITERATIONS):
-        t, size = mongo_db.bulk_insert_collections()
+        t, size = mongo_db.bulk_insert_collections(doc_path=DOCUMENT_DICT)
         t1.append(t), d.append(size)
 
     log = 'test_14: mongo_db.bulk_insert_collections(), doc_size={}, time_mean={}'
@@ -371,26 +378,28 @@ if args.test_suite == 4:
     logger.info("PERFORMING OP 4: Scan Test Suite")
     ts_scan()
 
-if args.test == 1: test_1()
-if args.test == 2: test_2()
-if args.test == 3: test_3()
-if args.test == 4: test_4()
-if args.test == 5: test_5()
-if args.test == 6: test_6()
-if args.test == 7: test_7()
-if args.test == 8: test_8()
-if args.test == 9: test_9()
-if args.test == 10: test_10()
-if args.test == 11: test_11()
-if args.test == 12: test_12()
-if args.test == 13: test_13()
-if args.test == 14: test_14()
+if args.test == 1: t1_mongo_db_bulk_insert()
+if args.test == 2: t2_mongo_db_insert_one_indexed()
+if args.test == 3: t3_mongo_db_insert_one_non_indexed()
+if args.test == 4: t4_mongo_db_find_indexed()
+if args.test == 5: t5_mongo_db_find_non_indexed()
+if args.test == 6: t6_mongo_db_scan()
+if args.test == 7: t7_mysql_db_bulk_insert_universal()
+if args.test == 8: t8_mysql_db_bulk_insert_normalized()
+if args.test == 9: t9_mysql_db_insert_one_indexed()
+if args.test == 10: t10_mysql_db_insert_one_non_indexed()
+if args.test == 11: t11_mysql_db_universal_select_indexed()
+if args.test == 12: t12_mysql_db_universal_select_non_indexed()
+if args.test == 13: t13_mysql_db_scan()
+if args.test == 14: t14_mongo_db_bulk_insert_collections()
 
 if __name__ == "__main__":
     # call main setup
     setup()
-    test_9()
-    #test_3()
+    #ts_bulk_insert()
+    #ts_insert_index()
+    ts_find_index()
+    #ts_scan()
 
 
 class DatabaseThreads(threading.Thread):

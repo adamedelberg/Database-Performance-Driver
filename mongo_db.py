@@ -48,19 +48,14 @@ def connect(host=HOST, port=PORT):
 
 
 def create_indexes(database):
-    """Create indexes
-
-    The following five indexes get dropped and recreated at each insert test where relevant.
+    """Create indexes after dropping 'benchmark_db_indexed'
 
     Parameters:
-        db - the database where indexes will be created
+        database - the database where indexes will be created
 
     """
     try:
         coll = database.get_collection(COLLECTION)
-    except Exception:
-        logger.warning("ERROR ON COLLECTION! see: create_indexes()")
-    try:
         coll.create_index([("id", pymongo.ASCENDING)], name='tweet_id_index')
         coll.create_index([("user.id", pymongo.ASCENDING)], name='user.id_index')
         coll.create_index([("user.followers_count", pymongo.ASCENDING)], name='user.follower_count_index')
@@ -70,22 +65,29 @@ def create_indexes(database):
         logger.warning("ERROR ON INDEXES! see: create_indexes()")
 
 
-def insert_one_indexed(drop):
+def insert_one_indexed(drop, doc_path):
     """Inserts a single document to the indexed benchmark_db database
+
     Parameters:
+        drop
+        doc_path
+
     Returns:
+        run2        - time taken to execute MongoDB commands
+        single_size - size of the inserted document
+        db_size     - size of the database
     """
 
-    if drop: drop_database('benchmark_db_indexed')
+    if drop: drop_database(DATABASE_INDEXED)
 
     client = MongoClient(HOST, PORT)
-    database = client.get_database('benchmark_db_indexed')
+    database = client.get_database(DATABASE_INDEXED)
     coll = database.get_collection(COLLECTION)
 
     # create indexes
     create_indexes(database)
 
-    document = open(DOCUMENT_DICT, 'r')
+    document = open(doc_path, 'r')
     document = json.load(document)
 
     start = time.time()
@@ -109,19 +111,28 @@ def insert_one_indexed(drop):
     return run2, single_size, db_size
 
 
-def insert_one_non_indexed(drop=True):
-    if drop: drop_database(DATABASE)
+def insert_one_non_indexed(doc_path, drop_database=True):
+    """Inserts a single document to the benchmark_db database
+
+       Parameters:
+           doc_path
+       Returns:
+           run2         - time taken to execute MongoDB commands
+           single_size  - size of the inserted document
+           db_size      - size of the database
+       """
+
+    drop_database(DATABASE)
 
     db = connect().get_database(DATABASE)
 
     coll = db.get_collection(COLLECTION)
 
-    document = open(DOCUMENT_DICT, 'r')
+    document = open(doc_path, 'r')
     document = json.load(document)
 
-    # coll.drop_indexes()
-    start = time.time()
 
+    start = time.time()
     coll.insert_many(document)
     run = time.time() - start
 
@@ -139,7 +150,8 @@ def insert_one_non_indexed(drop=True):
     logger.info("{} seconds to insert one without indexing, db_size={} doc_size={}".format(run2, db_size, single_size))
     return run2, single_size, db_size
 
-def bulk_insert(indexed=False):
+
+def bulk_insert(doc_path, indexed=False):
     """Bulk insert into MongoDB database
 
     Parameters:
@@ -155,7 +167,7 @@ def bulk_insert(indexed=False):
     db = connect().get_database(DATABASE)
     coll = db.get_collection(COLLECTION)
 
-    document = open(DOCUMENT_DICT, 'r')
+    document = open(doc_path, 'r')
     document = json.load(document)
 
     start = time.time()
@@ -176,7 +188,7 @@ def bulk_insert(indexed=False):
     return run, size
 
 
-def bulk_insert_one(indexed=False):
+def bulk_insert_one(doc_path, indexed=False):
     """Bulk insert one into MongoDB database
 
     DO NOT USE IN BENCHMARKING!
@@ -211,15 +223,19 @@ def bulk_insert_one(indexed=False):
     return run, size
 
 
-def find(indexed):
+def find(indexed, doc_path):
+
     client = MongoClient(HOST, PORT)
 
     if indexed:
         db = client.get_database(DATABASE_INDEXED)
+        bulk_insert(doc_path=doc_path,indexed=True)
+        coll = db.get_collection(COLLECTION)
+
     else:
         db = client.get_database(DATABASE)
-
-    coll = db.get_collection(COLLECTION)
+        bulk_insert(doc_path=doc_path,indexed=False)
+        coll = db.get_collection(COLLECTION)
 
     res = 0
 
@@ -227,13 +243,9 @@ def find(indexed):
     for i in range(5): res = coll.find({'user.location': 'London'}).count()
     for i in range(5): res = coll.find({'user.friends_count': {'$gt': 1000}}).count()
     for i in range(5): res = coll.find({'user.followers_count': {'$gt': 1000}}).count()
-
     run = time.time() - start
 
     count = coll.count()
-    # for x in coll.find():
-    #    print(x)
-    # print(coll.find({'id': {"$regex": '995'}}).count())
 
     logger.info("%.16f seconds to find %d with indexed= %s", run, res, indexed)
     return run
@@ -277,7 +289,7 @@ def drop_databases():
         logger.warning("DROP ERROR: " + e)
 
 
-def bulk_insert_collections():
+def bulk_insert_collections(doc_path):
     drop_database(DATABASE_COLLECTION)
 
     client = MongoClient(HOST, PORT)
