@@ -371,7 +371,7 @@ def t12_mysql_db_universal_select_non_indexed():
         t, size= mysql_db.universal_select(indexed=False, doc_path=DOCUMENT)
         t1.append(t)
 
-    log = 'test_16: mysql_db.universal_select(indexed=True), db_size= {}, time_mean={}'
+    log = 'test_16: mysql_db.universal_select(indexed=False), db_size= {}, time_mean={}'
 
     print(log.format(size, statistics.mean(t1)))
     log_results(log[:-14].format(size), t1)
