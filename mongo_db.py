@@ -111,11 +111,12 @@ def insert_one_indexed(drop, doc_path):
     return run2, single_size, db_size
 
 
-def insert_one_non_indexed(doc_path, drop_database=True):
+def insert_one_non_indexed(doc_path, drop):
     """Inserts a single document to the benchmark_db database
 
        Parameters:
            doc_path
+           drop
        Returns:
            run2         - time taken to execute MongoDB commands
            single_size  - size of the inserted document

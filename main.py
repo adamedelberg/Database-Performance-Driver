@@ -175,7 +175,7 @@ def t3_mongo_db_insert_one_non_indexed():
 
     # perform multiple test iterations
     for i in range(ITERATIONS):
-        t, size, size2 = mongo_db.insert_one_non_indexed(drop_database=True, doc_path=DOCUMENT_DICT)
+        t, size, size2 = mongo_db.insert_one_non_indexed(drop=True, doc_path=DOCUMENT_DICT)
         t1.append(t)#, d.append(size)
 
     log = 'test_3: mongo_db.insert_one_non_indexed(drop=True), db_size= {}, doc_size={}, time_mean={}'
@@ -441,9 +441,9 @@ if __name__ == "__main__":
     # call main setup
     setup()
     #ts_bulk_insert()
-    #ts_insert_index()
+    ts_insert_index()
     #ts_find_index()
-    ts_scan()
+    #ts_scan()
 
 class DatabaseThreads(threading.Thread):
     def __init__(self, thread_id, database):
