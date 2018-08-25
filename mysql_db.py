@@ -317,35 +317,6 @@ def bulk_insert_universal(doc_path, indexed=False):
     return run, size
 
 
-def bulk_insert_universal_indexed_2():
-    stmts = get_statements(table='universal_indexed')
-
-    delete_from_table('universal_indexed')
-
-    connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
-
-    cursor = connector.cursor()
-
-    sql = 'SET NAMES utf8mb4;'
-    cursor.execute(sql)
-
-
-    run=0
-    for sql in stmts:
-        start = time.time()
-        try:
-            cursor.execute(sql)
-        except Exception as e:
-            pass
-        run += time.time() - start
-
-    cursor.close()
-    connector.commit()
-    connector.close()
-
-    return run, len(stmts)
-
-
 def universal_insert_one_with_indexing_2():
 
     stmts = get_statements(table='universal_indexed')
@@ -419,6 +390,34 @@ def universal_insert_one_without_indexing_2():
 
     return run2, single_size, db_size
 
+# not used
+def bulk_insert_universal_indexed_2():
+    stmts = get_statements(table='universal_indexed')
+
+    delete_from_table('universal_indexed')
+
+    connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+
+    cursor = connector.cursor()
+
+    sql = 'SET NAMES utf8mb4;'
+    cursor.execute(sql)
+
+
+    run=0
+    for sql in stmts:
+        start = time.time()
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            pass
+        run += time.time() - start
+
+    cursor.close()
+    connector.commit()
+    connector.close()
+
+    return run, len(stmts)
 
 #############################
 #  Generate SQL Statements  #

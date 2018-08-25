@@ -192,7 +192,6 @@ def bulk_insert(doc_path, indexed):
 def bulk_insert_one(doc_path, indexed=False):
     """Bulk insert one into MongoDB database
 
-    DO NOT USE IN BENCHMARKING!
 
     """
 
@@ -375,8 +374,9 @@ def bulk_insert_collections(doc_path):
     start = time.time()
     try:
         coll_tweets.insert_many(document, ordered=False)
-    except Exception:
-        print()
+    except Exception as e:
+        #print(e)
+        pass
     exec += time.time() - start
 
     document = open('../dump2.json', 'r')
@@ -385,8 +385,9 @@ def bulk_insert_collections(doc_path):
     start = time.time()
     try:
         coll_users.insert_many(document, ordered=False)
-    except Exception:
-        print()
+    except Exception as e:
+        #print(e)
+        pass
     exec += time.time() - start
 
     size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
