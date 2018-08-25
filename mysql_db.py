@@ -115,7 +115,7 @@ def scan_all():
     return run, count
 
 
-def universal_select_with_indexing():
+def select_with_indexing():
     conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     cursor = conn.cursor()
 
@@ -156,7 +156,7 @@ def universal_select_with_indexing():
     return sql_time
 
 
-def universal_select(indexed, doc_path):
+def select(indexed, doc_path):
     conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     cursor = conn.cursor()
 
@@ -326,8 +326,48 @@ def bulk_insert_universal(doc_path, indexed=False):
     logger.info("{} seconds to bulk insert universal {}".format(run, size))
     return run, size
 
+def insert_one(indexed):
 
-def universal_insert_one_with_indexing_2():
+    if indexed: table = 'universal_indexed'
+    else: table = 'universal'
+
+    stmts = get_statements(table=table)
+    delete_from_table(table=table)
+
+
+    connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+
+    cursor = connector.cursor()
+    run = 0
+    for sql in stmts:
+        try:
+            start = time.time()
+            cursor.execute(sql)
+            run += time.time() - start
+        except Exception as e:
+            pass
+
+    stmts = get_statements(table=table, doc=DOCUMENT_SINGLE)
+
+    start = time.time()
+    cursor.execute(stmts.pop())
+    run2 = time.time() - start
+
+    cursor.close()
+    connector.commit()
+    connector.close()
+
+    #logger.info("{} seconds to universal_insert_one_with_indexing".format(run2))
+    single_size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
+
+    db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
+
+    logger.info("{} seconds to universal insert one indexed={}, db_size={}, doc_size={}".format(run2,indexed, db_size, single_size))
+
+    return run2, single_size, db_size, run
+
+
+def insert_one_with_indexing_2():
 
     stmts = get_statements(table='universal_indexed')
 
@@ -366,7 +406,7 @@ def universal_insert_one_with_indexing_2():
     #return run2
 
 
-def universal_insert_one_without_indexing_2():
+def insert_one_without_indexing_2():
     stmts = get_statements(table='universal')
 
     delete_from_table(table='universal')
@@ -399,6 +439,7 @@ def universal_insert_one_without_indexing_2():
     logger.info("{} seconds to universal insert one without indexing, db_size={} doc_size={}".format(run2, db_size, single_size))
 
     return run2, single_size, db_size, run
+
 
 # not used
 def bulk_insert_universal_indexed_2():

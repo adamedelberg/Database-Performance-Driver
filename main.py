@@ -15,7 +15,7 @@ import mongo_db_live
 import mysql_db_live
 import statistics
 import config
-# import matplotlib.pyplot as plt
+
 import psutil
 import time
 import datetime
@@ -42,22 +42,14 @@ DOCUMENT_SINGLE = config.document_single
 DATABASE_COLLECTION = config.collection_database
 
 
-def setup():
-    mongo_db.connect(host=config.host,port=config.port)
-    mysql_db.connect(host=config.mysql_host, port=config.mysql_port, user=config.username, password=config.password, database=config.database)
-    print()
-
-
 def log_results(test_name, data):
     try:
         with open(r'logs.csv', 'a') as report:
             writer = csv.writer(report, dialect='excel')
             writer.writerow([test_name] + data)
             report.close()
-        # logger.info('')
-    except Exception as e:
-        # logger.warning('' + e)
-        print()
+    except csv.Error as code:
+        logger.info("Logger: {}".format(code))
 
 
 ############################################################
@@ -77,37 +69,26 @@ def ts_bulk_insert():
 
 
 def ts_insert_index():
-    #  test_2: MongoDB Insert One Indexed
-    #t2_mongo_db_insert_one_indexed()
-    #  test_3 MongoDB Insert One Non-Indexed
-    #t3_mongo_db_insert_one_non_indexed()
-
     t2_mongo_db_insert_one(indexed=True)
     t2_mongo_db_insert_one(indexed=False)
 
-    #  test_9: MySQL Insert One Indexed
-    t9_mysql_db_insert_one_indexed()
-    #  test_10 MySQL Insert One Non-Indexed
-    t10_mysql_db_insert_one_non_indexed()
+    t9_mysql_db_insert_one(indexed=True)
+    t9_mysql_db_insert_one(indexed=False)
+
 
 
 def ts_find_index():
     mongo_db.bulk_insert(doc_path=DOCUMENT_DICT,indexed=True, drop_on_start=True)
-    mysql_db.bulk_insert_universal(doc_path=DOCUMENT, indexed=True)
     mongo_db.bulk_insert(doc_path=DOCUMENT_DICT, indexed=False, drop_on_start=True)
+
+    mysql_db.bulk_insert_universal(doc_path=DOCUMENT, indexed=True)
     mysql_db.bulk_insert_universal(doc_path=DOCUMENT, indexed=False)
 
-    #  test_4: MonogDB Find Indexed  #
-    t4_mongo_db_find_indexed()
-    #  test_5: MonogDB Find Non Indexed  #
-    t5_mongo_db_find_non_indexed()
-    #  test_11: MySQL Select Indexed
-    #t11_mysql_db_universal_select_indexed()
-    #  test_12: MySQL Select Non Indexed
-    #t12_mysql_db_universal_select_non_indexed()
-    t11_mysql_db_universal_select_indexed()
-    t12_mysql_db_universal_select_non_indexed()
+    t4_mongo_db_find(indexed=True)
+    t4_mongo_db_find(indexed=False)
 
+    t11_mysql_db_select(indexed=True)
+    t11_mysql_db_select(indexed=False)
 
 def ts_scan():
     mongo_db.bulk_insert(doc_path=DOCUMENT_DICT,indexed=False, drop_on_start=True)
@@ -202,41 +183,11 @@ def t9_mysql_db_insert_one(indexed):
     r = []
     # perform multiple test iterations
     for runs in range(ITERATIONS):
-        t, size, size2, run = mysql_db.universal_insert_one_with_indexing_2()
+        t, size, size2, run = mysql_db.insert_one(indexed)
         t1.append(t), r.append(run)
-    log = 'test_9: mysql_db.universal_insert_one_with_indexing(), db_size= {}, doc_size={}, time_mean={}, insert_time={}'
-    print(log.format(size2, size, statistics.mean(t1), statistics.mean(r)))
-    log_results(log[:-14].format(size2, size, statistics.mean(r)), t1)
-
-
-# test_9: mysql_db.universal_insert_one_with_indexing()
-def t9_mysql_db_insert_one_indexed():
-    # times for each insert
-    t1 = []
-    r = []
-    # perform multiple test iterations
-    for runs in range(ITERATIONS):
-        t, size, size2, run = mysql_db.universal_insert_one_with_indexing_2()
-        t1.append(t), r.append(run)
-        #t1.append(mysql_db.universal_insert_one_with_indexing_2())
-    log = 'test_9: mysql_db.universal_insert_one_with_indexing(), db_size= {}, doc_size={}, time_mean={}, insert_time={}'
-    print(log.format(size2, size, statistics.mean(t1), statistics.mean(r)))
-    log_results(log[:-14].format(size2, size, statistics.mean(r)), t1)
-
-
-# test_10: mysql_db.universal_insert_one_without_indexing()
-def t10_mysql_db_insert_one_non_indexed():
-    # times for each insert
-    t1 = []
-    r = []
-    # perform multiple test iterations
-    for runs in range(ITERATIONS):
-        t, size, size2, run = mysql_db.universal_insert_one_without_indexing_2()
-        t1.append(t), r.append(run)
-    #t1.append(mysql_db.universal_insert_one_without_indexing_2())
-    log = 'test_10: mysql_db.universal_insert_one_without_indexing(), db_size= {}, doc_size={}, time_mean={}, insert_time={}'
-    print(log.format(size2, size, statistics.mean(t1), statistics.mean(r)))
-    log_results(log[:-14].format(size2, size, statistics.mean(r)), t1)
+    log = 'test_9: mysql_db.universal_insert_one indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
+    print(log.format(indexed,size2, size, statistics.mean(t1), statistics.mean(r)))
+    log_results(log[:-14].format(indexed, size2, size, statistics.mean(r)), t1)
 
 
 # test_14: mongo_db.bulk_insert_collections()
@@ -260,71 +211,33 @@ def t14_mongo_db_bulk_insert_collections():
 ############################
 # OP 3: Find Indexed Tests
 ###########################
-
-# test_4: mongo_db.find(indexed=True)
-def t4_mongo_db_find_indexed():
+def t4_mongo_db_find(indexed):
     # times for each
     t1 = []
 
     # perform multiple test iterations
     for i in range(ITERATIONS):
-        t, size = mongo_db.find(doc_path=DOCUMENT_DICT, indexed=True)
+        t, size = mongo_db.find(doc_path=DOCUMENT_DICT, indexed=indexed)
         t1.append(t)
 
-    #log = 'test_4: mongo_db.find(indexed=True), time_mean={}'
-
-    log = 'test_4: mongo_db.find(indexed=True), db_size= {}, time_mean={}'
-    print(log.format(size, statistics.mean(t1)))
-    log_results(log[:-14].format(size), t1)
-
-    #print(log.format(statistics.mean(t1)))
-    #log_results(log[:-14].format(), t1)
+    log = 'test_4: mongo_db.find, indexed={}, db_size= {}, time_mean={}'
+    print(log.format(indexed, size, statistics.mean(t1)))
+    log_results(log[:-14].format(indexed, size), t1)
 
 
-# test_5: mongo_db.find(indexed=False)
-def t5_mongo_db_find_non_indexed():
-    # times for each
-    t1 = []
-
-    # perform multiple test iterations
-    for i in range(ITERATIONS):
-        t, size = mongo_db.find(doc_path=DOCUMENT_DICT, indexed=False)
-        t1.append(t)
-    log = 'test_5: mongo_db.find(indexed=False), time_mean={}'
-    log = 'test_5: mongo_db.find(indexed=False), db_size= {}, time_mean={}'
-
-    print(log.format(size, statistics.mean(t1)))
-    log_results(log[:-14].format(size), t1)
-
-
-def t11_mysql_db_universal_select_indexed():
+def t11_mysql_db_select(indexed):
     # times for each insert
     t1 = []
 
     # perform multiple test iterations
     for i in range(ITERATIONS):
-        t, size= mysql_db.universal_select(indexed=True, doc_path=DOCUMENT)
+        t, size= mysql_db.select(indexed=indexed, doc_path=DOCUMENT)
         t1.append(t)
 
-    log = 'test_15: mysql_db.universal_select(indexed=True), db_size= {}, time_mean={}'
+    log = 'test_11: mysql_db.select, indexed={}, db_size= {}, time_mean={}'
 
-    print(log.format(size, statistics.mean(t1)))
-    log_results(log[:-14].format(size), t1)
-
-
-def t12_mysql_db_universal_select_non_indexed():
-    # times for each insert
-    t1 = []
-
-    # perform multiple test iterations
-    for i in range(ITERATIONS):
-        t, size= mysql_db.universal_select(indexed=False, doc_path=DOCUMENT)
-        t1.append(t)
-
-    log = 'test_16: mysql_db.universal_select(indexed=False), db_size= {}, time_mean={}'
-
-    print(log.format(size, statistics.mean(t1)))
-    log_results(log[:-14].format(size), t1)
+    print(log.format(indexed, size, statistics.mean(t1)))
+    log_results(log[:-14].format(indexed, size), t1)
 
 
 ####################
@@ -416,23 +329,26 @@ if args.test_suite == 4:
     ts_scan()
 
 if args.test == 1: t1_mongo_db_bulk_insert()
-if args.test == 2: t2_mongo_db_insert_one_indexed()
-if args.test == 3: t3_mongo_db_insert_one_non_indexed()
-if args.test == 4: t4_mongo_db_find_indexed()
-if args.test == 5: t5_mongo_db_find_non_indexed()
+if args.test == 2: t2_mongo_db_insert_one(indexed=True)
+if args.test == 3: t2_mongo_db_insert_one(indexed=False)
+if args.test == 4: t4_mongo_db_find(indexed=True)
+if args.test == 5: t4_mongo_db_find(indexed=False)
 if args.test == 6: t6_mongo_db_scan()
 if args.test == 7: t7_mysql_db_bulk_insert_universal()
 if args.test == 8: t8_mysql_db_bulk_insert_normalized()
-if args.test == 9: t9_mysql_db_insert_one_indexed()
-if args.test == 10: t10_mysql_db_insert_one_non_indexed()
-if args.test == 11: t11_mysql_db_universal_select_indexed()
-if args.test == 12: t12_mysql_db_universal_select_non_indexed()
+if args.test == 9: t9_mysql_db_insert_one(indexed=True)
+if args.test == 10: t9_mysql_db_insert_one(indexed=False)
+if args.test == 11: t11_mysql_db_select(indexed=True)
+if args.test == 12: t11_mysql_db_select(indexed=False)
 if args.test == 13: t13_mysql_db_scan()
 if args.test == 14: t14_mongo_db_bulk_insert_collections()
 
 if __name__ == "__main__":
-    # call main setup
-    setup()
+    # call connect to check access to databases
+    mongo_db.connect(host=config.host, port=config.port)
+    mysql_db.connect(host=config.mysql_host, port=config.mysql_port, user=config.username, password=config.password,
+                     database=config.database)
+
     ts_bulk_insert()
     ts_insert_index()
     ts_find_index()
@@ -454,24 +370,3 @@ class DatabaseThreads(threading.Thread):
         elif self.database == 2:
             mysql_db_live.main(THREADS)
             print('hi')
-
-
-class App:
-  __conf = {
-    "username": "",
-    "password": "",
-    "MYSQL_PORT": 3306,
-
-  }
-  __setters = ["username", "password"]
-
-  @staticmethod
-  def config(name):
-    return App.__conf[name]
-
-  @staticmethod
-  def set(name, value):
-    if name in App.__setters:
-      App.__conf[name] = value
-    else:
-      raise NameError("Name not accepted in set() method")
