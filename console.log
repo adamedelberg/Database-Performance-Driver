@@ -4569,3 +4569,61 @@ INFO: 2018-08-25 16:40:43,173: mysql_db: 0.0059070587158203125 seconds to select
 INFO: 2018-08-25 16:40:43,181: mysql_db: 0.0053255558013916016 seconds to select 351 objects indexed=True, doc_size=4.89MB
 INFO: 2018-08-25 16:40:43,200: mysql_db: 0.015995502471923828 seconds to select 351 objects indexed=False, doc_size=4.89MB
 INFO: 2018-08-25 16:40:43,221: mysql_db: 0.01910257339477539 seconds to select 351 objects indexed=False, doc_size=4.89MB
+INFO: 2018-08-25 17:32:42,532: mongo_db: 0.6166877746582031 seconds to bulk insert 4.89MB indexed=True
+INFO: 2018-08-25 17:32:43,306: mongo_db: 0.6176149845123291 seconds to bulk insert 4.89MB indexed=False
+INFO: 2018-08-25 17:32:44,151: mysql_db: 0.5590164661407471 seconds to bulk insert universal 4.89MB
+INFO: 2018-08-25 17:32:44,924: mysql_db: 0.5527760982513428 seconds to bulk insert universal 4.89MB
+INFO: 2018-08-25 17:32:44,943: mongo_db: 0.017174243927001953 seconds to find 351 with indexed=True, doc_size=4.89MB
+INFO: 2018-08-25 17:32:44,962: mongo_db: 0.017043352127075195 seconds to find 351 with indexed=True, doc_size=4.89MB
+INFO: 2018-08-25 17:32:44,995: mongo_db: 0.02953028678894043 seconds to find 351 with indexed=False, doc_size=4.89MB
+INFO: 2018-08-25 17:32:45,027: mongo_db: 0.0302278995513916 seconds to find 351 with indexed=False, doc_size=4.89MB
+INFO: 2018-08-25 17:32:45,037: mysql_db: 0.007759571075439453 seconds to select 351 objects indexed=True, doc_size=4.89MB
+INFO: 2018-08-25 17:32:45,046: mysql_db: 0.00600886344909668 seconds to select 351 objects indexed=True, doc_size=4.89MB
+INFO: 2018-08-25 17:32:45,068: mysql_db: 0.019449472427368164 seconds to select 351 objects indexed=False, doc_size=4.89MB
+INFO: 2018-08-25 17:32:45,093: mysql_db: 0.021146774291992188 seconds to select 351 objects indexed=False, doc_size=4.89MB
+INFO: 2018-08-25 17:33:03,419: mongo_db: 0.0017747879028320312 seconds to insert one indexed=True db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 17:33:04,265: mongo_db: 0.0016362667083740234 seconds to insert one indexed=True db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 17:33:04,991: mongo_db: 0.0017571449279785156 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 17:33:05,789: mongo_db: 0.0019083023071289062 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 17:33:06,582: mysql_db: 0.00045990943908691406 seconds to universal insert one indexed=True, db_size=4.89MB, doc_size=0.01MB
+INFO: 2018-08-25 17:33:07,403: mysql_db: 0.0004611015319824219 seconds to universal insert one indexed=True, db_size=4.89MB, doc_size=0.01MB
+INFO: 2018-08-25 17:33:08,142: mysql_db: 0.0003829002380371094 seconds to universal insert one indexed=False, db_size=4.89MB, doc_size=0.01MB
+INFO: 2018-08-25 17:33:08,872: mysql_db: 0.00044798851013183594 seconds to universal insert one indexed=False, db_size=4.89MB, doc_size=0.01MB
+INFO: 2018-08-25 17:51:41,467: mongo_db: 0.0017189979553222656 seconds to insert one indexed=True db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 17:51:42,249: mongo_db: 0.0015947818756103516 seconds to insert one indexed=True db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 17:51:43,051: mongo_db: 0.0015690326690673828 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 17:51:43,798: mongo_db: 0.0019309520721435547 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 17:51:44,718: mysql_db: 0.0004658699035644531 seconds to universal insert one indexed=True, db_size=4.89MB, doc_size=0.01MB
+INFO: 2018-08-25 17:51:45,597: mysql_db: 0.0004420280456542969 seconds to universal insert one indexed=True, db_size=4.89MB, doc_size=0.01MB
+INFO: 2018-08-25 17:51:46,340: mysql_db: 0.0003650188446044922 seconds to universal insert one indexed=False, db_size=4.89MB, doc_size=0.01MB
+INFO: 2018-08-25 17:51:47,109: mysql_db: 0.00040411949157714844 seconds to universal insert one indexed=False, db_size=4.89MB, doc_size=0.01MB
+INFO: 2018-08-25 17:53:33,929: mongo_db: 0.5953531265258789 seconds to bulk insert 4.89MB indexed=False
+INFO: 2018-08-25 17:53:34,719: mysql_db: 0.511307954788208 seconds to bulk insert universal 4.89MB
+INFO: 2018-08-25 17:53:34,725: mongo_db: 0.003216981887817383 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-25 17:53:34,729: mongo_db: 0.0027701854705810547 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-25 17:53:34,966: mysql_db:  0.23280715942382812 seconds to scan 1000 objects from universal table
+INFO: 2018-08-25 17:53:35,218: mysql_db:  0.24800896644592285 seconds to scan 1000 objects from universal table
+INFO: 2018-08-25 17:53:58,889: mongo_db: 0.6697351932525635 seconds to bulk insert 4.89MB indexed=False
+INFO: 2018-08-25 17:54:00,048: mysql_db: 0.8947770595550537 seconds to bulk insert universal 4.89MB
+INFO: 2018-08-25 17:54:00,057: mongo_db: 0.006134033203125 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-25 17:54:00,073: mongo_db: 0.013709068298339844 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-25 17:54:00,867: mysql_db:  0.7563338279724121 seconds to scan 1000 objects from universal table
+INFO: 2018-08-25 17:54:01,573: mysql_db:  0.6885602474212646 seconds to scan 1000 objects from universal table
+INFO: 2018-08-25 17:54:06,926: mongo_db: 0.620485782623291 seconds to bulk insert 4.89MB indexed=False
+INFO: 2018-08-25 17:54:07,685: mysql_db: 0.4975426197052002 seconds to bulk insert universal 4.89MB
+INFO: 2018-08-25 17:54:07,694: mongo_db: 0.005027055740356445 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-25 17:54:07,700: mongo_db: 0.004018068313598633 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-25 17:54:07,945: mysql_db:  0.23514437675476074 seconds to scan 1000 objects from universal table
+INFO: 2018-08-25 17:54:08,156: mysql_db:  0.20729398727416992 seconds to scan 1000 objects from universal table
+INFO: 2018-08-25 18:41:22,096: mongo_db: 0.6101272106170654 seconds to bulk insert 4.89MB indexed=False
+INFO: 2018-08-25 18:41:22,896: mysql_db: 0.4897582530975342 seconds to bulk insert universal 4.89MB
+INFO: 2018-08-25 18:41:22,901: mongo_db: 0.0033111572265625 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-25 18:41:22,906: mongo_db: 0.0028617382049560547 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-25 18:41:23,138: mysql_db:  0.22866511344909668 seconds to scan 1000 objects from universal table
+INFO: 2018-08-25 18:41:23,374: mysql_db:  0.23118376731872559 seconds to scan 1000 objects from universal table
+INFO: 2018-08-25 18:41:56,248: mongo_db: 0.5999360084533691 seconds to bulk insert 4.89MB indexed=False
+INFO: 2018-08-25 18:41:57,045: mysql_db: 0.5040042400360107 seconds to bulk insert universal 4.89MB
+INFO: 2018-08-25 18:41:57,060: mongo_db: 0.009435892105102539 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-25 18:41:57,071: mongo_db: 0.004801750183105469 seconds to scan 1000 db_size=4.89MB
+INFO: 2018-08-25 18:41:57,298: mysql_db:  0.22267580032348633 seconds to scan 1000 objects from universal table
+INFO: 2018-08-25 18:41:57,524: mysql_db:  0.22168493270874023 seconds to scan 1000 objects from universal table

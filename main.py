@@ -43,6 +43,8 @@ DATABASE_COLLECTION = config.collection_database
 
 
 def log_results(test_name, data):
+    # print test data to console
+    print(test_name)
     try:
         with open(r'logs.csv', 'a') as report:
             writer = csv.writer(report, dialect='excel')
@@ -104,20 +106,18 @@ def ts_scan():
 ###########################
 
 def test_mongo_db_bulk_insert():
-    # times for each insert
-    t1 = []
-
-    # size(s) of docs
-    d = []
+    # timing and metric variables
+    times = []
+    insert_size = []
 
     # perform multiple test iterations
     for i in range(ITERATIONS):
         t, size = mongo_db.bulk_insert(doc_path=DOCUMENT_DICT, indexed=False, drop_on_start=True)
-        t1.append(t), d.append(size)
+        times.append(t), insert_size.append(size)
 
-    log = 'test_1: mongo_db.bulk_insert(), doc_size={}, time_mean={}'
-    print(log.format(size, statistics.mean(t1)))
-    log_results(log[:-14].format(size), t1)
+    log = 'mongo_db.bulk_insert(), doc_size={}, time_mean={}'
+    #print(log.format(size, statistics.mean(times)))
+    log_results(log[:-14].format(size), times)
 
 
 def test_mongo_db_bulk_insert_collections():
@@ -132,8 +132,8 @@ def test_mongo_db_bulk_insert_collections():
         t, size = mongo_db.bulk_insert_collections(doc_path=DOCUMENT_DICT)
         t1.append(t), d.append(size)
 
-    log = 'test_14: mongo_db.bulk_insert_collections(), doc_size={}, time_mean={}'
-    print(log.format(size, statistics.mean(t1)))
+    log = 'mongo_db.bulk_insert_collections(), doc_size={}, time_mean={}'
+    #print(log.format(size, statistics.mean(t1)))
     log_results(log[:-14].format(size), t1)
 
 
@@ -145,8 +145,8 @@ def test_mysql_db_bulk_insert_universal():
     for runs in range(ITERATIONS):
         t, size = mysql_db.bulk_insert_universal(doc_path=DOCUMENT)
         t1.append(t), d.append(size)
-    log = 'test_7: mysql_db.bulk_insert_universal(), doc_size={}, time_mean={}'
-    print(log.format(size, statistics.mean(t1)))
+    log = 'mysql_db.bulk_insert_universal(), doc_size={}, time_mean={}'
+    #print(log.format(size, statistics.mean(t1)))
     log_results(log[:-14].format(size), t1)
 
 
@@ -160,8 +160,8 @@ def test_mysql_db_bulk_insert_normalized():
         t, size = mysql_db.bulk_insert_normalized()
         t1.append(t), d.append(size)
 
-    log = 'test_8: mysql_db.bulk_insert_normalized(), doc_size={}, time_mean={}'
-    print(log.format(size, statistics.mean(t1)))
+    log = 'mysql_db.bulk_insert_normalized(), doc_size={}, time_mean={}'
+    #print(log.format(size, statistics.mean(t1)))
     log_results(log[:-14].format(size), t1)
 
 
@@ -180,8 +180,8 @@ def test_mongo_db_insert_one(indexed):
     for i in range(ITERATIONS):
         t, size, size2, run = mongo_db.insert_one(indexed=indexed, drop_on_start=True, doc_path=DOCUMENT_DICT)
         t1.append(t), r.append(run)
-    log = 'test_: mongo_db.insert_one, indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
-    print(log.format(indexed, size2, size, statistics.mean(t1), statistics.mean(r)))
+    log = 'mongo_db.insert_one, indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
+    #print(log.format(indexed, size2, size, statistics.mean(t1), statistics.mean(r)))
     log_results(log[:-14].format(indexed, size2, size, statistics.mean(r)), t1)
 
 
@@ -193,8 +193,8 @@ def test_mysql_db_insert_one(indexed):
     for runs in range(ITERATIONS):
         t, size, size2, run = mysql_db.insert_one(indexed)
         t1.append(t), r.append(run)
-    log = 'test_9: mysql_db.universal_insert_one indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
-    print(log.format(indexed,size2, size, statistics.mean(t1), statistics.mean(r)))
+    log = 'mysql_db.universal_insert_one, indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
+    #print(log.format(indexed,size2, size, statistics.mean(t1), statistics.mean(r)))
     log_results(log[:-14].format(indexed, size2, size, statistics.mean(r)), t1)
 
 
@@ -211,8 +211,8 @@ def test_mongo_db_find(indexed):
         t, size = mongo_db.find(doc_path=DOCUMENT_DICT, indexed=indexed)
         t1.append(t)
 
-    log = 'test_4: mongo_db.find, indexed={}, db_size= {}, time_mean={}'
-    print(log.format(indexed, size, statistics.mean(t1)))
+    log = 'mongo_db.find, indexed={}, db_size= {}, time_mean={}'
+    #print(log.format(indexed, size, statistics.mean(t1)))
     log_results(log[:-14].format(indexed, size), t1)
 
 
@@ -225,9 +225,9 @@ def test_mysql_db_select(indexed):
         t, size= mysql_db.select(indexed=indexed, doc_path=DOCUMENT)
         t1.append(t)
 
-    log = 'test_11: mysql_db.select, indexed={}, db_size= {}, time_mean={}'
+    log = 'mysql_db.select, indexed={}, db_size= {}, time_mean={}'
 
-    print(log.format(indexed, size, statistics.mean(t1)))
+    #print(log.format(indexed, size, statistics.mean(t1)))
     log_results(log[:-14].format(indexed, size), t1)
 
 
@@ -244,9 +244,9 @@ def test_mongo_db_scan():
         t, scanned = mongo_db.scan_all(doc_path=DOCUMENT_DICT)
         t1.append(t)
 
-    log = 'test_6: mongo_db.scan_all(), time_mean={}, db_size={}, scanned={}'
+    log = 'mongo_db.scan, time_mean={}, db_size={}, scanned={}'
     db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
-    print(log.format(statistics.mean(t1),db_size,scanned))
+    #print(log.format(statistics.mean(t1),db_size,scanned))
     log_results(log.format(statistics.mean(t1), db_size, scanned), t1)
 
 
@@ -258,14 +258,11 @@ def test_mysql_db_scan():
         t, scanned = mysql_db.scan_all()
         t1.append(t)
 
-    log = 'test_13: mysql_db.scan_all(), time_mean={}, db_size={}, scanned={}'
+    log = 'mysql_db.scan, time_mean={}, db_size={}, scanned={}'
     db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
 
-    print(log.format(statistics.mean(t1),db_size, scanned))
+    #print(log.format(statistics.mean(t1),db_size, scanned))
     log_results(log.format(statistics.mean(t1), db_size, scanned), t1)
-
-
-
 
 
 # TODO: finish proper argument
@@ -277,11 +274,10 @@ parser.add_argument('-ts', '--test_suite', help='Select a test suite to perform.
 parser.add_argument('-t', '--test', help='Select a manual test to perform.', required=False, type=int,
                     choices=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
 
-parser.add_argument('-s', '--size', help='doc size {1=5MB, 2=50MB, 3=100MB, 4=500MB, 5=1GB, 6=MaxGB }', default=1, type=int,
-                    required=False, choices=[1, 2, 3, 4, 5, 6])
+parser.add_argument('-s', '--size', help='{1=5MB, 2=50MB, 3=100MB, 4=500MB, 5=1GB, 6=MaxGB }', type=int,required=False,
+                    choices=[1, 2, 3, 4, 5, 6])
 
-parser.add_argument('-i', '--iterations', help='Number of iterations.', type=int, required=False, default=1)
-
+parser.add_argument('-i', '--iterations', help='Number of iterations.', type=int, required=False, default=2)
 
 parser.add_argument('-d', '--debug', help='Debugger verbosity.', required=False, default='v',
                     choices=['v', 'vv', 'vvv'])
@@ -289,7 +285,6 @@ parser.add_argument('-d', '--debug', help='Debugger verbosity.', required=False,
 
 args = parser.parse_args()
 
-#ITERATIONS=args.iterations
 
 # if args.size ==1:
 #     logger.info("size=5MB")
@@ -340,8 +335,8 @@ if __name__ == "__main__":
 
     #ts_bulk_insert()
     #ts_insert_index()
-    ts_find_index()
-    #ts_scan()
+  #  ts_find_index()
+    ts_scan()
 
 class DatabaseThreads(threading.Thread):
     def __init__(self, thread_id, database):
