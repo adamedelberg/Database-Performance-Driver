@@ -329,8 +329,8 @@ def bulk_insert_collections(doc_path):
     coll_tweets.create_index([("id", pymongo.ASCENDING)], name='tweet.id index', unique=True)
     coll_users.create_index([("id", pymongo.ASCENDING)], name='user.id index', unique=True)
 
-    doc1 = open('../doc1.json', 'w')
-    doc2 = open('../doc2.json', 'w')
+    doc1 = open('../dump1.json', 'w')
+    doc2 = open('../dump2.json', 'w')
     doc1.write('['), doc2.write('[')
 
     count = 0
@@ -368,7 +368,7 @@ def bulk_insert_collections(doc_path):
     doc1.write(']'), doc2.write(']')
     doc1.close(), doc2.close()
 
-    document = open('../doc1.json', 'r')
+    document = open('../dump1.json', 'r')
     document = json.load(document)
 
     start = time.time()
@@ -378,7 +378,7 @@ def bulk_insert_collections(doc_path):
         print()
     exec += time.time() - start
 
-    document = open('../doc2.json', 'r')
+    document = open('../dump2.json', 'r')
     document = json.load(document)
 
     start = time.time()

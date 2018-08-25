@@ -347,6 +347,7 @@ def bulk_insert_universal_indexed_2():
 
 
 def universal_insert_one_with_indexing_2():
+
     stmts = get_statements(table='universal_indexed')
 
     delete_from_table(table='universal_indexed')
@@ -356,12 +357,12 @@ def universal_insert_one_with_indexing_2():
     cursor = connector.cursor()
     run = 0
     for sql in stmts:
-        start = time.time()
         try:
+            start = time.time()
             cursor.execute(sql)
+            run += time.time() - start
         except Exception as e:
             pass
-        run += time.time() - start
 
     stmts = get_statements(table='universal_indexed', doc=DOCUMENT_SINGLE)
 
@@ -375,6 +376,7 @@ def universal_insert_one_with_indexing_2():
 
     #logger.info("{} seconds to universal_insert_one_with_indexing".format(run2))
     single_size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
+
     db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
 
     logger.info("{} seconds to universal insert one with indexing, db_size={} doc_size={}".format(run2, db_size, single_size))
@@ -460,14 +462,9 @@ def get_statements(table, doc=DOCUMENT):
             place_name = str(data['place']['name']) if 'country' in data else None
             place_place_type = str(data['place']['place_type']) if 'country' in data else None
             place_url = str(data['place']['url']) if 'country' in data else None
-
             quoted_status_id = str(data['quoted_status_id']) if 'quoted_status_id' in data else None
             quoted_status_id_str = str(data['quoted_status_id_str']) if 'quoted_status_id' in data else None
-
             quoted_status = str(data['quoted_status']['text']).replace("\'","\\'") if 'quoted_status' in data else None
-
-
-
             possibly_sensitive = str(data['possibly_sensitive']) if 'possibly_sensitive' in data else None
             retweeted_status = str(data['retweeted_status']['id']) if 'retweeted_status' in data else None
 
