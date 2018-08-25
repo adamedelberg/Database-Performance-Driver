@@ -19,6 +19,7 @@ import config
 
 logger = logging.getLogger(__name__)
 
+# set defaults
 DATABASE = config.database
 DATABASE_INDEXED = config.indexed_database
 COLLECTION = config.collection

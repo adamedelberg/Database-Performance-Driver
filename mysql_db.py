@@ -21,6 +21,7 @@ import config
 
 logger = logging.getLogger(__name__)
 
+# set defaults
 USER = config.username
 PASS = config.password
 HOST = config.mysql_host
@@ -49,6 +50,7 @@ def connect(host, port, user, password, database):
     except pymysql.err.Error as code:
         logger.info("PyMySQL Error: {}".format(code))
     return client
+
 
 # untested
 def create_schema():

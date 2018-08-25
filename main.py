@@ -58,58 +58,52 @@ def log_results(test_name, data):
 
 
 def ts_bulk_insert():
-    #  test_1: Mongo Bulk Insert
-    t1_mongo_db_bulk_insert()
-    #  test_14: Mongo Bulk Insert Collections
-    t14_mongo_db_bulk_insert_collections()
-    #  test_7: MySQL Bulk Insert Universal
-    t7_mysql_db_bulk_insert_universal()
-    #  test_8: MySQL Bulk Insert Normalized
-    t8_mysql_db_bulk_insert_normalized()
+    test_mongo_db_bulk_insert()
+    test_mongo_db_bulk_insert_collections()
+
+    test_mysql_db_bulk_insert_universal()
+    test_mysql_db_bulk_insert_normalized()
 
 
 def ts_insert_index():
-    t2_mongo_db_insert_one(indexed=True)
-    t2_mongo_db_insert_one(indexed=False)
+    test_mongo_db_insert_one(indexed=True)
+    test_mongo_db_insert_one(indexed=False)
 
-    t9_mysql_db_insert_one(indexed=True)
-    t9_mysql_db_insert_one(indexed=False)
-
+    test_mysql_db_insert_one(indexed=True)
+    test_mysql_db_insert_one(indexed=False)
 
 
 def ts_find_index():
-    mongo_db.bulk_insert(doc_path=DOCUMENT_DICT,indexed=True, drop_on_start=True)
-    mongo_db.bulk_insert(doc_path=DOCUMENT_DICT, indexed=False, drop_on_start=True)
+    mongo_db.bulk_insert(doc_path=DOCUMENT_DICT,indexed=True, drop_on_start=True, drop_on_exit=True)
+    mongo_db.bulk_insert(doc_path=DOCUMENT_DICT, indexed=False, drop_on_start=True, drop_on_exit=True)
 
     mysql_db.bulk_insert_universal(doc_path=DOCUMENT, indexed=True)
     mysql_db.bulk_insert_universal(doc_path=DOCUMENT, indexed=False)
 
-    t4_mongo_db_find(indexed=True)
-    t4_mongo_db_find(indexed=False)
+    test_mongo_db_find(indexed=True)
+    test_mongo_db_find(indexed=False)
 
-    t11_mysql_db_select(indexed=True)
-    t11_mysql_db_select(indexed=False)
+    test_mysql_db_select(indexed=True)
+    test_mysql_db_select(indexed=False)
+
 
 def ts_scan():
-    mongo_db.bulk_insert(doc_path=DOCUMENT_DICT,indexed=False, drop_on_start=True)
+    mongo_db.bulk_insert(doc_path=DOCUMENT_DICT,indexed=False, drop_on_start=True, drop_on_exit=True)
     mysql_db.bulk_insert_universal(doc_path=DOCUMENT, indexed=False)
 
-    #  test_6: MongoDB Scan
-    t6_mongo_db_scan()
-    #  test_13: MySQL Scan
-    t13_mysql_db_scan()
+    test_mongo_db_scan()
+    test_mysql_db_scan()
 
 
 ############################################################
 #                  MANUAL TEST PROCEDURES                  #
 ############################################################
 
-############################
+###########################
 # OP 1: Bulk Insert Tests
 ###########################
 
-# test_1: mongo_db_bulk_insert
-def t1_mongo_db_bulk_insert():
+def test_mongo_db_bulk_insert():
     # times for each insert
     t1 = []
 
@@ -126,72 +120,7 @@ def t1_mongo_db_bulk_insert():
     log_results(log[:-14].format(size), t1)
 
 
-# test_7: mysql_db.bulk_insert_universal()
-def t7_mysql_db_bulk_insert_universal():
-    # times for each insert
-    t1 = []
-    d = []
-    # perform multiple test iterations
-    for runs in range(ITERATIONS):
-        t, size = mysql_db.bulk_insert_universal(doc_path=DOCUMENT)
-        t1.append(t), d.append(size)
-    log = 'test_7: mysql_db.bulk_insert_universal(), doc_size={}, time_mean={}'
-    print(log.format(size, statistics.mean(t1)))
-    log_results(log[:-14].format(size), t1)
-
-
-# test_8: mysql_db.bulk_insert_normalized()
-def t8_mysql_db_bulk_insert_normalized():
-    # times for each insert
-    t1 = []
-    d = []
-
-    # perform multiple test iterations
-    for runs in range(ITERATIONS):
-        t, size = mysql_db.bulk_insert_normalized()
-        t1.append(t), d.append(size)
-
-    log = 'test_8: mysql_db.bulk_insert_normalized(), doc_size={}, time_mean={}'
-    print(log.format(size, statistics.mean(t1)))
-    log_results(log[:-14].format(size), t1)
-
-############################
-# OP 1: Indexed Insert Tests
-###########################
-
-# test_2: mongo_db_insert_one
-def t2_mongo_db_insert_one(indexed):
-    # times for each insert
-    t1 = []
-
-    # size(s) of docs
-    d = []
-    r = []
-    # perform multiple test iterations
-    for i in range(ITERATIONS):
-        t, size, size2, run = mongo_db.insert_one(indexed=indexed, drop_on_start=True, doc_path=DOCUMENT_DICT)
-        t1.append(t), r.append(run)
-    log = 'test_: mongo_db.insert_one, indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
-    print(log.format(indexed, size2, size, statistics.mean(t1), statistics.mean(r)))
-    log_results(log[:-14].format(indexed, size2, size, statistics.mean(r)), t1)
-
-
-# test_9: mysql_db.universal_insert_one_with_indexing()
-def t9_mysql_db_insert_one(indexed):
-    # times for each insert
-    t1 = []
-    r = []
-    # perform multiple test iterations
-    for runs in range(ITERATIONS):
-        t, size, size2, run = mysql_db.insert_one(indexed)
-        t1.append(t), r.append(run)
-    log = 'test_9: mysql_db.universal_insert_one indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
-    print(log.format(indexed,size2, size, statistics.mean(t1), statistics.mean(r)))
-    log_results(log[:-14].format(indexed, size2, size, statistics.mean(r)), t1)
-
-
-# test_14: mongo_db.bulk_insert_collections()
-def t14_mongo_db_bulk_insert_collections():
+def test_mongo_db_bulk_insert_collections():
     # times for each insert
     t1 = []
 
@@ -208,10 +137,72 @@ def t14_mongo_db_bulk_insert_collections():
     log_results(log[:-14].format(size), t1)
 
 
+def test_mysql_db_bulk_insert_universal():
+    # times for each insert
+    t1 = []
+    d = []
+    # perform multiple test iterations
+    for runs in range(ITERATIONS):
+        t, size = mysql_db.bulk_insert_universal(doc_path=DOCUMENT)
+        t1.append(t), d.append(size)
+    log = 'test_7: mysql_db.bulk_insert_universal(), doc_size={}, time_mean={}'
+    print(log.format(size, statistics.mean(t1)))
+    log_results(log[:-14].format(size), t1)
+
+
+def test_mysql_db_bulk_insert_normalized():
+    # times for each insert
+    t1 = []
+    d = []
+
+    # perform multiple test iterations
+    for runs in range(ITERATIONS):
+        t, size = mysql_db.bulk_insert_normalized()
+        t1.append(t), d.append(size)
+
+    log = 'test_8: mysql_db.bulk_insert_normalized(), doc_size={}, time_mean={}'
+    print(log.format(size, statistics.mean(t1)))
+    log_results(log[:-14].format(size), t1)
+
+
+##############################
+# OP 2: Indexed Insert Tests
+##############################
+
+def test_mongo_db_insert_one(indexed):
+    # times for each insert
+    t1 = []
+
+    # size(s) of docs
+    d = []
+    r = []
+    # perform multiple test iterations
+    for i in range(ITERATIONS):
+        t, size, size2, run = mongo_db.insert_one(indexed=indexed, drop_on_start=True, doc_path=DOCUMENT_DICT)
+        t1.append(t), r.append(run)
+    log = 'test_: mongo_db.insert_one, indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
+    print(log.format(indexed, size2, size, statistics.mean(t1), statistics.mean(r)))
+    log_results(log[:-14].format(indexed, size2, size, statistics.mean(r)), t1)
+
+
+def test_mysql_db_insert_one(indexed):
+    # times for each insert
+    t1 = []
+    r = []
+    # perform multiple test iterations
+    for runs in range(ITERATIONS):
+        t, size, size2, run = mysql_db.insert_one(indexed)
+        t1.append(t), r.append(run)
+    log = 'test_9: mysql_db.universal_insert_one indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
+    print(log.format(indexed,size2, size, statistics.mean(t1), statistics.mean(r)))
+    log_results(log[:-14].format(indexed, size2, size, statistics.mean(r)), t1)
+
+
 ############################
 # OP 3: Find Indexed Tests
-###########################
-def t4_mongo_db_find(indexed):
+############################
+
+def test_mongo_db_find(indexed):
     # times for each
     t1 = []
 
@@ -225,7 +216,7 @@ def t4_mongo_db_find(indexed):
     log_results(log[:-14].format(indexed, size), t1)
 
 
-def t11_mysql_db_select(indexed):
+def test_mysql_db_select(indexed):
     # times for each insert
     t1 = []
 
@@ -244,8 +235,7 @@ def t11_mysql_db_select(indexed):
 # OP 4: Scan Tests
 ####################
 
-# test_6: mongo_db.scan_all()
-def t6_mongo_db_scan():
+def test_mongo_db_scan():
     # times for each
     t1 = []
 
@@ -260,8 +250,7 @@ def t6_mongo_db_scan():
     log_results(log.format(statistics.mean(t1), db_size, scanned), t1)
 
 
-# test_13: mysql_db.scan_all()
-def t13_mysql_db_scan():
+def test_mysql_db_scan():
     # times for each insert
     t1 = []
 
@@ -328,20 +317,20 @@ if args.test_suite == 4:
     logger.info("PERFORMING OP 4: Scan Test Suite")
     ts_scan()
 
-if args.test == 1: t1_mongo_db_bulk_insert()
-if args.test == 2: t2_mongo_db_insert_one(indexed=True)
-if args.test == 3: t2_mongo_db_insert_one(indexed=False)
-if args.test == 4: t4_mongo_db_find(indexed=True)
-if args.test == 5: t4_mongo_db_find(indexed=False)
-if args.test == 6: t6_mongo_db_scan()
-if args.test == 7: t7_mysql_db_bulk_insert_universal()
-if args.test == 8: t8_mysql_db_bulk_insert_normalized()
-if args.test == 9: t9_mysql_db_insert_one(indexed=True)
-if args.test == 10: t9_mysql_db_insert_one(indexed=False)
-if args.test == 11: t11_mysql_db_select(indexed=True)
-if args.test == 12: t11_mysql_db_select(indexed=False)
-if args.test == 13: t13_mysql_db_scan()
-if args.test == 14: t14_mongo_db_bulk_insert_collections()
+if args.test == 1: test_mongo_db_bulk_insert()
+if args.test == 2: test_mongo_db_insert_one(indexed=True)
+if args.test == 3: test_mongo_db_insert_one(indexed=False)
+if args.test == 4: test_mongo_db_find(indexed=True)
+if args.test == 5: test_mongo_db_find(indexed=False)
+if args.test == 6: test_mongo_db_scan()
+if args.test == 7: test_mysql_db_bulk_insert_universal()
+if args.test == 8: test_mysql_db_bulk_insert_normalized()
+if args.test == 9: test_mysql_db_insert_one(indexed=True)
+if args.test == 10: test_mysql_db_insert_one(indexed=False)
+if args.test == 11: test_mysql_db_select(indexed=True)
+if args.test == 12: test_mysql_db_select(indexed=False)
+if args.test == 13: test_mysql_db_scan()
+if args.test == 14: test_mongo_db_bulk_insert_collections()
 
 if __name__ == "__main__":
     # call connect to check access to databases
