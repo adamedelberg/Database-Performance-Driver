@@ -14,6 +14,9 @@ import time
 import os
 import pymysql
 import mysql.connector
+from pymysql import err
+
+
 import config
 
 logger = logging.getLogger(__name__)
@@ -43,8 +46,8 @@ def connect(host, port, user, password, database):
     try:
         client = pymysql.connect(user=user, password=password, host=host, db=database, port=port, autocommit=False)
         logger.debug("CONNECTED ON: {}:{}".format(client.host, client.port))
-    except mysql.connector.errorcode as code:
-        logger.info("CONNECTION FAILED! ERRO: {}".format(code))
+    except pymysql.err.Error as code:
+        logger.info("PyMySQL Error: {}".format(code))
     return client
 
 # untested
