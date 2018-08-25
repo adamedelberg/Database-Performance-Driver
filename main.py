@@ -45,6 +45,7 @@ def log_results(test_name, data):
     # print test data to console
     print(test_name)
     try:
+        # logs get appended to the same file
         with open(r'logs.csv', 'a') as report:
             writer = csv.writer(report, dialect='excel')
             writer.writerow([test_name] + data)
