@@ -359,7 +359,7 @@ def universal_insert_one_with_indexing_2():
 
     logger.info("{} seconds to universal insert one with indexing, db_size={} doc_size={}".format(run2, db_size, single_size))
 
-    return run2, single_size, db_size
+    return run2, single_size, db_size, run
     #return run2
 
 
@@ -395,7 +395,7 @@ def universal_insert_one_without_indexing_2():
     #logger.info("{} seconds to universal_insert_one_without_indexing".format(run))
     logger.info("{} seconds to universal insert one without indexing, db_size={} doc_size={}".format(run2, db_size, single_size))
 
-    return run2, single_size, db_size
+    return run2, single_size, db_size, run
 
 # not used
 def bulk_insert_universal_indexed_2():

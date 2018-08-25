@@ -323,3 +323,9 @@ test_13: mysql_db.scan_all(),0.3682060241699219,0.3692920207977295,0.25095510482
 "test_3: mongo_db.insert_one_non_indexed(drop=True), db_size= 4.89MB, doc_size=0.01MB",0.0017023086547851562,0.0015959739685058594
 "test_9: mysql_db.universal_insert_one_with_indexing(), db_size= 4.89MB, doc_size=0.01MB",0.0006468296051025391,0.0004177093505859375
 "test_10: mysql_db.universal_insert_one_without_indexing(), db_size= 4.89MB, doc_size=0.01MB",0.0003750324249267578,0.00034999847412109375
+"test_2: mongo_db.insert_one_indexed(drop=True), db_size= 4.89MB, doc_size=0.01MB",0.001711130142211914,0.0017368793487548828
+"test_2: mongo_db.insert_one_indexed(drop=True), db_size= 4.89MB, doc_size=0.01MB",0.001851797103881836,0.0017118453979492188
+"test_2: mongo_db.insert_one_indexed(drop=True), db_size= 4.89MB, doc_size=0.01MB",0.0016541481018066406,0.0016436576843261719
+"test_3: mongo_db.insert_one_non_indexed(drop=True), db_size= 4.89MB, doc_size=0.01MB",0.0016489028930664062,0.001641988754272461
+"test_9: mysql_db.universal_insert_one_with_indexing(), db_size= 4.89MB, doc_size=0.01MB",0.00047516822814941406,0.00043773651123046875
+"test_10: mysql_db.universal_insert_one_without_indexing(), db_size= 4.89MB, doc_size=0.01MB",0.000377655029296875,0.00034928321838378906

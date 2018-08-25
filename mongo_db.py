@@ -108,7 +108,7 @@ def insert_one_indexed(drop_on_start, doc_path, drop_on_exit=False):
     logger.info("{} seconds to insert one with indexing, db_size={} doc_size={}".format(run2, db_size, single_size))
 
     if drop_on_exit: drop_database(DATABASE_INDEXED)
-    return run2, single_size, db_size
+    return run2, single_size, db_size, run
 
 
 def insert_one_non_indexed(doc_path, drop_on_start, drop_on_exit=False):
@@ -151,7 +151,7 @@ def insert_one_non_indexed(doc_path, drop_on_start, drop_on_exit=False):
     db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
     logger.info("{} seconds to insert one without indexing, db_size={} doc_size={}".format(run2, db_size, single_size))
     if drop_on_exit: drop_database(DATABASE)
-    return run2, single_size, db_size
+    return run2, single_size, db_size, run
 
 
 def bulk_insert(doc_path, indexed, drop_on_start=True,drop_on_exit=False):
