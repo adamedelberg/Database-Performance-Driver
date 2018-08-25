@@ -17,9 +17,6 @@ import config
 
 logger = logging.getLogger(__name__)
 
-HOST = config.host
-PORT = config.port
-
 DATABASE = config.database
 DATABASE_INDEXED = config.indexed_database
 COLLECTION = config.collection
@@ -27,14 +24,16 @@ DOCUMENT = config.document
 DOCUMENT_DICT = config.document_dict
 DOCUMENT_SINGLE = config.document_single
 DATABASE_COLLECTION = config.collection_database
+HOST=config.host
+PORT =config.port
 
 
-def connect(host=HOST, port=PORT):
-    """Connect to the MongoDB Server
+def connect(host, port):
+    """Connect to the MongoDB Server on host:port
 
     Parameters:
-        host - see configs - server host [default = 'localhost']
-        port - see configs - server port [default = 27017]
+        host - see configs - [default = 'localhost']
+        port - see configs - [default = 27017]
     Returns:
         client - MongoClient object"""
 
@@ -42,8 +41,8 @@ def connect(host=HOST, port=PORT):
     try:
         client = MongoClient(host, port)
         logger.debug("CONNECTED ON: {}:{}".format(client.HOST, client.PORT))
-    except pymongo.errors.ConnectionFailure as err:
-        logger.info("CONNECTION FAILED! ERROR: {}".format(err))
+    except pymongo.errors.ConnectionFailure as code:
+        logger.info("CONNECTION FAILED! ERROR: {}".format(code))
     return client
 
 
@@ -65,11 +64,11 @@ def create_indexes(database):
         logger.warning("ERROR ON INDEXES! see: create_indexes()")
 
 
-def insert_one_indexed(drop, doc_path):
+def insert_one_indexed(drop_on_start, doc_path, drop_on_exit=False):
     """Inserts a single document to the indexed benchmark_db database
 
     Parameters:
-        drop
+        drop_on_start
         doc_path
 
     Returns:
@@ -78,7 +77,7 @@ def insert_one_indexed(drop, doc_path):
         db_size     - size of the database
     """
 
-    if drop: drop_database(DATABASE_INDEXED)
+    if drop_on_start: drop_database(DATABASE_INDEXED)
 
     client = MongoClient(HOST, PORT)
     database = client.get_database(DATABASE_INDEXED)
@@ -108,15 +107,17 @@ def insert_one_indexed(drop, doc_path):
 
     logger.info("{} seconds to insert one with indexing, db_size={} doc_size={}".format(run2, db_size, single_size))
 
+    if drop_on_exit: drop_database(DATABASE_INDEXED)
     return run2, single_size, db_size
 
 
-def insert_one_non_indexed(doc_path, drop):
+def insert_one_non_indexed(doc_path, drop_on_start, drop_on_exit=False):
     """Inserts a single document to the benchmark_db database
 
        Parameters:
            doc_path
-           drop
+           drop_on_start
+           drop_on_exit
        Returns:
            run2         - time taken to execute MongoDB commands
            single_size  - size of the inserted document
@@ -125,7 +126,7 @@ def insert_one_non_indexed(doc_path, drop):
 
     drop_database(DATABASE)
 
-    db = connect().get_database(DATABASE)
+    db = connect(HOST, PORT).get_database(DATABASE)
 
     coll = db.get_collection(COLLECTION)
 
@@ -149,10 +150,11 @@ def insert_one_non_indexed(doc_path, drop):
     single_size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
     db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
     logger.info("{} seconds to insert one without indexing, db_size={} doc_size={}".format(run2, db_size, single_size))
+    if drop_on_exit: drop_database(DATABASE)
     return run2, single_size, db_size
 
 
-def bulk_insert(doc_path, indexed):
+def bulk_insert(doc_path, indexed, drop_on_start=True,drop_on_exit=False):
     """Bulk insert into MongoDB database
 
     Parameters:
@@ -162,10 +164,10 @@ def bulk_insert(doc_path, indexed):
 
     """
 
-    # drop database
-    drop_database(DATABASE)
+    # check drop flag
+    if drop_on_start: drop_database(DATABASE)
 
-    db = connect().get_database(DATABASE)
+    db = connect(HOST,PORT).get_database(DATABASE)
     coll = db.get_collection(COLLECTION)
 
     document = open(doc_path, 'r')
@@ -176,7 +178,7 @@ def bulk_insert(doc_path, indexed):
     run = time.time() - start
 
     if indexed:
-        db2 = connect().get_database(DATABASE_INDEXED)
+        db2 = connect(HOST,PORT).get_database(DATABASE_INDEXED)
         coll2 = db2.get_collection(COLLECTION)
         drop_database(DATABASE_INDEXED)
         create_indexes(db2)
@@ -185,6 +187,10 @@ def bulk_insert(doc_path, indexed):
     count = coll.count()
     size = "{}MB".format(round(os.path.getsize(doc_path) / 1024 / 1024, 2))
     logger.info("{} seconds to bulk insert {}".format(run, size))
+
+
+    # check drop flag on exit
+    if drop_on_exit: drop_database(DATABASE)
 
     return run, size
 
@@ -290,7 +296,7 @@ def scan_all(doc_path):
 def drop_database(database):
     try:
         # client = MongoClient(HOST, PORT)
-        connect().drop_database(database)
+        connect(HOST,PORT).drop_database(database)
         # client.drop_database(database)
         logger.debug("DROPPED {}!".format(database))
 

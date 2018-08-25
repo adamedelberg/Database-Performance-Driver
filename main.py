@@ -24,7 +24,7 @@ import timeit
 
 # console logging
 logging_format = '%(levelname)s: %(asctime)s: %(name)s: %(message)s'
-logging.basicConfig(level=logging.WARNING, format=logging_format)
+logging.basicConfig(level=logging.INFO, format=logging_format)
 handler = logging.FileHandler('console.log')
 handler.setFormatter(logging.Formatter(logging_format))
 logger = logging.getLogger()
@@ -43,13 +43,8 @@ DATABASE_COLLECTION = config.collection_database
 
 
 def setup():
-    # logger.debug('MEMORY USING: %s'% (psutil.Process(os.getpid()).memory_info().rss))
-    # logger.debug('VIRTUAL: %s' % (psutil.Process(os.getpid()).memory_info().vms))
-    # logger.debug(psutil.virtual_memory().available)
-    # logger.debug((psutil.virtual_memory().total))
-    # test connection to databases
-    mongo_db.connect()
-    mysql_db.connect()
+    mongo_db.connect(host=config.host,port=config.port)
+    mysql_db.connect(host=config.mysql_host, port=config.mysql_port, user=config.username, password=config.password, database=config.database)
     print()
 
 
@@ -126,6 +121,9 @@ def ts_scan():
 #                  MANUAL TEST PROCEDURES                  #
 ############################################################
 
+############################
+# OP 1: Bulk Insert Tests
+###########################
 
 # test_1: mongo_db.bulk_insert()
 def t1_mongo_db_bulk_insert():
@@ -156,7 +154,7 @@ def t2_mongo_db_insert_one_indexed():
 
     # perform multiple test iterations
     for i in range(ITERATIONS):
-        t, size, size2 = mongo_db.insert_one_indexed(drop=True, doc_path=DOCUMENT_DICT)
+        t, size, size2 = mongo_db.insert_one_indexed(drop_on_start=True, doc_path=DOCUMENT_DICT)
         t1.append(t)
         #d.append(size), d2.append(size2)
 
@@ -175,12 +173,18 @@ def t3_mongo_db_insert_one_non_indexed():
 
     # perform multiple test iterations
     for i in range(ITERATIONS):
-        t, size, size2 = mongo_db.insert_one_non_indexed(drop=True, doc_path=DOCUMENT_DICT)
-        t1.append(t)#, d.append(size)
+        t, size, size2 = mongo_db.insert_one_non_indexed(drop_on_start=True, doc_path=DOCUMENT_DICT)
+        t1.append(t)
 
     log = 'test_3: mongo_db.insert_one_non_indexed(drop=True), db_size= {}, doc_size={}, time_mean={}'
     print(log.format(size2, size, statistics.mean(t1)))
     log_results(log[:-14].format(size2, size), t1)
+
+
+
+
+
+
 
 ############################
 # OP 3: Find Indexed Tests
@@ -443,10 +447,10 @@ if args.test == 14: t14_mongo_db_bulk_insert_collections()
 if __name__ == "__main__":
     # call main setup
     setup()
-    ts_bulk_insert()
+    #ts_bulk_insert()
     ts_insert_index()
-    ts_find_index()
-    ts_scan()
+    #ts_find_index()
+    #ts_scan()
 
 class DatabaseThreads(threading.Thread):
     def __init__(self, thread_id, database):

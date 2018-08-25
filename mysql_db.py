@@ -27,32 +27,39 @@ DOCUMENT = config.document
 DOCUMENT_SINGLE = config.document_single
 
 
-def connect(host=HOST, port=PORT, user=USER, password=PASS, db=DATABASE):
+def connect(host, port, user, password, database):
     """Connect to the MySQL Server
 
     Parameters:
-        host - server host [default = 'localhost']
-        port - server port [default = 3306]
-        user - username [default = 'root']
-        pswd - password [default = 'root']
-        db - database name [default = 'benchmark_db']
+        host        - server host      - [default = 'localhost']
+        port        - server port      - [default = 3306]
+        user        - username         - [default = 'root']
+        password    - password         - [default = 'root']
+        database    - database name    - [default = 'benchmark_db']
     Returns:
-        client - PyMySQL Connector Object"""
+        client      - PyMySQL Connector Object"""
 
     global client
     try:
-        # connector = mysql.connector.connect(user=USER, password=PASS, host=HOST)
-        client = pymysql.connect(user=user, password=password, host=host, db=db, port=port, autocommit=False)
+        client = pymysql.connect(user=user, password=password, host=host, db=database, port=port, autocommit=False)
         logger.debug("CONNECTED ON: {}:{}".format(client.host, client.port))
-    except mysql.connector.errorcode as err:
-        logger.info("CONNECTION FAILED: " + err)
+    except mysql.connector.errorcode as code:
+        logger.info("CONNECTION FAILED! ERRO: {}".format(code))
     return client
 
-
-def set_up():
+# untested
+def create_schema():
     client = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     cursor = client.cursor()
-    #sql = 'DELETE from {};'.format(table)
+
+    f = open('/schema/schema.sql', 'r')
+
+    try:
+        sql = f.read()
+        cursor.execute(sql)
+
+    finally:
+        f.close()
 
 
 def delete_from_table(table):
@@ -419,9 +426,11 @@ def bulk_insert_universal_indexed_2():
 
     return run, len(stmts)
 
+
 #############################
 #  Generate SQL Statements  #
 #############################
+
 
 def get_statements(table, doc=DOCUMENT):
     document = io.open(doc, 'r')
