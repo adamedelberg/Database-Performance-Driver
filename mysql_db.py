@@ -115,47 +115,6 @@ def scan_all():
     return run, count
 
 
-def select_with_indexing():
-    conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
-    cursor = conn.cursor()
-
-    sql1 = "SELECT COUNT(*) from universal_indexed where `users.location` = 'London';"
-    sql2 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.friends_count`>1000;"
-    sql3 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.followers_count`>1000;"
-
-    num = 0
-    sql_time = 0
-
-    for i in range(5):
-        start = time.time()
-        cursor.execute(sql1)
-        sql_time += time.time() - start
-
-        res = cursor.fetchone()
-        for row in res: num=row
-
-    for i in range(5):
-        start = time.time()
-
-        cursor.execute(sql2)
-        sql_time += time.time() - start
-
-        res = cursor.fetchone()
-        for row in res: num = row
-
-    for i in range(5):
-        start = time.time()
-
-        cursor.execute(sql3)
-        sql_time += time.time() - start
-
-        res = cursor.fetchone()
-        for row in res: num = row
-
-    logger.info("{} seconds to select {} objects indexed".format(sql_time, num))
-    return sql_time
-
-
 def select(indexed, doc_path):
     conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     cursor = conn.cursor()
@@ -326,6 +285,7 @@ def bulk_insert_universal(doc_path, indexed=False):
     logger.info("{} seconds to bulk insert universal {}".format(run, size))
     return run, size
 
+
 def insert_one(indexed):
 
     if indexed: table = 'universal_indexed'
@@ -365,110 +325,6 @@ def insert_one(indexed):
     logger.info("{} seconds to universal insert one indexed={}, db_size={}, doc_size={}".format(run2,indexed, db_size, single_size))
 
     return run2, single_size, db_size, run
-
-
-def insert_one_with_indexing_2():
-
-    stmts = get_statements(table='universal_indexed')
-
-    delete_from_table(table='universal_indexed')
-
-    connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
-
-    cursor = connector.cursor()
-    run = 0
-    for sql in stmts:
-        try:
-            start = time.time()
-            cursor.execute(sql)
-            run += time.time() - start
-        except Exception as e:
-            pass
-
-    stmts = get_statements(table='universal_indexed', doc=DOCUMENT_SINGLE)
-
-    start = time.time()
-    cursor.execute(stmts.pop())
-    run2 = time.time() - start
-
-    cursor.close()
-    connector.commit()
-    connector.close()
-
-    #logger.info("{} seconds to universal_insert_one_with_indexing".format(run2))
-    single_size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
-
-    db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
-
-    logger.info("{} seconds to universal insert one with indexing, db_size={} doc_size={}".format(run2, db_size, single_size))
-
-    return run2, single_size, db_size, run
-    #return run2
-
-
-def insert_one_without_indexing_2():
-    stmts = get_statements(table='universal')
-
-    delete_from_table(table='universal')
-
-    connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
-
-    cursor = connector.cursor()
-    run=0
-    for sql in stmts:
-        start = time.time()
-        try:
-            cursor.execute(sql)
-        except Exception as e:
-            pass
-        run += time.time() - start
-
-    stmts = get_statements(table='universal', doc=DOCUMENT_SINGLE)
-
-    start = time.time()
-    cursor.execute(stmts.pop())
-    run2 = time.time() - start
-
-    cursor.close()
-    connector.commit()
-    connector.close()
-    single_size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
-    db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
-
-    #logger.info("{} seconds to universal_insert_one_without_indexing".format(run))
-    logger.info("{} seconds to universal insert one without indexing, db_size={} doc_size={}".format(run2, db_size, single_size))
-
-    return run2, single_size, db_size, run
-
-
-# not used
-def bulk_insert_universal_indexed_2():
-    stmts = get_statements(table='universal_indexed')
-
-    delete_from_table('universal_indexed')
-
-    connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
-
-    cursor = connector.cursor()
-
-    sql = 'SET NAMES utf8mb4;'
-    cursor.execute(sql)
-
-
-    run=0
-    for sql in stmts:
-        start = time.time()
-        try:
-            cursor.execute(sql)
-        except Exception as e:
-            pass
-        run += time.time() - start
-
-    cursor.close()
-    connector.commit()
-    connector.close()
-
-    return run, len(stmts)
 
 
 #############################

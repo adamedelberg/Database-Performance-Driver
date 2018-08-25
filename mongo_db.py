@@ -3,8 +3,9 @@
 MongoDB Database Driver
 
     This class contains all the accessor methods for manipulating MongoDB databases.
-    The default host is assigned as: localhost, port 27017. These settings can be adjusted in config.py.
 
+    For a single server, the default host is assigned to: localhost, port 27017. For further adjustments to the
+    database connector please see config.py.
 """
 
 import json
@@ -83,8 +84,10 @@ def insert_one(indexed, doc_path, drop_on_start, drop_on_exit=False):
            doc_size         - size of the inserted document
            db_size          - size of the database"""
 
-    if indexed: database = DATABASE_INDEXED
-    else: database = DATABASE
+    if indexed:
+        database = DATABASE_INDEXED
+    else:
+        database = DATABASE
 
     if drop_on_start: drop_database(database)
 
@@ -108,7 +111,8 @@ def insert_one(indexed, doc_path, drop_on_start, drop_on_exit=False):
     doc_size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
     db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
 
-    logger.info("{} seconds to insert one indexed={} db_size={} doc_size={}".format(insert_one_time,indexed, db_size, doc_size))
+    logger.info("{} seconds to insert one indexed={} db_size={} doc_size={}".format(insert_one_time, indexed, db_size,
+                                                                                    doc_size))
 
     if drop_on_exit: drop_database(database)
 
@@ -155,6 +159,7 @@ def bulk_insert(indexed, doc_path, drop_on_start, drop_on_exit=False):
     return run, size
 
 
+# not used in benchmarks
 def bulk_insert_one(doc_path, indexed=False):
     """Bulk insert one into MongoDB database
 
@@ -263,18 +268,6 @@ def drop_database(database):
         logger.warning("DROP ERROR: " + e)
 
 
-def drop_databases():
-    try:
-        client = MongoClient(HOST, PORT)
-        client.drop_database(DATABASE)
-        logger.debug("DROPPED " + DATABASE + "!")
-        client.drop_database(DATABASE_INDEXED)
-        logger.debug("DROPPED " + DATABASE_INDEXED + "!")
-
-    except pymongo.errors as e:
-        logger.warning("DROP ERROR: " + e)
-
-
 def bulk_insert_collections(doc_path):
     drop_database(DATABASE_COLLECTION)
 
@@ -359,97 +352,3 @@ def bulk_insert_collections(doc_path):
     logger.info("{} seconds to bulk insert into collections {}".format(exec, size))
 
     return exec, size
-
-
-##############
-# DEPRECATED
-##############
-def insert_one_indexed(doc_path, drop_on_start, drop_on_exit=False):
-    """Inserts a single document to the indexed benchmark_db database
-
-    Parameters:
-        doc_path        -
-        drop_on_start   - drop the database before executing query
-        drop_on_exit    - drop the database after executing query
-
-    Returns:
-        insert_one_time        - time taken to execute MongoDB commands
-        single_size - size of the inserted document
-        db_size     - size of the database
-        insert_time
-    """
-
-    if drop_on_start: drop_database(DATABASE_INDEXED)
-
-    client = MongoClient(HOST, PORT)
-    database = client.get_database(DATABASE_INDEXED)
-    coll = database.get_collection(COLLECTION)
-
-    # create indexes
-    create_indexes(database)
-
-    document = open(doc_path, 'r')
-    document = json.load(document)
-
-    start = time.time()
-    coll.insert_many(document)
-    insert_time = time.time() - start
-
-    document = open(DOCUMENT_SINGLE, 'r')
-    document = json.load(document)
-
-    # measuring time to insert one with indexing
-
-    start = time.time()
-    coll.insert_one(document)
-    insert_one_time = time.time() - start
-
-    single_size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
-    db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
-
-    logger.info("{} seconds to insert one with indexing, db_size={} doc_size={}".format(insert_one_time, db_size, single_size))
-
-    if drop_on_exit: drop_database(DATABASE_INDEXED)
-    return insert_one_time, single_size, db_size, insert_time
-
-
-def insert_one_non_indexed(doc_path, drop_on_start, drop_on_exit=False):
-    """Inserts a single document to the benchmark_db database
-
-       Parameters:
-           doc_path
-           drop_on_start
-           drop_on_exit
-       Returns:
-           run2         - time taken to execute MongoDB commands
-           single_size  - size of the inserted document
-           db_size      - size of the database
-       """
-
-    drop_database(DATABASE)
-
-    db = connect(HOST, PORT).get_database(DATABASE)
-
-    coll = db.get_collection(COLLECTION)
-
-    document = open(doc_path, 'r')
-    document = json.load(document)
-
-    start = time.time()
-    coll.insert_many(document)
-    run = time.time() - start
-
-    document = open(DOCUMENT_SINGLE, 'r')
-    document = json.load(document)
-
-    # measuring time to insert one without indexing
-
-    start = time.time()
-    coll.insert_one(document)
-    run2 = time.time() - start
-
-    single_size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
-    db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
-    logger.info("{} seconds to insert one without indexing, db_size={} doc_size={}".format(run2, db_size, single_size))
-    if drop_on_exit: drop_database(DATABASE)
-    return run2, single_size, db_size, run
