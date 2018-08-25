@@ -157,10 +157,9 @@ def t2_mongo_db_insert_one_indexed():
         t, size, size2, run = mongo_db.insert_one_indexed(drop_on_start=True, doc_path=DOCUMENT_DICT)
         t1.append(t), r.append(run)
         #d.append(size), d2.append(size2)
-    print(statistics.mean(r))
-    log = 'test_2: mongo_db.insert_one_indexed(drop=True), db_size= {}, doc_size={}, time_mean={}'
-    print(log.format(size2, size, statistics.mean(t1)))
-    log_results(log[:-14].format(size2, size), t1)
+    log = 'test_2: mongo_db.insert_one_indexed(drop=True), db_size= {}, doc_size={}, time_mean={}, insert_time={}'
+    print(log.format(size2, size, statistics.mean(t1), statistics.mean(r)))
+    log_results(log[:-14].format(size2, size, statistics.mean(r)), t1)
 
 
 # test_3: mongo_db.insert_one_non_indexed(drop=True)
@@ -175,10 +174,9 @@ def t3_mongo_db_insert_one_non_indexed():
     for i in range(ITERATIONS):
         t, size, size2, run = mongo_db.insert_one_non_indexed(drop_on_start=True, doc_path=DOCUMENT_DICT)
         t1.append(t), r.append(run)
-    print(statistics.mean(r))
-    log = 'test_3: mongo_db.insert_one_non_indexed(drop=True), db_size= {}, doc_size={}, time_mean={}'
-    print(log.format(size2, size, statistics.mean(t1)))
-    log_results(log[:-14].format(size2, size), t1)
+    log = 'test_3: mongo_db.insert_one_non_indexed(drop=True), db_size= {}, doc_size={}, time_mean={}, insert_time={}'
+    print(log.format(size2, size, statistics.mean(t1), statistics.mean(r)))
+    log_results(log[:-14].format(size2, size, statistics.mean(r)), t1)
 
 
 
@@ -305,10 +303,9 @@ def t9_mysql_db_insert_one_indexed():
         t, size, size2, run = mysql_db.universal_insert_one_with_indexing_2()
         t1.append(t), r.append(run)
         #t1.append(mysql_db.universal_insert_one_with_indexing_2())
-    print(statistics.mean(r))
-    log = 'test_9: mysql_db.universal_insert_one_with_indexing(), db_size= {}, doc_size={}, time_mean={}'
-    print(log.format(size2, size, statistics.mean(t1)))
-    log_results(log[:-14].format(size2, size), t1)
+    log = 'test_9: mysql_db.universal_insert_one_with_indexing(), db_size= {}, doc_size={}, time_mean={}, insert_time={}'
+    print(log.format(size2, size, statistics.mean(t1), statistics.mean(r)))
+    log_results(log[:-14].format(size2, size, statistics.mean(r)), t1)
 
 
 # test_10: mysql_db.universal_insert_one_without_indexing()
@@ -321,10 +318,9 @@ def t10_mysql_db_insert_one_non_indexed():
         t, size, size2, run = mysql_db.universal_insert_one_without_indexing_2()
         t1.append(t), r.append(run)
     #t1.append(mysql_db.universal_insert_one_without_indexing_2())
-    print(statistics.mean(r))
-    log = 'test_10: mysql_db.universal_insert_one_without_indexing(), db_size= {}, doc_size={}, time_mean={}'
-    print(log.format(size2, size, statistics.mean(t1)))
-    log_results(log[:-14].format(size2, size), t1)
+    log = 'test_10: mysql_db.universal_insert_one_without_indexing(), db_size= {}, doc_size={}, time_mean={}, insert_time={}'
+    print(log.format(size2, size, statistics.mean(t1), statistics.mean(r)))
+    log_results(log[:-14].format(size2, size, statistics.mean(r)), t1)
 
 
 

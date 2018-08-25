@@ -329,3 +329,11 @@ test_13: mysql_db.scan_all(),0.3682060241699219,0.3692920207977295,0.25095510482
 "test_3: mongo_db.insert_one_non_indexed(drop=True), db_size= 4.89MB, doc_size=0.01MB",0.0016489028930664062,0.001641988754272461
 "test_9: mysql_db.universal_insert_one_with_indexing(), db_size= 4.89MB, doc_size=0.01MB",0.00047516822814941406,0.00043773651123046875
 "test_10: mysql_db.universal_insert_one_without_indexing(), db_size= 4.89MB, doc_size=0.01MB",0.000377655029296875,0.00034928321838378906
+"test_2: mongo_db.insert_one_indexed(drop=True), db_size= 4.89MB, doc_size=0.01MB, time_mean=0.5726754665374756, ",0.0017139911651611328,0.0016219615936279297
+"test_3: mongo_db.insert_one_non_indexed(drop=True), db_size= 4.89MB, doc_size=0.01MB, time_mean=0.6480175256729126, ",0.001672983169555664,0.0015769004821777344
+"test_9: mysql_db.universal_insert_one_with_indexing(), db_size= 4.89MB, doc_size=0.01MB",0.00045228004455566406,0.0004889965057373047
+"test_10: mysql_db.universal_insert_one_without_indexing(), db_size= 4.89MB, doc_size=0.01MB",0.0004112720489501953,0.0006299018859863281
+"test_2: mongo_db.insert_one_indexed(drop=True), db_size= 4.89MB, doc_size=0.01MB, time_mean=0.5671833753585815, ",0.0016813278198242188,0.0016629695892333984
+"test_3: mongo_db.insert_one_non_indexed(drop=True), db_size= 4.89MB, doc_size=0.01MB, time_mean=0.6071552038192749, ",0.0015799999237060547,0.001688241958618164
+"test_9: mysql_db.universal_insert_one_with_indexing(), db_size= 4.89MB, doc_size=0.01MB, time_mean=0.5251011848449707, ",0.000415802001953125,0.0004978179931640625
+"test_10: mysql_db.universal_insert_one_without_indexing(), db_size= 4.89MB, doc_size=0.01MB, time_mean=0.5145211219787598, ",0.00042319297790527344,0.00041604042053222656

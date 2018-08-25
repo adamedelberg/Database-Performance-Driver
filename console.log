@@ -4114,3 +4114,19 @@ INFO: 2018-08-25 14:06:57,231: mysql_db: 0.00047516822814941406 seconds to unive
 INFO: 2018-08-25 14:06:58,142: mysql_db: 0.00043773651123046875 seconds to universal insert one with indexing, db_size=4.89MB doc_size=0.01MB
 INFO: 2018-08-25 14:06:58,902: mysql_db: 0.000377655029296875 seconds to universal insert one without indexing, db_size=4.89MB doc_size=0.01MB
 INFO: 2018-08-25 14:06:59,649: mysql_db: 0.00034928321838378906 seconds to universal insert one without indexing, db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 14:08:58,371: mongo_db: 0.0017139911651611328 seconds to insert one with indexing, db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 14:08:59,442: mongo_db: 0.0016219615936279297 seconds to insert one with indexing, db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 14:09:00,233: mongo_db: 0.001672983169555664 seconds to insert one without indexing, db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 14:09:01,031: mongo_db: 0.0015769004821777344 seconds to insert one without indexing, db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 14:09:01,845: mysql_db: 0.00045228004455566406 seconds to universal insert one with indexing, db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 14:09:02,742: mysql_db: 0.0004889965057373047 seconds to universal insert one with indexing, db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 14:09:03,477: mysql_db: 0.0004112720489501953 seconds to universal insert one without indexing, db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 14:09:04,282: mysql_db: 0.0006299018859863281 seconds to universal insert one without indexing, db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 14:09:42,150: mongo_db: 0.0016813278198242188 seconds to insert one with indexing, db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 14:09:43,231: mongo_db: 0.0016629695892333984 seconds to insert one with indexing, db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 14:09:44,009: mongo_db: 0.0015799999237060547 seconds to insert one without indexing, db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 14:09:44,788: mongo_db: 0.001688241958618164 seconds to insert one without indexing, db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 14:09:45,587: mysql_db: 0.000415802001953125 seconds to universal insert one with indexing, db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 14:09:46,337: mysql_db: 0.0004978179931640625 seconds to universal insert one with indexing, db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 14:09:47,100: mysql_db: 0.00042319297790527344 seconds to universal insert one without indexing, db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-25 14:09:47,811: mysql_db: 0.00041604042053222656 seconds to universal insert one without indexing, db_size=4.89MB doc_size=0.01MB
