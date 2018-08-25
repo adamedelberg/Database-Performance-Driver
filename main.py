@@ -74,8 +74,8 @@ def ts_insert_index():
 
 
 def ts_find_index():
-    mongo_db.bulk_insert(doc_path=DOCUMENT_DICT,indexed=True, drop_on_start=True, drop_on_exit=True)
-    mongo_db.bulk_insert(doc_path=DOCUMENT_DICT, indexed=False, drop_on_start=True, drop_on_exit=True)
+    mongo_db.bulk_insert(doc_path=DOCUMENT_DICT,indexed=True, drop_on_start=True, drop_on_exit=False)
+    mongo_db.bulk_insert(doc_path=DOCUMENT_DICT, indexed=False, drop_on_start=True, drop_on_exit=False)
 
     mysql_db.bulk_insert_universal(doc_path=DOCUMENT, indexed=True)
     mysql_db.bulk_insert_universal(doc_path=DOCUMENT, indexed=False)
@@ -88,7 +88,7 @@ def ts_find_index():
 
 
 def ts_scan():
-    mongo_db.bulk_insert(doc_path=DOCUMENT_DICT,indexed=False, drop_on_start=True, drop_on_exit=True)
+    mongo_db.bulk_insert(doc_path=DOCUMENT_DICT,indexed=False, drop_on_start=True, drop_on_exit=False)
     mysql_db.bulk_insert_universal(doc_path=DOCUMENT, indexed=False)
 
     test_mongo_db_scan()
@@ -338,10 +338,10 @@ if __name__ == "__main__":
     mysql_db.connect(host=config.mysql_host, port=config.mysql_port, user=config.username, password=config.password,
                      database=config.database)
 
-    ts_bulk_insert()
-    ts_insert_index()
+    #ts_bulk_insert()
+    #ts_insert_index()
     ts_find_index()
-    ts_scan()
+    #ts_scan()
 
 class DatabaseThreads(threading.Thread):
     def __init__(self, thread_id, database):

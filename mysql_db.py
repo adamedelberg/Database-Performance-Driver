@@ -3,8 +3,6 @@
 MySQL Database Driver
 
     description
-
-author: Adam Edelberg
 """
 import io
 import json
@@ -14,7 +12,6 @@ import time
 import os
 import pymysql
 import mysql.connector
-from pymysql import err
 
 
 import config
@@ -169,7 +166,7 @@ def bulk_insert_normalized():
     delete_from_table('user_mentions')
     delete_from_table('urls')
 
-    # conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    #conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     conn = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
 
     cursor = conn.cursor()
@@ -261,8 +258,8 @@ def bulk_insert_universal(doc_path, indexed=False):
         stmts = get_statements(table='universal', doc=doc_path)
         delete_from_table('universal')
 
-    #connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
-    connector = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    #connector = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
 
     cursor = connector.cursor()
     sql = 'SET NAMES utf8mb4;'
