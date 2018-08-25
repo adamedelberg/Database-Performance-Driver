@@ -159,41 +159,6 @@ def bulk_insert(indexed, doc_path, drop_on_start, drop_on_exit=False):
     return run, size
 
 
-# not used in benchmarks
-def bulk_insert_one(doc_path, indexed=False):
-    """Bulk insert one into MongoDB database
-
-
-    """
-
-    # drop database
-    drop_database(DATABASE)
-
-    db = connect().get_database(DATABASE)
-    coll = db.get_collection(COLLECTION)
-
-    document = open(DOCUMENT_DICT, 'r')
-    document = json.load(document)
-
-    start = time.time()
-    for doc in document:
-        coll.insert_one(doc)
-    run = time.time() - start
-
-    if indexed:
-        db2 = connect().get_database(DATABASE_INDEXED)
-        coll2 = db2.get_collection(COLLECTION)
-        drop_database(DATABASE_INDEXED)
-        create_indexes(db2)
-        coll2.insert_many(document)
-
-    count = coll.count()
-    size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
-    logger.info("{} seconds to bulk insert {}".format(run, size))
-
-    return run, size
-
-
 def find(indexed, doc_path):
     client = MongoClient(HOST, PORT)
 
@@ -352,3 +317,38 @@ def bulk_insert_collections(doc_path):
     logger.info("{} seconds to bulk insert into collections {}".format(exec, size))
 
     return exec, size
+
+
+# not used in benchmarks
+def bulk_insert_one(doc_path, indexed=False):
+    """Bulk insert one into MongoDB database
+
+
+    """
+
+    # drop database
+    drop_database(DATABASE)
+
+    db = connect().get_database(DATABASE)
+    coll = db.get_collection(COLLECTION)
+
+    document = open(DOCUMENT_DICT, 'r')
+    document = json.load(document)
+
+    start = time.time()
+    for doc in document:
+        coll.insert_one(doc)
+    run = time.time() - start
+
+    if indexed:
+        db2 = connect().get_database(DATABASE_INDEXED)
+        coll2 = db2.get_collection(COLLECTION)
+        drop_database(DATABASE_INDEXED)
+        create_indexes(db2)
+        coll2.insert_many(document)
+
+    count = coll.count()
+    size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
+    logger.info("{} seconds to bulk insert {}".format(run, size))
+
+    return run, size
