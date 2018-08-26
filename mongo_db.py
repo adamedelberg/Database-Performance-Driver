@@ -134,7 +134,7 @@ def bulk_insert(indexed, doc_path, drop_on_start, drop_on_exit=False):
     if drop_on_start: drop_database(DATABASE)
 
     db = connect(HOST, PORT).get_database(DATABASE)
-    coll = db.get_collection(COLLECTION)
+    coll = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=0))
 
     document = open(doc_path, 'r')
     document = json.load(document)
