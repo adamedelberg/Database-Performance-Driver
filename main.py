@@ -61,7 +61,7 @@ def log_results(test_name, data):
 
 def ts_bulk_insert():
     test_mongo_db_bulk_insert()
-    test_mongo_db_bulk_insert_collections()
+    #test_mongo_db_bulk_insert_collections()
 
     #test_mysql_db_bulk_insert_universal()
     #test_mysql_db_bulk_insert_normalized()

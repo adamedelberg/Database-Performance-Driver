@@ -225,8 +225,11 @@ def scan_all(doc_path):
 
 def drop_database(database):
     try:
-        # client = MongoClient(HOST, PORT)
-        connect(HOST, PORT).drop_database(database)
+        client = MongoClient(HOST, PORT)
+        #connect(HOST, PORT).drop_database(database)
+        db = client.get_database(database)
+        coll=db.get_collection(COLLECTION)
+        coll.remove({})
         # client.drop_database(database)
         logger.debug("DROPPED {}!".format(database))
 
