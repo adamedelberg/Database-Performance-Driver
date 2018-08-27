@@ -6,9 +6,11 @@ JSON Parsing Tools
     The functions below assume that JSON docs data delimited by \n or newline characters in a single file.
 
 """
-
+import argparse
 import json
 import shutil
+
+DOC = "../"
 
 # Load and clean JSON documents
 def load_docs(documents):
@@ -54,7 +56,6 @@ def create_docs(lines, indent, sort):
 
 
 # Create JSON docs dictionary
-
 def create_docs_d(lines, indent, sort):
     source = '../raw_data/big.json'
     data_parsed_dict = "../parsed_data/{}-{}d.json".format(source[12:-5], lines)
@@ -104,12 +105,22 @@ def join_files():
             with open(f, 'rb') as fd:
                 shutil.copyfileobj(fd, wfd, 1024 * 1024 * 10)
 
+                # copying in 10mb chunks
+
+
+# TODO: finish proper argument
+parser = argparse.ArgumentParser(description='json_tools module')
+parser.add_argument('-j', '--join_files', help='Join two json documents.', required=False)
+parser.add_argument('-c', '--clean_json_file', help='Parse and clean a json document.', required=False)
+parser.add_argument('-csd', '--create_space_delimited', help='Create space delimited json document.', required=False)
+parser.add_argument('-ccd', '--create_comma_demlimited', help='Create comma delimited json document.', required=False)
+args = parser.parse_args()
 
 if __name__ == '__main__':
     print("Creating...")
-
-    create_docs(1350000,None,False)
-    create_docs_d(1350000,None,False)
+    # 135?
+    create_docs(720000,None,False)
+    create_docs_d(720000,None,False)
 
     # join_files()
 
