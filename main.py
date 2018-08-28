@@ -61,10 +61,10 @@ def log_results(test_name, data):
 
 def ts_bulk_insert():
     test_mongo_db_bulk_insert()
-    #test_mongo_db_bulk_insert_collections()
+    test_mongo_db_bulk_insert_collections()
 
-    #test_mysql_db_bulk_insert_universal()
-    #test_mysql_db_bulk_insert_normalized()
+    test_mysql_db_bulk_insert_universal()
+    test_mysql_db_bulk_insert_normalized()
 
 
 def ts_insert_index():
@@ -299,8 +299,8 @@ if __name__ == "__main__":
     mysql_db.connect(host=config.mysql_host, port=config.mysql_port, user=config.username, password=config.password,
                      database=config.database)
 
-    ts_bulk_insert()
-    #ts_insert_index()
+    #ts_bulk_insert()
+    ts_insert_index()
     #ts_find_index()
     #ts_scan()
 

@@ -12,6 +12,7 @@ import shutil
 
 DOC = "../"
 
+
 # Load and clean JSON documents
 def load_docs(documents):
     json_text = ""
