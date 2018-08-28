@@ -323,10 +323,9 @@ def bulk_insert_collections(doc_path):
     return exec, size
 
 
-# not used in benchmarks
 def bulk_insert_one(indexed, doc_path, drop_on_start, drop_on_exit=False):
-    """Bulk insert one into MongoDB database
-
+    """
+    Bulk insert one into MongoDB database
 
     """
 

@@ -5068,3 +5068,9 @@ INFO: 2018-08-28 16:54:28,237: mongo_db: 3.9139039516448975 seconds to bulk inse
 INFO: 2018-08-28 16:54:32,518: mongo_db: 4.147220849990845 seconds to bulk insert one 4.89MB
 INFO: 2018-08-28 16:54:35,730: mongo_db: 0.7669751644134521 seconds to bulk insert one 4.89MB
 INFO: 2018-08-28 16:54:36,931: mongo_db: 0.9985189437866211 seconds to bulk insert one 4.89MB
+INFO: 2018-08-28 17:01:31,365: mongo_db: 0.7781598567962646 seconds to bulk insert one 4.89MB
+INFO: 2018-08-28 17:01:32,260: mongo_db: 0.7377409934997559 seconds to bulk insert one 4.89MB
+INFO: 2018-08-28 17:01:53,075: mongo_db: 0.7750198841094971 seconds to bulk insert one 4.89MB
+INFO: 2018-08-28 17:01:54,009: mongo_db: 0.776975154876709 seconds to bulk insert one 4.89MB
+INFO: 2018-08-28 17:01:57,095: mysql_db: 2.695309638977051 seconds to insert one universal 4.89MB
+INFO: 2018-08-28 17:01:58,529: mysql_db: 1.211035966873169 seconds to insert one universal 4.89MB

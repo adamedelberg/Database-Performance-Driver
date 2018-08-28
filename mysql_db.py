@@ -326,6 +326,43 @@ def insert_one(indexed):
     return run2, single_size, db_size, run
 
 
+def bulk_insert_one(doc_path, indexed=False):
+
+    if indexed:
+        stmts=get_statements(table='universal_indexed',doc=doc_path)
+        delete_from_table(table='universal_indexed')
+
+    else:
+        stmts = get_statements(table='universal', doc=doc_path)
+        delete_from_table('universal')
+
+    connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    #connector = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+
+    cursor = connector.cursor()
+    sql = 'SET NAMES utf8mb4;'
+    cursor.execute(sql)
+
+    run = 0
+    for sql in stmts:
+        start = time.time()
+        try:
+            cursor.execute(sql)
+            connector.commit()
+        except Exception as e:
+            pass
+            #print(e)
+
+        run += time.time() - start
+
+    cursor.close()
+    connector.commit()
+    connector.close()
+
+    size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
+    logger.info("{} seconds to insert one universal {}".format(run, size))
+    return run, size
+
 #############################
 #  Generate SQL Statements  #
 #############################
