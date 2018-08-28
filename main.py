@@ -66,6 +66,10 @@ def ts_bulk_insert():
     test_mysql_db_bulk_insert_universal()
     test_mysql_db_bulk_insert_normalized()
 
+def ts_bulk_insert_one():
+    test_mongo_db_bulk_insert_one()
+
+
 
 def ts_insert_index():
     test_mongo_db_insert_one(indexed=True)
@@ -151,6 +155,19 @@ def test_mysql_db_bulk_insert_normalized():
     log = 'mysql_db.bulk_insert_normalized: doc_size={}, time_mean={}'
     log_results(log.format(doc_size, statistics.mean(times)), times)
 
+
+def test_mongo_db_bulk_insert_one():
+    # timing and metric variables
+    times = []
+
+    # perform multiple test iterations
+    for i in range(ITERATIONS):
+        t, doc_size = mongo_db.bulk_insert_one(doc_path=DOCUMENT_DICT, indexed=False, drop_on_start=True)
+        times.append(t)
+
+    # log results
+    log = 'mongo_db.bulk_insert_one: doc_size={}, time_mean={}'
+    log_results(log.format(doc_size, statistics.mean(times)), times)
 
 ##############################
 # OP 2: Indexed Insert Tests
@@ -300,9 +317,10 @@ if __name__ == "__main__":
                      database=config.database)
 
     #ts_bulk_insert()
-    ts_insert_index()
+    ts_bulk_insert_one()
+    #ts_insert_index()
     #ts_find_index()
-    #ts_scan()
+    ##ts_scan()
 
 
 class DatabaseThreads(threading.Thread):

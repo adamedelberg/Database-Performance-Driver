@@ -324,7 +324,7 @@ def bulk_insert_collections(doc_path):
 
 
 # not used in benchmarks
-def bulk_insert_one(doc_path, indexed=False):
+def bulk_insert_one(indexed, doc_path, drop_on_start, drop_on_exit=False):
     """Bulk insert one into MongoDB database
 
 
@@ -333,8 +333,8 @@ def bulk_insert_one(doc_path, indexed=False):
     # drop database
     drop_database(DATABASE)
 
-    db = connect().get_database(DATABASE)
-    coll = db.get_collection(COLLECTION)
+    db = connect(HOST, PORT).get_database(DATABASE)
+    coll = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=0))
 
     document = open(DOCUMENT_DICT, 'r')
     document = json.load(document)
@@ -353,6 +353,6 @@ def bulk_insert_one(doc_path, indexed=False):
 
     count = coll.count()
     size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
-    logger.info("{} seconds to bulk insert {}".format(run, size))
+    logger.info("{} seconds to bulk insert one {}".format(run, size))
 
     return run, size

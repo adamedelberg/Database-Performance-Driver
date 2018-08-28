@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `benchmark_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
-USE `benchmark_db`;
 -- MySQL dump 10.13  Distrib 8.0.12, for macos10.13 (x86_64)
 --
 -- Host: localhost    Database: benchmark_db
@@ -120,6 +118,7 @@ DROP TABLE IF EXISTS `universal`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `universal` (
+  `pk_id` int(11) NOT NULL AUTO_INCREMENT,
   `hashtags.hashtag` varchar(100) DEFAULT NULL,
   `hashtags.id` bigint(20) DEFAULT NULL,
   `hashtags.indices` varchar(10) DEFAULT NULL,
@@ -143,7 +142,7 @@ CREATE TABLE `universal` (
   `tweets.favorite_count` int(20) DEFAULT NULL,
   `tweets.favorited` varchar(10) DEFAULT NULL,
   `tweets.filter_level` varchar(10) DEFAULT NULL,
-  `tweets.id` bigint(20) NOT NULL,
+  `tweets.id` bigint(20) DEFAULT NULL,
   `tweets.id_str` varchar(100) DEFAULT NULL,
   `tweets.in_reply_to_screen_name` varchar(100) DEFAULT NULL,
   `tweets.in_reply_to_status_id` varchar(100) DEFAULT NULL,
@@ -166,7 +165,7 @@ CREATE TABLE `universal` (
   `tweets.reply_count` int(20) DEFAULT NULL,
   `tweets.retweeted` varchar(100) DEFAULT NULL,
   `tweets.retweeted_status` varchar(100) DEFAULT NULL,
-  `tweets.source` varchar(100) DEFAULT NULL,
+  `tweets.source` varchar(200) DEFAULT NULL,
   `tweets.text` varchar(200) DEFAULT NULL,
   `tweets.truncated` varchar(100) DEFAULT NULL,
   `tweets.user_id` bigint(20) DEFAULT NULL,
@@ -197,12 +196,12 @@ CREATE TABLE `universal` (
   `users.is_translator` varchar(100) DEFAULT NULL,
   `users.lang` varchar(100) DEFAULT NULL,
   `users.listed_count` int(20) DEFAULT NULL,
-  `users.location` varchar(100) DEFAULT NULL,
+  `users.location` varchar(200) DEFAULT NULL,
   `users.name` varchar(100) DEFAULT NULL,
   `users.notifications` varchar(100) DEFAULT NULL,
   `users.profile_background_color` varchar(100) DEFAULT NULL,
-  `users.profile_background_image_url` varchar(200) DEFAULT NULL,
-  `users.profile_background_image_url_https` varchar(200) DEFAULT NULL,
+  `users.profile_background_image_url` longtext,
+  `users.profile_background_image_url_https` longtext,
   `users.profile_background_tile` varchar(100) DEFAULT NULL,
   `users.profile_image_url` varchar(200) DEFAULT NULL,
   `users.profile_image_url_https` varchar(200) DEFAULT NULL,
@@ -219,8 +218,8 @@ CREATE TABLE `universal` (
   `users.url` varchar(200) DEFAULT NULL,
   `users.utc_offset` varchar(100) DEFAULT NULL,
   `users.verified` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`tweets.id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`pk_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=327353 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -231,6 +230,7 @@ DROP TABLE IF EXISTS `universal_indexed`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `universal_indexed` (
+  `pk_id` int(11) NOT NULL AUTO_INCREMENT,
   `hashtags.hashtag` varchar(100) DEFAULT NULL,
   `hashtags.id` bigint(20) DEFAULT NULL,
   `hashtags.indices` varchar(10) DEFAULT NULL,
@@ -254,7 +254,7 @@ CREATE TABLE `universal_indexed` (
   `tweets.favorite_count` int(20) DEFAULT NULL,
   `tweets.favorited` varchar(10) DEFAULT NULL,
   `tweets.filter_level` varchar(10) DEFAULT NULL,
-  ` tweets.id` bigint(20) NOT NULL,
+  `tweets.id` bigint(20) DEFAULT NULL,
   `tweets.id_str` varchar(100) DEFAULT NULL,
   `tweets.in_reply_to_screen_name` varchar(100) DEFAULT NULL,
   `tweets.in_reply_to_status_id` varchar(100) DEFAULT NULL,
@@ -330,12 +330,13 @@ CREATE TABLE `universal_indexed` (
   `users.url` varchar(200) DEFAULT NULL,
   `users.utc_offset` varchar(100) DEFAULT NULL,
   `users.verified` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (` tweets.id`),
+  PRIMARY KEY (`pk_id`),
   KEY `user.id_index` (`users.id`) USING BTREE,
-  KEY `tweet.id_index` (` tweets.id`) USING BTREE,
+  KEY `tweet.id_index` (`tweets.id`) USING BTREE,
   KEY `followers_count_index` (`users.followers_count`) USING BTREE,
-  KEY `friends_count_index` (`users.friends_count`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `friends_count_index` (`users.friends_count`) USING BTREE,
+  KEY `location` (`users.location`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=192482 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -429,4 +430,4 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-08-21 17:20:04
+-- Dump completed on 2018-08-28 12:43:28

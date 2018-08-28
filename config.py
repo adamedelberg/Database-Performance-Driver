@@ -17,11 +17,14 @@ iterations = 2
 threads = 10
 
 #  MongoDB Configs
+host = '137.158.59.83'
+port = 27018
+
 #host = 'localhost'
 #port = 27017
 
-host = '137.158.59.83'
-port = 27020
+#host = '137.158.59.83'
+#port = 27020
 
 
 # shard_host = '137.158.59.81'
