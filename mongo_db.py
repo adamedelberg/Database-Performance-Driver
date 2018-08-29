@@ -70,7 +70,7 @@ def create_indexes(database):
         logger.warning("PyMongo Error: {}".format(code))
 
 
-def bulk_insert(indexed, doc_path, drop_on_start, drop_on_exit=False):
+def bulk_insert(path, indexed, drop_on_start, drop_on_exit=False):
     """Bulk insert into MongoDB database
 
     Parameters:
@@ -87,7 +87,7 @@ def bulk_insert(indexed, doc_path, drop_on_start, drop_on_exit=False):
     db = connect(HOST, PORT).get_database(DATABASE)
     coll = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=0))
 
-    document = open(doc_path, 'r')
+    document = open(path, 'r')
 
     docs = []
 
@@ -103,9 +103,9 @@ def bulk_insert(indexed, doc_path, drop_on_start, drop_on_exit=False):
         coll2 = db2.get_collection(COLLECTION)
         drop_database(DATABASE_INDEXED)
         create_indexes(db2)
-        coll2.insert_many(document)
+        coll2.insert_many(docs)
 
-    size = "{}MB".format(round(os.path.getsize(doc_path) / 1024 / 1024, 2))
+    size = "{}MB".format(round(os.path.getsize(path) / 1024 / 1024, 2))
     logger.info("{} seconds to bulk insert {} indexed={}".format(run, size, indexed))
 
     # check drop flag on exit
@@ -139,7 +139,7 @@ def bulk_insert_one(path, drop_on_start, drop_on_exit=False):
     return run, size
 
 
-def insert_one(indexed, doc_path, drop_on_start, drop_on_exit=False):
+def insert_one(path, indexed, drop_on_start, drop_on_exit=False):
     """Inserts a single document to the benchmark_db database
 
        Parameters:
@@ -164,7 +164,7 @@ def insert_one(indexed, doc_path, drop_on_start, drop_on_exit=False):
     db = connect(HOST, PORT).get_database(database)
     coll = db.get_collection(COLLECTION)
 
-    d1 = open(doc_path, 'r')
+    d1 = open(path, 'r')
     bulk_doc = json.load(d1)
 
     d2 = open(DOCUMENT_SINGLE, 'r')
@@ -189,7 +189,8 @@ def insert_one(indexed, doc_path, drop_on_start, drop_on_exit=False):
     return insert_one_time, doc_size, db_size, bulk_insert_time
 
 
-def find(indexed, doc_path):
+#TODO: get rid of path here
+def find(indexed):
     client = MongoClient(HOST, PORT)
 
     if indexed:
@@ -228,13 +229,13 @@ def find(indexed, doc_path):
 
     count = coll.count()
 
-    size = "{}MB".format(round(os.path.getsize(doc_path) / 1024 / 1024, 2))
-    logger.info("{} seconds to find {} with indexed={}, doc_size={}".format(run, res, indexed, size))
+    logger.info("{} seconds to find {} with indexed={}".format(run, res, indexed))
 
-    return run, size
+    return run, count
 
 
-def scan_all(doc_path):
+#TODO: get rid of path here
+def scan():
     client = MongoClient(HOST, PORT)
     db = client.get_database(DATABASE)
     coll = db.get_collection(COLLECTION)
@@ -243,13 +244,11 @@ def scan_all(doc_path):
     coll.find({}).count()
     run = time.time() - start
 
-    count = coll.count()
+    scanned = coll.count()
+    size = 0
+    logger.info("{} seconds to scan {}".format(run, scanned))
 
-    size = "{}MB".format(round(os.path.getsize(doc_path) / 1024 / 1024, 2))
-    logger.info("{} seconds to scan {} db_size={}".format(run, count, size))
-
-    # logger.info("%.16f seconds to scan %d objects", run, count)
-    return run, count
+    return run, scanned
 
 
 def drop_database(database):
