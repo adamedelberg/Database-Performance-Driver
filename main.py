@@ -9,6 +9,9 @@ import csv
 import logging
 import threading
 import argparse
+
+import time
+
 import mongo_db
 import mysql_db
 import mongo_db_live
@@ -81,11 +84,11 @@ def ts_insert_index():
 
 
 def ts_find_index():
-    mongo_db.bulk_insert(path=PATH, indexed=True, drop_on_start=True, drop_on_exit=False)
-    mongo_db.bulk_insert(path=PATH, indexed=False, drop_on_start=True, drop_on_exit=False)
+    #mongo_db.bulk_insert(path=PATH, indexed=True, drop_on_start=True, drop_on_exit=False)
+    #mongo_db.bulk_insert(path=PATH, indexed=False, drop_on_start=True, drop_on_exit=False)
 
-    mysql_db.bulk_insert_universal(doc_path=PATH, indexed=True)
-    mysql_db.bulk_insert_universal(doc_path=PATH, indexed=False)
+    #mysql_db.bulk_insert_universal(doc_path=PATH, indexed=True)
+    #mysql_db.bulk_insert_universal(doc_path=PATH, indexed=False)
 
     test_mongo_db_find(indexed=True)
     test_mongo_db_find(indexed=False)
@@ -95,8 +98,8 @@ def ts_find_index():
 
 
 def ts_scan():
-    mongo_db.bulk_insert(path=PATH, indexed=False, drop_on_start=True, drop_on_exit=False)
-    mysql_db.bulk_insert_universal(doc_path=PATH, indexed=False)
+    #mongo_db.bulk_insert(path=PATH, indexed=False, drop_on_start=True, drop_on_exit=False)
+    #mysql_db.bulk_insert_universal(doc_path=PATH, indexed=False)
 
     test_mongo_db_scan()
     test_mysql_db_scan()
@@ -139,7 +142,7 @@ def test_mysql_db_bulk_insert_universal():
     times = []
 
     for runs in range(ITERATIONS):
-        t, size = mysql_db.bulk_insert_universal(doc_path=PATH)
+        t, size = mysql_db.bulk_insert_universal(path=PATH)
         times.append(t)
 
     log = 'mysql_db.bulk_insert_universal: doc_size={}, time_mean={}'
@@ -150,7 +153,7 @@ def test_mysql_db_bulk_insert_normalized():
     times = []
 
     for runs in range(ITERATIONS):
-        t, doc_size = mysql_db.bulk_insert_normalized()
+        t, doc_size = mysql_db.bulk_insert_normalized(path=PATH)
         times.append(t)
 
     log = 'mysql_db.bulk_insert_normalized: doc_size={}, time_mean={}'
@@ -177,7 +180,7 @@ def test_mysql_db_bulk_insert_one():
 
     # perform multiple test iterations
     for i in range(ITERATIONS):
-        t, doc_size = mysql_db.bulk_insert_one(doc_path=PATH, indexed=False)
+        t, doc_size = mysql_db.bulk_insert_one(path=PATH, indexed=False)
         times.append(t)
 
     # log results
@@ -216,6 +219,9 @@ def test_mysql_db_insert_one(indexed):
 ############################
 
 def test_mongo_db_find(indexed):
+    mongo_db.bulk_insert(path=PATH, indexed=indexed, drop_on_start=True, drop_on_exit=False)
+    #mongo_db.bulk_insert(path=PATH, indexed=False, drop_on_start=True, drop_on_exit=False)
+
     times = []
 
     for i in range(ITERATIONS):
@@ -227,10 +233,12 @@ def test_mongo_db_find(indexed):
 
 
 def test_mysql_db_select(indexed):
+    mysql_db.bulk_insert_universal(path=PATH, indexed=indexed)
+    #mysql_db.bulk_insert_universal(doc_path=PATH, indexed=False)
     times = []
 
     for i in range(ITERATIONS):
-        t, db_size = mysql_db.select(indexed=indexed, doc_path=PATH)
+        t, db_size = mysql_db.select(indexed=indexed, path=PATH)
         times.append(t)
 
     log = 'mysql_db.select: indexed={}, db_size= {}, time_mean={}'
@@ -242,6 +250,12 @@ def test_mysql_db_select(indexed):
 ####################
 
 def test_mongo_db_scan():
+    # repopulate database
+    mongo_db.bulk_insert(path=PATH, indexed=False, drop_on_start=True, drop_on_exit=False)
+
+    # wait until previous operation is complete
+    time.sleep(0.5)
+
     times = []
 
     for i in range(ITERATIONS):
@@ -254,6 +268,12 @@ def test_mongo_db_scan():
 
 
 def test_mysql_db_scan():
+    # repopulate database
+    mysql_db.bulk_insert_universal(path=PATH, indexed=False)
+
+    # wait until previous operation is complete
+    time.sleep(0.5)
+
     times = []
 
     for i in range(ITERATIONS):
@@ -333,10 +353,10 @@ if __name__ == "__main__":
 
 
     ts_bulk_insert()
-    ts_bulk_insert_one()
-    ts_insert_index()
-    ts_find_index()
-    ts_scan()
+    #ts_bulk_insert_one()
+    #ts_insert_index()
+    #ts_find_index()
+    #ts_scan()
 
 
 

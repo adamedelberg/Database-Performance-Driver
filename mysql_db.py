@@ -13,7 +13,6 @@ import os
 import pymysql
 import mysql.connector
 
-
 import config
 
 logger = logging.getLogger(__name__)
@@ -113,8 +112,9 @@ def scan():
 
     return execution_time, scanned
 
-#TODO: tidy
-def select(indexed, doc_path):
+
+# TODO: tidy
+def select(path, indexed):
     conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     cursor = conn.cursor()
 
@@ -140,15 +140,16 @@ def select(indexed, doc_path):
         sql_time += time.time() - start
 
         res = cursor.fetchone()
-        for row in res: num+=row
+        for row in res: num += row
 
-    size = "{}MB".format(round(os.path.getsize(doc_path) / 1024 / 1024, 2))
-    logger.info("{} seconds to select {} objects indexed={}, doc_size={}".format(sql_time, num, indexed,size))
+    size = "{}MB".format(round(os.path.getsize(path) / 1024 / 1024, 2))
+    logger.info("{} seconds to select {} objects indexed={}, doc_size={}".format(sql_time, num, indexed, size))
 
     return sql_time, size
 
 
-def bulk_insert_normalized():
+def bulk_insert_normalized(path, indexed=False, drop_on_start=True, drop_on_exit=False):
+
     delete_from_table('hashtags')
     delete_from_table('symbols')
     delete_from_table('media')
@@ -161,8 +162,8 @@ def bulk_insert_normalized():
     conn = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
 
     cursor = conn.cursor()
-    sql = 'SET NAMES utf8mb4;'
-    cursor.execute(sql)
+    #sql = 'SET NAMES utf8mb4;'
+    #cursor.execute(sql)
 
     tweet_stmts, user_stmts, hashtags_stmts, media_stmts, user_mention_stmts, url_stmts, symbols_stmts = get_normalized_statements()
 
@@ -239,51 +240,54 @@ def bulk_insert_normalized():
     return run, size
 
 
-def bulk_insert_universal(doc_path, indexed=False):
+def bulk_insert_universal(path, indexed=False, drop_on_start=True, drop_on_exit=False):
 
-    if indexed:
-        stmts=get_statements(table='universal_indexed',doc=doc_path)
-        delete_from_table(table='universal_indexed')
+    if indexed: table = 'universal_indexed'
+    else: table = 'universal'
 
-    else:
-        stmts = get_statements(table='universal', doc=doc_path)
-        delete_from_table('universal')
+    statements = get_statements(table=table, path=path)
+
+    if drop_on_start: delete_from_table(table=table)
 
     connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
-    #connector = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
 
     cursor = connector.cursor()
-    sql = 'SET NAMES utf8mb4;'
-    cursor.execute(sql)
 
-    run = 0
-    for sql in stmts:
-        start = time.time()
+    #sql = 'SET NAMES utf8mb4;'
+    #cursor.execute(sql)
+
+    execution_time = 0
+
+    for sql in statements:
+
         try:
+            start_time = time.time()
             cursor.execute(sql)
-        except Exception as e:
+            execution_time += time.time() - start_time
+        except pymysql.Error as code:
+            logger.debug('PyMySQL Error: {}'.format(code))
             pass
-            #print(e)
-
-        run += time.time() - start
 
     cursor.close()
     connector.commit()
     connector.close()
 
     size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
-    logger.info("{} seconds to bulk insert universal {}".format(run, size))
-    return run, size
+    logger.info("{} seconds to bulk insert {}, indexed={}".format(execution_time, size, indexed))
+
+    if drop_on_exit: delete_from_table(table=table)
+
+    return execution_time, size
 
 
 def insert_one(indexed):
-
-    if indexed: table = 'universal_indexed'
-    else: table = 'universal'
+    if indexed:
+        table = 'universal_indexed'
+    else:
+        table = 'universal'
 
     stmts = get_statements(table=table)
     delete_from_table(table=table)
-
 
     connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
 
@@ -297,7 +301,7 @@ def insert_one(indexed):
         except Exception as e:
             pass
 
-    stmts = get_statements(table=table, doc=DOCUMENT_SINGLE)
+    stmts = get_statements(table=table, path=DOCUMENT_SINGLE)
 
     start = time.time()
     cursor.execute(stmts.pop())
@@ -307,28 +311,28 @@ def insert_one(indexed):
     connector.commit()
     connector.close()
 
-    #logger.info("{} seconds to universal_insert_one_with_indexing".format(run2))
+    # logger.info("{} seconds to universal_insert_one_with_indexing".format(run2))
     single_size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
 
     db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
 
-    logger.info("{} seconds to universal insert one indexed={}, db_size={}, doc_size={}".format(run2,indexed, db_size, single_size))
+    logger.info("{} seconds to universal insert one indexed={}, db_size={}, doc_size={}".format(run2, indexed, db_size,
+                                                                                                single_size))
 
     return run2, single_size, db_size, run
 
 
-def bulk_insert_one(doc_path, indexed=False):
-
+def bulk_insert_one(path, indexed=False):
     if indexed:
-        stmts=get_statements(table='universal_indexed',doc=doc_path)
+        stmts = get_statements(table='universal_indexed', path=path)
         delete_from_table(table='universal_indexed')
 
     else:
-        stmts = get_statements(table='universal', doc=doc_path)
+        stmts = get_statements(table='universal', path=path)
         delete_from_table('universal')
 
     connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
-    #connector = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    # connector = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
 
     cursor = connector.cursor()
     sql = 'SET NAMES utf8mb4;'
@@ -342,7 +346,7 @@ def bulk_insert_one(doc_path, indexed=False):
             connector.commit()
         except Exception as e:
             pass
-            #print(e)
+            # print(e)
 
         run += time.time() - start
 
@@ -354,13 +358,14 @@ def bulk_insert_one(doc_path, indexed=False):
     logger.info("{} seconds to insert one universal {}".format(run, size))
     return run, size
 
+
 #############################
 #  Generate SQL Statements  #
 #############################
 
 
-def get_statements(table, doc=DOCUMENT):
-    document = io.open(doc, 'r')
+def get_statements(table, path=DOCUMENT):
+    document = io.open(path, 'r')
 
     stmts = []
 
@@ -399,7 +404,7 @@ def get_statements(table, doc=DOCUMENT):
             place_url = str(data['place']['url']) if 'country' in data else None
             quoted_status_id = str(data['quoted_status_id']) if 'quoted_status_id' in data else None
             quoted_status_id_str = str(data['quoted_status_id_str']) if 'quoted_status_id' in data else None
-            quoted_status = str(data['quoted_status']['text']).replace("\'","\\'") if 'quoted_status' in data else None
+            quoted_status = str(data['quoted_status']['text']).replace("\'", "\\'") if 'quoted_status' in data else None
             possibly_sensitive = str(data['possibly_sensitive']) if 'possibly_sensitive' in data else None
             retweeted_status = str(data['retweeted_status']['id']) if 'retweeted_status' in data else None
 
@@ -566,7 +571,7 @@ def get_statements(table, doc=DOCUMENT):
     return stmts
 
 
-def get_normalized_statements(doc=DOCUMENT):
+def get_normalized_statements(path=DOCUMENT):
     tweet_stmts = []
     user_stmts = []
     media_stmts = []
@@ -575,7 +580,7 @@ def get_normalized_statements(doc=DOCUMENT):
     symbols_stmts = []
     hashtags_stmts = []
 
-    document = io.open(doc, 'r')
+    document = io.open(path, 'r')
 
     with document as json_docs:
         for data in json_docs:
@@ -596,8 +601,8 @@ def get_normalized_statements(doc=DOCUMENT):
             in_reply_to_user_id_str = str(data['in_reply_to_user_id_str'])
             in_reply_to_screen_name = str(data['in_reply_to_screen_name'])
 
-            if in_reply_to_user_id == None: in_reply_to_user_id = 0
-            if in_reply_to_status_id == None: in_reply_to_status_id = 0
+            if in_reply_to_user_id == 'None': in_reply_to_user_id = 0
+            if in_reply_to_status_id == 'None': in_reply_to_status_id = 0
 
             user_id = str(data['user']['id'])
             quote_count = str(data['quote_count'])
@@ -618,7 +623,7 @@ def get_normalized_statements(doc=DOCUMENT):
             place_url = str(data['place']['url']) if 'country' in data else None
             quoted_status_id = str(data['quoted_status_id']) if 'quoted_status_id' in data else 0
             quoted_status_id_str = str(data['quoted_status_id_str']) if 'quoted_status_id' in data else None
-            quoted_status = str(data['quoted_status']['text']).replace("\'","\\'") if 'quoted_status' in data else None
+            quoted_status = str(data['quoted_status']['text']).replace("\'", "\\'") if 'quoted_status' in data else None
             possibly_sensitive = str(data['possibly_sensitive']) if 'possibly_sensitive' in data else None
             retweeted_status = str(data['retweeted_status']['id']) if 'retweeted_status' in data else None
 
@@ -774,4 +779,3 @@ def get_normalized_statements(doc=DOCUMENT):
                             media_url_https))
 
     return tweet_stmts, user_stmts, hashtags_stmts, media_stmts, user_mention_stmts, url_stmts, symbols_stmts
-

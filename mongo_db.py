@@ -31,13 +31,13 @@ PORT = config.port_mongo
 
 
 def connect(host, port):
-    """Connect to the MongoDB Server on host:port
+    """
+    Connect to the MongoDB Server on <host>:<port>
 
-    Parameters:
-        host - see configs - [default = 'localhost']
-        port - see configs - [default = 27017]
-    Returns:
-        client - MongoClient object"""
+    :param host: see configs - [default = 'localhost']
+    :param port: see configs - [default = 27017]
+    :return: MongoClient object
+    """
 
     global client
     try:
@@ -51,12 +51,19 @@ def connect(host, port):
 
 
 def drop_database(database):
+    """
+    Safe drop database using remove
+
+    :param database:
+    :return:
+    """
     try:
         client = MongoClient(HOST, PORT)
-        # connect(HOST, PORT).drop_database(database)
         db = client.get_database(database)
         coll = db.get_collection(COLLECTION)
         coll.remove({})
+
+        # connect(HOST, PORT).drop_database(database)
         # client.drop_database(database)
         logger.debug("DROPPED {}!".format(database))
 
@@ -65,10 +72,13 @@ def drop_database(database):
 
 
 def create_indexes(database):
-    """Create indexes after dropping 'benchmark_db_indexed'
+    """
+    Create indexes in given database
 
-    Parameters:
-        database - the database where indexes will be created"""
+    :param database: the database where indexes will be created
+    :return:
+    """
+
 
     try:
         coll = database.get_collection(COLLECTION)
@@ -83,22 +93,25 @@ def create_indexes(database):
         logger.warning("PyMongo Error: {}".format(code))
 
 
-def bulk_insert(path, indexed, drop_on_start, drop_on_exit=False, wc=0):
-    """Bulk insert into MongoDB database
-
-    Parameters:
-        indexed - insert into benchmark_db_indexed [default = False]
-
-    Returns:
-
+def bulk_insert(path, indexed, drop_on_start, drop_on_exit=False, write_concern=1):
     """
+    Bulk insert into MongoDB database
+
+    :param path:
+    :param indexed: insert into benchmark_db_indexed [default = False]
+    :param drop_on_start:
+    :param drop_on_exit:
+    :param write_concern:
+    :return:
+    """
+
 
     # check drop flag
     if drop_on_start: drop_database(DATABASE)
 
     # connect to correct database:
     db = connect(HOST, PORT).get_database(DATABASE)
-    coll = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=wc))
+    coll = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=write_concern))
 
     document = open(path, 'r')
 
@@ -119,7 +132,7 @@ def bulk_insert(path, indexed, drop_on_start, drop_on_exit=False, wc=0):
         coll2.insert_many(docs)
 
     size = "{}MB".format(round(os.path.getsize(path) / 1024 / 1024, 2))
-    logger.info("{} seconds to bulk insert {} indexed={}".format(run, size, indexed))
+    logger.info("{} seconds to bulk insert {}, indexed={}".format(run, size, indexed))
 
     # check drop flag on exit
     if drop_on_exit: drop_database(DATABASE)
@@ -127,12 +140,21 @@ def bulk_insert(path, indexed, drop_on_start, drop_on_exit=False, wc=0):
     return run, size
 
 
-def bulk_insert_collections(path, indexed, drop_on_start, drop_on_exit=False):
+def bulk_insert_collections(path, indexed, drop_on_start, drop_on_exit=False, write_concern=1):
+    """
+
+    :param path:
+    :param indexed:
+    :param drop_on_start:
+    :param drop_on_exit:
+    :param write_concern:
+    :return:
+    """
     if drop_on_start: drop_database(DATABASE_COLLECTION)
 
     db = connect(HOST, PORT).get_database(DATABASE_COLLECTION)
-    user_collection = db.get_collection('users', write_concern=pymongo.WriteConcern(w=0))
-    tweet_collection = db.get_collection('tweets', write_concern=pymongo.WriteConcern(w=0))
+    user_collection = db.get_collection('users', write_concern=pymongo.WriteConcern(w=write_concern))
+    tweet_collection = db.get_collection('tweets', write_concern=pymongo.WriteConcern(w=write_concern))
 
     if indexed:
         tweet_collection.create_index([("id", pymongo.ASCENDING)], name='tweet.id index', unique=True)
@@ -163,20 +185,26 @@ def bulk_insert_collections(path, indexed, drop_on_start, drop_on_exit=False):
     size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
     logger.info("{} seconds to bulk insert into collections {}".format(execution_time, size))
 
+    if drop_on_exit: drop_database(DATABASE)
+
     return execution_time, size
 
 
-def bulk_insert_one(path, drop_on_start, drop_on_exit=False, wc=0):
+def bulk_insert_one(path, drop_on_start, drop_on_exit=False, write_concern=1):
     """
-    Bulk insert one into MongoDB database
 
+    :param path:
+    :param drop_on_start:
+    :param drop_on_exit:
+    :param write_concern:
+    :return:
     """
 
     # drop database
     if drop_on_start: drop_database(DATABASE)
 
     db = connect(HOST, PORT).get_database(DATABASE)
-    coll = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=wc))
+    coll = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=write_concern))
 
     document = open(path, 'r')
 
@@ -188,11 +216,21 @@ def bulk_insert_one(path, drop_on_start, drop_on_exit=False, wc=0):
     size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
     logger.info("{} seconds to bulk insert one {}".format(run, size))
 
+    if drop_on_exit: drop_database(DATABASE)
+
     return run, size
 
 
-def insert_one(path, indexed, drop_on_start, drop_on_exit=False, wc=0):
-    """Inserts a single document to the benchmark_db database
+def insert_one(path, indexed, drop_on_start, drop_on_exit=False, write_concern=1):
+    """
+    Inserts a single document to the benchmark_db database
+
+    :param path:
+    :param indexed:
+    :param drop_on_start:
+    :param drop_on_exit:
+    :param write_concern:
+    :return:
 
        Parameters:
            indexed          - insert with indexes
@@ -214,7 +252,7 @@ def insert_one(path, indexed, drop_on_start, drop_on_exit=False, wc=0):
     if drop_on_start: drop_database(database)
 
     db = connect(HOST, PORT).get_database(DATABASE)
-    coll = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=wc))
+    coll = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=write_concern))
 
     d1 = open(path, 'r')
     docs = []
@@ -245,14 +283,19 @@ def insert_one(path, indexed, drop_on_start, drop_on_exit=False, wc=0):
     return insert_one_time, doc_size, db_size, bulk_insert_time
 
 
-def find(indexed, wc=0):
+def find(indexed):
+    """
+
+    :param indexed:
+    :return:
+    """
 
     if indexed:
         db = connect(HOST, PORT).get_database(DATABASE)
     else:
         db = connect(HOST, PORT).get_database(DATABASE_INDEXED)
 
-    collection = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=wc))
+    collection = db.get_collection(COLLECTION)
 
     execution_time = 0
 
@@ -272,10 +315,14 @@ def find(indexed, wc=0):
     return execution_time, count
 
 
-def scan(write_concern=0):
+def scan():
+    """
+
+    :return:
+    """
     db = connect(HOST, PORT).get_database(DATABASE)
 
-    collection = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=write_concern))
+    collection = db.get_collection(COLLECTION)
 
     start_time = time.time()
 
@@ -285,7 +332,7 @@ def scan(write_concern=0):
 
     scanned = collection.count()
 
-    logger.info("{} seconds to scan {}".format(execution_time, scanned))
+    logger.info("{} seconds to scan {} objects".format(execution_time, scanned))
 
     return execution_time, scanned
 
