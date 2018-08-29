@@ -25,7 +25,7 @@ HOST = config.host_mysql
 PORT = config.port_mysql
 DATABASE = config.database
 DOCUMENT = config.document
-DOCUMENT_SINGLE = config.document_single
+DOCUMENT_SINGLE = config.single
 
 
 def connect(host, port, user, password, database):

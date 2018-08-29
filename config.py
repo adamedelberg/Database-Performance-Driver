@@ -10,7 +10,7 @@ import logging
 
 # debugger level
 levels = [logging.INFO, logging.DEBUG, logging.WARNING]
-DEBUGGING_LEVEL = levels[0]
+DEBUG_LEVEL = levels[0]
 
 iterations = 2
 threads = 10
@@ -57,4 +57,4 @@ docs = [
 
 
 # do not change unless necessary
-document_single = '../parsed_data/single.json'
+single = '../parsed_data/single.json'

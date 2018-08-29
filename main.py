@@ -15,27 +15,25 @@ import mongo_db_live
 import mysql_db_live
 import statistics
 import config
-
-import psutil
-import time
-import datetime
 import os
+
+
 ITERATIONS = config.iterations
 THREADS = config.threads
 
 DATABASE = config.database
 DATABASE_INDEXED = config.indexed_database
-COLLECTION = config.collection
-DOCUMENT = config.document
-#DOCUMENT_DICT = config.document_dict
-DOCUMENT_SINGLE = config.document_single
 DATABASE_COLLECTION = config.collection_database
-LEVEL = config.DEBUGGING_LEVEL
+
+COLLECTION = config.collection
+PATH = config.document
+SINGLE = config.single
+DEBUG_LEVEL = config.DEBUG_LEVEL
 
 
 # console logging
 logging_format = '%(levelname)s: %(asctime)s: %(name)s: %(message)s'
-logging.basicConfig(level=LEVEL, format=logging_format)
+logging.basicConfig(level=DEBUG_LEVEL, format=logging_format)
 handler = logging.FileHandler('console.log')
 handler.setFormatter(logging.Formatter(logging_format))
 logger = logging.getLogger()
@@ -83,11 +81,11 @@ def ts_insert_index():
 
 
 def ts_find_index():
-    mongo_db.bulk_insert(path=DOCUMENT, indexed=True, drop_on_start=True, drop_on_exit=False)
-    mongo_db.bulk_insert(path=DOCUMENT, indexed=False, drop_on_start=True, drop_on_exit=False)
+    mongo_db.bulk_insert(path=PATH, indexed=True, drop_on_start=True, drop_on_exit=False)
+    mongo_db.bulk_insert(path=PATH, indexed=False, drop_on_start=True, drop_on_exit=False)
 
-    mysql_db.bulk_insert_universal(doc_path=DOCUMENT, indexed=True)
-    mysql_db.bulk_insert_universal(doc_path=DOCUMENT, indexed=False)
+    mysql_db.bulk_insert_universal(doc_path=PATH, indexed=True)
+    mysql_db.bulk_insert_universal(doc_path=PATH, indexed=False)
 
     test_mongo_db_find(indexed=True)
     test_mongo_db_find(indexed=False)
@@ -97,8 +95,8 @@ def ts_find_index():
 
 
 def ts_scan():
-    mongo_db.bulk_insert(path=DOCUMENT, indexed=False, drop_on_start=True, drop_on_exit=False)
-    mysql_db.bulk_insert_universal(doc_path=DOCUMENT, indexed=False)
+    mongo_db.bulk_insert(path=PATH, indexed=False, drop_on_start=True, drop_on_exit=False)
+    mysql_db.bulk_insert_universal(doc_path=PATH, indexed=False)
 
     test_mongo_db_scan()
     test_mysql_db_scan()
@@ -118,7 +116,7 @@ def test_mongo_db_bulk_insert():
 
     # perform multiple test iterations
     for i in range(ITERATIONS):
-        t, doc_size = mongo_db.bulk_insert(path=DOCUMENT, indexed=False, drop_on_start=True)
+        t, doc_size = mongo_db.bulk_insert(path=PATH, indexed=False, drop_on_start=True)
         times.append(t)
 
     # log results
@@ -130,7 +128,7 @@ def test_mongo_db_bulk_insert_collections():
     times = []
 
     for i in range(ITERATIONS):
-        t, doc_size = mongo_db.bulk_insert_collections(path=DOCUMENT, indexed=False, drop_on_start=True)
+        t, doc_size = mongo_db.bulk_insert_collections(path=PATH, indexed=False, drop_on_start=True)
         times.append(t)
 
     log = 'mongo_db.bulk_insert_collections: doc_size={}, time_mean={}'
@@ -141,7 +139,7 @@ def test_mysql_db_bulk_insert_universal():
     times = []
 
     for runs in range(ITERATIONS):
-        t, size = mysql_db.bulk_insert_universal(doc_path=DOCUMENT)
+        t, size = mysql_db.bulk_insert_universal(doc_path=PATH)
         times.append(t)
 
     log = 'mysql_db.bulk_insert_universal: doc_size={}, time_mean={}'
@@ -165,7 +163,7 @@ def test_mongo_db_bulk_insert_one():
 
     # perform multiple test iterations
     for i in range(ITERATIONS):
-        t, doc_size = mongo_db.bulk_insert_one(path=DOCUMENT, drop_on_start=True)
+        t, doc_size = mongo_db.bulk_insert_one(path=PATH, drop_on_start=True)
         times.append(t)
 
     # log results
@@ -179,7 +177,7 @@ def test_mysql_db_bulk_insert_one():
 
     # perform multiple test iterations
     for i in range(ITERATIONS):
-        t, doc_size = mysql_db.bulk_insert_one(doc_path=DOCUMENT, indexed=False)
+        t, doc_size = mysql_db.bulk_insert_one(doc_path=PATH, indexed=False)
         times.append(t)
 
     # log results
@@ -195,7 +193,7 @@ def test_mongo_db_insert_one(indexed):
 
     for i in range(ITERATIONS):
         t, db_size, doc_size, bulk_insert_time = mongo_db.insert_one(indexed=indexed, drop_on_start=True,
-                                                                     path=DOCUMENT)
+                                                                     path=PATH)
         times.append(t), bulk.append(bulk_insert_time)
 
     log = 'mongo_db.insert_one: indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
@@ -232,7 +230,7 @@ def test_mysql_db_select(indexed):
     times = []
 
     for i in range(ITERATIONS):
-        t, db_size = mysql_db.select(indexed=indexed, doc_path=DOCUMENT)
+        t, db_size = mysql_db.select(indexed=indexed, doc_path=PATH)
         times.append(t)
 
     log = 'mysql_db.select: indexed={}, db_size= {}, time_mean={}'
@@ -251,7 +249,7 @@ def test_mongo_db_scan():
         times.append(t)
 
     log = 'mongo_db.scan: db_size={}, scanned={}, time_mean={}'
-    db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
+    db_size = "{}MB".format(round(os.path.getsize(PATH) / 1024 / 1024, 2))
     log_results(log.format(db_size, scanned, statistics.mean(times)), times)
 
 
@@ -263,7 +261,7 @@ def test_mysql_db_scan():
         times.append(t)
 
     log = 'mysql_db.scan: db_size={}, scanned={}, time_mean={}'
-    db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
+    db_size = "{}MB".format(round(os.path.getsize(PATH) / 1024 / 1024, 2))
     log_results(log.format(db_size, scanned, statistics.mean(times)), times)
 
 
