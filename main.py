@@ -116,7 +116,7 @@ def test_mongo_db_bulk_insert():
 
     # perform multiple test iterations
     for i in range(ITERATIONS):
-        t, doc_size = mongo_db.bulk_insert(doc_path=DOCUMENT_DICT, indexed=False, drop_on_start=True)
+        t, doc_size = mongo_db.bulk_insert(doc_path=DOCUMENT, indexed=False, drop_on_start=True)
         times.append(t)
 
     # log results
@@ -128,7 +128,7 @@ def test_mongo_db_bulk_insert_collections():
     times = []
 
     for i in range(ITERATIONS):
-        t, doc_size = mongo_db.bulk_insert_collections(doc_path=DOCUMENT_DICT)
+        t, doc_size = mongo_db.bulk_insert_collections(path=DOCUMENT, indexed=False, drop_on_start=True)
         times.append(t)
 
     log = 'mongo_db.bulk_insert_collections: doc_size={}, time_mean={}'
@@ -163,7 +163,7 @@ def test_mongo_db_bulk_insert_one():
 
     # perform multiple test iterations
     for i in range(ITERATIONS):
-        t, doc_size = mongo_db.bulk_insert_one(doc_path=DOCUMENT_DICT, indexed=False, drop_on_start=True)
+        t, doc_size = mongo_db.bulk_insert_one(path=DOCUMENT, drop_on_start=True)
         times.append(t)
 
     # log results
@@ -331,11 +331,14 @@ if __name__ == "__main__":
     mysql_db.connect(host=config.mysql_host, port=config.mysql_port, user=config.username, password=config.password,
                      database=config.database)
 
+    #mongo_db.bulk_insert(indexed=False,doc_path=DOCUMENT, drop_on_start=True, drop_on_exit=True)
+    #mongo_db.bulk_insert_collections_2(path=DOCUMENT,indexed=False, drop_on_start=True, drop_on_exit=False)
     #ts_bulk_insert()
     ts_bulk_insert_one()
     #ts_insert_index()
     #ts_find_index()
     ##ts_scan()
+
 
 
 class DatabaseThreads(threading.Thread):

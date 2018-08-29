@@ -20,8 +20,8 @@ threads = 10
 host = '137.158.59.83'
 port = 27018
 
-#host = 'localhost'
-#port = 27017
+host = 'localhost'
+port = 27017
 
 #host = '137.158.59.83'
 #port = 27020
