@@ -113,7 +113,7 @@ def scan_all():
 
     return run, count
 
-
+#TODO: fix
 def select(indexed, doc_path):
     conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     cursor = conn.cursor()
@@ -132,24 +132,15 @@ def select(indexed, doc_path):
 
     for i in range(5):
         start = time.time()
+
         cursor.execute(sql1)
-        sql_time += time.time() - start
-        res = cursor.fetchone()
-        for row in res: num=row
-
-    for i in range(5):
-        start = time.time()
         cursor.execute(sql2)
-        sql_time += time.time() - start
-        res = cursor.fetchone()
-        for row in res: num = row
-
-    for i in range(5):
-        start = time.time()
         cursor.execute(sql3)
+
         sql_time += time.time() - start
+
         res = cursor.fetchone()
-        for row in res: num = row
+        for row in res: num+=row
 
     size = "{}MB".format(round(os.path.getsize(doc_path) / 1024 / 1024, 2))
     logger.info("{} seconds to select {} objects indexed={}, doc_size={}".format(sql_time, num, indexed,size))

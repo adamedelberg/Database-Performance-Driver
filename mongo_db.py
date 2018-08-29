@@ -51,6 +51,20 @@ def connect(host, port):
     return client
 
 
+def drop_database(database):
+    try:
+        client = MongoClient(HOST, PORT)
+        # connect(HOST, PORT).drop_database(database)
+        db = client.get_database(database)
+        coll = db.get_collection(COLLECTION)
+        coll.remove({})
+        # client.drop_database(database)
+        logger.debug("DROPPED {}!".format(database))
+
+    except pymongo.errors as e:
+        logger.warning("DROP ERROR: " + e)
+
+
 def create_indexes(database):
     """Create indexes after dropping 'benchmark_db_indexed'
 
@@ -70,7 +84,7 @@ def create_indexes(database):
         logger.warning("PyMongo Error: {}".format(code))
 
 
-def bulk_insert(path, indexed, drop_on_start, drop_on_exit=False):
+def bulk_insert(path, indexed, drop_on_start, drop_on_exit=False, wc=0):
     """Bulk insert into MongoDB database
 
     Parameters:
@@ -85,7 +99,7 @@ def bulk_insert(path, indexed, drop_on_start, drop_on_exit=False):
 
     # connect to correct database:
     db = connect(HOST, PORT).get_database(DATABASE)
-    coll = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=0))
+    coll = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=wc))
 
     document = open(path, 'r')
 
@@ -114,7 +128,46 @@ def bulk_insert(path, indexed, drop_on_start, drop_on_exit=False):
     return run, size
 
 
-def bulk_insert_one(path, drop_on_start, drop_on_exit=False):
+def bulk_insert_collections(path, indexed, drop_on_start, drop_on_exit=False):
+    if drop_on_start: drop_database(DATABASE_COLLECTION)
+
+    db = connect(HOST, PORT).get_database(DATABASE_COLLECTION)
+    user_collection = db.get_collection('users', write_concern=pymongo.WriteConcern(w=0))
+    tweet_collection = db.get_collection('tweets', write_concern=pymongo.WriteConcern(w=0))
+
+    if indexed:
+        tweet_collection.create_index([("id", pymongo.ASCENDING)], name='tweet.id index', unique=True)
+        user_collection.create_index([("id", pymongo.ASCENDING)], name='user.id index', unique=True)
+
+    execution_time = 0
+
+    document = open(path, 'r')
+
+    users = []
+    tweets = []
+
+    for doc in document:
+        d = json.loads(doc)
+        users.append(d['user'])
+        # add the user id to the tweet collection
+        d['user_id'] = d['user']['id']
+        del d['user']
+        tweets.append(d)
+
+    start_time = time.time()
+
+    user_collection.insert_many(users)
+    tweet_collection.insert_many(tweets)
+
+    execution_time += time.time() - start_time
+
+    size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
+    logger.info("{} seconds to bulk insert into collections {}".format(execution_time, size))
+
+    return execution_time, size
+
+
+def bulk_insert_one(path, drop_on_start, drop_on_exit=False, wc=0):
     """
     Bulk insert one into MongoDB database
 
@@ -124,7 +177,7 @@ def bulk_insert_one(path, drop_on_start, drop_on_exit=False):
     if drop_on_start: drop_database(DATABASE)
 
     db = connect(HOST, PORT).get_database(DATABASE)
-    coll = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=0))
+    coll = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=wc))
 
     document = open(path, 'r')
 
@@ -139,7 +192,7 @@ def bulk_insert_one(path, drop_on_start, drop_on_exit=False):
     return run, size
 
 
-def insert_one(path, indexed, drop_on_start, drop_on_exit=False):
+def insert_one(path, indexed, drop_on_start, drop_on_exit=False, wc=0):
     """Inserts a single document to the benchmark_db database
 
        Parameters:
@@ -161,8 +214,8 @@ def insert_one(path, indexed, drop_on_start, drop_on_exit=False):
 
     if drop_on_start: drop_database(database)
 
-    db = connect(HOST, PORT).get_database(database)
-    coll = db.get_collection(COLLECTION)
+    db = connect(HOST, PORT).get_database(DATABASE)
+    coll = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=wc))
 
     d1 = open(path, 'r')
     bulk_doc = json.load(d1)
@@ -189,114 +242,50 @@ def insert_one(path, indexed, drop_on_start, drop_on_exit=False):
     return insert_one_time, doc_size, db_size, bulk_insert_time
 
 
-#TODO: get rid of path here
-def find(indexed):
-    client = MongoClient(HOST, PORT)
+def find(indexed, wc=0):
 
     if indexed:
-        db = client.get_database(DATABASE_INDEXED)
-        # bulk_insert(doc_path=doc_path,indexed=True)
-        coll = db.get_collection(COLLECTION)
-
+        db = connect(HOST, PORT).get_database(DATABASE)
     else:
-        db = client.get_database(DATABASE)
-        # bulk_insert(doc_path=doc_path,indexed=False)
-        coll = db.get_collection(COLLECTION)
+        db = connect(HOST, PORT).get_database(DATABASE_INDEXED)
 
-    res = 0
+    collection = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=wc))
 
-    run = 0
-
-    # start = time.time()
-    for i in range(5):
-        start = time.time()
-        res = coll.find({'user.location': 'London'}).count()
-        run += time.time() - start
+    execution_time = 0
 
     for i in range(5):
-        start = time.time()
+        count = 0
 
-        res = coll.find({'user.friends_count': {'$gt': 1000}}).count()
-        run += time.time() - start
+        start_time = time.time()
 
-    for i in range(5):
-        start = time.time()
+        count += collection.find({'user.location': 'London'}).count()
+        count += collection.find({'user.friends_count': {'$gt': 1000}}).count()
+        count += collection.find({'user.followers_count': {'$gt': 1000}}).count()
 
-        res = coll.find({'user.followers_count': {'$gt': 1000}}).count()
-        run += time.time() - start
+        execution_time += time.time() - start_time
 
-    # run = time.time() - start
+    logger.info("{} seconds to find {} with indexed={}".format(execution_time, count, indexed))
 
-    count = coll.count()
-
-    logger.info("{} seconds to find {} with indexed={}".format(run, res, indexed))
-
-    return run, count
+    return execution_time, count
 
 
-#TODO: get rid of path here
-def scan():
-    client = MongoClient(HOST, PORT)
-    db = client.get_database(DATABASE)
-    coll = db.get_collection(COLLECTION)
+def scan(write_concern=0):
+    db = connect(HOST, PORT).get_database(DATABASE)
 
-    start = time.time()
-    coll.find({}).count()
-    run = time.time() - start
+    collection = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=write_concern))
 
-    scanned = coll.count()
-    size = 0
-    logger.info("{} seconds to scan {}".format(run, scanned))
+    start_time = time.time()
 
-    return run, scanned
+    collection.find({}).count()
 
+    execution_time = time.time() - start_time
 
-def drop_database(database):
-    try:
-        client = MongoClient(HOST, PORT)
-        # connect(HOST, PORT).drop_database(database)
-        db = client.get_database(database)
-        coll = db.get_collection(COLLECTION)
-        coll.remove({})
-        # client.drop_database(database)
-        logger.debug("DROPPED {}!".format(database))
+    scanned = collection.count()
 
-    except pymongo.errors as e:
-        logger.warning("DROP ERROR: " + e)
+    logger.info("{} seconds to scan {}".format(execution_time, scanned))
+
+    return execution_time, scanned
 
 
-def bulk_insert_collections(path, indexed, drop_on_start, drop_on_exit=False):
-    if drop_on_start: drop_database(DATABASE_COLLECTION)
 
-    db = connect(HOST, PORT).get_database(DATABASE_COLLECTION)
-    coll1 = db.get_collection('users', write_concern=pymongo.WriteConcern(w=0))
-    coll2 = db.get_collection('tweets', write_concern=pymongo.WriteConcern(w=0))
 
-    run = 0
-
-    document = open(path, 'r')
-
-    users = []
-    tweets = []
-
-    for doc in document:
-        d = json.loads(doc)
-        users.append(d['user'])
-        # add the user id to the tweet collection
-        d['user_id'] = d['user']['id']
-        del d['user']
-        tweets.append(d)
-
-    start = time.time()
-    coll1.insert_many(users)
-    coll2.insert_many(tweets)
-    run += time.time() - start
-
-    if indexed:
-        coll2.create_index([("id", pymongo.ASCENDING)], name='tweet.id index', unique=True)
-        coll1.create_index([("id", pymongo.ASCENDING)], name='user.id index', unique=True)
-
-    size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
-    logger.info("{} seconds to bulk insert into collections {}".format(run, size))
-
-    return run, size

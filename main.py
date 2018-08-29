@@ -335,7 +335,7 @@ if __name__ == "__main__":
     #ts_bulk_insert()
     #ts_bulk_insert_one()
     #ts_insert_index()
-    #ts_find_index()
+    ts_find_index()
     #ts_scan()
 
 
