@@ -9,37 +9,28 @@ import pymongo
 import logging
 
 # debugger level
-DEBUGGING_LEVEL = logging.DEBUG
-#DEBUGGING_LEVEL = logging.INFO
-
+levels = [logging.INFO, logging.DEBUG, logging.WARNING]
+DEBUGGING_LEVEL = levels[0]
 
 iterations = 2
 threads = 10
 
 #  MongoDB Configs
-host = '137.158.59.83'
-port = 27018
+host_mongo = '137.158.59.83'
+port_mongo = 27018
 
-host = 'localhost'
-port = 27017
+host_mongo = 'localhost'
+port_mongo = 27017
 
 #host = '137.158.59.83'
 #port = 27020
 
-
-# shard_host = '137.158.59.81'
-# shard_port = 27016
-
 #   MySQL Configs
-mysql_host = 'localhost'
-mysql_port = 3306
+host_mysql = 'localhost'
+port_mysql = 3306
 
-username = 'root'
-password = 'passQ123'
-
-# Indexes
-
-indexes = [[('id', pymongo.ASCENDING)], [('user.id', pymongo.ASCENDING)]]
+username_mysql = 'root'
+password_mysql = 'passQ123'
 
 # Database
 
@@ -56,9 +47,14 @@ document = '../parsed_data/e3-5MB.json'
 #document = '../parsed_data/e10-1GB.json'
 #document = '../parsed_data/big-5GB.json'
 
+docs = [
+    '../parsed_data/e3-5MB.json',
+    '../parsed_data/e3-50MB.json',
+    '../parsed_data/e3-100MB.json',
+    '../parsed_data/e3-500MB.json',
+    '../parsed_data/e10-1GB.json',
+    '../parsed_data/big-5GB.json']
 
-
-document_dict = "{}-d.json".format(document[:-5])
 
 # do not change unless necessary
 document_single = '../parsed_data/single.json'

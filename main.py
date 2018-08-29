@@ -20,15 +20,6 @@ import psutil
 import time
 import datetime
 import os
-
-# console logging
-logging_format = '%(levelname)s: %(asctime)s: %(name)s: %(message)s'
-logging.basicConfig(level=logging.INFO, format=logging_format)
-handler = logging.FileHandler('console.log')
-handler.setFormatter(logging.Formatter(logging_format))
-logger = logging.getLogger()
-logger.addHandler(handler)
-
 ITERATIONS = config.iterations
 THREADS = config.threads
 
@@ -36,9 +27,20 @@ DATABASE = config.database
 DATABASE_INDEXED = config.indexed_database
 COLLECTION = config.collection
 DOCUMENT = config.document
-DOCUMENT_DICT = config.document_dict
+#DOCUMENT_DICT = config.document_dict
 DOCUMENT_SINGLE = config.document_single
 DATABASE_COLLECTION = config.collection_database
+LEVEL = config.DEBUGGING_LEVEL
+
+
+# console logging
+logging_format = '%(levelname)s: %(asctime)s: %(name)s: %(message)s'
+logging.basicConfig(level=LEVEL, format=logging_format)
+handler = logging.FileHandler('console.log')
+handler.setFormatter(logging.Formatter(logging_format))
+logger = logging.getLogger()
+logger.addHandler(handler)
+
 
 
 def log_results(test_name, data):
@@ -193,7 +195,7 @@ def test_mongo_db_insert_one(indexed):
 
     for i in range(ITERATIONS):
         t, db_size, doc_size, bulk_insert_time = mongo_db.insert_one(indexed=indexed, drop_on_start=True,
-                                                                     path=DOCUMENT_DICT)
+                                                                     path=DOCUMENT)
         times.append(t), bulk.append(bulk_insert_time)
 
     log = 'mongo_db.insert_one: indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
@@ -257,7 +259,7 @@ def test_mysql_db_scan():
     times = []
 
     for i in range(ITERATIONS):
-        t, scanned = mysql_db.scan_all()
+        t, scanned = mysql_db.scan()
         times.append(t)
 
     log = 'mysql_db.scan: db_size={}, scanned={}, time_mean={}'
@@ -327,16 +329,16 @@ if args.test == 14: test_mongo_db_bulk_insert_collections()
 
 if __name__ == "__main__":
     # call connect to check access to databases
-    mongo_db.connect(host=config.host, port=config.port)
-    mysql_db.connect(host=config.mysql_host, port=config.mysql_port, user=config.username, password=config.password,
+    mongo_db.connect(host=config.host_mongo, port=config.port_mongo)
+    mysql_db.connect(host=config.host_mysql, port=config.port_mysql, user=config.username_mysql, password=config.password_mysql,
                      database=config.database)
 
 
-    #ts_bulk_insert()
-    #ts_bulk_insert_one()
-    #ts_insert_index()
+    ts_bulk_insert()
+    ts_bulk_insert_one()
+    ts_insert_index()
     ts_find_index()
-    #ts_scan()
+    ts_scan()
 
 
 

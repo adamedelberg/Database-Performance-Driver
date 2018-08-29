@@ -19,10 +19,10 @@ import config
 logger = logging.getLogger(__name__)
 
 # set defaults
-USER = config.username
-PASS = config.password
-HOST = config.mysql_host
-PORT = config.mysql_port
+USER = config.username_mysql
+PASS = config.password_mysql
+HOST = config.host_mysql
+PORT = config.port_mysql
 DATABASE = config.database
 DOCUMENT = config.document
 DOCUMENT_SINGLE = config.document_single
@@ -85,7 +85,7 @@ def delete_from_table(table):
     client.close()
 
 
-def scan_all():
+def scan():
     """Scan from a table (default = universal)
 
     Parameters:
@@ -94,36 +94,36 @@ def scan_all():
     Returns:
 
     """
-
-    # conn = mysql.connector.connect(user=u, password=p, host=h)
-
     conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     cursor = conn.cursor()
 
     sql = "SELECT * FROM universal;"
 
-    start = time.time()
+    start_time = time.time()
+
     cursor.execute(sql)
-    run = time.time() - start
+
+    execution_time = time.time() - start_time
 
     cursor.fetchall()
-    count = cursor.rowcount
 
-    logger.info(" %s seconds to scan %d objects from universal table", run, count)
+    scanned = cursor.rowcount
 
-    return run, count
+    logger.info(" %s seconds to scan %d objects from universal table", execution_time, scanned)
 
-#TODO: fix
+    return execution_time, scanned
+
+#TODO: tidy
 def select(indexed, doc_path):
     conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     cursor = conn.cursor()
 
     if indexed:
-        sql1 = "SELECT COUNT(*) from universal_indexed where `users.location` = 'London';"
+        sql1 = "SELECT COUNT(*) FROM universal_indexed where `users.location` = 'London';"
         sql2 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.friends_count`>1000;"
         sql3 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.followers_count`>1000;"
     else:
-        sql1 = "SELECT COUNT(*) from universal WHERE `users.location` = 'London';"
+        sql1 = "SELECT COUNT(*) FROM universal WHERE `users.location` = 'London';"
         sql2 = "SELECT COUNT(*) FROM universal WHERE `users.friends_count`>1000;"
         sql3 = "SELECT COUNT(*) FROM universal WHERE `users.followers_count`>1000;"
 

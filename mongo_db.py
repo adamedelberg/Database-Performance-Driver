@@ -24,11 +24,10 @@ DATABASE = config.database
 DATABASE_INDEXED = config.indexed_database
 COLLECTION = config.collection
 DOCUMENT = config.document
-#DOCUMENT_DICT = config.document_dict
 DOCUMENT_SINGLE = config.document_single
 DATABASE_COLLECTION = config.collection_database
-HOST = config.host
-PORT = config.port
+HOST = config.host_mongo
+PORT = config.port_mongo
 
 
 def connect(host, port):
@@ -218,13 +217,17 @@ def insert_one(path, indexed, drop_on_start, drop_on_exit=False, wc=0):
     coll = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=wc))
 
     d1 = open(path, 'r')
-    bulk_doc = json.load(d1)
+    docs = []
+
+    for doc in d1:
+        docs.append(json.loads(doc))
+
 
     d2 = open(DOCUMENT_SINGLE, 'r')
     single_doc = json.load(d2)
 
     start = time.time()
-    coll.insert_many(bulk_doc)
+    coll.insert_many(docs)
     bulk_insert_time = time.time() - start
 
     start = time.time()
