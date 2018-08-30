@@ -299,46 +299,46 @@ parser.add_argument('-d', '--debug', help='Debugger verbosity.', required=False,
 
 args = parser.parse_args()
 
-# if args.size ==1:
-#     logger.info("size=5MB")
-# if args.size ==2:
-#     logger.info("size=50MB")
-#     data = '../parsed_data/e3-500MB.json'
-# if args.size ==3:
-#     data = '../parsed_data/e3-500MB.json'
-# if args.size ==4:
-#     data = '../parsed_data/e3-500MB.json'
-# if args.size ==5:
-#     data = '../parsed_data/e3-1GB.json'
-
-
-if args.test_suite == 1:
-    logger.info("PERFORMING OP 1: Bulk Insert Test Suite")
-    ts_bulk_insert()
-if args.test_suite == 2:
-    logger.info("PERFORMING OP 2: Insert Index Test Suite")
-    ts_insert_index()
-if args.test_suite == 3:
-    logger.info("PERFORMING OP 3: Find Index Test Suite")
-    ts_find_index()
-if args.test_suite == 4:
-    logger.info("PERFORMING OP 4: Scan Test Suite")
-    ts_scan()
-
-if args.test == 1: test_mongo_db_bulk_insert()
-if args.test == 2: test_mongo_db_insert_one(indexed=True)
-if args.test == 3: test_mongo_db_insert_one(indexed=False)
-if args.test == 4: test_mongo_db_find(indexed=True)
-if args.test == 5: test_mongo_db_find(indexed=False)
-if args.test == 6: test_mongo_db_scan()
-if args.test == 7: test_mysql_db_bulk_insert_universal()
-if args.test == 8: test_mysql_db_bulk_insert_normalized()
-if args.test == 9: test_mysql_db_insert_one(indexed=True)
-if args.test == 10: test_mysql_db_insert_one(indexed=False)
-if args.test == 11: test_mysql_db_select(indexed=True)
-if args.test == 12: test_mysql_db_select(indexed=False)
-if args.test == 13: test_mysql_db_scan()
-if args.test == 14: test_mongo_db_bulk_insert_collections()
+# # if args.size ==1:
+# #     logger.info("size=5MB")
+# # if args.size ==2:
+# #     logger.info("size=50MB")
+# #     data = '../parsed_data/e3-500MB.json'
+# # if args.size ==3:
+# #     data = '../parsed_data/e3-500MB.json'
+# # if args.size ==4:
+# #     data = '../parsed_data/e3-500MB.json'
+# # if args.size ==5:
+# #     data = '../parsed_data/e3-1GB.json'
+#
+#
+# if args.test_suite == 1:
+#     logger.info("PERFORMING OP 1: Bulk Insert Test Suite")
+#     ts_bulk_insert()
+# if args.test_suite == 2:
+#     logger.info("PERFORMING OP 2: Insert Index Test Suite")
+#     ts_insert_index()
+# if args.test_suite == 3:
+#     logger.info("PERFORMING OP 3: Find Index Test Suite")
+#     ts_find_index()
+# if args.test_suite == 4:
+#     logger.info("PERFORMING OP 4: Scan Test Suite")
+#     ts_scan()
+#
+# if args.test == 1: test_mongo_db_bulk_insert()
+# if args.test == 2: test_mongo_db_insert_one(indexed=True)
+# if args.test == 3: test_mongo_db_insert_one(indexed=False)
+# if args.test == 4: test_mongo_db_find(indexed=True)
+# if args.test == 5: test_mongo_db_find(indexed=False)
+# if args.test == 6: test_mongo_db_scan()
+# if args.test == 7: test_mysql_db_bulk_insert_universal()
+# if args.test == 8: test_mysql_db_bulk_insert_normalized()
+# if args.test == 9: test_mysql_db_insert_one(indexed=True)
+# if args.test == 10: test_mysql_db_insert_one(indexed=False)
+# if args.test == 11: test_mysql_db_select(indexed=True)
+# if args.test == 12: test_mysql_db_select(indexed=False)
+# if args.test == 13: test_mysql_db_scan()
+# if args.test == 14: test_mongo_db_bulk_insert_collections()
 
 if __name__ == "__main__":
     # call connect to check access to databases
