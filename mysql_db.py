@@ -779,3 +779,7 @@ def get_normalized_statements(path=DOCUMENT):
                             media_url_https))
 
     return tweet_stmts, user_stmts, hashtags_stmts, media_stmts, user_mention_stmts, url_stmts, symbols_stmts
+
+
+def simulation():
+    print("h")

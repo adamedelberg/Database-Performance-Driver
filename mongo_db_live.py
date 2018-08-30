@@ -31,31 +31,9 @@ def simulate_mongodb(thread):
     database = client.get_database(DATABASE)
     collection = database.get_collection(COLLECTION)
 
-    d1 = json.load(open('dump/1s.json'))
-    d2 = json.load(open('dump/2s.json'))
-    d3 = json.load(open('dump/3s.json'))
-    d4 = json.load(open('dump/4s.json'))
-    d5 = json.load(open('dump/5s.json'))
-    d6 = json.load(open('dump/6s.json'))
-    d7 = json.load(open('dump/7s.json'))
-    d8 = json.load(open('dump/8s.json'))
-    d9 = json.load(open('dump/9s.json'))
-    d10 = json.load(open('dump/10s.json'))
-
     print('Simulate: ' + thread)
 
     bulk = collection.initialize_unordered_bulk_op()
-
-    bulk.insert(d1)
-    bulk.insert(d2)
-    bulk.insert(d3)
-    bulk.insert(d4)
-    bulk.insert(d5)
-    bulk.insert(d6)
-    bulk.insert(d7)
-    bulk.insert(d8)
-    bulk.insert(d9)
-    bulk.insert(d10)
 
     #time.sleep(10)
 

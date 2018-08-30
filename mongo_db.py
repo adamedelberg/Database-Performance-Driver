@@ -9,6 +9,7 @@ MongoDB Database Driver
 """
 
 import json
+import threading
 import time
 import logging
 import pymongo
@@ -16,6 +17,8 @@ from pymongo import MongoClient
 from pymongo import errors
 import os
 import config
+from multiprocessing.pool import ThreadPool
+
 
 logger = logging.getLogger(__name__)
 
@@ -335,4 +338,22 @@ def scan():
     logger.info("{} seconds to scan {} objects".format(execution_time, scanned))
 
     return execution_time, scanned
+
+
+def simulation(write_concern=0):
+    db = connect(HOST, PORT).get_database(DATABASE)
+    coll = db.get_collection(COLLECTION)
+
+    print(1)
+
+    # QUERIES HERE
+    # bulk = coll.initialize_unordered_bulk_op()
+    # bulk.insert()
+    # bulk.find({'is_quote_status':'true'})
+    # bulk.find({'lang': 'en'}).update({'$set': {'test1': 'True'}})
+    # bulk.find({'lang': 'en'}).remove_one()
+    # bulk.execute(write_concern=write_concern)
+
+
+
 
