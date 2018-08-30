@@ -336,6 +336,3 @@ def scan():
 
     return execution_time, scanned
 
-
-
-

@@ -359,7 +359,6 @@ if __name__ == "__main__":
     #ts_scan()
 
 
-
 class DatabaseThreads(threading.Thread):
     def __init__(self, thread_id, database):
         """
