@@ -8,13 +8,10 @@ date: 02 Aug 2018
 import csv
 import logging
 
-import threading
 import argparse
 
 import time
-from concurrent.futures import thread
-from simulation import start_simulation
-
+import simulation
 import mongo_db
 import mysql_db
 
@@ -46,6 +43,12 @@ logger.addHandler(handler)
 
 
 def log(tag, data):
+    """
+
+    :param tag:
+    :param data:
+    :return:
+    """
     # print test data to console
     print(tag)
     try:
@@ -276,25 +279,6 @@ def test_mysql_db_scan():
     log(log.format(db_size, scanned, statistics.mean(times)), times)
 
 
-def simulation():
-    print()
-    # Create new threads
-    #for i in range(THREADS):
-     #   t = DatabaseThreads('Thread-{}'.format(i), 1)
-      #  t.start()
-
-
-class DatabaseThreads (threading.Thread):
-   def __init__(self, name, database):
-       threading.Thread.__init__(self)
-       self.name = name
-       self.database = database
-
-   def run(self):
-        time.sleep(1)
-        print(self.name)
-
-
 
 # TODO: finish proper argument
 parser = argparse.ArgumentParser(description='DBD - Database Benchmark Driver')
@@ -370,7 +354,7 @@ if __name__ == "__main__":
     #ts_scan()
 
     # 1 = MongoDB, 2 = MySQL, 3 = Both
-    start_simulation(database=1, threads=5)
+    simulation.start(database=1, threads=5)
 
 
 
