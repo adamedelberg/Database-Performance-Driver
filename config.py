@@ -13,7 +13,7 @@ levels = [logging.INFO, logging.DEBUG, logging.WARNING]
 DEBUG_LEVEL = levels[0]
 
 iterations = 2
-threads = 10
+threads = 4
 
 #  MongoDB Configs
 host_mongo = '137.158.59.83'

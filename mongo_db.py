@@ -344,7 +344,7 @@ def simulation(write_concern=0):
     db = connect(HOST, PORT).get_database(DATABASE)
     coll = db.get_collection(COLLECTION)
 
-    print(1)
+    print('query')
 
     # QUERIES HERE
     # bulk = coll.initialize_unordered_bulk_op()

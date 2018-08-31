@@ -1,3 +1,5 @@
+import logging
+import random
 import threading
 
 import time
@@ -5,13 +7,13 @@ import time
 import mongo_db
 import mysql_db
 
+logger = logging.getLogger(__name__)
+
 
 def start(database, threads):
-    print("database: {}".format(database))
-    print("threads: {}".format(threads))
 
     for i in range(threads):
-        t = DatabaseThreads('Thread-{}'.format(i), 1)
+        t = DatabaseThreads('Thread-{}'.format(i), database=database)
         t.start()
 
 
@@ -23,17 +25,18 @@ class DatabaseThreads(threading.Thread):
 
     def run(self):
 
-        # 1 = MongoDB, 2 = MySQL, 3 = Both
+        # 1 = MongoDB, 2 = MySQL,
 
-        if self.database == 1:
-            mongo_db.simulation(write_concern=0)
+        exit_flag = False
 
-        if self.database == 2:
-            mysql_db.simulation()
+        while not exit_flag:
+            # wait a random time between 0 and 5 seconds
+            time.sleep(random.randrange(0, 5))
 
-        if self.database == 3:
-            mongo_db.simulation(write_concern=0)
-            mysql_db.simulation()
+            if self.database == 1:
+                    mongo_db.simulation(write_concern=0)
+                    logger.info('{} simulating mongo'.format(self.name))
 
-        time.sleep(0.1)
-        # print(self.name)
+            if self.database == 2:
+                    mysql_db.simulation()
+                    logger.info('{} simulating mysql'.format(self.name))

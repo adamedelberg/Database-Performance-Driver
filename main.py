@@ -42,72 +42,10 @@ logger = logging.getLogger()
 logger.addHandler(handler)
 
 
-def log(tag, data):
-    """
-
-    :param tag:
-    :param data:
-    :return:
-    """
-    # print test data to console
-    print(tag)
-    try:
-        # logs get appended to the same file
-        with open(r'logs.csv', 'a') as report:
-            writer = csv.writer(report, dialect='excel')
-            writer.writerow([tag] + data)
-            report.close()
-    except csv.Error as code:
-        logger.info("Logger: {}".format(code))
-
-
-############################################################
-#                   TEST SUITE PROCEDURES                  #
-############################################################
-
-
-def ts_bulk_insert():
-    test_mongo_db_bulk_insert()
-    test_mongo_db_bulk_insert_collections()
-
-    test_mysql_db_bulk_insert_universal()
-    test_mysql_db_bulk_insert_normalized()
-
-
-def ts_bulk_insert_one():
-    test_mongo_db_bulk_insert_one()
-    test_mysql_db_bulk_insert_one()
-
-
-
-def ts_insert_index():
-    test_mongo_db_insert_one(indexed=True)
-    test_mongo_db_insert_one(indexed=False)
-
-    test_mysql_db_insert_one(indexed=True)
-    test_mysql_db_insert_one(indexed=False)
-
-
-def ts_find_index():
-    test_mongo_db_find(indexed=True)
-    test_mongo_db_find(indexed=False)
-
-    test_mysql_db_select(indexed=True)
-    test_mysql_db_select(indexed=False)
-
-
-def ts_scan():
-    test_mongo_db_scan()
-    test_mysql_db_scan()
-
-
 ############################################################
 #                  MANUAL TEST PROCEDURES                  #
 ############################################################
 
-###########################
-# OP 1: Bulk Insert Tests
-###########################
 
 def test_mongo_db_bulk_insert():
     # timing and metric variables
@@ -183,9 +121,6 @@ def test_mysql_db_bulk_insert_one():
     log = 'mysql_db.bulk_insert_one: doc_size={}, time_mean={}'
     log(log.format(doc_size, statistics.mean(times)), times)
 
-##############################
-# OP 2: Indexed Insert Tests
-##############################
 
 def test_mongo_db_insert_one(indexed):
     times, bulk = [], []
@@ -209,10 +144,6 @@ def test_mysql_db_insert_one(indexed):
     log = 'mysql_db.universal_insert_one: indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
     log(log.format(indexed, doc_size, db_size, statistics.mean(times), statistics.mean(bulk)), times)
 
-
-############################
-# OP 3: Find Indexed Tests
-############################
 
 def test_mongo_db_find(indexed):
     mongo_db.bulk_insert(path=PATH, indexed=indexed, drop_on_start=True, drop_on_exit=False)
@@ -238,10 +169,6 @@ def test_mysql_db_select(indexed):
     log = 'mysql_db.select: indexed={}, db_size= {}, time_mean={}'
     log(log.format(indexed, db_size, statistics.mean(times)), times)
 
-
-####################
-# OP 4: Scan Tests
-####################
 
 def test_mongo_db_scan():
     # repopulate database
@@ -278,6 +205,9 @@ def test_mysql_db_scan():
     db_size = "{}MB".format(round(os.path.getsize(PATH) / 1024 / 1024, 2))
     log(log.format(db_size, scanned, statistics.mean(times)), times)
 
+############################################################
+#              MANUAL TEST PROCEDURES END                  #
+############################################################
 
 
 # TODO: finish proper argument
@@ -299,32 +229,6 @@ parser.add_argument('-d', '--debug', help='Debugger verbosity.', required=False,
 
 args = parser.parse_args()
 
-# # if args.size ==1:
-# #     logger.info("size=5MB")
-# # if args.size ==2:
-# #     logger.info("size=50MB")
-# #     data = '../parsed_data/e3-500MB.json'
-# # if args.size ==3:
-# #     data = '../parsed_data/e3-500MB.json'
-# # if args.size ==4:
-# #     data = '../parsed_data/e3-500MB.json'
-# # if args.size ==5:
-# #     data = '../parsed_data/e3-1GB.json'
-#
-#
-# if args.test_suite == 1:
-#     logger.info("PERFORMING OP 1: Bulk Insert Test Suite")
-#     ts_bulk_insert()
-# if args.test_suite == 2:
-#     logger.info("PERFORMING OP 2: Insert Index Test Suite")
-#     ts_insert_index()
-# if args.test_suite == 3:
-#     logger.info("PERFORMING OP 3: Find Index Test Suite")
-#     ts_find_index()
-# if args.test_suite == 4:
-#     logger.info("PERFORMING OP 4: Scan Test Suite")
-#     ts_scan()
-#
 # if args.test == 1: test_mongo_db_bulk_insert()
 # if args.test == 2: test_mongo_db_insert_one(indexed=True)
 # if args.test == 3: test_mongo_db_insert_one(indexed=False)
@@ -340,18 +244,53 @@ args = parser.parse_args()
 # if args.test == 13: test_mysql_db_scan()
 # if args.test == 14: test_mongo_db_bulk_insert_collections()
 
+
+def log(tag, data):
+    """
+
+    :param tag:
+    :param data:
+    :return:
+    """
+    # print test data to console
+    print(tag)
+    try:
+        # logs get appended to the same file
+        with open(r'logs.csv', 'a') as report:
+            writer = csv.writer(report, dialect='excel')
+            writer.writerow([tag] + data)
+            report.close()
+    except csv.Error as code:
+        logger.info("Logger: {}".format(code))
+
+
 if __name__ == "__main__":
     # call connect to check access to databases
-    mongo_db.connect(host=config.host_mongo, port=config.port_mongo)
-    mysql_db.connect(host=config.host_mysql, port=config.port_mysql, user=config.username_mysql, password=config.password_mysql,
-                     database=config.database)
+    #mongo_db.connect(host=config.host_mongo, port=config.port_mongo)
+    #mysql_db.connect(host=config.host_mysql, port=config.port_mysql, user=config.username_mysql, password=config.password_mysql,
+                     #database=config.database)
 
+    # test_mongo_db_bulk_insert()
+    # test_mongo_db_bulk_insert_collections()
+    # test_mysql_db_bulk_insert_universal()
+    # test_mysql_db_bulk_insert_normalized()
 
-    #ts_bulk_insert()
-    #ts_bulk_insert_one()
-    #ts_insert_index()
-    #ts_find_index()
-    #ts_scan()
+    # test_mongo_db_bulk_insert_one()
+    # test_mysql_db_bulk_insert_one()
+
+    # test_mongo_db_insert_one(indexed=True)
+    # test_mongo_db_insert_one(indexed=False)
+    # test_mysql_db_insert_one(indexed=True)
+    # test_mysql_db_insert_one(indexed=False)
+
+    # test_mongo_db_find(indexed=True)
+    # test_mongo_db_find(indexed=False)
+    # test_mysql_db_select(indexed=True)
+    # test_mysql_db_select(indexed=False)
+
+    # test_mongo_db_scan()
+    # test_mysql_db_scan()
+
 
     # 1 = MongoDB, 2 = MySQL, 3 = Both
     simulation.start(database=1, threads=5)
