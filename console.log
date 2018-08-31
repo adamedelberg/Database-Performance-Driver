@@ -30478,3 +30478,240 @@ INFO: 2018-08-31 15:10:17,517: root: Stopping Thread-1
 INFO: 2018-08-31 15:10:17,518: root: Thread-1 stopped
 INFO: 2018-08-31 15:10:17,526: root: Stopping Thread-2
 INFO: 2018-08-31 15:10:17,527: root: Thread-2 stopped
+INFO: 2018-08-31 15:18:32,486: root: Thread-0 started
+INFO: 2018-08-31 15:18:32,488: root: Thread-1 started
+INFO: 2018-08-31 15:18:32,488: root: Thread-2 started
+INFO: 2018-08-31 15:18:32,558: root: Thread-1 started
+INFO: 2018-08-31 15:18:32,564: root: Thread-0 started
+INFO: 2018-08-31 15:18:32,568: root: Thread-2 started
+INFO: 2018-08-31 15:18:32,594: root: Thread-1 started
+INFO: 2018-08-31 15:18:32,599: root: Thread-0 started
+INFO: 2018-08-31 15:18:32,603: root: Thread-2 started
+INFO: 2018-08-31 15:18:32,628: root: Thread-1 started
+INFO: 2018-08-31 15:18:32,632: root: Thread-2 started
+INFO: 2018-08-31 15:18:32,632: root: Thread-0 started
+INFO: 2018-08-31 15:18:32,662: root: Thread-1 started
+INFO: 2018-08-31 15:18:32,665: root: Thread-0 started
+INFO: 2018-08-31 15:18:32,667: root: Thread-2 started
+INFO: 2018-08-31 15:18:32,696: root: Thread-2 started
+INFO: 2018-08-31 15:18:32,697: root: Thread-1 started
+INFO: 2018-08-31 15:18:32,697: root: Thread-0 started
+INFO: 2018-08-31 15:18:32,751: root: Thread-2 started
+INFO: 2018-08-31 15:18:32,753: root: Thread-1 started
+INFO: 2018-08-31 15:18:32,764: root: Thread-0 started
+INFO: 2018-08-31 15:18:32,812: root: Thread-2 started
+INFO: 2018-08-31 15:18:32,813: root: Thread-1 started
+INFO: 2018-08-31 15:18:32,819: root: Thread-0 started
+INFO: 2018-08-31 15:18:32,846: root: Thread-1 started
+INFO: 2018-08-31 15:18:32,849: root: Thread-2 started
+INFO: 2018-08-31 15:18:32,852: root: Thread-0 started
+INFO: 2018-08-31 15:18:32,879: root: Thread-1 started
+INFO: 2018-08-31 15:18:32,883: root: Thread-2 started
+INFO: 2018-08-31 15:18:32,884: root: Thread-0 started
+INFO: 2018-08-31 15:18:33,070: root: Thread-1 started
+INFO: 2018-08-31 15:18:33,072: root: Thread-2 started
+INFO: 2018-08-31 15:18:33,083: root: Thread-0 started
+INFO: 2018-08-31 15:18:33,267: root: Thread-1 started
+INFO: 2018-08-31 15:18:33,285: root: Thread-0 started
+INFO: 2018-08-31 15:18:33,289: root: Thread-2 started
+INFO: 2018-08-31 15:18:33,321: root: Thread-1 started
+INFO: 2018-08-31 15:18:33,357: root: Thread-0 started
+INFO: 2018-08-31 15:18:33,359: root: Thread-2 started
+INFO: 2018-08-31 15:18:33,372: root: Thread-1 started
+INFO: 2018-08-31 15:18:33,400: root: Thread-2 started
+INFO: 2018-08-31 15:18:33,401: root: Thread-0 started
+INFO: 2018-08-31 15:18:33,410: root: Thread-1 started
+INFO: 2018-08-31 15:18:33,469: root: Thread-0 started
+INFO: 2018-08-31 15:18:33,472: root: Thread-2 started
+INFO: 2018-08-31 15:18:33,477: root: Thread-1 started
+INFO: 2018-08-31 15:18:33,527: root: Thread-0 started
+INFO: 2018-08-31 15:18:33,536: root: Thread-2 started
+INFO: 2018-08-31 15:18:33,553: root: Thread-1 started
+INFO: 2018-08-31 15:18:33,667: root: Thread-0 started
+INFO: 2018-08-31 15:18:33,673: root: Thread-2 started
+INFO: 2018-08-31 15:18:33,676: root: Thread-1 started
+INFO: 2018-08-31 15:18:33,720: root: Thread-0 started
+INFO: 2018-08-31 15:18:33,721: root: Thread-2 started
+INFO: 2018-08-31 15:18:33,726: root: Thread-1 started
+INFO: 2018-08-31 15:18:33,840: root: Thread-1 started
+INFO: 2018-08-31 15:18:33,848: root: Thread-0 started
+INFO: 2018-08-31 15:18:33,852: root: Thread-2 started
+INFO: 2018-08-31 15:18:33,960: root: Thread-1 started
+INFO: 2018-08-31 15:18:33,963: root: Thread-2 started
+INFO: 2018-08-31 15:18:33,970: root: Thread-0 started
+INFO: 2018-08-31 15:18:33,994: root: Thread-1 started
+INFO: 2018-08-31 15:18:33,996: root: Thread-2 started
+INFO: 2018-08-31 15:18:34,002: root: Thread-0 started
+INFO: 2018-08-31 15:18:34,022: root: Thread-1 started
+INFO: 2018-08-31 15:18:34,055: root: Thread-2 started
+INFO: 2018-08-31 15:18:34,062: root: Thread-0 started
+INFO: 2018-08-31 15:18:34,090: root: Thread-1 started
+INFO: 2018-08-31 15:18:34,186: root: Thread-2 started
+INFO: 2018-08-31 15:18:34,203: root: Thread-0 started
+INFO: 2018-08-31 15:18:34,215: root: Thread-1 started
+INFO: 2018-08-31 15:18:34,230: root: Thread-2 started
+INFO: 2018-08-31 15:18:34,238: root: Thread-0 started
+INFO: 2018-08-31 15:18:34,250: root: Thread-1 started
+INFO: 2018-08-31 15:18:34,335: root: Thread-2 started
+INFO: 2018-08-31 15:18:34,359: root: Thread-0 started
+INFO: 2018-08-31 15:18:34,423: root: Thread-1 started
+INFO: 2018-08-31 15:18:34,526: root: Thread-2 started
+INFO: 2018-08-31 15:18:34,541: root: Thread-0 started
+INFO: 2018-08-31 15:18:34,586: root: Thread-1 started
+INFO: 2018-08-31 15:18:34,689: root: Thread-2 started
+INFO: 2018-08-31 15:18:34,759: root: Thread-0 started
+INFO: 2018-08-31 15:18:34,859: root: Thread-1 started
+INFO: 2018-08-31 15:18:35,118: root: Thread-0 started
+INFO: 2018-08-31 15:18:35,145: root: Thread-2 started
+INFO: 2018-08-31 15:18:35,213: root: Thread-1 started
+INFO: 2018-08-31 15:18:35,365: root: Thread-2 started
+INFO: 2018-08-31 15:18:35,374: root: Thread-0 started
+INFO: 2018-08-31 15:18:35,382: root: Thread-1 started
+INFO: 2018-08-31 15:18:35,403: root: Thread-2 started
+INFO: 2018-08-31 15:18:35,449: root: Thread-0 started
+INFO: 2018-08-31 15:18:35,464: root: Thread-1 started
+INFO: 2018-08-31 15:18:35,496: root: Thread-2 started
+INFO: 2018-08-31 15:18:35,497: mongo_db: 0.0038259029388427734 seconds to insert one indexed=3 db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:18:35,541: root: Thread-1 started
+INFO: 2018-08-31 15:18:35,561: root: Thread-0 started
+INFO: 2018-08-31 15:18:35,565: root: Thread-2 started
+INFO: 2018-08-31 15:18:35,726: root: Thread-2 started
+INFO: 2018-08-31 15:18:35,738: root: Thread-1 started
+INFO: 2018-08-31 15:18:35,738: root: Thread-0 started
+INFO: 2018-08-31 15:18:35,839: root: Thread-2 started
+INFO: 2018-08-31 15:18:35,858: root: Thread-0 started
+INFO: 2018-08-31 15:18:35,867: root: Thread-1 started
+INFO: 2018-08-31 15:18:35,947: root: Thread-2 started
+INFO: 2018-08-31 15:18:35,971: root: Thread-0 started
+INFO: 2018-08-31 15:18:36,022: root: Thread-1 started
+INFO: 2018-08-31 15:18:36,258: root: Thread-2 started
+INFO: 2018-08-31 15:18:36,328: root: Thread-0 started
+INFO: 2018-08-31 15:18:36,396: root: Thread-1 started
+INFO: 2018-08-31 15:18:36,635: root: Thread-2 started
+INFO: 2018-08-31 15:18:36,676: root: Thread-0 started
+INFO: 2018-08-31 15:18:36,689: root: Thread-1 started
+INFO: 2018-08-31 15:18:36,730: root: Thread-0 started
+INFO: 2018-08-31 15:18:36,736: root: Thread-2 started
+INFO: 2018-08-31 15:18:36,746: root: Thread-1 started
+INFO: 2018-08-31 15:18:36,750: mongo_db: 0.0025310516357421875 seconds to insert one indexed=3 db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:18:36,903: root: Thread-2 started
+INFO: 2018-08-31 15:18:36,905: root: Thread-0 started
+INFO: 2018-08-31 15:18:36,960: root: Thread-1 started
+INFO: 2018-08-31 15:18:37,061: root: Thread-0 started
+INFO: 2018-08-31 15:18:37,061: root: Thread-2 started
+INFO: 2018-08-31 15:18:37,087: root: Thread-1 started
+INFO: 2018-08-31 15:18:37,243: root: Thread-0 started
+INFO: 2018-08-31 15:18:37,279: root: Thread-2 started
+INFO: 2018-08-31 15:18:37,338: root: Thread-1 started
+INFO: 2018-08-31 15:18:37,603: root: Thread-0 started
+INFO: 2018-08-31 15:18:37,603: root: Thread-2 started
+INFO: 2018-08-31 15:18:37,645: root: Thread-1 started
+INFO: 2018-08-31 15:18:37,954: root: Thread-2 started
+INFO: 2018-08-31 15:18:37,976: root: Thread-0 started
+INFO: 2018-08-31 15:18:37,991: root: Thread-1 started
+INFO: 2018-08-31 15:18:38,022: mongo_db: 0.0028390884399414062 seconds to insert one indexed=3 db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:18:38,058: root: Thread-2 started
+INFO: 2018-08-31 15:18:38,073: root: Thread-0 started
+INFO: 2018-08-31 15:18:38,125: root: Thread-1 started
+INFO: 2018-08-31 15:18:38,229: root: Thread-2 started
+INFO: 2018-08-31 15:18:38,268: root: Thread-0 started
+INFO: 2018-08-31 15:18:38,291: root: Thread-1 started
+INFO: 2018-08-31 15:18:38,431: root: Thread-2 started
+INFO: 2018-08-31 15:18:38,444: root: Thread-0 started
+INFO: 2018-08-31 15:18:38,504: root: Thread-1 started
+INFO: 2018-08-31 15:18:38,901: root: Thread-1 started
+INFO: 2018-08-31 15:18:38,908: root: Thread-2 started
+INFO: 2018-08-31 15:18:38,929: root: Thread-0 started
+INFO: 2018-08-31 15:18:39,148: mongo_db: 0.002942800521850586 seconds to insert one indexed=3 db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:18:39,168: root: Thread-2 started
+INFO: 2018-08-31 15:18:39,176: root: Thread-1 started
+INFO: 2018-08-31 15:18:39,187: root: Thread-0 started
+INFO: 2018-08-31 15:18:39,232: root: Thread-2 started
+INFO: 2018-08-31 15:18:39,286: root: Thread-1 started
+INFO: 2018-08-31 15:18:39,295: root: Thread-0 started
+INFO: 2018-08-31 15:18:39,390: root: Thread-2 started
+INFO: 2018-08-31 15:18:39,543: root: Thread-1 started
+INFO: 2018-08-31 15:18:39,609: root: Thread-0 started
+INFO: 2018-08-31 15:18:39,692: root: Thread-2 started
+INFO: 2018-08-31 15:18:39,862: root: Thread-1 started
+INFO: 2018-08-31 15:18:40,059: root: Thread-0 started
+INFO: 2018-08-31 15:18:40,130: root: Thread-2 started
+INFO: 2018-08-31 15:18:40,279: root: Thread-1 started
+INFO: 2018-08-31 15:18:40,331: root: Thread-2 started
+INFO: 2018-08-31 15:18:40,358: root: Thread-0 started
+INFO: 2018-08-31 15:18:40,403: mongo_db: 0.01494908332824707 seconds to insert one indexed=3 db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:18:40,492: root: Stopping Thread-1
+INFO: 2018-08-31 15:18:40,492: root: Thread-1 stopped
+INFO: 2018-08-31 15:18:40,514: root: Stopping Thread-2
+INFO: 2018-08-31 15:18:40,514: root: Thread-2 stopped
+INFO: 2018-08-31 15:18:40,530: root: Stopping Thread-0
+INFO: 2018-08-31 15:18:40,531: root: Thread-0 stopped
+INFO: 2018-08-31 15:18:44,865: mongo_db: 0.0015869140625 seconds to insert one indexed=3 db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:18:45,625: mongo_db: 0.0017898082733154297 seconds to insert one indexed=3 db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:18:46,345: mongo_db: 0.004832029342651367 seconds to insert one indexed=3 db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:18:47,059: mongo_db: 0.0016210079193115234 seconds to insert one indexed=3 db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:18:47,780: mongo_db: 0.002640962600708008 seconds to insert one indexed=3 db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:19:44,710: mongo_db: 0.0017747879028320312 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:19:45,447: mongo_db: 0.0018138885498046875 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:19:46,152: mongo_db: 0.0015070438385009766 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:28:21,858: mongo_db: 0.6327991485595703 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:28:22,628: mongo_db: 0.6273252964019775 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:28:23,370: mongo_db: 0.5924761295318604 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:30:31,390: mongo_db: 0.5877816677093506 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:30:32,072: mongo_db: 0.5495281219482422 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:30:32,787: mongo_db: 0.5903418064117432 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:30:40,645: mongo_db: 0.6775870323181152 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 15:30:41,453: mongo_db: 0.6754617691040039 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 15:30:42,226: mongo_db: 0.6463758945465088 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 15:30:46,884: mysql_db: 0.8040282726287842 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:30:47,780: mysql_db: 0.5649776458740234 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:30:48,562: mysql_db: 0.4956784248352051 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:31:04,586: mysql_db: 0.492145299911499 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:31:05,328: mysql_db: 0.5113856792449951 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:31:06,099: mysql_db: 0.49190449714660645 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:32:07,234: mysql_db: 0.0005838871002197266 seconds to universal insert one indexed=3, db_size=4.89MB, doc_size=0.01MB
+INFO: 2018-08-31 15:33:40,985: mysql_db: 0.0004088878631591797 seconds to universal insert one indexed=3, db_size=4.89MB, doc_size=0.01MB
+INFO: 2018-08-31 15:33:55,709: mysql_db: 0.00040912628173828125 seconds to universal insert one indexed=True, db_size=4.89MB, doc_size=0.01MB
+INFO: 2018-08-31 15:33:56,548: mysql_db: 0.00039124488830566406 seconds to universal insert one indexed=True, db_size=4.89MB, doc_size=0.01MB
+INFO: 2018-08-31 15:33:57,370: mysql_db: 0.00040411949157714844 seconds to universal insert one indexed=True, db_size=4.89MB, doc_size=0.01MB
+INFO: 2018-08-31 15:34:20,328: mongo_db: 0.9283828735351562 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 15:34:21,173: mongo_db: 0.7228832244873047 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 15:34:21,948: mongo_db: 0.6505000591278076 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 15:34:27,443: mysql_db: 0.4792778491973877 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:34:28,172: mysql_db: 0.47869229316711426 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:34:28,868: mysql_db: 0.48929452896118164 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:35:51,136: mongo_db: 0.0017757415771484375 seconds to insert one indexed=True db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:35:51,873: mongo_db: 0.0015971660614013672 seconds to insert one indexed=True db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:35:52,555: mongo_db: 0.0016138553619384766 seconds to insert one indexed=True db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:36:14,423: mongo_db: 0.0018041133880615234 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:36:15,154: mongo_db: 0.0017862319946289062 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:36:15,858: mongo_db: 0.0015778541564941406 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:36:27,868: mongo_db: 0.001851797103881836 seconds to insert one indexed=True db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:36:28,678: mongo_db: 0.004313230514526367 seconds to insert one indexed=True db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:36:29,445: mongo_db: 0.0017483234405517578 seconds to insert one indexed=True db_size=4.89MB doc_size=0.01MB
+INFO: 2018-08-31 15:36:47,492: mongo_db: 0.6069860458374023 seconds to bulk insert 4.89MB, indexed=3
+INFO: 2018-08-31 15:37:58,666: mongo_db: 0.5329718589782715 seconds to bulk insert 4.89MB, indexed=3
+INFO: 2018-08-31 15:38:49,511: mongo_db: 0.5188658237457275 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:38:49,599: mongo_db: 0.07847166061401367 seconds to find 651 with indexed=False
+INFO: 2018-08-31 15:38:49,619: mongo_db: 0.0176849365234375 seconds to find 651 with indexed=False
+INFO: 2018-08-31 15:38:49,642: mongo_db: 0.021449804306030273 seconds to find 651 with indexed=False
+INFO: 2018-08-31 15:39:01,301: mongo_db: 0.5328950881958008 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:39:01,367: mongo_db: 0.017882108688354492 seconds to find 651 with indexed=False
+INFO: 2018-08-31 15:39:01,386: mongo_db: 0.01752328872680664 seconds to find 651 with indexed=False
+INFO: 2018-08-31 15:39:01,405: mongo_db: 0.017646074295043945 seconds to find 651 with indexed=False
+INFO: 2018-08-31 15:39:06,282: mysql_db: 0.44365620613098145 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:39:06,308: mysql_db: 0.023029088973999023 seconds to select 1755 objects indexed=False, doc_size=4.89MB
+INFO: 2018-08-31 15:39:06,332: mysql_db: 0.021291732788085938 seconds to select 1755 objects indexed=False, doc_size=4.89MB
+INFO: 2018-08-31 15:39:06,351: mysql_db: 0.01616644859313965 seconds to select 1755 objects indexed=False, doc_size=4.89MB
+INFO: 2018-08-31 15:39:35,844: mongo_db: 0.5863139629364014 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:39:36,363: mongo_db: 0.003464937210083008 seconds to scan 1000 objects
+INFO: 2018-08-31 15:39:36,369: mongo_db: 0.0029449462890625 seconds to scan 1000 objects
+INFO: 2018-08-31 15:39:36,373: mongo_db: 0.0026350021362304688 seconds to scan 1000 objects
+INFO: 2018-08-31 15:39:44,709: mysql_db: 0.47396111488342285 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:39:45,454: mysql_db:  0.23824667930603027 seconds to scan 1000 objects from universal table
+INFO: 2018-08-31 15:39:45,676: mysql_db:  0.21663713455200195 seconds to scan 1000 objects from universal table
+INFO: 2018-08-31 15:39:45,939: mysql_db:  0.25099802017211914 seconds to scan 1000 objects from universal table
+INFO: 2018-08-31 15:39:50,680: mongo_db: 0.5602669715881348 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 15:39:51,197: mongo_db: 0.0032520294189453125 seconds to scan 1000 objects
+INFO: 2018-08-31 15:39:51,201: mongo_db: 0.0030188560485839844 seconds to scan 1000 objects
+INFO: 2018-08-31 15:39:51,206: mongo_db: 0.0029888153076171875 seconds to scan 1000 objects
