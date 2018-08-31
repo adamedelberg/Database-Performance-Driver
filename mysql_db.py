@@ -7,6 +7,7 @@ MySQL Database Driver
 import io
 import json
 import logging
+import random
 import time
 
 import os
@@ -782,4 +783,18 @@ def get_normalized_statements(path=DOCUMENT):
 
 
 def simulation():
-    print("h")
+    connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    cursor = connector.cursor()
+
+    languages = ['es','en','ru']
+    truncated = ['true','false']
+    id = 0
+
+    for i in range (len(languages)):
+        sql_find="SELECT * FROM `universal` WHERE `tweets.lang` = '{}';".format(languages[random.randrange(0, len(languages))])
+        cursor.execute(sql_find)
+        sql_update="UPDATE `universal` SET `tweets.truncated` = '{}' WHERE `tweets.truncated` ='{}';".format(truncated[random.randrange(0,1)],truncated[random.randrange(0,1)])
+        cursor.execute(sql_update)
+        id+=1
+        sql_insert = "INSERT INTO universal (`tweets.created_at`, `tweets.id`, `tweets.id_str`, `tweets.text`,`tweets.truncated`) VALUES ('test', {}, '{}','test', 'false');".format(id,id)
+        cursor.execute(sql_insert)

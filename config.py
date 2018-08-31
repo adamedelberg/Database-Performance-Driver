@@ -12,7 +12,7 @@ import logging
 levels = [logging.INFO, logging.DEBUG, logging.WARNING]
 DEBUG_LEVEL = levels[0]
 
-iterations = 2
+iterations = 5
 threads = 4
 
 #  MongoDB Configs

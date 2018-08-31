@@ -25504,3 +25504,3733 @@ INFO: 2018-08-31 14:17:02,416: root: Thread-1
 INFO: 2018-08-31 14:17:02,424: root: Thread-0
 INFO: 2018-08-31 14:17:02,475: root: Thread-3
 INFO: 2018-08-31 14:17:02,488: root: Thread-2
+INFO: 2018-08-31 14:17:31,473: root: Thread-0
+INFO: 2018-08-31 14:17:31,474: root: Thread-1
+INFO: 2018-08-31 14:17:31,474: root: Thread-2
+INFO: 2018-08-31 14:17:31,476: root: Thread-3
+INFO: 2018-08-31 14:17:31,529: root: Thread-3
+INFO: 2018-08-31 14:17:31,530: root: Thread-2
+INFO: 2018-08-31 14:17:31,530: root: Thread-0
+INFO: 2018-08-31 14:17:31,531: root: Thread-1
+INFO: 2018-08-31 14:17:31,591: root: Thread-3
+INFO: 2018-08-31 14:17:31,595: root: Thread-2
+INFO: 2018-08-31 14:17:31,595: root: Thread-0
+INFO: 2018-08-31 14:17:31,598: root: Thread-1
+INFO: 2018-08-31 14:17:31,640: root: Thread-1
+INFO: 2018-08-31 14:17:31,641: root: Thread-3
+INFO: 2018-08-31 14:17:31,641: root: Thread-0
+INFO: 2018-08-31 14:17:31,642: root: Thread-2
+INFO: 2018-08-31 14:17:31,725: root: Thread-2
+INFO: 2018-08-31 14:17:31,725: root: Thread-1
+INFO: 2018-08-31 14:17:31,728: root: Thread-0
+INFO: 2018-08-31 14:17:31,733: root: Thread-3
+INFO: 2018-08-31 14:17:31,810: root: Thread-1
+INFO: 2018-08-31 14:17:31,812: root: Thread-2
+INFO: 2018-08-31 14:17:31,819: root: Thread-0
+INFO: 2018-08-31 14:17:31,822: root: Thread-3
+INFO: 2018-08-31 14:17:31,857: root: Thread-1
+INFO: 2018-08-31 14:17:31,863: root: Thread-2
+INFO: 2018-08-31 14:17:31,869: root: Thread-3
+INFO: 2018-08-31 14:17:31,872: root: Thread-0
+INFO: 2018-08-31 14:17:31,911: root: Thread-2
+INFO: 2018-08-31 14:17:31,913: root: Thread-1
+INFO: 2018-08-31 14:17:31,918: root: Thread-3
+INFO: 2018-08-31 14:17:31,920: root: Thread-0
+INFO: 2018-08-31 14:17:32,035: root: Thread-2
+INFO: 2018-08-31 14:17:32,073: root: Thread-0
+INFO: 2018-08-31 14:17:32,073: root: Thread-1
+INFO: 2018-08-31 14:17:32,081: root: Thread-3
+INFO: 2018-08-31 14:17:32,126: root: Thread-2
+INFO: 2018-08-31 14:17:32,139: root: Thread-0
+INFO: 2018-08-31 14:17:32,145: root: Thread-3
+INFO: 2018-08-31 14:17:32,148: root: Thread-1
+INFO: 2018-08-31 14:17:32,183: root: Thread-2
+INFO: 2018-08-31 14:17:32,198: root: Thread-0
+INFO: 2018-08-31 14:17:32,210: root: Thread-3
+INFO: 2018-08-31 14:17:32,213: root: Thread-1
+INFO: 2018-08-31 14:17:32,277: root: Thread-2
+INFO: 2018-08-31 14:17:32,341: root: Thread-0
+INFO: 2018-08-31 14:17:32,376: root: Thread-3
+INFO: 2018-08-31 14:17:32,388: root: Thread-1
+INFO: 2018-08-31 14:17:32,433: root: Thread-2
+INFO: 2018-08-31 14:17:32,473: root: Thread-3
+INFO: 2018-08-31 14:17:32,477: root: Thread-1
+INFO: 2018-08-31 14:17:32,480: root: Thread-0
+INFO: 2018-08-31 14:17:32,568: root: Thread-2
+INFO: 2018-08-31 14:17:32,609: root: Thread-3
+INFO: 2018-08-31 14:17:32,612: root: Thread-0
+INFO: 2018-08-31 14:17:32,622: root: Thread-1
+INFO: 2018-08-31 14:17:32,632: root: Thread-2
+INFO: 2018-08-31 14:17:32,657: root: Thread-3
+INFO: 2018-08-31 14:17:32,658: root: Thread-0
+INFO: 2018-08-31 14:17:32,671: root: Thread-1
+INFO: 2018-08-31 14:17:32,680: root: Thread-2
+INFO: 2018-08-31 14:17:32,782: root: Thread-3
+INFO: 2018-08-31 14:17:32,811: root: Thread-0
+INFO: 2018-08-31 14:17:32,838: root: Thread-1
+INFO: 2018-08-31 14:17:32,854: root: Thread-2
+INFO: 2018-08-31 14:17:32,896: root: Thread-3
+INFO: 2018-08-31 14:17:32,912: root: Thread-0
+INFO: 2018-08-31 14:17:32,926: root: Thread-2
+INFO: 2018-08-31 14:17:32,929: root: Thread-1
+INFO: 2018-08-31 14:17:33,028: root: Thread-0
+INFO: 2018-08-31 14:17:33,032: root: Thread-3
+INFO: 2018-08-31 14:17:33,038: root: Thread-2
+INFO: 2018-08-31 14:17:33,038: root: Thread-1
+INFO: 2018-08-31 14:17:33,086: root: Thread-3
+INFO: 2018-08-31 14:17:33,086: root: Thread-0
+INFO: 2018-08-31 14:17:33,086: root: Thread-2
+INFO: 2018-08-31 14:17:33,090: root: Thread-1
+INFO: 2018-08-31 14:17:33,216: root: Thread-2
+INFO: 2018-08-31 14:17:33,220: root: Thread-1
+INFO: 2018-08-31 14:17:33,222: root: Thread-0
+INFO: 2018-08-31 14:17:33,233: root: Thread-3
+INFO: 2018-08-31 14:17:33,299: root: Thread-1
+INFO: 2018-08-31 14:17:33,308: root: Thread-3
+INFO: 2018-08-31 14:17:33,315: root: Thread-2
+INFO: 2018-08-31 14:17:33,319: root: Thread-0
+INFO: 2018-08-31 14:17:33,360: root: Thread-1
+INFO: 2018-08-31 14:17:33,365: root: Thread-2
+INFO: 2018-08-31 14:17:33,366: root: Thread-3
+INFO: 2018-08-31 14:17:33,371: root: Thread-0
+INFO: 2018-08-31 14:17:33,455: root: Thread-1
+INFO: 2018-08-31 14:17:33,466: root: Thread-2
+INFO: 2018-08-31 14:17:35,753: mongo_db: 1.1180479526519775 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:17:36,878: mongo_db: 0.7557969093322754 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:18:30,163: mongo_db: 0.8131120204925537 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:18:31,183: mongo_db: 0.7767050266265869 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:18:53,679: mongo_db: 1.337925910949707 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:18:54,843: mongo_db: 1.020561933517456 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:19:19,436: mongo_db: 0.8876638412475586 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:19:20,351: mongo_db: 0.7866358757019043 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:20:10,433: mongo_db: 0.7991249561309814 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:20:11,326: mongo_db: 0.7649021148681641 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:20:53,609: mongo_db: 0.650752067565918 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:20:54,469: mongo_db: 0.7358870506286621 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:21:30,251: mongo_db: 0.7850687503814697 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:21:31,067: mongo_db: 0.6838748455047607 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:22:37,487: mongo_db: 0.7000482082366943 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:22:38,476: mongo_db: 0.865717887878418 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:23:10,478: root: Thread-0
+INFO: 2018-08-31 14:23:10,478: root: Thread-1
+INFO: 2018-08-31 14:23:10,478: root: Thread-2
+INFO: 2018-08-31 14:23:10,479: root: Thread-3
+INFO: 2018-08-31 14:23:10,539: root: Thread-1
+INFO: 2018-08-31 14:23:10,540: root: Thread-3
+INFO: 2018-08-31 14:23:10,543: root: Thread-2
+INFO: 2018-08-31 14:23:10,553: root: Thread-0
+INFO: 2018-08-31 14:23:10,586: root: Thread-3
+INFO: 2018-08-31 14:23:10,587: root: Thread-2
+INFO: 2018-08-31 14:23:10,588: root: Thread-1
+INFO: 2018-08-31 14:23:10,611: root: Thread-0
+INFO: 2018-08-31 14:23:10,655: root: Thread-3
+INFO: 2018-08-31 14:23:10,657: root: Thread-2
+INFO: 2018-08-31 14:23:10,661: root: Thread-1
+INFO: 2018-08-31 14:23:10,673: root: Thread-0
+INFO: 2018-08-31 14:23:10,763: root: Thread-0
+INFO: 2018-08-31 14:23:10,770: root: Thread-1
+INFO: 2018-08-31 14:23:10,775: root: Thread-2
+INFO: 2018-08-31 14:23:10,782: root: Thread-3
+INFO: 2018-08-31 14:23:10,826: root: Thread-0
+INFO: 2018-08-31 14:23:10,830: root: Thread-2
+INFO: 2018-08-31 14:23:10,831: root: Thread-1
+INFO: 2018-08-31 14:23:10,834: root: Thread-3
+INFO: 2018-08-31 14:23:10,873: root: Thread-2
+INFO: 2018-08-31 14:23:10,877: root: Thread-1
+INFO: 2018-08-31 14:23:10,878: root: Thread-0
+INFO: 2018-08-31 14:23:10,881: root: Thread-3
+INFO: 2018-08-31 14:23:10,929: root: Thread-2
+INFO: 2018-08-31 14:23:10,945: root: Thread-3
+INFO: 2018-08-31 14:23:10,949: root: Thread-1
+INFO: 2018-08-31 14:23:10,950: root: Thread-0
+INFO: 2018-08-31 14:23:11,031: root: Thread-2
+INFO: 2018-08-31 14:23:11,053: root: Thread-3
+INFO: 2018-08-31 14:23:11,108: root: Thread-1
+INFO: 2018-08-31 14:23:11,124: root: Thread-0
+INFO: 2018-08-31 14:23:11,170: root: Thread-3
+INFO: 2018-08-31 14:23:11,175: root: Thread-2
+INFO: 2018-08-31 14:23:11,205: root: Thread-1
+INFO: 2018-08-31 14:23:11,213: root: Thread-0
+INFO: 2018-08-31 14:23:11,262: root: Thread-3
+INFO: 2018-08-31 14:23:11,281: root: Thread-2
+INFO: 2018-08-31 14:23:11,380: root: Thread-1
+INFO: 2018-08-31 14:23:11,382: root: Thread-0
+INFO: 2018-08-31 14:23:11,394: root: Thread-2
+INFO: 2018-08-31 14:23:11,397: root: Thread-3
+INFO: 2018-08-31 14:23:11,417: root: Thread-0
+INFO: 2018-08-31 14:23:11,418: root: Thread-1
+INFO: 2018-08-31 14:23:11,464: root: Thread-3
+INFO: 2018-08-31 14:23:11,464: root: Thread-2
+INFO: 2018-08-31 14:23:11,544: root: Thread-0
+INFO: 2018-08-31 14:23:11,657: root: Thread-1
+INFO: 2018-08-31 14:23:11,662: root: Thread-3
+INFO: 2018-08-31 14:23:11,666: root: Thread-2
+INFO: 2018-08-31 14:23:11,671: root: Thread-0
+INFO: 2018-08-31 14:23:11,724: root: Thread-3
+INFO: 2018-08-31 14:23:11,726: root: Thread-1
+INFO: 2018-08-31 14:23:11,726: root: Thread-0
+INFO: 2018-08-31 14:23:11,728: root: Thread-2
+INFO: 2018-08-31 14:23:11,829: root: Thread-1
+INFO: 2018-08-31 14:23:11,846: root: Thread-0
+INFO: 2018-08-31 14:23:11,857: root: Thread-2
+INFO: 2018-08-31 14:23:11,859: root: Thread-3
+INFO: 2018-08-31 14:23:11,937: root: Thread-1
+INFO: 2018-08-31 14:23:11,938: root: Thread-0
+INFO: 2018-08-31 14:23:11,940: root: Thread-2
+INFO: 2018-08-31 14:23:11,941: root: Thread-3
+INFO: 2018-08-31 14:23:11,987: root: Thread-0
+INFO: 2018-08-31 14:23:11,990: root: Thread-3
+INFO: 2018-08-31 14:23:11,990: root: Thread-2
+INFO: 2018-08-31 14:23:11,991: root: Thread-1
+INFO: 2018-08-31 14:23:12,028: root: Thread-0
+INFO: 2018-08-31 14:23:12,031: root: Thread-3
+INFO: 2018-08-31 14:23:12,031: root: Thread-1
+INFO: 2018-08-31 14:23:12,036: root: Thread-2
+INFO: 2018-08-31 14:23:12,176: root: Thread-0
+INFO: 2018-08-31 14:23:12,179: root: Thread-2
+INFO: 2018-08-31 14:23:12,180: root: Thread-3
+INFO: 2018-08-31 14:23:12,183: root: Thread-1
+INFO: 2018-08-31 14:23:12,234: root: Thread-0
+INFO: 2018-08-31 14:23:12,331: root: Thread-1
+INFO: 2018-08-31 14:23:12,348: root: Thread-3
+INFO: 2018-08-31 14:23:12,360: root: Thread-2
+INFO: 2018-08-31 14:23:12,370: root: Thread-0
+INFO: 2018-08-31 14:23:12,422: root: Thread-2
+INFO: 2018-08-31 14:23:12,423: root: Thread-1
+INFO: 2018-08-31 14:23:12,425: root: Thread-3
+INFO: 2018-08-31 14:23:12,427: root: Thread-0
+INFO: 2018-08-31 14:23:13,395: mongo_db: 0.6855690479278564 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:23:14,194: mongo_db: 0.6613848209381104 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:23:25,038: mongo_db: 0.6975741386413574 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:23:25,814: mongo_db: 0.6448249816894531 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:23:25,824: root: Thread-0
+INFO: 2018-08-31 14:23:25,824: root: Thread-1
+INFO: 2018-08-31 14:23:25,825: root: Thread-2
+INFO: 2018-08-31 14:23:25,826: root: Thread-3
+INFO: 2018-08-31 14:23:25,882: root: Thread-1
+INFO: 2018-08-31 14:23:25,890: root: Thread-0
+INFO: 2018-08-31 14:23:25,896: root: Thread-2
+INFO: 2018-08-31 14:23:25,896: root: Thread-3
+INFO: 2018-08-31 14:23:25,932: root: Thread-1
+INFO: 2018-08-31 14:23:25,935: root: Thread-0
+INFO: 2018-08-31 14:23:25,937: root: Thread-2
+INFO: 2018-08-31 14:23:25,938: root: Thread-3
+INFO: 2018-08-31 14:23:25,976: root: Thread-2
+INFO: 2018-08-31 14:23:25,977: root: Thread-1
+INFO: 2018-08-31 14:23:25,978: root: Thread-3
+INFO: 2018-08-31 14:23:25,982: root: Thread-0
+INFO: 2018-08-31 14:23:26,042: root: Thread-0
+INFO: 2018-08-31 14:23:26,046: root: Thread-2
+INFO: 2018-08-31 14:23:26,049: root: Thread-1
+INFO: 2018-08-31 14:23:26,052: root: Thread-3
+INFO: 2018-08-31 14:23:26,185: root: Thread-2
+INFO: 2018-08-31 14:23:26,188: root: Thread-0
+INFO: 2018-08-31 14:23:26,191: root: Thread-1
+INFO: 2018-08-31 14:23:26,192: root: Thread-3
+INFO: 2018-08-31 14:23:26,242: root: Thread-2
+INFO: 2018-08-31 14:23:26,337: root: Thread-1
+INFO: 2018-08-31 14:23:26,354: root: Thread-0
+INFO: 2018-08-31 14:23:26,358: root: Thread-3
+INFO: 2018-08-31 14:23:26,375: root: Thread-2
+INFO: 2018-08-31 14:23:26,428: root: Thread-3
+INFO: 2018-08-31 14:23:26,430: root: Thread-1
+INFO: 2018-08-31 14:23:26,433: root: Thread-0
+INFO: 2018-08-31 14:23:26,435: root: Thread-2
+INFO: 2018-08-31 14:23:26,473: root: Thread-0
+INFO: 2018-08-31 14:23:26,474: root: Thread-3
+INFO: 2018-08-31 14:23:26,475: root: Thread-2
+INFO: 2018-08-31 14:23:26,477: root: Thread-1
+INFO: 2018-08-31 14:23:26,529: root: Thread-0
+INFO: 2018-08-31 14:23:26,533: root: Thread-2
+INFO: 2018-08-31 14:23:26,535: root: Thread-3
+INFO: 2018-08-31 14:23:26,537: root: Thread-1
+INFO: 2018-08-31 14:23:26,683: root: Thread-0
+INFO: 2018-08-31 14:23:26,709: root: Thread-3
+INFO: 2018-08-31 14:23:26,718: root: Thread-2
+INFO: 2018-08-31 14:23:26,738: root: Thread-1
+INFO: 2018-08-31 14:23:26,777: root: Thread-0
+INFO: 2018-08-31 14:23:26,782: root: Thread-3
+INFO: 2018-08-31 14:23:26,782: root: Thread-2
+INFO: 2018-08-31 14:23:26,785: root: Thread-1
+INFO: 2018-08-31 14:23:26,822: root: Thread-0
+INFO: 2018-08-31 14:23:26,826: root: Thread-3
+INFO: 2018-08-31 14:23:26,828: root: Thread-1
+INFO: 2018-08-31 14:23:26,829: root: Thread-2
+INFO: 2018-08-31 14:23:26,873: root: Thread-0
+INFO: 2018-08-31 14:23:26,878: root: Thread-3
+INFO: 2018-08-31 14:23:26,878: root: Thread-1
+INFO: 2018-08-31 14:23:26,881: root: Thread-2
+INFO: 2018-08-31 14:23:27,022: root: Thread-0
+INFO: 2018-08-31 14:23:27,053: root: Thread-3
+INFO: 2018-08-31 14:23:27,063: root: Thread-1
+INFO: 2018-08-31 14:23:27,068: root: Thread-2
+INFO: 2018-08-31 14:23:27,207: root: Thread-3
+INFO: 2018-08-31 14:23:27,220: root: Thread-0
+INFO: 2018-08-31 14:23:27,236: root: Thread-2
+INFO: 2018-08-31 14:23:27,249: root: Thread-1
+INFO: 2018-08-31 14:23:27,324: root: Thread-3
+INFO: 2018-08-31 14:23:27,327: root: Thread-0
+INFO: 2018-08-31 14:23:27,333: root: Thread-2
+INFO: 2018-08-31 14:23:27,337: root: Thread-1
+INFO: 2018-08-31 14:23:27,379: root: Thread-1
+INFO: 2018-08-31 14:23:27,379: root: Thread-3
+INFO: 2018-08-31 14:23:27,382: root: Thread-2
+INFO: 2018-08-31 14:23:27,383: root: Thread-0
+INFO: 2018-08-31 14:23:27,436: root: Thread-1
+INFO: 2018-08-31 14:23:27,452: root: Thread-0
+INFO: 2018-08-31 14:23:27,456: root: Thread-3
+INFO: 2018-08-31 14:23:27,457: root: Thread-2
+INFO: 2018-08-31 14:23:27,499: root: Thread-1
+INFO: 2018-08-31 14:23:27,532: root: Thread-0
+INFO: 2018-08-31 14:23:27,534: root: Thread-3
+INFO: 2018-08-31 14:23:27,537: root: Thread-2
+INFO: 2018-08-31 14:23:27,560: root: Thread-1
+INFO: 2018-08-31 14:23:27,582: root: Thread-0
+INFO: 2018-08-31 14:23:27,585: root: Thread-2
+INFO: 2018-08-31 14:23:27,587: root: Thread-3
+INFO: 2018-08-31 14:23:27,625: root: Thread-1
+INFO: 2018-08-31 14:23:27,627: root: Thread-2
+INFO: 2018-08-31 14:23:27,631: root: Thread-0
+INFO: 2018-08-31 14:23:27,632: root: Thread-3
+INFO: 2018-08-31 14:23:27,691: root: Thread-3
+INFO: 2018-08-31 14:23:27,691: root: Thread-1
+INFO: 2018-08-31 14:23:27,692: root: Thread-0
+INFO: 2018-08-31 14:23:27,702: root: Thread-2
+INFO: 2018-08-31 14:23:27,791: root: Thread-2
+INFO: 2018-08-31 14:23:27,796: root: Thread-1
+INFO: 2018-08-31 14:23:27,797: root: Thread-0
+INFO: 2018-08-31 14:23:27,802: root: Thread-3
+INFO: 2018-08-31 14:23:27,827: root: Thread-2
+INFO: 2018-08-31 14:23:27,829: root: Thread-1
+INFO: 2018-08-31 14:25:21,401: mysql_db: 1.9642424583435059 seconds to insert one universal 4.89MB
+INFO: 2018-08-31 14:25:23,319: mysql_db: 1.6100780963897705 seconds to insert one universal 4.89MB
+INFO: 2018-08-31 14:25:23,321: root: Thread-0
+INFO: 2018-08-31 14:25:23,321: root: Thread-1
+INFO: 2018-08-31 14:25:23,322: root: Thread-2
+INFO: 2018-08-31 14:25:23,324: root: Thread-3
+INFO: 2018-08-31 14:25:23,371: root: Thread-0
+INFO: 2018-08-31 14:25:23,376: root: Thread-1
+INFO: 2018-08-31 14:25:23,378: root: Thread-3
+INFO: 2018-08-31 14:25:23,380: root: Thread-2
+INFO: 2018-08-31 14:25:23,416: root: Thread-0
+INFO: 2018-08-31 14:25:23,423: root: Thread-1
+INFO: 2018-08-31 14:25:23,424: root: Thread-2
+INFO: 2018-08-31 14:25:23,425: root: Thread-3
+INFO: 2018-08-31 14:25:23,486: root: Thread-0
+INFO: 2018-08-31 14:25:23,493: root: Thread-2
+INFO: 2018-08-31 14:25:23,498: root: Thread-3
+INFO: 2018-08-31 14:25:23,508: root: Thread-1
+INFO: 2018-08-31 14:25:23,649: root: Thread-2
+INFO: 2018-08-31 14:25:23,653: root: Thread-1
+INFO: 2018-08-31 14:25:23,671: root: Thread-0
+INFO: 2018-08-31 14:25:23,673: root: Thread-3
+INFO: 2018-08-31 14:25:23,714: root: Thread-0
+INFO: 2018-08-31 14:25:23,715: root: Thread-1
+INFO: 2018-08-31 14:25:23,720: root: Thread-2
+INFO: 2018-08-31 14:25:23,721: root: Thread-3
+INFO: 2018-08-31 14:25:23,760: root: Thread-1
+INFO: 2018-08-31 14:25:23,764: root: Thread-0
+INFO: 2018-08-31 14:25:23,766: root: Thread-2
+INFO: 2018-08-31 14:25:23,768: root: Thread-3
+INFO: 2018-08-31 14:25:23,806: root: Thread-0
+INFO: 2018-08-31 14:25:23,806: root: Thread-1
+INFO: 2018-08-31 14:25:23,811: root: Thread-3
+INFO: 2018-08-31 14:25:23,812: root: Thread-2
+INFO: 2018-08-31 14:25:23,850: root: Thread-3
+INFO: 2018-08-31 14:25:23,855: root: Thread-0
+INFO: 2018-08-31 14:25:23,863: root: Thread-2
+INFO: 2018-08-31 14:25:23,867: root: Thread-1
+INFO: 2018-08-31 14:25:23,980: root: Thread-3
+INFO: 2018-08-31 14:25:24,001: root: Thread-2
+INFO: 2018-08-31 14:25:24,007: root: Thread-1
+INFO: 2018-08-31 14:25:24,008: root: Thread-0
+INFO: 2018-08-31 14:25:24,128: root: Thread-1
+INFO: 2018-08-31 14:25:24,133: root: Thread-2
+INFO: 2018-08-31 14:25:24,136: root: Thread-0
+INFO: 2018-08-31 14:25:24,142: root: Thread-3
+INFO: 2018-08-31 14:25:24,215: root: Thread-1
+INFO: 2018-08-31 14:25:24,221: root: Thread-2
+INFO: 2018-08-31 14:25:24,222: root: Thread-3
+INFO: 2018-08-31 14:25:24,227: root: Thread-0
+INFO: 2018-08-31 14:25:24,378: root: Thread-1
+INFO: 2018-08-31 14:25:24,383: root: Thread-0
+INFO: 2018-08-31 14:25:24,400: root: Thread-3
+INFO: 2018-08-31 14:25:24,405: root: Thread-2
+INFO: 2018-08-31 14:25:24,480: root: Thread-1
+INFO: 2018-08-31 14:25:24,483: root: Thread-0
+INFO: 2018-08-31 14:25:24,487: root: Thread-2
+INFO: 2018-08-31 14:25:24,487: root: Thread-3
+INFO: 2018-08-31 14:25:24,572: root: Thread-0
+INFO: 2018-08-31 14:25:24,575: root: Thread-2
+INFO: 2018-08-31 14:25:24,578: root: Thread-1
+INFO: 2018-08-31 14:25:24,579: root: Thread-3
+INFO: 2018-08-31 14:25:24,645: root: Thread-0
+INFO: 2018-08-31 14:25:24,647: root: Thread-1
+INFO: 2018-08-31 14:25:24,649: root: Thread-3
+INFO: 2018-08-31 14:25:24,651: root: Thread-2
+INFO: 2018-08-31 14:25:24,700: root: Thread-2
+INFO: 2018-08-31 14:25:24,701: root: Thread-3
+INFO: 2018-08-31 14:25:24,702: root: Thread-1
+INFO: 2018-08-31 14:25:24,703: root: Thread-0
+INFO: 2018-08-31 14:25:24,748: root: Thread-1
+INFO: 2018-08-31 14:25:24,752: root: Thread-3
+INFO: 2018-08-31 14:25:24,754: root: Thread-2
+INFO: 2018-08-31 14:25:24,755: root: Thread-0
+INFO: 2018-08-31 14:25:24,815: root: Thread-0
+INFO: 2018-08-31 14:25:24,816: root: Thread-3
+INFO: 2018-08-31 14:25:24,817: root: Thread-1
+INFO: 2018-08-31 14:25:24,817: root: Thread-2
+INFO: 2018-08-31 14:25:24,900: root: Thread-3
+INFO: 2018-08-31 14:25:24,904: root: Thread-0
+INFO: 2018-08-31 14:25:24,910: root: Thread-1
+INFO: 2018-08-31 14:25:24,911: root: Thread-2
+INFO: 2018-08-31 14:25:24,946: root: Thread-3
+INFO: 2018-08-31 14:25:24,954: root: Thread-0
+INFO: 2018-08-31 14:25:24,962: root: Thread-1
+INFO: 2018-08-31 14:25:24,964: root: Thread-2
+INFO: 2018-08-31 14:25:24,997: root: Thread-3
+INFO: 2018-08-31 14:25:25,005: root: Thread-0
+INFO: 2018-08-31 14:25:25,034: root: Thread-1
+INFO: 2018-08-31 14:25:25,038: root: Thread-2
+INFO: 2018-08-31 14:25:25,081: root: Thread-0
+INFO: 2018-08-31 14:25:25,083: root: Thread-3
+INFO: 2018-08-31 14:25:25,103: root: Thread-1
+INFO: 2018-08-31 14:25:25,114: root: Thread-2
+INFO: 2018-08-31 14:25:25,148: root: Thread-3
+INFO: 2018-08-31 14:25:25,155: root: Thread-0
+INFO: 2018-08-31 14:25:25,179: root: Thread-1
+INFO: 2018-08-31 14:25:25,181: root: Thread-2
+INFO: 2018-08-31 14:25:25,202: root: Thread-0
+INFO: 2018-08-31 14:25:25,203: root: Thread-3
+INFO: 2018-08-31 14:25:25,255: root: Thread-2
+INFO: 2018-08-31 14:25:25,256: root: Thread-1
+INFO: 2018-08-31 14:25:25,258: root: Thread-0
+INFO: 2018-08-31 14:25:25,264: root: Thread-3
+INFO: 2018-08-31 14:25:25,312: root: Thread-1
+INFO: 2018-08-31 14:25:25,315: root: Thread-0
+INFO: 2018-08-31 14:25:25,317: root: Thread-2
+INFO: 2018-08-31 14:25:25,321: root: Thread-3
+INFO: 2018-08-31 14:25:26,311: mongo_db: 0.6383240222930908 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:25:27,137: mongo_db: 0.694849967956543 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:25:45,999: mongo_db: 0.5366342067718506 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:25:46,750: mongo_db: 0.5855259895324707 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:25:46,760: root: Thread-0
+INFO: 2018-08-31 14:25:46,761: root: Thread-1
+INFO: 2018-08-31 14:25:46,761: root: Thread-2
+INFO: 2018-08-31 14:25:46,763: root: Thread-3
+INFO: 2018-08-31 14:25:46,799: root: Thread-2
+INFO: 2018-08-31 14:25:46,799: root: Thread-1
+INFO: 2018-08-31 14:25:46,800: root: Thread-3
+INFO: 2018-08-31 14:25:46,800: root: Thread-0
+INFO: 2018-08-31 14:25:46,839: root: Thread-3
+INFO: 2018-08-31 14:25:46,839: root: Thread-0
+INFO: 2018-08-31 14:25:46,841: root: Thread-2
+INFO: 2018-08-31 14:25:46,844: root: Thread-1
+INFO: 2018-08-31 14:25:46,878: root: Thread-2
+INFO: 2018-08-31 14:25:46,881: root: Thread-3
+INFO: 2018-08-31 14:25:46,881: root: Thread-1
+INFO: 2018-08-31 14:25:46,882: root: Thread-0
+INFO: 2018-08-31 14:25:46,918: root: Thread-3
+INFO: 2018-08-31 14:25:46,919: root: Thread-0
+INFO: 2018-08-31 14:25:46,920: root: Thread-1
+INFO: 2018-08-31 14:25:46,923: root: Thread-2
+INFO: 2018-08-31 14:25:46,961: root: Thread-3
+INFO: 2018-08-31 14:25:46,962: root: Thread-2
+INFO: 2018-08-31 14:25:46,965: root: Thread-0
+INFO: 2018-08-31 14:25:46,971: root: Thread-1
+INFO: 2018-08-31 14:25:47,099: root: Thread-3
+INFO: 2018-08-31 14:25:47,110: root: Thread-0
+INFO: 2018-08-31 14:25:47,111: root: Thread-2
+INFO: 2018-08-31 14:25:47,133: root: Thread-1
+INFO: 2018-08-31 14:25:47,247: root: Thread-2
+INFO: 2018-08-31 14:25:47,250: root: Thread-3
+INFO: 2018-08-31 14:25:47,253: root: Thread-0
+INFO: 2018-08-31 14:25:47,255: root: Thread-1
+INFO: 2018-08-31 14:25:47,338: root: Thread-2
+INFO: 2018-08-31 14:25:47,343: root: Thread-0
+INFO: 2018-08-31 14:25:47,344: root: Thread-1
+INFO: 2018-08-31 14:25:47,347: root: Thread-3
+INFO: 2018-08-31 14:25:47,382: root: Thread-1
+INFO: 2018-08-31 14:25:47,383: root: Thread-2
+INFO: 2018-08-31 14:25:47,383: root: Thread-0
+INFO: 2018-08-31 14:25:47,386: root: Thread-3
+INFO: 2018-08-31 14:25:47,426: root: Thread-0
+INFO: 2018-08-31 14:25:47,427: root: Thread-1
+INFO: 2018-08-31 14:25:47,429: root: Thread-2
+INFO: 2018-08-31 14:25:47,431: root: Thread-3
+INFO: 2018-08-31 14:25:47,536: root: Thread-2
+INFO: 2018-08-31 14:25:47,563: root: Thread-0
+INFO: 2018-08-31 14:25:47,569: root: Thread-3
+INFO: 2018-08-31 14:25:47,572: root: Thread-1
+INFO: 2018-08-31 14:25:47,675: root: Thread-0
+INFO: 2018-08-31 14:25:47,677: root: Thread-2
+INFO: 2018-08-31 14:25:47,683: root: Thread-3
+INFO: 2018-08-31 14:25:47,684: root: Thread-1
+INFO: 2018-08-31 14:25:47,720: root: Thread-0
+INFO: 2018-08-31 14:25:47,724: root: Thread-2
+INFO: 2018-08-31 14:25:47,733: root: Thread-1
+INFO: 2018-08-31 14:25:47,738: root: Thread-3
+INFO: 2018-08-31 14:25:47,867: root: Thread-0
+INFO: 2018-08-31 14:25:47,880: root: Thread-2
+INFO: 2018-08-31 14:25:47,898: root: Thread-1
+INFO: 2018-08-31 14:25:47,907: root: Thread-3
+INFO: 2018-08-31 14:25:47,993: root: Thread-2
+INFO: 2018-08-31 14:25:48,014: root: Thread-1
+INFO: 2018-08-31 14:25:48,015: root: Thread-3
+INFO: 2018-08-31 14:25:48,022: root: Thread-0
+INFO: 2018-08-31 14:25:48,089: root: Thread-2
+INFO: 2018-08-31 14:25:48,094: root: Thread-0
+INFO: 2018-08-31 14:25:48,097: root: Thread-3
+INFO: 2018-08-31 14:25:48,103: root: Thread-1
+INFO: 2018-08-31 14:25:48,168: root: Thread-0
+INFO: 2018-08-31 14:25:48,173: root: Thread-2
+INFO: 2018-08-31 14:25:48,223: root: Thread-3
+INFO: 2018-08-31 14:25:48,263: root: Thread-1
+INFO: 2018-08-31 14:25:48,357: root: Thread-2
+INFO: 2018-08-31 14:25:48,363: root: Thread-0
+INFO: 2018-08-31 14:25:48,364: root: Thread-3
+INFO: 2018-08-31 14:25:48,371: root: Thread-1
+INFO: 2018-08-31 14:25:48,404: root: Thread-3
+INFO: 2018-08-31 14:25:48,407: root: Thread-0
+INFO: 2018-08-31 14:25:48,409: root: Thread-2
+INFO: 2018-08-31 14:25:48,413: root: Thread-1
+INFO: 2018-08-31 14:25:48,472: root: Thread-3
+INFO: 2018-08-31 14:25:48,473: root: Thread-2
+INFO: 2018-08-31 14:25:48,473: root: Thread-1
+INFO: 2018-08-31 14:25:48,479: root: Thread-0
+INFO: 2018-08-31 14:25:48,515: root: Thread-1
+INFO: 2018-08-31 14:25:48,519: root: Thread-0
+INFO: 2018-08-31 14:25:48,521: root: Thread-2
+INFO: 2018-08-31 14:25:48,525: root: Thread-3
+INFO: 2018-08-31 14:25:48,559: root: Thread-1
+INFO: 2018-08-31 14:25:48,562: root: Thread-2
+INFO: 2018-08-31 14:25:48,563: root: Thread-0
+INFO: 2018-08-31 14:25:48,568: root: Thread-3
+INFO: 2018-08-31 14:25:48,604: root: Thread-1
+INFO: 2018-08-31 14:25:48,608: root: Thread-0
+INFO: 2018-08-31 14:25:48,609: root: Thread-2
+INFO: 2018-08-31 14:25:48,615: root: Thread-3
+INFO: 2018-08-31 14:25:48,707: root: Thread-1
+INFO: 2018-08-31 14:25:48,709: root: Thread-0
+INFO: 2018-08-31 14:25:48,712: root: Thread-3
+INFO: 2018-08-31 14:25:48,718: root: Thread-2
+INFO: 2018-08-31 14:25:48,762: root: Thread-1
+INFO: 2018-08-31 14:25:48,763: root: Thread-0
+INFO: 2018-08-31 14:25:48,764: root: Thread-3
+INFO: 2018-08-31 14:25:49,671: mongo_db: 0.759321928024292 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:25:50,467: mongo_db: 0.657696008682251 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:26:10,491: mongo_db: 1.0960829257965088 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:26:11,224: mongo_db: 0.5742840766906738 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:26:11,932: mongo_db: 0.5631248950958252 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:26:12,660: mongo_db: 0.5874581336975098 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:26:13,653: mongo_db: 0.8609108924865723 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:26:13,663: root: Thread-0
+INFO: 2018-08-31 14:26:13,664: root: Thread-1
+INFO: 2018-08-31 14:26:13,665: root: Thread-2
+INFO: 2018-08-31 14:26:13,667: root: Thread-3
+INFO: 2018-08-31 14:26:13,734: root: Thread-3
+INFO: 2018-08-31 14:26:13,734: root: Thread-0
+INFO: 2018-08-31 14:26:13,735: root: Thread-1
+INFO: 2018-08-31 14:26:13,737: root: Thread-2
+INFO: 2018-08-31 14:26:13,795: root: Thread-1
+INFO: 2018-08-31 14:26:13,799: root: Thread-3
+INFO: 2018-08-31 14:26:13,802: root: Thread-2
+INFO: 2018-08-31 14:26:13,819: root: Thread-0
+INFO: 2018-08-31 14:26:13,951: root: Thread-2
+INFO: 2018-08-31 14:26:13,956: root: Thread-1
+INFO: 2018-08-31 14:26:13,962: root: Thread-3
+INFO: 2018-08-31 14:26:13,992: root: Thread-0
+INFO: 2018-08-31 14:26:14,026: root: Thread-3
+INFO: 2018-08-31 14:26:14,035: root: Thread-1
+INFO: 2018-08-31 14:26:14,039: root: Thread-2
+INFO: 2018-08-31 14:26:14,047: root: Thread-0
+INFO: 2018-08-31 14:26:14,081: root: Thread-3
+INFO: 2018-08-31 14:26:14,085: root: Thread-1
+INFO: 2018-08-31 14:26:14,085: root: Thread-2
+INFO: 2018-08-31 14:26:14,098: root: Thread-0
+INFO: 2018-08-31 14:26:14,132: root: Thread-3
+INFO: 2018-08-31 14:26:14,135: root: Thread-2
+INFO: 2018-08-31 14:26:14,138: root: Thread-1
+INFO: 2018-08-31 14:26:14,149: root: Thread-0
+INFO: 2018-08-31 14:26:14,245: root: Thread-3
+INFO: 2018-08-31 14:26:14,270: root: Thread-2
+INFO: 2018-08-31 14:26:14,272: root: Thread-1
+INFO: 2018-08-31 14:26:14,302: root: Thread-0
+INFO: 2018-08-31 14:26:14,360: root: Thread-3
+INFO: 2018-08-31 14:26:14,361: root: Thread-2
+INFO: 2018-08-31 14:26:14,367: root: Thread-1
+INFO: 2018-08-31 14:26:14,370: root: Thread-0
+INFO: 2018-08-31 14:26:14,399: root: Thread-2
+INFO: 2018-08-31 14:26:14,406: root: Thread-3
+INFO: 2018-08-31 14:26:14,412: root: Thread-1
+INFO: 2018-08-31 14:26:14,412: root: Thread-0
+INFO: 2018-08-31 14:26:14,441: root: Thread-2
+INFO: 2018-08-31 14:26:14,446: root: Thread-3
+INFO: 2018-08-31 14:26:14,454: root: Thread-0
+INFO: 2018-08-31 14:26:14,458: root: Thread-1
+INFO: 2018-08-31 14:26:14,568: root: Thread-2
+INFO: 2018-08-31 14:26:14,637: root: Thread-3
+INFO: 2018-08-31 14:26:14,637: root: Thread-0
+INFO: 2018-08-31 14:26:14,644: root: Thread-1
+INFO: 2018-08-31 14:26:14,724: root: Thread-2
+INFO: 2018-08-31 14:26:14,829: root: Thread-3
+INFO: 2018-08-31 14:26:14,848: root: Thread-1
+INFO: 2018-08-31 14:26:14,866: root: Thread-0
+INFO: 2018-08-31 14:26:15,027: root: Thread-2
+INFO: 2018-08-31 14:26:15,051: root: Thread-1
+INFO: 2018-08-31 14:26:15,056: root: Thread-3
+INFO: 2018-08-31 14:26:15,060: root: Thread-0
+INFO: 2018-08-31 14:26:15,089: root: Thread-2
+INFO: 2018-08-31 14:26:15,116: root: Thread-3
+INFO: 2018-08-31 14:26:15,116: root: Thread-1
+INFO: 2018-08-31 14:26:15,117: root: Thread-0
+INFO: 2018-08-31 14:26:15,131: root: Thread-2
+INFO: 2018-08-31 14:26:15,158: root: Thread-3
+INFO: 2018-08-31 14:26:15,162: root: Thread-1
+INFO: 2018-08-31 14:26:15,164: root: Thread-0
+INFO: 2018-08-31 14:26:15,175: root: Thread-2
+INFO: 2018-08-31 14:26:15,200: root: Thread-1
+INFO: 2018-08-31 14:26:15,202: root: Thread-0
+INFO: 2018-08-31 14:26:15,203: root: Thread-3
+INFO: 2018-08-31 14:26:15,216: root: Thread-2
+INFO: 2018-08-31 14:26:15,250: root: Thread-3
+INFO: 2018-08-31 14:26:15,250: root: Thread-1
+INFO: 2018-08-31 14:26:15,252: root: Thread-0
+INFO: 2018-08-31 14:26:15,271: root: Thread-2
+INFO: 2018-08-31 14:26:15,299: root: Thread-3
+INFO: 2018-08-31 14:26:15,304: root: Thread-0
+INFO: 2018-08-31 14:26:15,306: root: Thread-1
+INFO: 2018-08-31 14:26:15,313: root: Thread-2
+INFO: 2018-08-31 14:26:15,358: root: Thread-3
+INFO: 2018-08-31 14:26:15,366: root: Thread-0
+INFO: 2018-08-31 14:26:15,368: root: Thread-1
+INFO: 2018-08-31 14:26:15,374: root: Thread-2
+INFO: 2018-08-31 14:26:15,403: root: Thread-3
+INFO: 2018-08-31 14:26:15,410: root: Thread-0
+INFO: 2018-08-31 14:26:15,416: root: Thread-1
+INFO: 2018-08-31 14:26:15,423: root: Thread-2
+INFO: 2018-08-31 14:26:15,449: root: Thread-3
+INFO: 2018-08-31 14:26:15,455: root: Thread-0
+INFO: 2018-08-31 14:26:15,463: root: Thread-1
+INFO: 2018-08-31 14:26:15,482: root: Thread-2
+INFO: 2018-08-31 14:26:15,506: root: Thread-3
+INFO: 2018-08-31 14:26:15,511: root: Thread-0
+INFO: 2018-08-31 14:26:15,516: root: Thread-1
+INFO: 2018-08-31 14:26:15,530: root: Thread-2
+INFO: 2018-08-31 14:26:15,549: root: Thread-3
+INFO: 2018-08-31 14:26:15,555: root: Thread-0
+INFO: 2018-08-31 14:26:15,556: root: Thread-1
+INFO: 2018-08-31 14:26:15,573: root: Thread-2
+INFO: 2018-08-31 14:26:15,594: root: Thread-3
+INFO: 2018-08-31 14:26:15,599: root: Thread-0
+INFO: 2018-08-31 14:26:15,602: root: Thread-1
+INFO: 2018-08-31 14:26:15,620: root: Thread-2
+INFO: 2018-08-31 14:26:15,647: root: Thread-0
+INFO: 2018-08-31 14:26:15,649: root: Thread-3
+INFO: 2018-08-31 14:26:15,651: root: Thread-1
+INFO: 2018-08-31 14:26:16,715: mongo_db: 0.8455078601837158 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:26:17,661: mongo_db: 0.8018350601196289 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:26:19,589: mongo_db: 1.6728630065917969 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:26:20,647: mongo_db: 0.9300730228424072 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:26:21,522: mongo_db: 0.7399499416351318 seconds to bulk insert into collections 4.89MB
+INFO: 2018-08-31 14:26:25,580: mongo_db: 0.6101512908935547 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:26:26,427: mongo_db: 0.6990699768066406 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:26:27,195: mongo_db: 0.6126940250396729 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:26:28,214: mongo_db: 0.8678669929504395 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:26:29,605: mongo_db: 1.226078987121582 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:26:29,666: root: Thread-0
+INFO: 2018-08-31 14:26:29,668: root: Thread-1
+INFO: 2018-08-31 14:26:29,669: root: Thread-2
+INFO: 2018-08-31 14:26:29,670: root: Thread-3
+INFO: 2018-08-31 14:26:29,910: root: Thread-0
+INFO: 2018-08-31 14:26:29,948: root: Thread-1
+INFO: 2018-08-31 14:26:29,970: root: Thread-3
+INFO: 2018-08-31 14:26:29,987: root: Thread-2
+INFO: 2018-08-31 14:26:30,088: root: Thread-1
+INFO: 2018-08-31 14:26:30,089: root: Thread-0
+INFO: 2018-08-31 14:26:30,101: root: Thread-2
+INFO: 2018-08-31 14:26:30,105: root: Thread-3
+INFO: 2018-08-31 14:26:30,121: root: Thread-0
+INFO: 2018-08-31 14:26:30,124: root: Thread-1
+INFO: 2018-08-31 14:26:30,242: root: Thread-1
+INFO: 2018-08-31 14:26:30,248: root: Thread-3
+INFO: 2018-08-31 14:26:30,250: root: Thread-2
+INFO: 2018-08-31 14:26:30,319: root: Thread-0
+INFO: 2018-08-31 14:26:30,413: root: Thread-1
+INFO: 2018-08-31 14:26:30,416: root: Thread-2
+INFO: 2018-08-31 14:26:30,420: root: Thread-3
+INFO: 2018-08-31 14:26:30,465: root: Thread-0
+INFO: 2018-08-31 14:26:30,539: root: Thread-2
+INFO: 2018-08-31 14:26:30,549: root: Thread-1
+INFO: 2018-08-31 14:26:30,557: root: Thread-3
+INFO: 2018-08-31 14:26:30,561: root: Thread-0
+INFO: 2018-08-31 14:26:30,623: root: Thread-1
+INFO: 2018-08-31 14:26:30,624: root: Thread-2
+INFO: 2018-08-31 14:26:30,639: root: Thread-0
+INFO: 2018-08-31 14:26:30,644: root: Thread-3
+INFO: 2018-08-31 14:26:30,728: root: Thread-1
+INFO: 2018-08-31 14:26:30,755: root: Thread-0
+INFO: 2018-08-31 14:26:30,759: root: Thread-2
+INFO: 2018-08-31 14:26:30,763: root: Thread-3
+INFO: 2018-08-31 14:26:30,777: root: Thread-1
+INFO: 2018-08-31 14:26:30,824: root: Thread-0
+INFO: 2018-08-31 14:26:30,825: root: Thread-1
+INFO: 2018-08-31 14:26:30,829: root: Thread-2
+INFO: 2018-08-31 14:26:30,829: root: Thread-3
+INFO: 2018-08-31 14:26:30,992: root: Thread-3
+INFO: 2018-08-31 14:26:30,993: root: Thread-0
+INFO: 2018-08-31 14:26:30,999: root: Thread-1
+INFO: 2018-08-31 14:26:31,001: root: Thread-2
+INFO: 2018-08-31 14:26:31,125: root: Thread-3
+INFO: 2018-08-31 14:26:31,129: root: Thread-2
+INFO: 2018-08-31 14:26:31,136: root: Thread-1
+INFO: 2018-08-31 14:26:31,168: root: Thread-0
+INFO: 2018-08-31 14:26:31,382: root: Thread-2
+INFO: 2018-08-31 14:26:31,384: root: Thread-3
+INFO: 2018-08-31 14:26:31,402: root: Thread-1
+INFO: 2018-08-31 14:26:31,417: root: Thread-0
+INFO: 2018-08-31 14:26:31,519: root: Thread-3
+INFO: 2018-08-31 14:26:31,534: root: Thread-0
+INFO: 2018-08-31 14:26:31,535: root: Thread-1
+INFO: 2018-08-31 14:26:31,536: root: Thread-2
+INFO: 2018-08-31 14:26:31,570: root: Thread-3
+INFO: 2018-08-31 14:26:31,578: root: Thread-2
+INFO: 2018-08-31 14:26:31,580: root: Thread-0
+INFO: 2018-08-31 14:26:31,580: root: Thread-1
+INFO: 2018-08-31 14:26:44,454: mongo_db: 0.6147851943969727 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:26:45,221: mongo_db: 0.614159107208252 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:26:46,026: mongo_db: 0.6713747978210449 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:26:46,739: mongo_db: 0.5754399299621582 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:26:47,665: mongo_db: 0.80413818359375 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:26:47,674: root: Thread-0
+INFO: 2018-08-31 14:26:47,675: root: Thread-1
+INFO: 2018-08-31 14:26:47,676: root: Thread-2
+INFO: 2018-08-31 14:26:47,677: root: Thread-3
+INFO: 2018-08-31 14:26:47,740: root: Thread-0
+INFO: 2018-08-31 14:26:47,744: root: Thread-2
+INFO: 2018-08-31 14:26:47,744: root: Thread-3
+INFO: 2018-08-31 14:26:47,745: root: Thread-1
+INFO: 2018-08-31 14:26:47,824: root: Thread-0
+INFO: 2018-08-31 14:26:47,827: root: Thread-1
+INFO: 2018-08-31 14:26:47,829: root: Thread-2
+INFO: 2018-08-31 14:26:47,830: root: Thread-3
+INFO: 2018-08-31 14:26:47,886: root: Thread-2
+INFO: 2018-08-31 14:26:47,886: root: Thread-0
+INFO: 2018-08-31 14:26:47,887: root: Thread-1
+INFO: 2018-08-31 14:26:47,888: root: Thread-3
+INFO: 2018-08-31 14:26:48,030: root: Thread-3
+INFO: 2018-08-31 14:26:48,030: root: Thread-0
+INFO: 2018-08-31 14:26:48,031: root: Thread-1
+INFO: 2018-08-31 14:26:48,034: root: Thread-2
+INFO: 2018-08-31 14:26:48,200: root: Thread-0
+INFO: 2018-08-31 14:26:48,216: root: Thread-1
+INFO: 2018-08-31 14:26:48,230: root: Thread-2
+INFO: 2018-08-31 14:26:48,234: root: Thread-3
+INFO: 2018-08-31 14:26:48,279: root: Thread-0
+INFO: 2018-08-31 14:26:48,281: root: Thread-3
+INFO: 2018-08-31 14:26:48,282: root: Thread-1
+INFO: 2018-08-31 14:26:48,313: root: Thread-2
+INFO: 2018-08-31 14:26:48,371: root: Thread-2
+INFO: 2018-08-31 14:26:48,373: root: Thread-0
+INFO: 2018-08-31 14:26:48,374: root: Thread-3
+INFO: 2018-08-31 14:26:48,375: root: Thread-1
+INFO: 2018-08-31 14:26:48,470: root: Thread-0
+INFO: 2018-08-31 14:26:48,476: root: Thread-2
+INFO: 2018-08-31 14:26:48,499: root: Thread-3
+INFO: 2018-08-31 14:26:48,507: root: Thread-1
+INFO: 2018-08-31 14:26:48,609: root: Thread-0
+INFO: 2018-08-31 14:26:48,615: root: Thread-1
+INFO: 2018-08-31 14:26:48,620: root: Thread-3
+INFO: 2018-08-31 14:26:48,621: root: Thread-2
+INFO: 2018-08-31 14:26:48,670: root: Thread-1
+INFO: 2018-08-31 14:26:48,676: root: Thread-0
+INFO: 2018-08-31 14:26:48,679: root: Thread-2
+INFO: 2018-08-31 14:26:48,699: root: Thread-3
+INFO: 2018-08-31 14:26:48,830: root: Thread-0
+INFO: 2018-08-31 14:26:48,831: root: Thread-2
+INFO: 2018-08-31 14:26:48,836: root: Thread-1
+INFO: 2018-08-31 14:26:48,842: root: Thread-3
+INFO: 2018-08-31 14:26:48,880: root: Thread-2
+INFO: 2018-08-31 14:26:48,880: root: Thread-0
+INFO: 2018-08-31 14:26:48,882: root: Thread-1
+INFO: 2018-08-31 14:26:48,899: root: Thread-3
+INFO: 2018-08-31 14:26:48,996: root: Thread-2
+INFO: 2018-08-31 14:26:49,039: root: Thread-1
+INFO: 2018-08-31 14:26:49,041: root: Thread-3
+INFO: 2018-08-31 14:26:49,048: root: Thread-0
+INFO: 2018-08-31 14:26:49,067: root: Thread-2
+INFO: 2018-08-31 14:26:49,083: root: Thread-3
+INFO: 2018-08-31 14:26:49,084: root: Thread-1
+INFO: 2018-08-31 14:26:49,085: root: Thread-0
+INFO: 2018-08-31 14:26:49,250: root: Thread-2
+INFO: 2018-08-31 14:26:49,261: root: Thread-0
+INFO: 2018-08-31 14:26:49,266: root: Thread-3
+INFO: 2018-08-31 14:26:49,267: root: Thread-1
+INFO: 2018-08-31 14:26:49,417: root: Thread-3
+INFO: 2018-08-31 14:26:49,418: root: Thread-2
+INFO: 2018-08-31 14:26:49,418: root: Thread-0
+INFO: 2018-08-31 14:26:49,424: root: Thread-1
+INFO: 2018-08-31 14:26:49,510: root: Thread-3
+INFO: 2018-08-31 14:26:49,533: root: Thread-0
+INFO: 2018-08-31 14:26:49,538: root: Thread-1
+INFO: 2018-08-31 14:26:49,539: root: Thread-2
+INFO: 2018-08-31 14:26:49,580: root: Thread-3
+INFO: 2018-08-31 14:26:49,580: root: Thread-0
+INFO: 2018-08-31 14:26:49,580: root: Thread-1
+INFO: 2018-08-31 14:26:49,583: root: Thread-2
+INFO: 2018-08-31 14:27:30,923: mongo_db: 0.5423822402954102 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:27:31,756: mongo_db: 0.5801491737365723 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:27:32,448: mongo_db: 0.5624427795410156 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:27:33,161: mongo_db: 0.5800988674163818 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:27:33,842: mongo_db: 0.5519769191741943 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:27:33,850: root: Thread-0
+INFO: 2018-08-31 14:27:33,851: root: Thread-1
+INFO: 2018-08-31 14:27:33,852: root: Thread-2
+INFO: 2018-08-31 14:27:33,853: root: Thread-3
+INFO: 2018-08-31 14:27:33,913: root: Thread-0
+INFO: 2018-08-31 14:27:33,913: root: Thread-2
+INFO: 2018-08-31 14:27:33,913: root: Thread-1
+INFO: 2018-08-31 14:27:33,914: root: Thread-3
+INFO: 2018-08-31 14:27:33,960: root: Thread-2
+INFO: 2018-08-31 14:27:33,962: root: Thread-0
+INFO: 2018-08-31 14:27:33,964: root: Thread-3
+INFO: 2018-08-31 14:27:33,967: root: Thread-1
+INFO: 2018-08-31 14:27:34,018: root: Thread-2
+INFO: 2018-08-31 14:27:34,019: root: Thread-3
+INFO: 2018-08-31 14:27:34,020: root: Thread-0
+INFO: 2018-08-31 14:27:34,021: root: Thread-1
+INFO: 2018-08-31 14:27:34,072: root: Thread-2
+INFO: 2018-08-31 14:27:34,081: root: Thread-0
+INFO: 2018-08-31 14:27:34,083: root: Thread-1
+INFO: 2018-08-31 14:27:34,101: root: Thread-3
+INFO: 2018-08-31 14:27:34,189: root: Thread-0
+INFO: 2018-08-31 14:27:34,211: root: Thread-2
+INFO: 2018-08-31 14:27:34,225: root: Thread-1
+INFO: 2018-08-31 14:27:34,228: root: Thread-3
+INFO: 2018-08-31 14:27:34,276: root: Thread-0
+INFO: 2018-08-31 14:27:34,278: root: Thread-1
+INFO: 2018-08-31 14:27:34,281: root: Thread-2
+INFO: 2018-08-31 14:27:34,289: root: Thread-3
+INFO: 2018-08-31 14:27:34,416: root: Thread-1
+INFO: 2018-08-31 14:27:34,417: root: Thread-2
+INFO: 2018-08-31 14:27:34,417: root: Thread-0
+INFO: 2018-08-31 14:27:34,438: root: Thread-3
+INFO: 2018-08-31 14:27:34,472: root: Thread-1
+INFO: 2018-08-31 14:27:34,473: root: Thread-0
+INFO: 2018-08-31 14:27:34,475: root: Thread-2
+INFO: 2018-08-31 14:27:34,476: root: Thread-3
+INFO: 2018-08-31 14:27:34,571: root: Thread-2
+INFO: 2018-08-31 14:27:34,596: root: Thread-1
+INFO: 2018-08-31 14:27:34,601: root: Thread-0
+INFO: 2018-08-31 14:27:34,617: root: Thread-3
+INFO: 2018-08-31 14:27:34,690: root: Thread-2
+INFO: 2018-08-31 14:27:34,696: root: Thread-0
+INFO: 2018-08-31 14:27:34,697: root: Thread-1
+INFO: 2018-08-31 14:27:34,704: root: Thread-3
+INFO: 2018-08-31 14:27:34,729: root: Thread-2
+INFO: 2018-08-31 14:27:34,734: root: Thread-0
+INFO: 2018-08-31 14:27:34,734: root: Thread-1
+INFO: 2018-08-31 14:27:34,804: root: Thread-3
+INFO: 2018-08-31 14:27:34,841: root: Thread-2
+INFO: 2018-08-31 14:27:34,847: root: Thread-1
+INFO: 2018-08-31 14:27:34,868: root: Thread-0
+INFO: 2018-08-31 14:27:34,942: root: Thread-2
+INFO: 2018-08-31 14:27:34,945: root: Thread-3
+INFO: 2018-08-31 14:27:34,950: root: Thread-0
+INFO: 2018-08-31 14:27:34,951: root: Thread-1
+INFO: 2018-08-31 14:27:34,977: root: Thread-3
+INFO: 2018-08-31 14:27:35,009: root: Thread-2
+INFO: 2018-08-31 14:27:35,010: root: Thread-0
+INFO: 2018-08-31 14:27:35,011: root: Thread-1
+INFO: 2018-08-31 14:27:35,018: root: Thread-3
+INFO: 2018-08-31 14:27:35,209: root: Thread-2
+INFO: 2018-08-31 14:27:35,210: root: Thread-1
+INFO: 2018-08-31 14:27:35,211: root: Thread-0
+INFO: 2018-08-31 14:27:35,216: root: Thread-3
+INFO: 2018-08-31 14:27:35,328: root: Thread-2
+INFO: 2018-08-31 14:27:35,335: root: Thread-0
+INFO: 2018-08-31 14:27:35,340: root: Thread-3
+INFO: 2018-08-31 14:27:35,340: root: Thread-1
+INFO: 2018-08-31 14:27:35,375: root: Thread-2
+INFO: 2018-08-31 14:27:35,381: root: Thread-1
+INFO: 2018-08-31 14:27:35,384: root: Thread-0
+INFO: 2018-08-31 14:27:35,389: root: Thread-3
+INFO: 2018-08-31 14:27:35,422: root: Thread-2
+INFO: 2018-08-31 14:27:35,426: root: Thread-1
+INFO: 2018-08-31 14:27:35,426: root: Thread-3
+INFO: 2018-08-31 14:27:35,429: root: Thread-0
+INFO: 2018-08-31 14:27:35,467: root: Thread-2
+INFO: 2018-08-31 14:27:35,470: root: Thread-0
+INFO: 2018-08-31 14:27:35,470: root: Thread-1
+INFO: 2018-08-31 14:27:35,472: root: Thread-3
+INFO: 2018-08-31 14:27:35,508: root: Thread-2
+INFO: 2018-08-31 14:27:35,511: root: Thread-3
+INFO: 2018-08-31 14:27:35,514: root: Thread-0
+INFO: 2018-08-31 14:27:35,514: root: Thread-1
+INFO: 2018-08-31 14:27:35,658: root: Thread-3
+INFO: 2018-08-31 14:27:35,664: root: Thread-2
+INFO: 2018-08-31 14:27:35,676: root: Thread-1
+INFO: 2018-08-31 14:27:35,681: root: Thread-0
+INFO: 2018-08-31 14:27:35,765: root: Thread-3
+INFO: 2018-08-31 14:27:35,782: root: Thread-1
+INFO: 2018-08-31 14:27:35,791: root: Thread-2
+INFO: 2018-08-31 14:27:35,792: root: Thread-0
+INFO: 2018-08-31 14:27:55,290: root: Thread-0
+INFO: 2018-08-31 14:27:55,291: root: Thread-1
+INFO: 2018-08-31 14:27:55,292: root: Thread-2
+INFO: 2018-08-31 14:27:55,293: root: Thread-3
+INFO: 2018-08-31 14:27:55,337: root: Thread-0
+INFO: 2018-08-31 14:27:55,340: root: Thread-1
+INFO: 2018-08-31 14:27:55,342: root: Thread-2
+INFO: 2018-08-31 14:27:55,344: root: Thread-3
+INFO: 2018-08-31 14:27:55,394: root: Thread-0
+INFO: 2018-08-31 14:27:55,397: root: Thread-1
+INFO: 2018-08-31 14:27:55,410: root: Thread-3
+INFO: 2018-08-31 14:27:55,410: root: Thread-2
+INFO: 2018-08-31 14:27:55,468: root: Thread-0
+INFO: 2018-08-31 14:27:55,472: root: Thread-2
+INFO: 2018-08-31 14:27:55,473: root: Thread-3
+INFO: 2018-08-31 14:27:55,475: root: Thread-1
+INFO: 2018-08-31 14:27:55,568: root: Thread-0
+INFO: 2018-08-31 14:27:55,570: root: Thread-3
+INFO: 2018-08-31 14:27:55,570: root: Thread-2
+INFO: 2018-08-31 14:27:55,579: root: Thread-1
+INFO: 2018-08-31 14:27:55,653: root: Thread-0
+INFO: 2018-08-31 14:27:55,655: root: Thread-3
+INFO: 2018-08-31 14:27:55,657: root: Thread-1
+INFO: 2018-08-31 14:27:55,659: root: Thread-2
+INFO: 2018-08-31 14:27:55,717: root: Thread-3
+INFO: 2018-08-31 14:27:55,733: root: Thread-1
+INFO: 2018-08-31 14:27:55,741: root: Thread-0
+INFO: 2018-08-31 14:27:55,756: root: Thread-2
+INFO: 2018-08-31 14:27:55,908: root: Thread-3
+INFO: 2018-08-31 14:27:55,914: root: Thread-1
+INFO: 2018-08-31 14:27:55,937: root: Thread-2
+INFO: 2018-08-31 14:27:55,940: root: Thread-0
+INFO: 2018-08-31 14:27:55,979: root: Thread-3
+INFO: 2018-08-31 14:27:55,982: root: Thread-1
+INFO: 2018-08-31 14:27:55,983: root: Thread-0
+INFO: 2018-08-31 14:27:55,984: root: Thread-2
+INFO: 2018-08-31 14:27:56,028: root: Thread-1
+INFO: 2018-08-31 14:27:56,030: root: Thread-3
+INFO: 2018-08-31 14:27:56,032: root: Thread-0
+INFO: 2018-08-31 14:27:56,035: root: Thread-2
+INFO: 2018-08-31 14:27:56,072: root: Thread-1
+INFO: 2018-08-31 14:27:56,075: root: Thread-3
+INFO: 2018-08-31 14:27:56,079: root: Thread-0
+INFO: 2018-08-31 14:27:56,081: root: Thread-2
+INFO: 2018-08-31 14:27:56,128: root: Thread-1
+INFO: 2018-08-31 14:27:56,136: root: Thread-3
+INFO: 2018-08-31 14:27:56,153: root: Thread-0
+INFO: 2018-08-31 14:27:56,170: root: Thread-2
+INFO: 2018-08-31 14:27:56,368: root: Thread-1
+INFO: 2018-08-31 14:27:56,374: root: Thread-3
+INFO: 2018-08-31 14:27:56,378: root: Thread-2
+INFO: 2018-08-31 14:27:56,379: root: Thread-0
+INFO: 2018-08-31 14:27:56,500: root: Thread-1
+INFO: 2018-08-31 14:27:56,619: root: Thread-0
+INFO: 2018-08-31 14:27:56,620: root: Thread-3
+INFO: 2018-08-31 14:27:56,622: root: Thread-2
+INFO: 2018-08-31 14:27:56,622: root: Thread-1
+INFO: 2018-08-31 14:27:56,681: root: Thread-0
+INFO: 2018-08-31 14:27:56,688: root: Thread-3
+INFO: 2018-08-31 14:27:56,690: root: Thread-2
+INFO: 2018-08-31 14:27:56,695: root: Thread-1
+INFO: 2018-08-31 14:27:56,815: root: Thread-0
+INFO: 2018-08-31 14:27:56,840: root: Thread-2
+INFO: 2018-08-31 14:27:56,848: root: Thread-3
+INFO: 2018-08-31 14:27:56,859: root: Thread-1
+INFO: 2018-08-31 14:27:56,925: root: Thread-0
+INFO: 2018-08-31 14:27:56,932: root: Thread-3
+INFO: 2018-08-31 14:27:56,935: root: Thread-1
+INFO: 2018-08-31 14:27:56,935: root: Thread-2
+INFO: 2018-08-31 14:27:56,975: root: Thread-2
+INFO: 2018-08-31 14:27:56,976: root: Thread-0
+INFO: 2018-08-31 14:27:56,977: root: Thread-1
+INFO: 2018-08-31 14:27:56,983: root: Thread-3
+INFO: 2018-08-31 14:27:57,023: root: Thread-2
+INFO: 2018-08-31 14:27:57,024: root: Thread-1
+INFO: 2018-08-31 14:27:57,028: root: Thread-3
+INFO: 2018-08-31 14:27:57,028: root: Thread-0
+INFO: 2018-08-31 14:27:57,104: root: Thread-2
+INFO: 2018-08-31 14:27:57,106: root: Thread-0
+INFO: 2018-08-31 14:27:57,106: root: Thread-1
+INFO: 2018-08-31 14:27:57,113: root: Thread-3
+INFO: 2018-08-31 14:27:57,160: root: Thread-2
+INFO: 2018-08-31 14:27:57,161: root: Thread-0
+INFO: 2018-08-31 14:27:57,162: root: Thread-3
+INFO: 2018-08-31 14:27:57,167: root: Thread-1
+INFO: 2018-08-31 14:27:57,207: root: Thread-1
+INFO: 2018-08-31 14:27:57,212: root: Thread-0
+INFO: 2018-08-31 14:27:57,212: root: Thread-2
+INFO: 2018-08-31 14:27:57,216: root: Thread-3
+INFO: 2018-08-31 14:28:08,015: root: Thread-0
+INFO: 2018-08-31 14:28:08,015: root: Thread-1
+INFO: 2018-08-31 14:28:08,016: root: Thread-2
+INFO: 2018-08-31 14:28:08,017: root: Thread-3
+INFO: 2018-08-31 14:28:08,058: root: Thread-1
+INFO: 2018-08-31 14:28:08,059: root: Thread-2
+INFO: 2018-08-31 14:28:08,060: root: Thread-0
+INFO: 2018-08-31 14:28:08,064: root: Thread-3
+INFO: 2018-08-31 14:28:08,204: root: Thread-0
+INFO: 2018-08-31 14:28:08,205: root: Thread-3
+INFO: 2018-08-31 14:28:08,207: root: Thread-1
+INFO: 2018-08-31 14:28:08,210: root: Thread-2
+INFO: 2018-08-31 14:28:08,315: root: Thread-0
+INFO: 2018-08-31 14:28:08,359: root: Thread-1
+INFO: 2018-08-31 14:28:08,385: root: Thread-3
+INFO: 2018-08-31 14:28:08,417: root: Thread-2
+INFO: 2018-08-31 14:28:08,778: root: Thread-1
+INFO: 2018-08-31 14:28:08,820: root: Thread-0
+INFO: 2018-08-31 14:28:08,889: root: Thread-3
+INFO: 2018-08-31 14:28:08,903: root: Thread-2
+INFO: 2018-08-31 14:28:08,922: root: Thread-1
+INFO: 2018-08-31 14:28:08,928: root: Thread-0
+INFO: 2018-08-31 14:28:08,957: mongo_db: 0.7180778980255127 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:28:08,967: root: Thread-2
+INFO: 2018-08-31 14:28:08,970: root: Thread-3
+INFO: 2018-08-31 14:28:08,970: root: Thread-1
+INFO: 2018-08-31 14:28:08,977: root: Thread-0
+INFO: 2018-08-31 14:28:09,109: root: Thread-1
+INFO: 2018-08-31 14:28:09,110: root: Thread-2
+INFO: 2018-08-31 14:28:09,113: root: Thread-3
+INFO: 2018-08-31 14:28:09,134: root: Thread-0
+INFO: 2018-08-31 14:28:09,287: root: Thread-1
+INFO: 2018-08-31 14:28:09,288: root: Thread-3
+INFO: 2018-08-31 14:28:09,289: root: Thread-2
+INFO: 2018-08-31 14:28:09,300: root: Thread-0
+INFO: 2018-08-31 14:28:09,392: root: Thread-1
+INFO: 2018-08-31 14:28:09,402: root: Thread-3
+INFO: 2018-08-31 14:28:09,465: root: Thread-0
+INFO: 2018-08-31 14:28:09,473: root: Thread-2
+INFO: 2018-08-31 14:28:09,656: root: Thread-1
+INFO: 2018-08-31 14:28:09,782: root: Thread-3
+INFO: 2018-08-31 14:28:09,902: root: Thread-2
+INFO: 2018-08-31 14:28:09,919: root: Thread-0
+INFO: 2018-08-31 14:28:10,271: mongo_db: 0.8478977680206299 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:28:11,368: mongo_db: 0.7794549465179443 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:28:12,081: mongo_db: 0.5718190670013428 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:28:12,864: mongo_db: 0.5724461078643799 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:28:41,023: root: Thread-0
+INFO: 2018-08-31 14:28:41,024: root: Thread-1
+INFO: 2018-08-31 14:28:41,025: root: Thread-2
+INFO: 2018-08-31 14:28:41,027: root: Thread-3
+INFO: 2018-08-31 14:28:41,063: root: Thread-3
+INFO: 2018-08-31 14:28:41,065: root: Thread-1
+INFO: 2018-08-31 14:28:41,067: root: Thread-0
+INFO: 2018-08-31 14:28:41,069: root: Thread-2
+INFO: 2018-08-31 14:28:41,103: root: Thread-3
+INFO: 2018-08-31 14:28:41,106: root: Thread-2
+INFO: 2018-08-31 14:28:41,108: root: Thread-1
+INFO: 2018-08-31 14:28:41,110: root: Thread-0
+INFO: 2018-08-31 14:28:41,157: root: Thread-2
+INFO: 2018-08-31 14:28:41,157: root: Thread-3
+INFO: 2018-08-31 14:28:41,158: root: Thread-1
+INFO: 2018-08-31 14:28:41,162: root: Thread-0
+INFO: 2018-08-31 14:28:41,205: root: Thread-1
+INFO: 2018-08-31 14:28:41,206: root: Thread-3
+INFO: 2018-08-31 14:28:41,207: root: Thread-2
+INFO: 2018-08-31 14:28:41,207: root: Thread-0
+INFO: 2018-08-31 14:28:41,309: root: Thread-0
+INFO: 2018-08-31 14:28:41,312: root: Thread-1
+INFO: 2018-08-31 14:28:41,322: root: Thread-2
+INFO: 2018-08-31 14:28:41,332: root: Thread-3
+INFO: 2018-08-31 14:28:41,399: root: Thread-1
+INFO: 2018-08-31 14:28:41,402: root: Thread-3
+INFO: 2018-08-31 14:28:41,405: root: Thread-0
+INFO: 2018-08-31 14:28:41,406: root: Thread-2
+INFO: 2018-08-31 14:28:41,454: root: Thread-1
+INFO: 2018-08-31 14:28:41,455: root: Thread-3
+INFO: 2018-08-31 14:28:41,455: root: Thread-0
+INFO: 2018-08-31 14:28:41,458: root: Thread-2
+INFO: 2018-08-31 14:28:41,551: root: Thread-0
+INFO: 2018-08-31 14:28:41,556: root: Thread-2
+INFO: 2018-08-31 14:28:41,562: root: Thread-1
+INFO: 2018-08-31 14:28:41,572: root: Thread-3
+INFO: 2018-08-31 14:28:41,689: root: Thread-1
+INFO: 2018-08-31 14:28:41,692: root: Thread-2
+INFO: 2018-08-31 14:28:41,694: root: Thread-3
+INFO: 2018-08-31 14:28:41,698: root: Thread-0
+INFO: 2018-08-31 14:28:41,731: root: Thread-2
+INFO: 2018-08-31 14:28:41,736: root: Thread-3
+INFO: 2018-08-31 14:28:41,738: root: Thread-1
+INFO: 2018-08-31 14:28:41,739: root: Thread-0
+INFO: 2018-08-31 14:28:41,821: root: Thread-1
+INFO: 2018-08-31 14:28:41,824: root: Thread-2
+INFO: 2018-08-31 14:28:41,832: root: Thread-0
+INFO: 2018-08-31 14:28:41,832: root: Thread-3
+INFO: 2018-08-31 14:28:41,933: root: Thread-3
+INFO: 2018-08-31 14:28:41,933: root: Thread-1
+INFO: 2018-08-31 14:28:41,935: root: Thread-2
+INFO: 2018-08-31 14:28:41,939: root: Thread-0
+INFO: 2018-08-31 14:28:41,976: root: Thread-0
+INFO: 2018-08-31 14:28:41,977: root: Thread-3
+INFO: 2018-08-31 14:28:41,980: root: Thread-2
+INFO: 2018-08-31 14:28:41,981: root: Thread-1
+INFO: 2018-08-31 14:28:42,099: root: Thread-3
+INFO: 2018-08-31 14:28:42,103: root: Thread-1
+INFO: 2018-08-31 14:28:42,118: root: Thread-2
+INFO: 2018-08-31 14:28:42,126: root: Thread-0
+INFO: 2018-08-31 14:28:42,201: root: Thread-1
+INFO: 2018-08-31 14:28:42,204: root: Thread-3
+INFO: 2018-08-31 14:28:42,206: root: Thread-2
+INFO: 2018-08-31 14:28:42,210: root: Thread-0
+INFO: 2018-08-31 14:28:42,255: root: Thread-0
+INFO: 2018-08-31 14:28:42,256: root: Thread-3
+INFO: 2018-08-31 14:28:42,258: root: Thread-1
+INFO: 2018-08-31 14:28:42,260: root: Thread-2
+INFO: 2018-08-31 14:28:42,307: root: Thread-1
+INFO: 2018-08-31 14:28:42,317: root: Thread-2
+INFO: 2018-08-31 14:28:42,318: root: Thread-3
+INFO: 2018-08-31 14:28:42,318: root: Thread-0
+INFO: 2018-08-31 14:28:42,469: root: Thread-3
+INFO: 2018-08-31 14:28:42,472: root: Thread-2
+INFO: 2018-08-31 14:28:42,477: root: Thread-1
+INFO: 2018-08-31 14:28:42,478: root: Thread-0
+INFO: 2018-08-31 14:28:42,591: root: Thread-2
+INFO: 2018-08-31 14:28:42,596: root: Thread-3
+INFO: 2018-08-31 14:28:42,620: root: Thread-1
+INFO: 2018-08-31 14:28:42,623: root: Thread-0
+INFO: 2018-08-31 14:28:42,692: root: Thread-3
+INFO: 2018-08-31 14:28:42,692: root: Thread-2
+INFO: 2018-08-31 14:28:42,698: root: Thread-1
+INFO: 2018-08-31 14:28:42,700: root: Thread-0
+INFO: 2018-08-31 14:28:42,736: root: Thread-3
+INFO: 2018-08-31 14:28:42,738: root: Thread-2
+INFO: 2018-08-31 14:28:42,746: root: Thread-0
+INFO: 2018-08-31 14:28:42,749: root: Thread-1
+INFO: 2018-08-31 14:28:42,780: root: Thread-3
+INFO: 2018-08-31 14:28:42,784: root: Thread-2
+INFO: 2018-08-31 14:28:42,792: root: Thread-1
+INFO: 2018-08-31 14:28:42,793: root: Thread-0
+INFO: 2018-08-31 14:28:42,936: root: Thread-3
+INFO: 2018-08-31 14:28:42,952: root: Thread-1
+INFO: 2018-08-31 14:28:42,957: root: Thread-2
+INFO: 2018-08-31 14:28:42,960: root: Thread-0
+INFO: 2018-08-31 14:28:43,025: root: Thread-3
+INFO: 2018-08-31 14:28:43,027: root: Thread-0
+INFO: 2018-08-31 14:28:43,840: mongo_db: 0.5941579341888428 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:28:44,540: mongo_db: 0.5530409812927246 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:28:45,237: mongo_db: 0.5607459545135498 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:28:45,919: mongo_db: 0.5479631423950195 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:28:46,672: mongo_db: 0.5980720520019531 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:28:53,838: root: Thread-0
+INFO: 2018-08-31 14:28:53,839: root: Thread-1
+INFO: 2018-08-31 14:28:53,840: root: Thread-2
+INFO: 2018-08-31 14:28:53,841: root: Thread-3
+INFO: 2018-08-31 14:28:53,879: root: Thread-0
+INFO: 2018-08-31 14:28:53,880: root: Thread-3
+INFO: 2018-08-31 14:28:53,882: root: Thread-1
+INFO: 2018-08-31 14:28:53,882: root: Thread-2
+INFO: 2018-08-31 14:28:53,909: root: Thread-3
+INFO: 2018-08-31 14:28:53,909: root: Thread-0
+INFO: 2018-08-31 14:28:53,969: root: Thread-1
+INFO: 2018-08-31 14:28:53,970: root: Thread-0
+INFO: 2018-08-31 14:28:53,972: root: Thread-3
+INFO: 2018-08-31 14:28:53,974: root: Thread-2
+INFO: 2018-08-31 14:28:54,022: root: Thread-3
+INFO: 2018-08-31 14:28:54,024: root: Thread-1
+INFO: 2018-08-31 14:28:54,024: root: Thread-2
+INFO: 2018-08-31 14:28:54,025: root: Thread-0
+INFO: 2018-08-31 14:28:54,136: root: Thread-2
+INFO: 2018-08-31 14:28:54,154: root: Thread-1
+INFO: 2018-08-31 14:28:54,160: root: Thread-0
+INFO: 2018-08-31 14:28:54,162: root: Thread-3
+INFO: 2018-08-31 14:28:54,227: root: Thread-2
+INFO: 2018-08-31 14:28:54,237: root: Thread-0
+INFO: 2018-08-31 14:28:54,239: root: Thread-1
+INFO: 2018-08-31 14:28:54,241: root: Thread-3
+INFO: 2018-08-31 14:28:54,268: root: Thread-2
+INFO: 2018-08-31 14:28:54,284: root: Thread-3
+INFO: 2018-08-31 14:28:54,286: root: Thread-1
+INFO: 2018-08-31 14:28:54,287: root: Thread-0
+INFO: 2018-08-31 14:28:54,318: root: Thread-2
+INFO: 2018-08-31 14:28:54,341: root: Thread-3
+INFO: 2018-08-31 14:28:54,352: root: Thread-0
+INFO: 2018-08-31 14:28:54,352: root: Thread-1
+INFO: 2018-08-31 14:28:54,446: root: Thread-2
+INFO: 2018-08-31 14:28:54,489: root: Thread-0
+INFO: 2018-08-31 14:28:54,503: root: Thread-3
+INFO: 2018-08-31 14:28:54,507: root: Thread-1
+INFO: 2018-08-31 14:28:54,526: root: Thread-2
+INFO: 2018-08-31 14:28:54,544: root: Thread-3
+INFO: 2018-08-31 14:28:54,544: root: Thread-0
+INFO: 2018-08-31 14:28:54,551: root: Thread-1
+INFO: 2018-08-31 14:28:54,608: root: Thread-2
+INFO: 2018-08-31 14:28:54,694: root: Thread-0
+INFO: 2018-08-31 14:28:54,696: root: Thread-1
+INFO: 2018-08-31 14:28:54,698: root: Thread-3
+INFO: 2018-08-31 14:28:54,726: root: Thread-2
+INFO: 2018-08-31 14:28:54,745: root: Thread-1
+INFO: 2018-08-31 14:28:54,747: root: Thread-0
+INFO: 2018-08-31 14:28:54,759: root: Thread-3
+INFO: 2018-08-31 14:28:54,790: root: Thread-2
+INFO: 2018-08-31 14:28:54,862: root: Thread-1
+INFO: 2018-08-31 14:28:54,878: root: Thread-0
+INFO: 2018-08-31 14:28:54,890: root: Thread-3
+INFO: 2018-08-31 14:28:54,909: root: Thread-2
+INFO: 2018-08-31 14:28:54,937: root: Thread-1
+INFO: 2018-08-31 14:28:54,939: root: Thread-0
+INFO: 2018-08-31 14:28:54,940: root: Thread-3
+INFO: 2018-08-31 14:28:54,953: root: Thread-2
+INFO: 2018-08-31 14:28:54,996: root: Thread-1
+INFO: 2018-08-31 14:28:55,016: root: Thread-0
+INFO: 2018-08-31 14:28:55,052: root: Thread-3
+INFO: 2018-08-31 14:28:55,072: root: Thread-2
+INFO: 2018-08-31 14:28:55,126: root: Thread-1
+INFO: 2018-08-31 14:28:55,130: root: Thread-0
+INFO: 2018-08-31 14:28:55,171: root: Thread-3
+INFO: 2018-08-31 14:28:55,172: root: Thread-2
+INFO: 2018-08-31 14:28:55,190: root: Thread-1
+INFO: 2018-08-31 14:28:55,198: root: Thread-0
+INFO: 2018-08-31 14:28:55,259: root: Thread-2
+INFO: 2018-08-31 14:28:55,263: root: Thread-3
+INFO: 2018-08-31 14:28:55,339: root: Thread-1
+INFO: 2018-08-31 14:28:55,346: root: Thread-0
+INFO: 2018-08-31 14:28:55,377: root: Thread-2
+INFO: 2018-08-31 14:28:55,378: root: Thread-3
+INFO: 2018-08-31 14:28:55,400: root: Thread-1
+INFO: 2018-08-31 14:28:55,439: root: Thread-0
+INFO: 2018-08-31 14:28:55,459: root: Thread-2
+INFO: 2018-08-31 14:28:55,465: root: Thread-3
+INFO: 2018-08-31 14:28:55,525: root: Thread-1
+INFO: 2018-08-31 14:28:55,541: root: Thread-0
+INFO: 2018-08-31 14:28:55,547: root: Thread-2
+INFO: 2018-08-31 14:28:55,551: root: Thread-3
+INFO: 2018-08-31 14:28:55,572: root: Thread-1
+INFO: 2018-08-31 14:28:55,587: root: Thread-0
+INFO: 2018-08-31 14:28:55,593: root: Thread-2
+INFO: 2018-08-31 14:28:55,594: root: Thread-3
+INFO: 2018-08-31 14:28:55,665: root: Thread-1
+INFO: 2018-08-31 14:28:55,691: root: Thread-0
+INFO: 2018-08-31 14:28:55,713: root: Thread-2
+INFO: 2018-08-31 14:28:55,732: root: Thread-3
+INFO: 2018-08-31 14:28:55,779: root: Thread-1
+INFO: 2018-08-31 14:28:55,794: root: Thread-2
+INFO: 2018-08-31 14:28:55,795: root: Thread-0
+INFO: 2018-08-31 14:28:55,809: root: Thread-3
+INFO: 2018-08-31 14:28:55,837: root: Thread-1
+INFO: 2018-08-31 14:28:55,848: root: Thread-0
+INFO: 2018-08-31 14:28:55,853: root: Thread-2
+INFO: 2018-08-31 14:28:55,868: root: Thread-3
+INFO: 2018-08-31 14:28:55,933: root: Thread-1
+INFO: 2018-08-31 14:28:55,949: root: Thread-0
+INFO: 2018-08-31 14:28:55,967: root: Thread-2
+INFO: 2018-08-31 14:28:56,048: root: Thread-3
+INFO: 2018-08-31 14:28:56,153: root: Thread-1
+INFO: 2018-08-31 14:28:56,177: root: Thread-0
+INFO: 2018-08-31 14:28:56,213: root: Thread-2
+INFO: 2018-08-31 14:28:56,254: root: Thread-3
+INFO: 2018-08-31 14:28:56,442: root: Thread-0
+INFO: 2018-08-31 14:28:56,468: root: Thread-1
+INFO: 2018-08-31 14:28:56,482: root: Thread-2
+INFO: 2018-08-31 14:28:56,702: root: Thread-3
+INFO: 2018-08-31 14:28:56,830: root: Thread-1
+INFO: 2018-08-31 14:28:56,886: root: Thread-0
+INFO: 2018-08-31 14:28:56,888: root: Thread-2
+INFO: 2018-08-31 14:28:56,900: root: Thread-3
+INFO: 2018-08-31 14:28:56,929: mongo_db: 0.6891829967498779 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:28:56,952: root: Thread-1
+INFO: 2018-08-31 14:28:56,963: root: Thread-0
+INFO: 2018-08-31 14:28:56,970: root: Thread-2
+INFO: 2018-08-31 14:28:56,997: root: Thread-3
+INFO: 2018-08-31 14:28:57,057: root: Thread-1
+INFO: 2018-08-31 14:28:57,076: root: Thread-0
+INFO: 2018-08-31 14:28:57,077: root: Thread-2
+INFO: 2018-08-31 14:28:57,108: root: Thread-3
+INFO: 2018-08-31 14:28:57,171: root: Thread-1
+INFO: 2018-08-31 14:28:57,226: root: Thread-2
+INFO: 2018-08-31 14:28:57,265: root: Thread-0
+INFO: 2018-08-31 14:28:57,277: root: Thread-3
+INFO: 2018-08-31 14:28:57,384: root: Thread-1
+INFO: 2018-08-31 14:28:57,520: root: Thread-2
+INFO: 2018-08-31 14:28:57,563: root: Thread-0
+INFO: 2018-08-31 14:28:57,609: root: Thread-3
+INFO: 2018-08-31 14:28:57,802: root: Thread-1
+INFO: 2018-08-31 14:28:57,888: root: Thread-2
+INFO: 2018-08-31 14:28:57,921: root: Thread-0
+INFO: 2018-08-31 14:28:57,969: root: Thread-3
+INFO: 2018-08-31 14:28:57,976: root: Thread-1
+INFO: 2018-08-31 14:28:58,002: mongo_db: 0.6970369815826416 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:28:58,068: root: Thread-0
+INFO: 2018-08-31 14:28:58,086: root: Thread-2
+INFO: 2018-08-31 14:28:58,091: root: Thread-3
+INFO: 2018-08-31 14:28:58,121: root: Thread-1
+INFO: 2018-08-31 14:28:58,247: root: Thread-2
+INFO: 2018-08-31 14:28:58,253: root: Thread-0
+INFO: 2018-08-31 14:28:58,254: root: Thread-3
+INFO: 2018-08-31 14:28:58,313: root: Thread-1
+INFO: 2018-08-31 14:28:58,432: root: Thread-2
+INFO: 2018-08-31 14:28:58,437: root: Thread-0
+INFO: 2018-08-31 14:28:58,445: root: Thread-3
+INFO: 2018-08-31 14:28:58,458: root: Thread-1
+INFO: 2018-08-31 14:28:58,523: root: Thread-2
+INFO: 2018-08-31 14:28:58,558: root: Thread-0
+INFO: 2018-08-31 14:28:58,579: root: Thread-3
+INFO: 2018-08-31 14:28:58,613: root: Thread-1
+INFO: 2018-08-31 14:28:58,797: root: Thread-2
+INFO: 2018-08-31 14:28:58,835: root: Thread-0
+INFO: 2018-08-31 14:28:58,897: root: Thread-3
+INFO: 2018-08-31 14:28:58,985: root: Thread-1
+INFO: 2018-08-31 14:28:59,232: root: Thread-2
+INFO: 2018-08-31 14:28:59,236: root: Thread-3
+INFO: 2018-08-31 14:28:59,238: root: Thread-0
+INFO: 2018-08-31 14:28:59,249: root: Thread-1
+INFO: 2018-08-31 14:28:59,268: root: Thread-2
+INFO: 2018-08-31 14:28:59,269: root: Thread-3
+INFO: 2018-08-31 14:28:59,271: root: Thread-0
+INFO: 2018-08-31 14:28:59,297: mongo_db: 0.7298011779785156 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:28:59,321: root: Thread-1
+INFO: 2018-08-31 14:28:59,325: root: Thread-2
+INFO: 2018-08-31 14:28:59,335: root: Thread-0
+INFO: 2018-08-31 14:28:59,357: root: Thread-3
+INFO: 2018-08-31 14:28:59,500: root: Thread-1
+INFO: 2018-08-31 14:28:59,525: root: Thread-0
+INFO: 2018-08-31 14:28:59,545: root: Thread-2
+INFO: 2018-08-31 14:28:59,615: root: Thread-3
+INFO: 2018-08-31 14:28:59,678: root: Thread-1
+INFO: 2018-08-31 14:28:59,756: root: Thread-0
+INFO: 2018-08-31 14:28:59,758: root: Thread-2
+INFO: 2018-08-31 14:28:59,788: root: Thread-3
+INFO: 2018-08-31 14:28:59,892: root: Thread-1
+INFO: 2018-08-31 14:28:59,937: root: Thread-2
+INFO: 2018-08-31 14:28:59,940: root: Thread-0
+INFO: 2018-08-31 14:29:00,003: root: Thread-3
+INFO: 2018-08-31 14:29:00,039: root: Thread-1
+INFO: 2018-08-31 14:29:00,069: root: Thread-0
+INFO: 2018-08-31 14:29:00,126: root: Thread-2
+INFO: 2018-08-31 14:29:00,159: root: Thread-3
+INFO: 2018-08-31 14:29:00,289: root: Thread-1
+INFO: 2018-08-31 14:29:00,519: root: Thread-0
+INFO: 2018-08-31 14:29:00,637: root: Thread-3
+INFO: 2018-08-31 14:29:00,638: root: Thread-2
+INFO: 2018-08-31 14:29:00,740: root: Thread-1
+INFO: 2018-08-31 14:29:00,902: root: Thread-0
+INFO: 2018-08-31 14:29:01,026: root: Thread-2
+INFO: 2018-08-31 14:29:01,046: root: Thread-3
+INFO: 2018-08-31 14:29:01,055: root: Thread-1
+INFO: 2018-08-31 14:29:01,071: root: Thread-0
+INFO: 2018-08-31 14:29:01,080: mongo_db: 1.0037672519683838 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:29:01,098: root: Thread-2
+INFO: 2018-08-31 14:29:01,107: root: Thread-3
+INFO: 2018-08-31 14:29:01,111: root: Thread-1
+INFO: 2018-08-31 14:29:01,123: root: Thread-0
+INFO: 2018-08-31 14:29:01,133: root: Thread-2
+INFO: 2018-08-31 14:29:01,174: root: Thread-3
+INFO: 2018-08-31 14:29:01,188: root: Thread-1
+INFO: 2018-08-31 14:29:01,229: root: Thread-0
+INFO: 2018-08-31 14:29:01,275: root: Thread-2
+INFO: 2018-08-31 14:29:01,349: root: Thread-3
+INFO: 2018-08-31 14:29:01,407: root: Thread-1
+INFO: 2018-08-31 14:29:01,422: root: Thread-0
+INFO: 2018-08-31 14:29:01,468: root: Thread-2
+INFO: 2018-08-31 14:29:01,477: root: Thread-3
+INFO: 2018-08-31 14:29:01,493: root: Thread-1
+INFO: 2018-08-31 14:29:01,537: root: Thread-0
+INFO: 2018-08-31 14:29:01,649: root: Thread-2
+INFO: 2018-08-31 14:29:01,663: root: Thread-3
+INFO: 2018-08-31 14:29:01,772: root: Thread-1
+INFO: 2018-08-31 14:29:01,878: root: Thread-0
+INFO: 2018-08-31 14:29:02,022: root: Thread-2
+INFO: 2018-08-31 14:29:02,095: root: Thread-3
+INFO: 2018-08-31 14:29:02,166: root: Thread-1
+INFO: 2018-08-31 14:29:02,229: root: Thread-0
+INFO: 2018-08-31 14:29:02,284: root: Thread-2
+INFO: 2018-08-31 14:29:02,300: root: Thread-3
+INFO: 2018-08-31 14:29:02,306: root: Thread-1
+INFO: 2018-08-31 14:29:02,311: root: Thread-0
+INFO: 2018-08-31 14:29:02,317: mongo_db: 0.7632379531860352 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:29:25,443: root: Thread-0
+INFO: 2018-08-31 14:29:25,444: root: Thread-1
+INFO: 2018-08-31 14:29:25,445: root: Thread-2
+INFO: 2018-08-31 14:29:25,446: root: Thread-3
+INFO: 2018-08-31 14:29:25,479: root: Thread-0
+INFO: 2018-08-31 14:29:25,482: root: Thread-2
+INFO: 2018-08-31 14:29:25,483: root: Thread-3
+INFO: 2018-08-31 14:29:25,486: root: Thread-1
+INFO: 2018-08-31 14:29:25,519: root: Thread-3
+INFO: 2018-08-31 14:29:25,523: root: Thread-0
+INFO: 2018-08-31 14:29:25,525: root: Thread-2
+INFO: 2018-08-31 14:29:25,525: root: Thread-1
+INFO: 2018-08-31 14:29:25,574: root: Thread-0
+INFO: 2018-08-31 14:29:25,575: root: Thread-3
+INFO: 2018-08-31 14:29:25,580: root: Thread-2
+INFO: 2018-08-31 14:29:25,581: root: Thread-1
+INFO: 2018-08-31 14:29:25,624: root: Thread-3
+INFO: 2018-08-31 14:29:25,625: root: Thread-1
+INFO: 2018-08-31 14:29:25,627: root: Thread-2
+INFO: 2018-08-31 14:29:25,629: root: Thread-0
+INFO: 2018-08-31 14:29:25,721: root: Thread-1
+INFO: 2018-08-31 14:29:25,728: root: Thread-2
+INFO: 2018-08-31 14:29:25,739: root: Thread-0
+INFO: 2018-08-31 14:29:25,742: root: Thread-3
+INFO: 2018-08-31 14:29:25,822: root: Thread-1
+INFO: 2018-08-31 14:29:25,834: root: Thread-2
+INFO: 2018-08-31 14:29:25,838: root: Thread-0
+INFO: 2018-08-31 14:29:25,842: root: Thread-3
+INFO: 2018-08-31 14:29:25,875: root: Thread-1
+INFO: 2018-08-31 14:29:25,887: root: Thread-3
+INFO: 2018-08-31 14:29:25,888: root: Thread-2
+INFO: 2018-08-31 14:29:25,890: root: Thread-0
+INFO: 2018-08-31 14:29:25,924: root: Thread-1
+INFO: 2018-08-31 14:29:25,931: root: Thread-0
+INFO: 2018-08-31 14:29:25,937: root: Thread-3
+INFO: 2018-08-31 14:29:25,962: root: Thread-2
+INFO: 2018-08-31 14:29:26,079: root: Thread-0
+INFO: 2018-08-31 14:29:26,089: root: Thread-1
+INFO: 2018-08-31 14:29:26,090: root: Thread-3
+INFO: 2018-08-31 14:29:26,094: root: Thread-2
+INFO: 2018-08-31 14:29:26,186: root: Thread-1
+INFO: 2018-08-31 14:29:26,204: root: Thread-3
+INFO: 2018-08-31 14:29:26,210: root: Thread-0
+INFO: 2018-08-31 14:29:26,211: root: Thread-2
+INFO: 2018-08-31 14:29:26,285: root: Thread-1
+INFO: 2018-08-31 14:29:26,291: root: Thread-0
+INFO: 2018-08-31 14:29:26,292: root: Thread-3
+INFO: 2018-08-31 14:29:26,294: root: Thread-2
+INFO: 2018-08-31 14:29:26,356: root: Thread-3
+INFO: 2018-08-31 14:29:26,360: root: Thread-1
+INFO: 2018-08-31 14:29:26,363: root: Thread-0
+INFO: 2018-08-31 14:29:26,365: root: Thread-2
+INFO: 2018-08-31 14:29:26,464: root: Thread-3
+INFO: 2018-08-31 14:29:26,474: root: Thread-0
+INFO: 2018-08-31 14:29:26,482: root: Thread-2
+INFO: 2018-08-31 14:29:26,490: root: Thread-1
+INFO: 2018-08-31 14:29:26,564: root: Thread-3
+INFO: 2018-08-31 14:29:26,565: root: Thread-0
+INFO: 2018-08-31 14:29:26,571: root: Thread-2
+INFO: 2018-08-31 14:29:26,573: root: Thread-1
+INFO: 2018-08-31 14:29:26,618: root: Thread-3
+INFO: 2018-08-31 14:29:26,619: root: Thread-1
+INFO: 2018-08-31 14:29:26,620: root: Thread-0
+INFO: 2018-08-31 14:29:26,622: root: Thread-2
+INFO: 2018-08-31 14:29:26,666: root: Thread-1
+INFO: 2018-08-31 14:29:26,668: root: Thread-2
+INFO: 2018-08-31 14:29:26,668: root: Thread-0
+INFO: 2018-08-31 14:29:26,671: root: Thread-3
+INFO: 2018-08-31 14:29:26,792: root: Thread-1
+INFO: 2018-08-31 14:29:26,813: root: Thread-0
+INFO: 2018-08-31 14:29:26,831: root: Thread-3
+INFO: 2018-08-31 14:29:26,833: root: Thread-2
+INFO: 2018-08-31 14:29:26,906: root: Thread-1
+INFO: 2018-08-31 14:29:26,917: root: Thread-0
+INFO: 2018-08-31 14:29:26,927: root: Thread-3
+INFO: 2018-08-31 14:29:26,932: root: Thread-2
+INFO: 2018-08-31 14:29:27,015: root: Thread-1
+INFO: 2018-08-31 14:29:27,019: root: Thread-0
+INFO: 2018-08-31 14:29:27,022: root: Thread-3
+INFO: 2018-08-31 14:29:27,024: root: Thread-2
+INFO: 2018-08-31 14:29:27,066: root: Thread-0
+INFO: 2018-08-31 14:29:27,068: root: Thread-2
+INFO: 2018-08-31 14:29:27,071: root: Thread-3
+INFO: 2018-08-31 14:29:27,071: root: Thread-1
+INFO: 2018-08-31 14:29:27,116: root: Thread-0
+INFO: 2018-08-31 14:29:27,120: root: Thread-1
+INFO: 2018-08-31 14:29:27,132: root: Thread-2
+INFO: 2018-08-31 14:29:27,133: root: Thread-3
+INFO: 2018-08-31 14:29:27,248: root: Thread-3
+INFO: 2018-08-31 14:29:27,261: root: Thread-0
+INFO: 2018-08-31 14:29:27,269: root: Thread-1
+INFO: 2018-08-31 14:29:27,270: root: Thread-2
+INFO: 2018-08-31 14:29:27,316: root: Thread-3
+INFO: 2018-08-31 14:29:27,319: root: Thread-0
+INFO: 2018-08-31 14:29:27,320: root: Thread-1
+INFO: 2018-08-31 14:29:27,324: root: Thread-2
+INFO: 2018-08-31 14:29:27,444: root: Thread-1
+INFO: 2018-08-31 14:29:27,464: root: Thread-2
+INFO: 2018-08-31 14:29:27,480: root: Thread-3
+INFO: 2018-08-31 14:29:27,487: root: Thread-0
+INFO: 2018-08-31 14:29:27,580: root: Thread-2
+INFO: 2018-08-31 14:29:27,595: root: Thread-1
+INFO: 2018-08-31 14:29:27,605: root: Thread-0
+INFO: 2018-08-31 14:29:27,617: root: Thread-3
+INFO: 2018-08-31 14:29:27,763: root: Thread-2
+INFO: 2018-08-31 14:29:27,765: root: Thread-3
+INFO: 2018-08-31 14:29:27,796: root: Thread-1
+INFO: 2018-08-31 14:29:27,822: root: Thread-0
+INFO: 2018-08-31 14:29:28,159: root: Thread-2
+INFO: 2018-08-31 14:29:28,185: root: Thread-1
+INFO: 2018-08-31 14:29:28,185: root: Thread-0
+INFO: 2018-08-31 14:29:28,193: root: Thread-3
+INFO: 2018-08-31 14:29:28,509: root: Thread-3
+INFO: 2018-08-31 14:29:28,510: root: Thread-2
+INFO: 2018-08-31 14:29:28,511: root: Thread-0
+INFO: 2018-08-31 14:29:28,514: root: Thread-1
+INFO: 2018-08-31 14:29:28,532: mongo_db: 0.7514898777008057 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:29:28,571: root: Thread-3
+INFO: 2018-08-31 14:29:28,574: root: Thread-1
+INFO: 2018-08-31 14:29:28,576: root: Thread-2
+INFO: 2018-08-31 14:29:28,582: root: Thread-0
+INFO: 2018-08-31 14:29:28,664: root: Thread-2
+INFO: 2018-08-31 14:29:28,684: root: Thread-1
+INFO: 2018-08-31 14:29:28,694: root: Thread-3
+INFO: 2018-08-31 14:29:28,696: root: Thread-0
+INFO: 2018-08-31 14:29:28,815: root: Thread-2
+INFO: 2018-08-31 14:29:28,868: root: Thread-1
+INFO: 2018-08-31 14:29:28,870: root: Thread-3
+INFO: 2018-08-31 14:29:28,871: root: Thread-0
+INFO: 2018-08-31 14:29:29,192: root: Thread-2
+INFO: 2018-08-31 14:29:29,237: root: Thread-3
+INFO: 2018-08-31 14:29:29,250: root: Thread-1
+INFO: 2018-08-31 14:29:29,339: root: Thread-0
+INFO: 2018-08-31 14:29:29,529: root: Thread-2
+INFO: 2018-08-31 14:29:29,541: root: Thread-3
+INFO: 2018-08-31 14:29:29,546: root: Thread-1
+INFO: 2018-08-31 14:29:29,556: root: Thread-0
+INFO: 2018-08-31 14:29:29,577: mongo_db: 0.6756138801574707 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:29:29,579: root: Thread-3
+INFO: 2018-08-31 14:29:29,595: root: Thread-2
+INFO: 2018-08-31 14:29:29,601: root: Thread-1
+INFO: 2018-08-31 14:29:29,608: root: Thread-0
+INFO: 2018-08-31 14:29:29,619: root: Thread-3
+INFO: 2018-08-31 14:29:29,699: root: Thread-2
+INFO: 2018-08-31 14:29:29,716: root: Thread-0
+INFO: 2018-08-31 14:29:29,720: root: Thread-1
+INFO: 2018-08-31 14:29:29,720: root: Thread-3
+INFO: 2018-08-31 14:29:29,825: root: Thread-2
+INFO: 2018-08-31 14:29:29,850: root: Thread-1
+INFO: 2018-08-31 14:29:29,852: root: Thread-0
+INFO: 2018-08-31 14:29:29,855: root: Thread-3
+INFO: 2018-08-31 14:29:30,020: root: Thread-2
+INFO: 2018-08-31 14:29:30,058: root: Thread-3
+INFO: 2018-08-31 14:29:30,064: root: Thread-1
+INFO: 2018-08-31 14:29:30,126: root: Thread-0
+INFO: 2018-08-31 14:29:30,434: root: Thread-3
+INFO: 2018-08-31 14:29:30,502: root: Thread-2
+INFO: 2018-08-31 14:29:30,521: root: Thread-1
+INFO: 2018-08-31 14:29:30,533: root: Thread-0
+INFO: 2018-08-31 14:29:30,604: root: Thread-3
+INFO: 2018-08-31 14:29:30,614: root: Thread-2
+INFO: 2018-08-31 14:29:30,616: mongo_db: 0.6936547756195068 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:29:30,619: root: Thread-1
+INFO: 2018-08-31 14:29:30,636: root: Thread-0
+INFO: 2018-08-31 14:29:30,741: root: Thread-3
+INFO: 2018-08-31 14:29:30,759: root: Thread-2
+INFO: 2018-08-31 14:29:30,773: root: Thread-1
+INFO: 2018-08-31 14:29:30,797: root: Thread-0
+INFO: 2018-08-31 14:29:30,842: root: Thread-3
+INFO: 2018-08-31 14:29:30,842: root: Thread-1
+INFO: 2018-08-31 14:29:30,864: root: Thread-2
+INFO: 2018-08-31 14:29:30,881: root: Thread-0
+INFO: 2018-08-31 14:29:30,936: root: Thread-3
+INFO: 2018-08-31 14:29:30,955: root: Thread-2
+INFO: 2018-08-31 14:29:30,965: root: Thread-1
+INFO: 2018-08-31 14:29:30,990: root: Thread-0
+INFO: 2018-08-31 14:29:31,085: root: Thread-3
+INFO: 2018-08-31 14:29:31,118: root: Thread-2
+INFO: 2018-08-31 14:29:31,132: root: Thread-1
+INFO: 2018-08-31 14:29:31,148: root: Thread-0
+INFO: 2018-08-31 14:29:31,403: root: Thread-3
+INFO: 2018-08-31 14:29:31,404: root: Thread-2
+INFO: 2018-08-31 14:29:31,523: root: Thread-0
+INFO: 2018-08-31 14:29:31,557: root: Thread-1
+INFO: 2018-08-31 14:29:31,834: root: Thread-2
+INFO: 2018-08-31 14:29:31,841: root: Thread-3
+INFO: 2018-08-31 14:29:31,909: root: Thread-1
+INFO: 2018-08-31 14:29:31,910: root: Thread-0
+INFO: 2018-08-31 14:29:31,933: root: Thread-3
+INFO: 2018-08-31 14:29:31,936: root: Thread-2
+INFO: 2018-08-31 14:29:31,940: mongo_db: 0.8038971424102783 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:29:31,976: root: Thread-0
+INFO: 2018-08-31 14:29:31,984: root: Thread-1
+INFO: 2018-08-31 14:29:31,999: root: Thread-3
+INFO: 2018-08-31 14:29:32,003: root: Thread-2
+INFO: 2018-08-31 14:29:32,052: root: Thread-0
+INFO: 2018-08-31 14:29:32,086: root: Thread-1
+INFO: 2018-08-31 14:29:32,160: root: Thread-2
+INFO: 2018-08-31 14:29:32,174: root: Thread-3
+INFO: 2018-08-31 14:29:32,197: root: Thread-0
+INFO: 2018-08-31 14:29:32,246: root: Thread-1
+INFO: 2018-08-31 14:29:32,285: root: Thread-2
+INFO: 2018-08-31 14:29:32,323: root: Thread-3
+INFO: 2018-08-31 14:29:32,344: root: Thread-0
+INFO: 2018-08-31 14:29:32,385: root: Thread-1
+INFO: 2018-08-31 14:29:32,415: root: Thread-2
+INFO: 2018-08-31 14:29:32,431: root: Thread-3
+INFO: 2018-08-31 14:29:32,443: root: Thread-0
+INFO: 2018-08-31 14:29:32,558: root: Thread-2
+INFO: 2018-08-31 14:29:32,653: root: Thread-1
+INFO: 2018-08-31 14:29:32,732: root: Thread-3
+INFO: 2018-08-31 14:29:32,821: root: Thread-0
+INFO: 2018-08-31 14:29:32,991: root: Thread-2
+INFO: 2018-08-31 14:29:33,044: root: Thread-1
+INFO: 2018-08-31 14:29:33,131: root: Thread-3
+INFO: 2018-08-31 14:29:33,135: root: Thread-0
+INFO: 2018-08-31 14:29:33,153: root: Thread-2
+INFO: 2018-08-31 14:29:33,160: mongo_db: 0.7113690376281738 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:30:21,998: root: Thread-0
+INFO: 2018-08-31 14:30:21,999: root: Thread-1
+INFO: 2018-08-31 14:30:22,000: root: Thread-2
+INFO: 2018-08-31 14:30:22,001: root: Thread-3
+INFO: 2018-08-31 14:30:22,035: root: Thread-1
+INFO: 2018-08-31 14:30:22,040: root: Thread-3
+INFO: 2018-08-31 14:30:22,041: root: Thread-0
+INFO: 2018-08-31 14:30:22,041: root: Thread-2
+INFO: 2018-08-31 14:30:22,077: root: Thread-0
+INFO: 2018-08-31 14:30:22,079: root: Thread-2
+INFO: 2018-08-31 14:30:22,081: root: Thread-3
+INFO: 2018-08-31 14:30:22,084: root: Thread-1
+INFO: 2018-08-31 14:30:22,115: root: Thread-0
+INFO: 2018-08-31 14:30:22,118: root: Thread-3
+INFO: 2018-08-31 14:30:22,120: root: Thread-1
+INFO: 2018-08-31 14:30:22,121: root: Thread-2
+INFO: 2018-08-31 14:30:22,170: root: Thread-1
+INFO: 2018-08-31 14:30:22,172: root: Thread-0
+INFO: 2018-08-31 14:30:22,173: root: Thread-3
+INFO: 2018-08-31 14:30:22,177: root: Thread-2
+INFO: 2018-08-31 14:30:22,286: root: Thread-2
+INFO: 2018-08-31 14:30:22,289: root: Thread-1
+INFO: 2018-08-31 14:30:22,295: root: Thread-0
+INFO: 2018-08-31 14:30:22,299: root: Thread-3
+INFO: 2018-08-31 14:30:22,380: root: Thread-2
+INFO: 2018-08-31 14:30:22,384: root: Thread-1
+INFO: 2018-08-31 14:30:22,385: root: Thread-0
+INFO: 2018-08-31 14:30:22,386: root: Thread-3
+INFO: 2018-08-31 14:30:22,419: root: Thread-3
+INFO: 2018-08-31 14:30:22,421: root: Thread-1
+INFO: 2018-08-31 14:30:22,425: root: Thread-2
+INFO: 2018-08-31 14:30:22,425: root: Thread-0
+INFO: 2018-08-31 14:30:22,470: root: Thread-2
+INFO: 2018-08-31 14:30:22,470: root: Thread-3
+INFO: 2018-08-31 14:30:22,472: root: Thread-1
+INFO: 2018-08-31 14:30:22,476: root: Thread-0
+INFO: 2018-08-31 14:30:22,615: root: Thread-2
+INFO: 2018-08-31 14:30:22,628: root: Thread-3
+INFO: 2018-08-31 14:30:22,651: root: Thread-0
+INFO: 2018-08-31 14:30:22,656: root: Thread-1
+INFO: 2018-08-31 14:30:22,692: root: Thread-3
+INFO: 2018-08-31 14:30:22,724: root: Thread-2
+INFO: 2018-08-31 14:30:22,759: root: Thread-1
+INFO: 2018-08-31 14:30:22,760: root: Thread-0
+INFO: 2018-08-31 14:30:22,765: root: Thread-3
+INFO: 2018-08-31 14:30:22,787: root: Thread-2
+INFO: 2018-08-31 14:30:22,840: root: Thread-1
+INFO: 2018-08-31 14:30:22,844: root: Thread-3
+INFO: 2018-08-31 14:30:22,861: root: Thread-2
+INFO: 2018-08-31 14:30:22,863: root: Thread-0
+INFO: 2018-08-31 14:30:22,993: root: Thread-3
+INFO: 2018-08-31 14:30:23,026: root: Thread-1
+INFO: 2018-08-31 14:30:23,034: root: Thread-2
+INFO: 2018-08-31 14:30:23,066: root: Thread-0
+INFO: 2018-08-31 14:30:23,152: root: Thread-3
+INFO: 2018-08-31 14:30:23,165: root: Thread-1
+INFO: 2018-08-31 14:30:23,217: root: Thread-0
+INFO: 2018-08-31 14:30:23,232: root: Thread-2
+INFO: 2018-08-31 14:30:23,272: root: Thread-3
+INFO: 2018-08-31 14:30:23,287: root: Thread-1
+INFO: 2018-08-31 14:30:23,335: root: Thread-0
+INFO: 2018-08-31 14:30:23,341: root: Thread-2
+INFO: 2018-08-31 14:30:23,358: root: Thread-3
+INFO: 2018-08-31 14:30:23,385: root: Thread-1
+INFO: 2018-08-31 14:30:23,391: root: Thread-0
+INFO: 2018-08-31 14:30:23,398: root: Thread-2
+INFO: 2018-08-31 14:30:23,407: root: Thread-3
+INFO: 2018-08-31 14:30:23,432: root: Thread-1
+INFO: 2018-08-31 14:30:23,435: root: Thread-0
+INFO: 2018-08-31 14:30:23,440: root: Thread-2
+INFO: 2018-08-31 14:30:23,448: root: Thread-3
+INFO: 2018-08-31 14:30:23,478: root: Thread-2
+INFO: 2018-08-31 14:30:23,480: root: Thread-1
+INFO: 2018-08-31 14:30:23,486: root: Thread-0
+INFO: 2018-08-31 14:30:23,534: root: Thread-3
+INFO: 2018-08-31 14:30:23,663: root: Thread-1
+INFO: 2018-08-31 14:30:23,677: root: Thread-2
+INFO: 2018-08-31 14:30:23,704: root: Thread-0
+INFO: 2018-08-31 14:30:23,761: root: Thread-3
+INFO: 2018-08-31 14:30:23,885: root: Thread-2
+INFO: 2018-08-31 14:30:23,934: root: Thread-1
+INFO: 2018-08-31 14:30:23,978: root: Thread-0
+INFO: 2018-08-31 14:30:23,994: root: Thread-3
+INFO: 2018-08-31 14:30:24,064: root: Thread-2
+INFO: 2018-08-31 14:30:24,070: root: Thread-1
+INFO: 2018-08-31 14:30:24,075: root: Thread-0
+INFO: 2018-08-31 14:30:24,075: root: Thread-3
+INFO: 2018-08-31 14:30:24,250: root: Thread-2
+INFO: 2018-08-31 14:30:24,274: root: Thread-1
+INFO: 2018-08-31 14:30:24,274: root: Thread-3
+INFO: 2018-08-31 14:30:24,288: root: Thread-0
+INFO: 2018-08-31 14:30:24,443: root: Thread-2
+INFO: 2018-08-31 14:30:24,448: root: Thread-0
+INFO: 2018-08-31 14:30:24,460: root: Thread-3
+INFO: 2018-08-31 14:30:24,473: root: Thread-1
+INFO: 2018-08-31 14:30:24,641: root: Thread-2
+INFO: 2018-08-31 14:30:24,658: root: Thread-0
+INFO: 2018-08-31 14:30:24,660: root: Thread-3
+INFO: 2018-08-31 14:30:24,690: root: Thread-1
+INFO: 2018-08-31 14:30:25,067: root: Thread-2
+INFO: 2018-08-31 14:30:25,070: root: Thread-0
+INFO: 2018-08-31 14:30:25,098: root: Thread-1
+INFO: 2018-08-31 14:30:25,150: root: Thread-3
+INFO: 2018-08-31 14:30:25,499: root: Thread-2
+INFO: 2018-08-31 14:30:25,612: root: Thread-0
+INFO: 2018-08-31 14:30:25,620: root: Thread-1
+INFO: 2018-08-31 14:30:25,651: root: Thread-3
+INFO: 2018-08-31 14:30:25,929: root: Thread-2
+INFO: 2018-08-31 14:30:25,936: root: Thread-0
+INFO: 2018-08-31 14:30:25,940: root: Thread-3
+INFO: 2018-08-31 14:30:25,941: root: Thread-1
+INFO: 2018-08-31 14:30:25,960: mongo_db: 1.3120152950286865 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:30:25,986: root: Thread-0
+INFO: 2018-08-31 14:30:25,991: root: Thread-2
+INFO: 2018-08-31 14:30:25,992: root: Thread-3
+INFO: 2018-08-31 14:30:25,996: root: Thread-1
+INFO: 2018-08-31 14:30:26,062: root: Thread-0
+INFO: 2018-08-31 14:30:26,079: root: Thread-3
+INFO: 2018-08-31 14:30:26,087: root: Thread-2
+INFO: 2018-08-31 14:30:26,093: root: Thread-1
+INFO: 2018-08-31 14:30:26,283: root: Thread-1
+INFO: 2018-08-31 14:30:26,285: root: Thread-0
+INFO: 2018-08-31 14:30:26,293: root: Thread-3
+INFO: 2018-08-31 14:30:26,295: root: Thread-2
+INFO: 2018-08-31 14:30:26,368: root: Thread-1
+INFO: 2018-08-31 14:30:26,434: root: Thread-2
+INFO: 2018-08-31 14:30:26,460: root: Thread-0
+INFO: 2018-08-31 14:30:26,462: root: Thread-3
+INFO: 2018-08-31 14:30:26,545: root: Thread-1
+INFO: 2018-08-31 14:30:26,672: root: Thread-2
+INFO: 2018-08-31 14:30:26,679: root: Thread-3
+INFO: 2018-08-31 14:30:26,707: root: Thread-0
+INFO: 2018-08-31 14:30:26,733: root: Thread-1
+INFO: 2018-08-31 14:30:26,892: root: Thread-2
+INFO: 2018-08-31 14:30:26,958: root: Thread-3
+INFO: 2018-08-31 14:30:27,026: root: Thread-0
+INFO: 2018-08-31 14:30:27,069: root: Thread-1
+INFO: 2018-08-31 14:30:27,306: root: Thread-2
+INFO: 2018-08-31 14:30:27,313: root: Thread-3
+INFO: 2018-08-31 14:30:27,429: root: Thread-0
+INFO: 2018-08-31 14:30:27,440: root: Thread-1
+INFO: 2018-08-31 14:30:27,463: root: Thread-2
+INFO: 2018-08-31 14:30:27,463: root: Thread-3
+INFO: 2018-08-31 14:30:27,471: root: Thread-0
+INFO: 2018-08-31 14:30:27,475: root: Thread-1
+INFO: 2018-08-31 14:30:27,503: mongo_db: 0.7755188941955566 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:30:27,577: root: Thread-2
+INFO: 2018-08-31 14:30:27,594: root: Thread-3
+INFO: 2018-08-31 14:30:27,603: root: Thread-1
+INFO: 2018-08-31 14:30:27,604: root: Thread-0
+INFO: 2018-08-31 14:30:27,699: root: Thread-3
+INFO: 2018-08-31 14:30:27,705: root: Thread-2
+INFO: 2018-08-31 14:30:27,712: root: Thread-0
+INFO: 2018-08-31 14:30:27,712: root: Thread-1
+INFO: 2018-08-31 14:30:27,804: root: Thread-3
+INFO: 2018-08-31 14:30:27,824: root: Thread-2
+INFO: 2018-08-31 14:30:27,878: root: Thread-1
+INFO: 2018-08-31 14:30:27,886: root: Thread-0
+INFO: 2018-08-31 14:30:28,005: root: Thread-3
+INFO: 2018-08-31 14:30:28,046: root: Thread-1
+INFO: 2018-08-31 14:30:28,051: root: Thread-2
+INFO: 2018-08-31 14:30:28,059: root: Thread-0
+INFO: 2018-08-31 14:30:28,167: root: Thread-2
+INFO: 2018-08-31 14:30:28,171: root: Thread-1
+INFO: 2018-08-31 14:30:28,175: root: Thread-0
+INFO: 2018-08-31 14:30:28,181: root: Thread-3
+INFO: 2018-08-31 14:30:28,358: root: Thread-0
+INFO: 2018-08-31 14:30:28,414: root: Thread-1
+INFO: 2018-08-31 14:30:28,422: root: Thread-3
+INFO: 2018-08-31 14:30:28,447: root: Thread-2
+INFO: 2018-08-31 14:30:28,818: root: Thread-1
+INFO: 2018-08-31 14:30:28,820: root: Thread-3
+INFO: 2018-08-31 14:30:28,908: root: Thread-2
+INFO: 2018-08-31 14:30:28,908: root: Thread-0
+INFO: 2018-08-31 14:30:29,234: root: Thread-1
+INFO: 2018-08-31 14:30:29,385: root: Thread-2
+INFO: 2018-08-31 14:30:29,411: root: Thread-0
+INFO: 2018-08-31 14:30:29,417: root: Thread-3
+INFO: 2018-08-31 14:30:29,572: root: Thread-1
+INFO: 2018-08-31 14:30:29,783: root: Thread-2
+INFO: 2018-08-31 14:30:29,803: root: Thread-0
+INFO: 2018-08-31 14:30:29,911: root: Thread-3
+INFO: 2018-08-31 14:30:29,979: root: Thread-1
+INFO: 2018-08-31 14:30:30,121: root: Thread-2
+INFO: 2018-08-31 14:30:30,127: root: Thread-0
+INFO: 2018-08-31 14:30:30,280: root: Thread-3
+INFO: 2018-08-31 14:30:30,293: root: Thread-1
+INFO: 2018-08-31 14:30:30,331: root: Thread-0
+INFO: 2018-08-31 14:30:30,369: mongo_db: 1.9851551055908203 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:30:30,371: root: Thread-2
+INFO: 2018-08-31 14:30:30,432: root: Thread-1
+INFO: 2018-08-31 14:30:30,433: root: Thread-3
+INFO: 2018-08-31 14:30:30,450: root: Thread-0
+INFO: 2018-08-31 14:30:30,469: root: Thread-2
+INFO: 2018-08-31 14:30:30,483: root: Thread-1
+INFO: 2018-08-31 14:30:30,619: root: Thread-0
+INFO: 2018-08-31 14:30:30,644: root: Thread-2
+INFO: 2018-08-31 14:30:30,671: root: Thread-3
+INFO: 2018-08-31 14:30:30,682: root: Thread-1
+INFO: 2018-08-31 14:30:30,753: root: Thread-2
+INFO: 2018-08-31 14:30:30,754: root: Thread-3
+INFO: 2018-08-31 14:30:30,776: root: Thread-1
+INFO: 2018-08-31 14:30:30,776: root: Thread-0
+INFO: 2018-08-31 14:30:31,028: root: Thread-2
+INFO: 2018-08-31 14:30:31,067: root: Thread-3
+INFO: 2018-08-31 14:30:31,141: root: Thread-0
+INFO: 2018-08-31 14:30:31,198: root: Thread-1
+INFO: 2018-08-31 14:30:31,513: root: Thread-2
+INFO: 2018-08-31 14:30:31,544: root: Thread-3
+INFO: 2018-08-31 14:30:31,636: root: Thread-1
+INFO: 2018-08-31 14:30:31,643: root: Thread-0
+INFO: 2018-08-31 14:30:31,672: root: Thread-2
+INFO: 2018-08-31 14:30:31,683: root: Thread-3
+INFO: 2018-08-31 14:30:31,695: mongo_db: 0.9284720420837402 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:30:31,719: root: Thread-1
+INFO: 2018-08-31 14:30:31,720: root: Thread-0
+INFO: 2018-08-31 14:30:31,811: root: Thread-3
+INFO: 2018-08-31 14:30:31,814: root: Thread-2
+INFO: 2018-08-31 14:30:31,900: root: Thread-0
+INFO: 2018-08-31 14:30:31,913: root: Thread-1
+INFO: 2018-08-31 14:30:31,963: root: Thread-3
+INFO: 2018-08-31 14:30:31,980: root: Thread-2
+INFO: 2018-08-31 14:30:32,074: root: Thread-0
+INFO: 2018-08-31 14:30:32,074: root: Thread-1
+INFO: 2018-08-31 14:30:32,104: root: Thread-3
+INFO: 2018-08-31 14:30:32,110: root: Thread-2
+INFO: 2018-08-31 14:30:32,162: root: Thread-0
+INFO: 2018-08-31 14:30:32,164: root: Thread-1
+INFO: 2018-08-31 14:30:32,232: root: Thread-3
+INFO: 2018-08-31 14:30:32,270: root: Thread-2
+INFO: 2018-08-31 14:30:32,487: root: Thread-1
+INFO: 2018-08-31 14:30:32,501: root: Thread-0
+INFO: 2018-08-31 14:30:32,595: root: Thread-3
+INFO: 2018-08-31 14:30:32,716: root: Thread-2
+INFO: 2018-08-31 14:30:32,885: root: Thread-1
+INFO: 2018-08-31 14:30:32,954: root: Thread-0
+INFO: 2018-08-31 14:30:32,996: root: Thread-3
+INFO: 2018-08-31 14:30:33,010: root: Thread-2
+INFO: 2018-08-31 14:30:33,028: root: Thread-1
+INFO: 2018-08-31 14:30:33,031: root: Thread-0
+INFO: 2018-08-31 14:30:33,034: mongo_db: 0.8397440910339355 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:30:36,157: root: Thread-0
+INFO: 2018-08-31 14:30:36,157: root: Thread-1
+INFO: 2018-08-31 14:30:36,159: root: Thread-2
+INFO: 2018-08-31 14:30:36,160: root: Thread-3
+INFO: 2018-08-31 14:30:38,914: mongo_db: 0.5314671993255615 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:30:39,737: mongo_db: 0.5538361072540283 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:30:40,455: mongo_db: 0.570864200592041 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:30:41,132: mongo_db: 0.531548261642456 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:30:41,810: mongo_db: 0.5463652610778809 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:31:08,701: root: Thread-0
+INFO: 2018-08-31 14:31:08,702: root: Thread-1
+INFO: 2018-08-31 14:31:08,702: root: Thread-2
+INFO: 2018-08-31 14:31:08,703: root: Thread-3
+INFO: 2018-08-31 14:31:11,923: mongo_db: 1.0790839195251465 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:31:12,884: mongo_db: 0.672346830368042 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:31:13,843: mongo_db: 0.6671388149261475 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:31:14,780: mongo_db: 0.7943470478057861 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:31:15,471: mongo_db: 0.5663859844207764 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:31:18,265: mongo_db: 1.1967458724975586 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:31:19,000: mongo_db: 0.570563793182373 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:31:19,704: mongo_db: 0.5556700229644775 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:31:20,418: mongo_db: 0.579509973526001 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:31:21,090: mongo_db: 0.5483582019805908 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:31:36,819: mongo_db: 0.5213871002197266 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:31:37,526: mongo_db: 0.5394527912139893 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:31:38,223: mongo_db: 0.5730280876159668 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:31:38,917: mongo_db: 0.5434319972991943 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:31:39,613: mongo_db: 0.5599451065063477 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:32:00,623: root: Thread-0
+INFO: 2018-08-31 14:32:00,624: root: Thread-1
+INFO: 2018-08-31 14:32:00,625: root: Thread-2
+INFO: 2018-08-31 14:32:00,626: root: Thread-3
+INFO: 2018-08-31 14:32:00,695: root: Thread-1
+INFO: 2018-08-31 14:32:00,698: root: Thread-0
+INFO: 2018-08-31 14:32:00,699: root: Thread-2
+INFO: 2018-08-31 14:32:00,704: root: Thread-3
+INFO: 2018-08-31 14:32:00,748: root: Thread-2
+INFO: 2018-08-31 14:32:00,749: root: Thread-0
+INFO: 2018-08-31 14:32:00,750: root: Thread-1
+INFO: 2018-08-31 14:32:00,750: root: Thread-3
+INFO: 2018-08-31 14:32:00,795: root: Thread-0
+INFO: 2018-08-31 14:32:00,799: root: Thread-3
+INFO: 2018-08-31 14:32:00,801: root: Thread-1
+INFO: 2018-08-31 14:32:00,805: root: Thread-2
+INFO: 2018-08-31 14:32:00,863: root: Thread-0
+INFO: 2018-08-31 14:32:00,876: root: Thread-1
+INFO: 2018-08-31 14:32:00,880: root: Thread-2
+INFO: 2018-08-31 14:32:00,881: root: Thread-3
+INFO: 2018-08-31 14:32:00,945: root: Thread-1
+INFO: 2018-08-31 14:32:00,949: root: Thread-3
+INFO: 2018-08-31 14:32:00,952: root: Thread-2
+INFO: 2018-08-31 14:32:00,953: root: Thread-0
+INFO: 2018-08-31 14:32:01,007: root: Thread-1
+INFO: 2018-08-31 14:32:01,013: root: Thread-3
+INFO: 2018-08-31 14:32:01,016: root: Thread-2
+INFO: 2018-08-31 14:32:01,023: root: Thread-0
+INFO: 2018-08-31 14:32:01,037: root: Thread-1
+INFO: 2018-08-31 14:32:01,113: root: Thread-3
+INFO: 2018-08-31 14:32:01,120: root: Thread-1
+INFO: 2018-08-31 14:32:01,152: root: Thread-0
+INFO: 2018-08-31 14:32:01,166: root: Thread-2
+INFO: 2018-08-31 14:32:01,246: root: Thread-1
+INFO: 2018-08-31 14:32:01,248: root: Thread-3
+INFO: 2018-08-31 14:32:01,260: root: Thread-0
+INFO: 2018-08-31 14:32:01,264: root: Thread-2
+INFO: 2018-08-31 14:32:01,280: root: Thread-3
+INFO: 2018-08-31 14:32:01,281: root: Thread-1
+INFO: 2018-08-31 14:32:01,359: root: Thread-0
+INFO: 2018-08-31 14:32:01,372: root: Thread-3
+INFO: 2018-08-31 14:32:01,375: root: Thread-1
+INFO: 2018-08-31 14:32:01,375: root: Thread-2
+INFO: 2018-08-31 14:32:01,508: root: Thread-3
+INFO: 2018-08-31 14:32:01,509: root: Thread-0
+INFO: 2018-08-31 14:32:01,510: root: Thread-2
+INFO: 2018-08-31 14:32:01,511: root: Thread-1
+INFO: 2018-08-31 14:32:01,598: root: Thread-3
+INFO: 2018-08-31 14:32:01,601: root: Thread-2
+INFO: 2018-08-31 14:32:01,604: root: Thread-1
+INFO: 2018-08-31 14:32:01,611: root: Thread-0
+INFO: 2018-08-31 14:32:01,711: root: Thread-3
+INFO: 2018-08-31 14:32:01,718: root: Thread-2
+INFO: 2018-08-31 14:32:01,720: root: Thread-0
+INFO: 2018-08-31 14:32:01,720: root: Thread-1
+INFO: 2018-08-31 14:32:01,776: root: Thread-3
+INFO: 2018-08-31 14:32:01,776: root: Thread-1
+INFO: 2018-08-31 14:32:01,779: root: Thread-2
+INFO: 2018-08-31 14:32:01,780: root: Thread-0
+INFO: 2018-08-31 14:32:01,888: root: Thread-0
+INFO: 2018-08-31 14:32:01,892: root: Thread-2
+INFO: 2018-08-31 14:32:01,914: root: Thread-3
+INFO: 2018-08-31 14:32:01,918: root: Thread-1
+INFO: 2018-08-31 14:32:02,005: root: Thread-0
+INFO: 2018-08-31 14:32:02,010: root: Thread-3
+INFO: 2018-08-31 14:32:02,010: root: Thread-1
+INFO: 2018-08-31 14:32:02,011: root: Thread-2
+INFO: 2018-08-31 14:32:02,035: root: Thread-0
+INFO: 2018-08-31 14:32:02,078: root: Thread-0
+INFO: 2018-08-31 14:32:02,078: root: Thread-1
+INFO: 2018-08-31 14:32:02,081: root: Thread-3
+INFO: 2018-08-31 14:32:02,083: root: Thread-2
+INFO: 2018-08-31 14:32:02,207: root: Thread-1
+INFO: 2018-08-31 14:32:02,209: root: Thread-2
+INFO: 2018-08-31 14:32:02,209: root: Thread-3
+INFO: 2018-08-31 14:32:02,229: root: Thread-0
+INFO: 2018-08-31 14:32:02,283: root: Thread-2
+INFO: 2018-08-31 14:32:02,285: root: Thread-1
+INFO: 2018-08-31 14:32:02,289: root: Thread-0
+INFO: 2018-08-31 14:32:02,291: root: Thread-3
+INFO: 2018-08-31 14:32:02,327: root: Thread-2
+INFO: 2018-08-31 14:32:02,329: root: Thread-1
+INFO: 2018-08-31 14:32:02,330: root: Thread-0
+INFO: 2018-08-31 14:32:02,331: root: Thread-3
+INFO: 2018-08-31 14:32:02,377: root: Thread-1
+INFO: 2018-08-31 14:32:02,378: root: Thread-0
+INFO: 2018-08-31 14:32:02,379: root: Thread-3
+INFO: 2018-08-31 14:32:02,380: root: Thread-2
+INFO: 2018-08-31 14:32:02,473: root: Thread-2
+INFO: 2018-08-31 14:32:02,484: root: Thread-0
+INFO: 2018-08-31 14:32:02,495: root: Thread-3
+INFO: 2018-08-31 14:32:02,501: root: Thread-1
+INFO: 2018-08-31 14:32:02,604: root: Thread-2
+INFO: 2018-08-31 14:32:02,609: root: Thread-0
+INFO: 2018-08-31 14:32:02,618: root: Thread-1
+INFO: 2018-08-31 14:32:02,621: root: Thread-3
+INFO: 2018-08-31 14:32:02,641: root: Thread-2
+INFO: 2018-08-31 14:32:02,646: root: Thread-0
+INFO: 2018-08-31 14:32:02,677: root: Thread-1
+INFO: 2018-08-31 14:32:02,702: root: Thread-0
+INFO: 2018-08-31 14:32:02,714: root: Thread-2
+INFO: 2018-08-31 14:32:02,726: root: Thread-3
+INFO: 2018-08-31 14:32:02,881: root: Thread-1
+INFO: 2018-08-31 14:32:02,883: root: Thread-2
+INFO: 2018-08-31 14:32:02,909: root: Thread-0
+INFO: 2018-08-31 14:32:02,926: root: Thread-3
+INFO: 2018-08-31 14:32:03,018: root: Thread-2
+INFO: 2018-08-31 14:32:03,041: root: Thread-3
+INFO: 2018-08-31 14:32:03,042: root: Thread-0
+INFO: 2018-08-31 14:32:03,051: root: Thread-1
+INFO: 2018-08-31 14:32:03,132: root: Thread-2
+INFO: 2018-08-31 14:32:03,170: root: Thread-3
+INFO: 2018-08-31 14:32:03,185: root: Thread-0
+INFO: 2018-08-31 14:32:03,229: root: Thread-1
+INFO: 2018-08-31 14:32:03,483: root: Thread-3
+INFO: 2018-08-31 14:32:03,499: root: Thread-0
+INFO: 2018-08-31 14:32:03,513: root: Thread-2
+INFO: 2018-08-31 14:32:03,570: root: Thread-1
+INFO: 2018-08-31 14:32:03,876: root: Thread-3
+INFO: 2018-08-31 14:32:03,889: root: Thread-0
+INFO: 2018-08-31 14:32:03,909: root: Thread-2
+INFO: 2018-08-31 14:32:03,912: root: Thread-1
+INFO: 2018-08-31 14:32:03,927: root: Thread-3
+INFO: 2018-08-31 14:32:03,934: mongo_db: 0.6900601387023926 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:32:03,977: root: Thread-2
+INFO: 2018-08-31 14:32:03,983: root: Thread-0
+INFO: 2018-08-31 14:32:03,984: root: Thread-1
+INFO: 2018-08-31 14:32:03,995: root: Thread-3
+INFO: 2018-08-31 14:32:04,129: root: Thread-2
+INFO: 2018-08-31 14:32:04,164: root: Thread-0
+INFO: 2018-08-31 14:32:04,189: root: Thread-1
+INFO: 2018-08-31 14:32:04,222: root: Thread-3
+INFO: 2018-08-31 14:32:04,303: root: Thread-2
+INFO: 2018-08-31 14:32:04,383: root: Thread-0
+INFO: 2018-08-31 14:32:04,423: root: Thread-1
+INFO: 2018-08-31 14:32:04,552: root: Thread-3
+INFO: 2018-08-31 14:32:04,653: root: Thread-2
+INFO: 2018-08-31 14:32:04,779: root: Thread-0
+INFO: 2018-08-31 14:32:04,890: root: Thread-1
+INFO: 2018-08-31 14:32:04,973: root: Thread-3
+INFO: 2018-08-31 14:32:04,980: root: Thread-2
+INFO: 2018-08-31 14:32:05,013: root: Thread-0
+INFO: 2018-08-31 14:32:05,016: mongo_db: 0.7236301898956299 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:32:05,019: root: Thread-1
+INFO: 2018-08-31 14:32:05,043: root: Thread-2
+INFO: 2018-08-31 14:32:05,048: root: Thread-3
+INFO: 2018-08-31 14:32:05,075: root: Thread-1
+INFO: 2018-08-31 14:32:05,087: root: Thread-0
+INFO: 2018-08-31 14:32:05,092: root: Thread-2
+INFO: 2018-08-31 14:32:05,106: root: Thread-3
+INFO: 2018-08-31 14:32:05,242: root: Thread-1
+INFO: 2018-08-31 14:32:05,252: root: Thread-0
+INFO: 2018-08-31 14:32:05,266: root: Thread-2
+INFO: 2018-08-31 14:32:05,291: root: Thread-3
+INFO: 2018-08-31 14:32:05,400: root: Thread-1
+INFO: 2018-08-31 14:32:05,418: root: Thread-0
+INFO: 2018-08-31 14:32:05,419: root: Thread-2
+INFO: 2018-08-31 14:32:05,457: root: Thread-3
+INFO: 2018-08-31 14:32:05,536: root: Thread-2
+INFO: 2018-08-31 14:32:05,543: root: Thread-0
+INFO: 2018-08-31 14:32:05,544: root: Thread-1
+INFO: 2018-08-31 14:32:05,764: root: Thread-3
+INFO: 2018-08-31 14:32:05,876: root: Thread-2
+INFO: 2018-08-31 14:32:05,937: root: Thread-0
+INFO: 2018-08-31 14:32:05,997: root: Thread-1
+INFO: 2018-08-31 14:32:06,259: root: Thread-3
+INFO: 2018-08-31 14:32:06,286: root: Thread-2
+INFO: 2018-08-31 14:32:06,295: root: Thread-0
+INFO: 2018-08-31 14:32:06,303: root: Thread-1
+INFO: 2018-08-31 14:32:06,333: mongo_db: 0.7941720485687256 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:32:06,334: root: Thread-3
+INFO: 2018-08-31 14:32:06,349: root: Thread-0
+INFO: 2018-08-31 14:32:06,365: root: Thread-2
+INFO: 2018-08-31 14:32:06,366: root: Thread-1
+INFO: 2018-08-31 14:32:06,379: root: Thread-3
+INFO: 2018-08-31 14:32:06,382: root: Thread-0
+INFO: 2018-08-31 14:32:06,446: root: Thread-1
+INFO: 2018-08-31 14:32:06,453: root: Thread-3
+INFO: 2018-08-31 14:32:06,454: root: Thread-2
+INFO: 2018-08-31 14:32:06,458: root: Thread-0
+INFO: 2018-08-31 14:32:06,648: root: Thread-1
+INFO: 2018-08-31 14:32:06,686: root: Thread-0
+INFO: 2018-08-31 14:32:06,692: root: Thread-3
+INFO: 2018-08-31 14:32:06,696: root: Thread-2
+INFO: 2018-08-31 14:32:06,860: root: Thread-1
+INFO: 2018-08-31 14:32:06,896: root: Thread-0
+INFO: 2018-08-31 14:32:06,897: root: Thread-2
+INFO: 2018-08-31 14:32:06,982: root: Thread-3
+INFO: 2018-08-31 14:32:07,307: root: Thread-1
+INFO: 2018-08-31 14:32:07,382: root: Thread-2
+INFO: 2018-08-31 14:32:07,422: root: Thread-0
+INFO: 2018-08-31 14:32:07,439: root: Thread-3
+INFO: 2018-08-31 14:32:07,471: mongo_db: 0.7325382232666016 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:32:07,472: root: Thread-2
+INFO: 2018-08-31 14:32:07,483: root: Thread-1
+INFO: 2018-08-31 14:32:07,487: root: Thread-0
+INFO: 2018-08-31 14:32:07,523: root: Thread-3
+INFO: 2018-08-31 14:32:07,643: root: Thread-0
+INFO: 2018-08-31 14:32:07,682: root: Thread-2
+INFO: 2018-08-31 14:32:07,691: root: Thread-1
+INFO: 2018-08-31 14:32:07,731: root: Thread-3
+INFO: 2018-08-31 14:32:07,779: root: Thread-0
+INFO: 2018-08-31 14:32:07,808: root: Thread-1
+INFO: 2018-08-31 14:32:07,824: root: Thread-2
+INFO: 2018-08-31 14:32:07,861: root: Thread-3
+INFO: 2018-08-31 14:32:07,882: root: Thread-0
+INFO: 2018-08-31 14:32:07,905: root: Thread-2
+INFO: 2018-08-31 14:32:07,906: root: Thread-1
+INFO: 2018-08-31 14:32:07,932: root: Thread-3
+INFO: 2018-08-31 14:32:07,976: root: Thread-0
+INFO: 2018-08-31 14:32:08,094: root: Thread-2
+INFO: 2018-08-31 14:32:08,095: root: Thread-1
+INFO: 2018-08-31 14:32:08,102: root: Thread-3
+INFO: 2018-08-31 14:32:08,111: root: Thread-0
+INFO: 2018-08-31 14:32:08,275: root: Thread-1
+INFO: 2018-08-31 14:32:08,314: root: Thread-2
+INFO: 2018-08-31 14:32:08,359: root: Thread-3
+INFO: 2018-08-31 14:32:08,442: root: Thread-0
+INFO: 2018-08-31 14:32:08,612: root: Thread-1
+INFO: 2018-08-31 14:32:08,697: root: Thread-2
+INFO: 2018-08-31 14:32:08,727: root: Thread-3
+INFO: 2018-08-31 14:32:08,836: root: Thread-0
+INFO: 2018-08-31 14:32:08,912: root: Thread-1
+INFO: 2018-08-31 14:32:08,924: root: Thread-2
+INFO: 2018-08-31 14:32:08,925: root: Thread-3
+INFO: 2018-08-31 14:32:08,935: root: Thread-0
+INFO: 2018-08-31 14:32:08,943: mongo_db: 0.8057820796966553 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:33:09,800: root: Thread-0 started
+INFO: 2018-08-31 14:33:09,801: root: Thread-1 started
+INFO: 2018-08-31 14:33:09,803: root: Thread-2 started
+INFO: 2018-08-31 14:33:09,803: root: Thread-3 started
+INFO: 2018-08-31 14:33:09,880: root: Thread-2 started
+INFO: 2018-08-31 14:33:09,881: root: Thread-1 started
+INFO: 2018-08-31 14:33:09,881: root: Thread-3 started
+INFO: 2018-08-31 14:33:09,892: root: Thread-0 started
+INFO: 2018-08-31 14:33:09,927: root: Thread-2 started
+INFO: 2018-08-31 14:33:09,928: root: Thread-0 started
+INFO: 2018-08-31 14:33:09,928: root: Thread-1 started
+INFO: 2018-08-31 14:33:09,929: root: Thread-3 started
+INFO: 2018-08-31 14:33:10,022: root: Thread-3 started
+INFO: 2018-08-31 14:33:10,029: root: Thread-0 started
+INFO: 2018-08-31 14:33:10,041: root: Thread-1 started
+INFO: 2018-08-31 14:33:10,049: root: Thread-2 started
+INFO: 2018-08-31 14:33:10,239: root: Thread-2 started
+INFO: 2018-08-31 14:33:10,273: root: Thread-0 started
+INFO: 2018-08-31 14:33:10,314: root: Thread-1 started
+INFO: 2018-08-31 14:33:10,336: root: Thread-3 started
+INFO: 2018-08-31 14:33:10,439: root: Thread-0 started
+INFO: 2018-08-31 14:33:10,439: root: Thread-2 started
+INFO: 2018-08-31 14:33:10,507: root: Thread-1 started
+INFO: 2018-08-31 14:33:10,511: root: Thread-3 started
+INFO: 2018-08-31 14:33:10,569: root: Thread-2 started
+INFO: 2018-08-31 14:33:10,582: root: Thread-0 started
+INFO: 2018-08-31 14:33:10,603: root: Thread-1 started
+INFO: 2018-08-31 14:33:10,610: root: Thread-3 started
+INFO: 2018-08-31 14:33:10,628: root: Thread-2 started
+INFO: 2018-08-31 14:33:10,630: root: Thread-0 started
+INFO: 2018-08-31 14:33:10,643: root: Thread-1 started
+INFO: 2018-08-31 14:33:10,648: root: Thread-3 started
+INFO: 2018-08-31 14:33:10,676: root: Thread-2 started
+INFO: 2018-08-31 14:33:10,678: root: Thread-1 started
+INFO: 2018-08-31 14:33:10,681: root: Thread-0 started
+INFO: 2018-08-31 14:33:10,685: root: Thread-3 started
+INFO: 2018-08-31 14:33:10,729: root: Thread-1 started
+INFO: 2018-08-31 14:33:10,746: root: Thread-3 started
+INFO: 2018-08-31 14:33:10,756: root: Thread-0 started
+INFO: 2018-08-31 14:33:10,766: root: Thread-2 started
+INFO: 2018-08-31 14:33:10,870: root: Thread-1 started
+INFO: 2018-08-31 14:33:10,873: root: Thread-3 started
+INFO: 2018-08-31 14:33:10,898: root: Thread-0 started
+INFO: 2018-08-31 14:33:10,914: root: Thread-2 started
+INFO: 2018-08-31 14:33:10,937: root: Thread-3 started
+INFO: 2018-08-31 14:33:10,940: root: Thread-1 started
+INFO: 2018-08-31 14:33:10,968: root: Thread-0 started
+INFO: 2018-08-31 14:33:11,054: root: Thread-2 started
+INFO: 2018-08-31 14:33:11,056: root: Thread-3 started
+INFO: 2018-08-31 14:33:11,060: root: Thread-1 started
+INFO: 2018-08-31 14:33:11,083: root: Thread-0 started
+INFO: 2018-08-31 14:33:11,122: root: Thread-1 started
+INFO: 2018-08-31 14:33:11,124: root: Thread-2 started
+INFO: 2018-08-31 14:33:11,127: root: Thread-3 started
+INFO: 2018-08-31 14:33:11,130: root: Thread-0 started
+INFO: 2018-08-31 14:33:11,226: root: Thread-1 started
+INFO: 2018-08-31 14:33:11,235: root: Thread-0 started
+INFO: 2018-08-31 14:33:11,243: root: Thread-2 started
+INFO: 2018-08-31 14:33:11,251: root: Thread-3 started
+INFO: 2018-08-31 14:33:11,382: root: Thread-2 started
+INFO: 2018-08-31 14:33:11,398: root: Thread-1 started
+INFO: 2018-08-31 14:33:11,409: root: Thread-0 started
+INFO: 2018-08-31 14:33:11,426: root: Thread-3 started
+INFO: 2018-08-31 14:33:11,546: root: Thread-1 started
+INFO: 2018-08-31 14:33:11,595: root: Thread-2 started
+INFO: 2018-08-31 14:33:11,596: root: Thread-3 started
+INFO: 2018-08-31 14:33:11,597: root: Thread-0 started
+INFO: 2018-08-31 14:33:11,664: root: Thread-1 started
+INFO: 2018-08-31 14:33:11,676: root: Thread-3 started
+INFO: 2018-08-31 14:33:11,681: root: Thread-2 started
+INFO: 2018-08-31 14:33:11,683: root: Thread-0 started
+INFO: 2018-08-31 14:33:11,723: root: Thread-1 started
+INFO: 2018-08-31 14:33:11,726: root: Thread-0 started
+INFO: 2018-08-31 14:33:11,729: root: Thread-2 started
+INFO: 2018-08-31 14:33:11,732: root: Thread-3 started
+INFO: 2018-08-31 14:33:11,842: root: Thread-0 started
+INFO: 2018-08-31 14:33:11,844: root: Thread-1 started
+INFO: 2018-08-31 14:33:11,845: root: Thread-2 started
+INFO: 2018-08-31 14:33:11,854: root: Thread-3 started
+INFO: 2018-08-31 14:33:11,984: root: Thread-0 started
+INFO: 2018-08-31 14:33:11,987: root: Thread-1 started
+INFO: 2018-08-31 14:33:11,993: root: Thread-3 started
+INFO: 2018-08-31 14:33:11,996: root: Thread-2 started
+INFO: 2018-08-31 14:33:12,158: root: Thread-0 started
+INFO: 2018-08-31 14:33:12,159: root: Thread-2 started
+INFO: 2018-08-31 14:33:12,161: root: Thread-1 started
+INFO: 2018-08-31 14:33:12,181: root: Thread-3 started
+INFO: 2018-08-31 14:33:12,321: root: Thread-1 started
+INFO: 2018-08-31 14:33:12,405: root: Thread-3 started
+INFO: 2018-08-31 14:33:12,411: root: Thread-2 started
+INFO: 2018-08-31 14:33:12,420: root: Thread-0 started
+INFO: 2018-08-31 14:33:12,739: root: Thread-1 started
+INFO: 2018-08-31 14:33:12,802: root: Thread-3 started
+INFO: 2018-08-31 14:33:12,855: root: Thread-0 started
+INFO: 2018-08-31 14:33:12,904: root: Thread-2 started
+INFO: 2018-08-31 14:33:12,934: root: Thread-1 started
+INFO: 2018-08-31 14:33:13,007: mongo_db: 0.7555398941040039 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:33:13,056: root: Thread-2 started
+INFO: 2018-08-31 14:33:13,057: root: Thread-3 started
+INFO: 2018-08-31 14:33:13,059: root: Thread-0 started
+INFO: 2018-08-31 14:33:13,062: root: Thread-1 started
+INFO: 2018-08-31 14:33:13,171: root: Thread-3 started
+INFO: 2018-08-31 14:33:13,218: root: Thread-0 started
+INFO: 2018-08-31 14:33:13,224: root: Thread-1 started
+INFO: 2018-08-31 14:33:13,231: root: Thread-2 started
+INFO: 2018-08-31 14:33:13,285: root: Thread-3 started
+INFO: 2018-08-31 14:33:13,530: root: Thread-0 started
+INFO: 2018-08-31 14:33:13,575: root: Thread-2 started
+INFO: 2018-08-31 14:33:13,610: root: Thread-1 started
+INFO: 2018-08-31 14:33:13,679: root: Thread-3 started
+INFO: 2018-08-31 14:33:13,889: root: Thread-1 started
+INFO: 2018-08-31 14:33:13,936: root: Thread-0 started
+INFO: 2018-08-31 14:33:13,942: root: Thread-2 started
+INFO: 2018-08-31 14:33:13,978: root: Thread-3 started
+INFO: 2018-08-31 14:33:14,014: mongo_db: 0.7626681327819824 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:33:14,037: root: Thread-1 started
+INFO: 2018-08-31 14:33:14,039: root: Thread-0 started
+INFO: 2018-08-31 14:33:14,041: root: Thread-2 started
+INFO: 2018-08-31 14:33:14,043: root: Thread-3 started
+INFO: 2018-08-31 14:33:14,073: root: Thread-1 started
+INFO: 2018-08-31 14:33:14,104: root: Thread-0 started
+INFO: 2018-08-31 14:33:14,217: root: Thread-2 started
+INFO: 2018-08-31 14:33:14,246: root: Thread-3 started
+INFO: 2018-08-31 14:33:14,277: root: Thread-1 started
+INFO: 2018-08-31 14:33:14,291: root: Thread-0 started
+INFO: 2018-08-31 14:33:14,359: root: Thread-2 started
+INFO: 2018-08-31 14:33:14,381: root: Thread-3 started
+INFO: 2018-08-31 14:33:14,384: root: Thread-1 started
+INFO: 2018-08-31 14:33:14,429: root: Thread-0 started
+INFO: 2018-08-31 14:33:14,438: root: Thread-2 started
+INFO: 2018-08-31 14:33:14,721: root: Thread-3 started
+INFO: 2018-08-31 14:33:14,775: root: Thread-2 started
+INFO: 2018-08-31 14:33:14,820: root: Thread-1 started
+INFO: 2018-08-31 14:33:14,879: root: Thread-0 started
+INFO: 2018-08-31 14:33:15,092: root: Thread-3 started
+INFO: 2018-08-31 14:33:15,103: root: Thread-2 started
+INFO: 2018-08-31 14:33:15,110: root: Thread-0 started
+INFO: 2018-08-31 14:33:15,111: root: Thread-1 started
+INFO: 2018-08-31 14:33:15,125: root: Thread-3 started
+INFO: 2018-08-31 14:33:15,129: root: Thread-2 started
+INFO: 2018-08-31 14:33:15,142: mongo_db: 0.7498879432678223 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:33:15,179: root: Thread-0 started
+INFO: 2018-08-31 14:33:15,184: root: Thread-2 started
+INFO: 2018-08-31 14:33:15,185: root: Thread-3 started
+INFO: 2018-08-31 14:33:15,187: root: Thread-1 started
+INFO: 2018-08-31 14:33:15,293: root: Thread-0 started
+INFO: 2018-08-31 14:33:15,296: root: Thread-1 started
+INFO: 2018-08-31 14:33:15,307: root: Thread-2 started
+INFO: 2018-08-31 14:33:15,311: root: Thread-3 started
+INFO: 2018-08-31 14:33:15,415: root: Thread-0 started
+INFO: 2018-08-31 14:33:15,434: root: Thread-1 started
+INFO: 2018-08-31 14:33:15,438: root: Thread-3 started
+INFO: 2018-08-31 14:33:15,464: root: Thread-2 started
+INFO: 2018-08-31 14:33:15,560: root: Thread-0 started
+INFO: 2018-08-31 14:33:15,570: root: Thread-3 started
+INFO: 2018-08-31 14:33:15,595: root: Thread-1 started
+INFO: 2018-08-31 14:33:15,754: root: Thread-2 started
+INFO: 2018-08-31 14:33:15,918: root: Thread-0 started
+INFO: 2018-08-31 14:33:15,962: root: Thread-3 started
+INFO: 2018-08-31 14:33:15,987: root: Thread-1 started
+INFO: 2018-08-31 14:33:16,096: root: Thread-2 started
+INFO: 2018-08-31 14:33:16,223: root: Thread-1 started
+INFO: 2018-08-31 14:33:16,223: root: Thread-3 started
+INFO: 2018-08-31 14:33:16,224: root: Thread-0 started
+INFO: 2018-08-31 14:33:16,234: root: Thread-2 started
+INFO: 2018-08-31 14:33:16,265: mongo_db: 0.7168803215026855 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:33:16,278: root: Thread-3 started
+INFO: 2018-08-31 14:33:16,282: root: Thread-1 started
+INFO: 2018-08-31 14:33:16,283: root: Thread-0 started
+INFO: 2018-08-31 14:33:16,303: root: Thread-2 started
+INFO: 2018-08-31 14:33:16,328: root: Thread-0 started
+INFO: 2018-08-31 14:33:16,330: root: Thread-3 started
+INFO: 2018-08-31 14:33:16,330: root: Thread-1 started
+INFO: 2018-08-31 14:33:16,366: root: Thread-2 started
+INFO: 2018-08-31 14:33:16,403: root: Thread-3 started
+INFO: 2018-08-31 14:33:16,406: root: Thread-0 started
+INFO: 2018-08-31 14:33:16,441: root: Thread-1 started
+INFO: 2018-08-31 14:33:16,556: root: Thread-2 started
+INFO: 2018-08-31 14:33:16,566: root: Thread-0 started
+INFO: 2018-08-31 14:33:16,575: root: Thread-3 started
+INFO: 2018-08-31 14:33:16,621: root: Thread-1 started
+INFO: 2018-08-31 14:33:16,684: root: Thread-2 started
+INFO: 2018-08-31 14:33:16,685: root: Thread-0 started
+INFO: 2018-08-31 14:33:16,718: root: Thread-3 started
+INFO: 2018-08-31 14:33:16,770: root: Thread-1 started
+INFO: 2018-08-31 14:33:16,825: root: Thread-2 started
+INFO: 2018-08-31 14:33:16,843: root: Thread-3 started
+INFO: 2018-08-31 14:33:16,867: root: Thread-0 started
+INFO: 2018-08-31 14:33:17,021: root: Thread-1 started
+INFO: 2018-08-31 14:33:17,119: root: Thread-2 started
+INFO: 2018-08-31 14:33:17,193: root: Thread-0 started
+INFO: 2018-08-31 14:33:17,261: root: Thread-3 started
+INFO: 2018-08-31 14:33:17,390: root: Thread-1 started
+INFO: 2018-08-31 14:33:17,530: root: Thread-2 started
+INFO: 2018-08-31 14:33:17,605: root: Thread-0 started
+INFO: 2018-08-31 14:33:17,609: root: Thread-3 started
+INFO: 2018-08-31 14:33:17,624: root: Thread-1 started
+INFO: 2018-08-31 14:33:17,634: root: Thread-2 started
+INFO: 2018-08-31 14:33:17,641: mongo_db: 0.8305370807647705 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:33:17,651: root: Thread-0 started
+INFO: 2018-08-31 14:33:17,678: root: Stopping thread...
+INFO: 2018-08-31 14:33:17,678: root: Thread-3 stopped
+INFO: 2018-08-31 14:33:17,681: root: Stopping thread...
+INFO: 2018-08-31 14:33:17,682: root: Thread-2 stopped
+INFO: 2018-08-31 14:33:17,683: root: Stopping thread...
+INFO: 2018-08-31 14:33:17,683: root: Thread-1 stopped
+INFO: 2018-08-31 14:33:17,685: root: Stopping thread...
+INFO: 2018-08-31 14:33:17,685: root: Thread-0 stopped
+INFO: 2018-08-31 14:33:37,658: root: Thread-0 started
+INFO: 2018-08-31 14:33:37,659: root: Thread-1 started
+INFO: 2018-08-31 14:33:37,683: root: Thread-0 started
+INFO: 2018-08-31 14:33:37,683: root: Thread-1 started
+INFO: 2018-08-31 14:33:37,713: root: Thread-0 started
+INFO: 2018-08-31 14:33:37,717: root: Thread-1 started
+INFO: 2018-08-31 14:33:37,764: root: Thread-0 started
+INFO: 2018-08-31 14:33:37,767: root: Thread-1 started
+INFO: 2018-08-31 14:33:37,818: root: Thread-0 started
+INFO: 2018-08-31 14:33:37,822: root: Thread-1 started
+INFO: 2018-08-31 14:33:37,875: root: Thread-0 started
+INFO: 2018-08-31 14:33:37,885: root: Thread-1 started
+INFO: 2018-08-31 14:33:37,922: root: Thread-0 started
+INFO: 2018-08-31 14:33:37,930: root: Thread-1 started
+INFO: 2018-08-31 14:33:37,968: root: Thread-0 started
+INFO: 2018-08-31 14:33:37,971: root: Thread-1 started
+INFO: 2018-08-31 14:33:38,018: root: Thread-0 started
+INFO: 2018-08-31 14:33:38,020: root: Thread-1 started
+INFO: 2018-08-31 14:33:38,063: root: Thread-1 started
+INFO: 2018-08-31 14:33:38,064: root: Thread-0 started
+INFO: 2018-08-31 14:33:38,150: root: Thread-0 started
+INFO: 2018-08-31 14:33:38,150: root: Thread-1 started
+INFO: 2018-08-31 14:33:38,211: root: Thread-0 started
+INFO: 2018-08-31 14:33:38,216: root: Thread-1 started
+INFO: 2018-08-31 14:33:38,263: root: Thread-0 started
+INFO: 2018-08-31 14:33:38,273: root: Thread-1 started
+INFO: 2018-08-31 14:33:38,314: root: Thread-0 started
+INFO: 2018-08-31 14:33:38,318: root: Thread-1 started
+INFO: 2018-08-31 14:33:38,374: root: Thread-1 started
+INFO: 2018-08-31 14:33:38,376: root: Thread-0 started
+INFO: 2018-08-31 14:33:38,464: root: Thread-0 started
+INFO: 2018-08-31 14:33:38,465: root: Thread-1 started
+INFO: 2018-08-31 14:33:38,513: root: Thread-0 started
+INFO: 2018-08-31 14:33:38,516: root: Thread-1 started
+INFO: 2018-08-31 14:33:38,567: root: Thread-1 started
+INFO: 2018-08-31 14:33:38,567: root: Thread-0 started
+INFO: 2018-08-31 14:33:38,650: root: Thread-1 started
+INFO: 2018-08-31 14:33:38,665: root: Thread-0 started
+INFO: 2018-08-31 14:33:38,732: root: Thread-1 started
+INFO: 2018-08-31 14:33:38,735: root: Thread-0 started
+INFO: 2018-08-31 14:33:38,765: root: Thread-0 started
+INFO: 2018-08-31 14:33:38,772: root: Thread-1 started
+INFO: 2018-08-31 14:33:38,810: root: Thread-0 started
+INFO: 2018-08-31 14:33:38,816: root: Thread-1 started
+INFO: 2018-08-31 14:33:38,833: root: Thread-0 started
+INFO: 2018-08-31 14:33:38,866: root: Thread-1 started
+INFO: 2018-08-31 14:33:38,871: root: Thread-0 started
+INFO: 2018-08-31 14:33:38,968: root: Thread-0 started
+INFO: 2018-08-31 14:33:38,968: root: Thread-1 started
+INFO: 2018-08-31 14:33:39,031: root: Thread-0 started
+INFO: 2018-08-31 14:33:39,033: root: Thread-1 started
+INFO: 2018-08-31 14:33:39,067: root: Thread-0 started
+INFO: 2018-08-31 14:33:39,071: root: Thread-1 started
+INFO: 2018-08-31 14:33:39,172: root: Thread-1 started
+INFO: 2018-08-31 14:33:39,176: root: Thread-0 started
+INFO: 2018-08-31 14:33:39,224: root: Thread-0 started
+INFO: 2018-08-31 14:33:39,225: root: Thread-1 started
+INFO: 2018-08-31 14:33:39,265: root: Thread-0 started
+INFO: 2018-08-31 14:33:39,269: root: Thread-1 started
+INFO: 2018-08-31 14:33:39,348: root: Thread-0 started
+INFO: 2018-08-31 14:33:39,360: root: Thread-1 started
+INFO: 2018-08-31 14:33:39,406: root: Thread-0 started
+INFO: 2018-08-31 14:33:39,422: root: Thread-1 started
+INFO: 2018-08-31 14:33:39,429: root: Thread-0 started
+INFO: 2018-08-31 14:33:39,463: root: Thread-1 started
+INFO: 2018-08-31 14:33:39,468: root: Thread-0 started
+INFO: 2018-08-31 14:33:39,488: root: Thread-1 started
+INFO: 2018-08-31 14:33:39,511: root: Thread-0 started
+INFO: 2018-08-31 14:33:39,513: root: Thread-1 started
+INFO: 2018-08-31 14:33:39,567: root: Thread-1 started
+INFO: 2018-08-31 14:33:39,578: root: Thread-0 started
+INFO: 2018-08-31 14:33:39,659: root: Thread-1 started
+INFO: 2018-08-31 14:33:39,660: root: Thread-0 started
+INFO: 2018-08-31 14:33:39,665: root: Thread-2 started
+INFO: 2018-08-31 14:33:39,741: root: Thread-2 started
+INFO: 2018-08-31 14:33:39,742: root: Thread-1 started
+INFO: 2018-08-31 14:33:39,745: root: Thread-0 started
+INFO: 2018-08-31 14:33:39,790: root: Thread-2 started
+INFO: 2018-08-31 14:33:39,793: root: Thread-0 started
+INFO: 2018-08-31 14:33:39,794: root: Thread-1 started
+INFO: 2018-08-31 14:33:39,881: root: Thread-2 started
+INFO: 2018-08-31 14:33:39,889: root: Thread-1 started
+INFO: 2018-08-31 14:33:39,927: root: Thread-0 started
+INFO: 2018-08-31 14:33:39,955: root: Thread-2 started
+INFO: 2018-08-31 14:33:39,956: root: Thread-1 started
+INFO: 2018-08-31 14:33:39,971: root: Thread-0 started
+INFO: 2018-08-31 14:33:39,983: root: Thread-2 started
+INFO: 2018-08-31 14:33:39,986: root: Thread-1 started
+INFO: 2018-08-31 14:33:40,058: root: Thread-1 started
+INFO: 2018-08-31 14:33:40,068: root: Thread-2 started
+INFO: 2018-08-31 14:33:40,080: root: Thread-0 started
+INFO: 2018-08-31 14:33:40,152: root: Thread-1 started
+INFO: 2018-08-31 14:33:40,158: root: Thread-0 started
+INFO: 2018-08-31 14:33:40,163: root: Thread-2 started
+INFO: 2018-08-31 14:33:40,187: root: Thread-1 started
+INFO: 2018-08-31 14:33:40,188: root: Thread-0 started
+INFO: 2018-08-31 14:33:40,218: root: Thread-0 started
+INFO: 2018-08-31 14:33:40,224: root: Thread-1 started
+INFO: 2018-08-31 14:33:40,228: root: Thread-2 started
+INFO: 2018-08-31 14:33:40,271: root: Thread-0 started
+INFO: 2018-08-31 14:33:40,283: root: Thread-2 started
+INFO: 2018-08-31 14:33:40,299: root: Thread-1 started
+INFO: 2018-08-31 14:33:40,378: root: Thread-0 started
+INFO: 2018-08-31 14:33:40,387: root: Thread-2 started
+INFO: 2018-08-31 14:33:40,408: root: Thread-1 started
+INFO: 2018-08-31 14:33:40,453: root: Thread-0 started
+INFO: 2018-08-31 14:33:40,458: root: Thread-2 started
+INFO: 2018-08-31 14:33:40,459: root: Thread-1 started
+INFO: 2018-08-31 14:33:40,509: root: Thread-2 started
+INFO: 2018-08-31 14:33:40,510: root: Thread-1 started
+INFO: 2018-08-31 14:33:40,522: root: Thread-0 started
+INFO: 2018-08-31 14:33:40,634: root: Thread-1 started
+INFO: 2018-08-31 14:33:40,637: root: Thread-2 started
+INFO: 2018-08-31 14:33:40,651: root: Thread-0 started
+INFO: 2018-08-31 14:33:40,667: root: Thread-3 started
+INFO: 2018-08-31 14:33:40,691: root: Thread-1 started
+INFO: 2018-08-31 14:33:40,697: root: Thread-0 started
+INFO: 2018-08-31 14:33:40,701: root: Thread-2 started
+INFO: 2018-08-31 14:33:40,733: root: Thread-3 started
+INFO: 2018-08-31 14:33:40,777: root: Thread-1 started
+INFO: 2018-08-31 14:33:40,819: root: Thread-2 started
+INFO: 2018-08-31 14:33:40,825: root: Thread-0 started
+INFO: 2018-08-31 14:33:40,855: root: Thread-3 started
+INFO: 2018-08-31 14:33:40,888: root: Thread-1 started
+INFO: 2018-08-31 14:33:40,895: root: Thread-0 started
+INFO: 2018-08-31 14:33:40,896: root: Thread-2 started
+INFO: 2018-08-31 14:33:40,908: root: Thread-3 started
+INFO: 2018-08-31 14:33:40,931: root: Thread-2 started
+INFO: 2018-08-31 14:33:40,932: root: Thread-1 started
+INFO: 2018-08-31 14:33:40,936: root: Thread-0 started
+INFO: 2018-08-31 14:33:40,953: root: Thread-3 started
+INFO: 2018-08-31 14:33:41,052: root: Thread-2 started
+INFO: 2018-08-31 14:33:41,063: root: Thread-0 started
+INFO: 2018-08-31 14:33:41,067: root: Thread-1 started
+INFO: 2018-08-31 14:33:41,091: root: Thread-3 started
+INFO: 2018-08-31 14:33:41,154: root: Thread-0 started
+INFO: 2018-08-31 14:33:41,155: root: Thread-2 started
+INFO: 2018-08-31 14:33:41,160: root: Thread-1 started
+INFO: 2018-08-31 14:33:41,191: root: Thread-3 started
+INFO: 2018-08-31 14:33:41,238: root: Thread-0 started
+INFO: 2018-08-31 14:33:41,256: root: Thread-2 started
+INFO: 2018-08-31 14:33:41,261: root: Thread-1 started
+INFO: 2018-08-31 14:33:41,262: root: Thread-3 started
+INFO: 2018-08-31 14:33:41,289: root: Thread-0 started
+INFO: 2018-08-31 14:33:41,301: root: Thread-2 started
+INFO: 2018-08-31 14:33:41,332: root: Thread-1 started
+INFO: 2018-08-31 14:33:41,338: root: Thread-3 started
+INFO: 2018-08-31 14:33:41,343: root: Thread-2 started
+INFO: 2018-08-31 14:33:41,347: root: Thread-0 started
+INFO: 2018-08-31 14:33:41,430: root: Thread-1 started
+INFO: 2018-08-31 14:33:41,453: root: Thread-3 started
+INFO: 2018-08-31 14:33:41,468: root: Thread-0 started
+INFO: 2018-08-31 14:33:41,473: root: Thread-2 started
+INFO: 2018-08-31 14:33:41,539: root: Thread-3 started
+INFO: 2018-08-31 14:33:41,544: root: Thread-0 started
+INFO: 2018-08-31 14:33:41,545: root: Thread-1 started
+INFO: 2018-08-31 14:33:41,550: root: Thread-2 started
+INFO: 2018-08-31 14:33:41,582: root: Thread-3 started
+INFO: 2018-08-31 14:33:41,589: root: Thread-0 started
+INFO: 2018-08-31 14:33:41,590: root: Thread-1 started
+INFO: 2018-08-31 14:33:41,604: root: Thread-2 started
+INFO: 2018-08-31 14:33:41,641: root: Thread-3 started
+INFO: 2018-08-31 14:33:41,664: root: Thread-1 started
+INFO: 2018-08-31 14:33:41,697: root: Thread-0 started
+INFO: 2018-08-31 14:33:41,785: root: Thread-3 started
+INFO: 2018-08-31 14:33:41,817: root: Thread-2 started
+INFO: 2018-08-31 14:33:41,824: root: Thread-1 started
+INFO: 2018-08-31 14:33:41,828: root: Thread-0 started
+INFO: 2018-08-31 14:33:41,842: root: Thread-3 started
+INFO: 2018-08-31 14:33:41,933: root: Thread-1 started
+INFO: 2018-08-31 14:33:41,935: root: Thread-2 started
+INFO: 2018-08-31 14:33:41,937: root: Thread-0 started
+INFO: 2018-08-31 14:33:41,976: root: Thread-3 started
+INFO: 2018-08-31 14:33:41,999: root: Thread-2 started
+INFO: 2018-08-31 14:33:42,005: root: Thread-0 started
+INFO: 2018-08-31 14:33:42,008: root: Thread-1 started
+INFO: 2018-08-31 14:33:42,034: root: Thread-3 started
+INFO: 2018-08-31 14:33:42,052: root: Thread-1 started
+INFO: 2018-08-31 14:33:42,061: root: Thread-2 started
+INFO: 2018-08-31 14:33:42,073: root: Thread-0 started
+INFO: 2018-08-31 14:33:42,126: root: Thread-3 started
+INFO: 2018-08-31 14:33:42,205: root: Thread-1 started
+INFO: 2018-08-31 14:33:42,208: root: Thread-2 started
+INFO: 2018-08-31 14:33:42,224: root: Thread-0 started
+INFO: 2018-08-31 14:33:42,238: root: Thread-3 started
+INFO: 2018-08-31 14:33:42,343: root: Thread-3 started
+INFO: 2018-08-31 14:33:42,357: root: Thread-1 started
+INFO: 2018-08-31 14:33:42,360: root: Thread-2 started
+INFO: 2018-08-31 14:33:42,369: root: Thread-0 started
+INFO: 2018-08-31 14:33:42,479: root: Thread-3 started
+INFO: 2018-08-31 14:33:42,480: root: Thread-1 started
+INFO: 2018-08-31 14:33:42,486: root: Thread-2 started
+INFO: 2018-08-31 14:33:42,487: root: Thread-0 started
+INFO: 2018-08-31 14:33:42,533: root: Thread-2 started
+INFO: 2018-08-31 14:33:42,533: root: Thread-3 started
+INFO: 2018-08-31 14:33:42,534: root: Thread-0 started
+INFO: 2018-08-31 14:33:42,539: root: Thread-1 started
+INFO: 2018-08-31 14:33:42,654: root: Thread-1 started
+INFO: 2018-08-31 14:33:42,661: root: Thread-2 started
+INFO: 2018-08-31 14:33:42,675: root: Thread-0 started
+INFO: 2018-08-31 14:33:42,681: root: Thread-3 started
+INFO: 2018-08-31 14:33:42,738: root: Thread-1 started
+INFO: 2018-08-31 14:33:42,748: root: Thread-2 started
+INFO: 2018-08-31 14:33:42,760: root: Thread-3 started
+INFO: 2018-08-31 14:33:42,762: root: Thread-0 started
+INFO: 2018-08-31 14:33:42,896: root: Thread-1 started
+INFO: 2018-08-31 14:33:42,953: root: Thread-3 started
+INFO: 2018-08-31 14:33:42,974: root: Thread-0 started
+INFO: 2018-08-31 14:33:42,985: root: Thread-2 started
+INFO: 2018-08-31 14:33:43,055: root: Thread-1 started
+INFO: 2018-08-31 14:33:43,085: root: Thread-3 started
+INFO: 2018-08-31 14:33:43,087: root: Thread-0 started
+INFO: 2018-08-31 14:33:43,089: root: Thread-2 started
+INFO: 2018-08-31 14:33:43,433: root: Thread-1 started
+INFO: 2018-08-31 14:33:43,460: root: Thread-0 started
+INFO: 2018-08-31 14:33:43,460: root: Thread-3 started
+INFO: 2018-08-31 14:33:43,511: root: Thread-2 started
+INFO: 2018-08-31 14:33:43,828: root: Thread-1 started
+INFO: 2018-08-31 14:33:43,832: root: Thread-3 started
+INFO: 2018-08-31 14:33:43,834: root: Thread-0 started
+INFO: 2018-08-31 14:33:43,841: root: Thread-2 started
+INFO: 2018-08-31 14:33:43,864: mongo_db: 0.7873039245605469 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:33:43,885: root: Thread-1 started
+INFO: 2018-08-31 14:33:43,889: root: Thread-3 started
+INFO: 2018-08-31 14:33:43,889: root: Thread-0 started
+INFO: 2018-08-31 14:33:43,893: root: Thread-2 started
+INFO: 2018-08-31 14:33:43,929: root: Thread-1 started
+INFO: 2018-08-31 14:33:43,934: root: Thread-0 started
+INFO: 2018-08-31 14:33:43,935: root: Thread-3 started
+INFO: 2018-08-31 14:33:43,955: root: Thread-2 started
+INFO: 2018-08-31 14:33:44,069: root: Thread-0 started
+INFO: 2018-08-31 14:33:44,080: root: Thread-1 started
+INFO: 2018-08-31 14:33:44,088: root: Thread-2 started
+INFO: 2018-08-31 14:33:44,118: root: Thread-3 started
+INFO: 2018-08-31 14:33:44,237: root: Thread-2 started
+INFO: 2018-08-31 14:33:44,241: root: Thread-0 started
+INFO: 2018-08-31 14:33:44,257: root: Thread-1 started
+INFO: 2018-08-31 14:33:44,351: root: Thread-3 started
+INFO: 2018-08-31 14:33:44,591: root: Thread-1 started
+INFO: 2018-08-31 14:33:44,628: root: Thread-2 started
+INFO: 2018-08-31 14:33:44,669: root: Thread-0 started
+INFO: 2018-08-31 14:33:44,696: root: Thread-3 started
+INFO: 2018-08-31 14:33:44,974: root: Thread-1 started
+INFO: 2018-08-31 14:33:44,979: root: Thread-2 started
+INFO: 2018-08-31 14:33:44,981: root: Thread-0 started
+INFO: 2018-08-31 14:33:44,985: root: Thread-3 started
+INFO: 2018-08-31 14:33:45,014: mongo_db: 0.7886857986450195 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:33:45,043: root: Thread-0 started
+INFO: 2018-08-31 14:33:45,045: root: Thread-1 started
+INFO: 2018-08-31 14:33:45,047: root: Thread-2 started
+INFO: 2018-08-31 14:33:45,053: root: Thread-3 started
+INFO: 2018-08-31 14:33:45,097: root: Thread-0 started
+INFO: 2018-08-31 14:33:45,107: root: Thread-2 started
+INFO: 2018-08-31 14:33:45,109: root: Thread-3 started
+INFO: 2018-08-31 14:33:45,147: root: Thread-1 started
+INFO: 2018-08-31 14:33:45,183: root: Thread-0 started
+INFO: 2018-08-31 14:33:45,252: root: Thread-2 started
+INFO: 2018-08-31 14:33:45,281: root: Thread-3 started
+INFO: 2018-08-31 14:33:45,344: root: Thread-1 started
+INFO: 2018-08-31 14:33:45,363: root: Thread-0 started
+INFO: 2018-08-31 14:33:45,383: root: Thread-2 started
+INFO: 2018-08-31 14:33:45,453: root: Thread-3 started
+INFO: 2018-08-31 14:33:45,551: root: Thread-1 started
+INFO: 2018-08-31 14:33:45,552: root: Thread-0 started
+INFO: 2018-08-31 14:33:45,660: root: Thread-2 started
+INFO: 2018-08-31 14:33:45,797: root: Thread-3 started
+INFO: 2018-08-31 14:33:45,878: root: Thread-0 started
+INFO: 2018-08-31 14:33:45,931: root: Thread-1 started
+INFO: 2018-08-31 14:33:46,070: root: Thread-2 started
+INFO: 2018-08-31 14:33:46,197: root: Thread-3 started
+INFO: 2018-08-31 14:33:46,200: root: Thread-0 started
+INFO: 2018-08-31 14:33:46,205: root: Thread-1 started
+INFO: 2018-08-31 14:33:46,241: mongo_db: 0.8028650283813477 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:33:46,252: root: Thread-2 started
+INFO: 2018-08-31 14:33:46,320: root: Thread-0 started
+INFO: 2018-08-31 14:33:46,321: root: Thread-3 started
+INFO: 2018-08-31 14:33:46,329: root: Thread-1 started
+INFO: 2018-08-31 14:33:46,362: root: Thread-2 started
+INFO: 2018-08-31 14:33:46,397: root: Thread-3 started
+INFO: 2018-08-31 14:33:46,403: root: Thread-0 started
+INFO: 2018-08-31 14:33:46,410: root: Thread-1 started
+INFO: 2018-08-31 14:33:46,486: root: Thread-2 started
+INFO: 2018-08-31 14:33:46,546: root: Thread-3 started
+INFO: 2018-08-31 14:33:46,555: root: Thread-0 started
+INFO: 2018-08-31 14:33:46,623: root: Thread-1 started
+INFO: 2018-08-31 14:33:46,677: root: Thread-2 started
+INFO: 2018-08-31 14:33:46,748: root: Thread-3 started
+INFO: 2018-08-31 14:33:46,764: root: Thread-0 started
+INFO: 2018-08-31 14:33:46,807: root: Thread-1 started
+INFO: 2018-08-31 14:33:46,820: root: Thread-2 started
+INFO: 2018-08-31 14:33:46,830: root: Thread-3 started
+INFO: 2018-08-31 14:33:46,843: root: Thread-0 started
+INFO: 2018-08-31 14:33:46,933: root: Thread-2 started
+INFO: 2018-08-31 14:33:46,943: root: Thread-1 started
+INFO: 2018-08-31 14:33:46,959: root: Thread-3 started
+INFO: 2018-08-31 14:33:47,002: root: Thread-0 started
+INFO: 2018-08-31 14:33:47,191: root: Thread-2 started
+INFO: 2018-08-31 14:33:47,251: root: Thread-1 started
+INFO: 2018-08-31 14:33:47,320: root: Thread-3 started
+INFO: 2018-08-31 14:33:47,456: root: Thread-0 started
+INFO: 2018-08-31 14:33:47,609: root: Thread-2 started
+INFO: 2018-08-31 14:33:47,629: root: Thread-1 started
+INFO: 2018-08-31 14:33:47,697: mongo_db: 0.7504270076751709 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:33:47,709: root: Thread-3 started
+INFO: 2018-08-31 14:33:47,722: root: Thread-0 started
+INFO: 2018-08-31 14:33:47,729: root: Thread-2 started
+INFO: 2018-08-31 14:33:47,731: root: Thread-1 started
+INFO: 2018-08-31 14:33:47,828: root: Thread-2 started
+INFO: 2018-08-31 14:33:47,832: root: Thread-3 started
+INFO: 2018-08-31 14:33:47,838: root: Thread-0 started
+INFO: 2018-08-31 14:33:47,842: root: Thread-1 started
+INFO: 2018-08-31 14:33:47,957: root: Thread-2 started
+INFO: 2018-08-31 14:33:48,023: root: Thread-3 started
+INFO: 2018-08-31 14:33:48,025: root: Thread-0 started
+INFO: 2018-08-31 14:33:48,103: root: Thread-1 started
+INFO: 2018-08-31 14:33:48,425: root: Thread-0 started
+INFO: 2018-08-31 14:33:48,426: root: Thread-2 started
+INFO: 2018-08-31 14:33:48,474: root: Thread-3 started
+INFO: 2018-08-31 14:33:48,539: root: Thread-1 started
+INFO: 2018-08-31 14:33:48,829: root: Thread-0 started
+INFO: 2018-08-31 14:33:48,868: root: Thread-2 started
+INFO: 2018-08-31 14:33:48,927: root: Thread-3 started
+INFO: 2018-08-31 14:33:48,975: root: Thread-1 started
+INFO: 2018-08-31 14:33:49,135: root: Thread-2 started
+INFO: 2018-08-31 14:33:49,145: root: Thread-1 started
+INFO: 2018-08-31 14:33:49,155: root: Thread-0 started
+INFO: 2018-08-31 14:33:49,217: root: Thread-3 started
+INFO: 2018-08-31 14:33:49,263: mongo_db: 1.3373398780822754 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:33:49,333: root: Stopping thread...
+INFO: 2018-08-31 14:33:49,333: root: Stopping thread...
+INFO: 2018-08-31 14:33:49,334: root: Stopping thread...
+INFO: 2018-08-31 14:33:49,335: root: Stopping thread...
+INFO: 2018-08-31 14:33:49,336: root: Thread-0 stopped
+INFO: 2018-08-31 14:33:49,336: root: Thread-2 stopped
+INFO: 2018-08-31 14:33:49,336: root: Thread-1 stopped
+INFO: 2018-08-31 14:33:49,336: root: Thread-3 stopped
+INFO: 2018-08-31 14:33:57,343: root: Thread-2 started
+INFO: 2018-08-31 14:33:58,347: root: Thread-1 started
+INFO: 2018-08-31 14:33:58,348: root: Thread-0 started
+INFO: 2018-08-31 14:33:58,348: root: Thread-3 started
+INFO: 2018-08-31 14:33:59,371: root: Thread-2 started
+INFO: 2018-08-31 14:33:59,384: root: Thread-0 started
+INFO: 2018-08-31 14:33:59,386: root: Thread-3 started
+INFO: 2018-08-31 14:33:59,474: root: Thread-2 started
+INFO: 2018-08-31 14:34:00,101: mongo_db: 0.5647668838500977 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:34:00,391: root: Thread-1 started
+INFO: 2018-08-31 14:34:00,516: root: Thread-3 started
+INFO: 2018-08-31 14:34:00,633: root: Thread-2 started
+INFO: 2018-08-31 14:34:00,817: mongo_db: 0.5699317455291748 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:34:01,500: root: Thread-0 started
+INFO: 2018-08-31 14:34:01,516: mongo_db: 0.5501708984375 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:34:01,542: root: Thread-0 started
+INFO: 2018-08-31 14:34:01,799: root: Thread-1 started
+INFO: 2018-08-31 14:34:02,243: mongo_db: 0.5738048553466797 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:34:02,802: root: Thread-2 started
+INFO: 2018-08-31 14:34:02,814: root: Thread-3 started
+INFO: 2018-08-31 14:34:02,903: root: Thread-2 started
+INFO: 2018-08-31 14:34:02,909: root: Thread-3 started
+INFO: 2018-08-31 14:34:02,919: mongo_db: 0.5519208908081055 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:34:02,938: root: Stopping thread...
+INFO: 2018-08-31 14:34:02,938: root: Thread-2 stopped
+INFO: 2018-08-31 14:34:02,943: root: Stopping thread...
+INFO: 2018-08-31 14:34:02,963: root: Thread-3 stopped
+INFO: 2018-08-31 14:34:03,093: root: Thread-1 started
+INFO: 2018-08-31 14:34:03,162: root: Stopping thread...
+INFO: 2018-08-31 14:34:03,162: root: Thread-1 stopped
+INFO: 2018-08-31 14:34:03,575: root: Thread-0 started
+INFO: 2018-08-31 14:34:03,612: root: Stopping thread...
+INFO: 2018-08-31 14:34:03,612: root: Thread-0 stopped
+INFO: 2018-08-31 14:34:17,722: root: Thread-0 started
+INFO: 2018-08-31 14:34:17,723: root: Thread-1 started
+INFO: 2018-08-31 14:34:17,724: root: Thread-2 started
+INFO: 2018-08-31 14:34:17,725: root: Thread-3 started
+INFO: 2018-08-31 14:34:17,771: root: Thread-2 started
+INFO: 2018-08-31 14:34:17,772: root: Thread-1 started
+INFO: 2018-08-31 14:34:17,773: root: Thread-3 started
+INFO: 2018-08-31 14:34:17,774: root: Thread-0 started
+INFO: 2018-08-31 14:34:17,865: root: Thread-0 started
+INFO: 2018-08-31 14:34:17,865: root: Thread-1 started
+INFO: 2018-08-31 14:34:17,865: root: Thread-2 started
+INFO: 2018-08-31 14:34:17,865: root: Thread-3 started
+INFO: 2018-08-31 14:34:17,925: root: Thread-0 started
+INFO: 2018-08-31 14:34:17,927: root: Thread-1 started
+INFO: 2018-08-31 14:34:17,928: root: Thread-2 started
+INFO: 2018-08-31 14:34:17,930: root: Thread-3 started
+INFO: 2018-08-31 14:34:18,015: root: Thread-2 started
+INFO: 2018-08-31 14:34:18,018: root: Thread-0 started
+INFO: 2018-08-31 14:34:18,020: root: Thread-1 started
+INFO: 2018-08-31 14:34:18,023: root: Thread-3 started
+INFO: 2018-08-31 14:34:18,080: root: Thread-2 started
+INFO: 2018-08-31 14:34:18,081: root: Thread-1 started
+INFO: 2018-08-31 14:34:18,081: root: Thread-0 started
+INFO: 2018-08-31 14:34:18,084: root: Thread-3 started
+INFO: 2018-08-31 14:34:18,128: root: Thread-1 started
+INFO: 2018-08-31 14:34:18,128: root: Thread-2 started
+INFO: 2018-08-31 14:34:18,132: root: Thread-3 started
+INFO: 2018-08-31 14:34:18,133: root: Thread-0 started
+INFO: 2018-08-31 14:34:18,224: root: Thread-2 started
+INFO: 2018-08-31 14:34:18,226: root: Thread-1 started
+INFO: 2018-08-31 14:34:18,232: root: Thread-0 started
+INFO: 2018-08-31 14:34:18,241: root: Thread-3 started
+INFO: 2018-08-31 14:34:18,327: root: Thread-2 started
+INFO: 2018-08-31 14:34:18,328: root: Thread-1 started
+INFO: 2018-08-31 14:34:18,330: root: Thread-3 started
+INFO: 2018-08-31 14:34:18,332: root: Thread-0 started
+INFO: 2018-08-31 14:34:18,379: root: Thread-2 started
+INFO: 2018-08-31 14:34:18,384: root: Thread-1 started
+INFO: 2018-08-31 14:34:18,385: root: Thread-0 started
+INFO: 2018-08-31 14:34:18,386: root: Thread-3 started
+INFO: 2018-08-31 14:34:18,433: root: Thread-2 started
+INFO: 2018-08-31 14:34:18,450: root: Thread-3 started
+INFO: 2018-08-31 14:34:18,450: root: Thread-1 started
+INFO: 2018-08-31 14:34:18,451: root: Thread-0 started
+INFO: 2018-08-31 14:34:18,550: root: Thread-2 started
+INFO: 2018-08-31 14:34:18,582: root: Thread-3 started
+INFO: 2018-08-31 14:34:18,595: root: Thread-0 started
+INFO: 2018-08-31 14:34:18,596: root: Thread-1 started
+INFO: 2018-08-31 14:34:18,617: root: Thread-2 started
+INFO: 2018-08-31 14:34:18,627: root: Thread-3 started
+INFO: 2018-08-31 14:34:18,630: root: Thread-1 started
+INFO: 2018-08-31 14:34:18,632: root: Thread-0 started
+INFO: 2018-08-31 14:34:18,734: root: Thread-3 started
+INFO: 2018-08-31 14:34:18,735: root: Thread-2 started
+INFO: 2018-08-31 14:34:18,749: root: Thread-0 started
+INFO: 2018-08-31 14:34:18,759: root: Thread-1 started
+INFO: 2018-08-31 14:34:18,856: root: Thread-2 started
+INFO: 2018-08-31 14:34:18,864: root: Thread-3 started
+INFO: 2018-08-31 14:34:18,866: root: Thread-1 started
+INFO: 2018-08-31 14:34:18,866: root: Thread-0 started
+INFO: 2018-08-31 14:34:18,899: root: Thread-2 started
+INFO: 2018-08-31 14:34:18,924: root: Thread-1 started
+INFO: 2018-08-31 14:34:18,928: root: Thread-0 started
+INFO: 2018-08-31 14:34:18,930: root: Thread-3 started
+INFO: 2018-08-31 14:34:18,935: root: Thread-2 started
+INFO: 2018-08-31 14:34:19,012: root: Thread-1 started
+INFO: 2018-08-31 14:34:19,050: root: Thread-3 started
+INFO: 2018-08-31 14:34:19,058: root: Thread-2 started
+INFO: 2018-08-31 14:34:19,058: root: Thread-0 started
+INFO: 2018-08-31 14:34:19,113: root: Thread-1 started
+INFO: 2018-08-31 14:34:19,128: root: Thread-2 started
+INFO: 2018-08-31 14:34:19,129: root: Thread-0 started
+INFO: 2018-08-31 14:34:19,129: root: Thread-3 started
+INFO: 2018-08-31 14:34:19,151: root: Thread-1 started
+INFO: 2018-08-31 14:34:19,172: root: Thread-3 started
+INFO: 2018-08-31 14:34:19,175: root: Thread-0 started
+INFO: 2018-08-31 14:34:19,177: root: Thread-2 started
+INFO: 2018-08-31 14:34:19,188: root: Thread-1 started
+INFO: 2018-08-31 14:34:19,230: root: Thread-0 started
+INFO: 2018-08-31 14:34:19,230: root: Thread-3 started
+INFO: 2018-08-31 14:34:19,239: root: Thread-2 started
+INFO: 2018-08-31 14:34:19,260: root: Thread-1 started
+INFO: 2018-08-31 14:34:19,364: root: Thread-3 started
+INFO: 2018-08-31 14:34:19,384: root: Thread-0 started
+INFO: 2018-08-31 14:34:19,414: root: Thread-2 started
+INFO: 2018-08-31 14:34:19,428: root: Thread-1 started
+INFO: 2018-08-31 14:34:19,448: root: Thread-3 started
+INFO: 2018-08-31 14:34:19,454: root: Thread-0 started
+INFO: 2018-08-31 14:34:19,531: root: Thread-1 started
+INFO: 2018-08-31 14:34:19,544: root: Thread-2 started
+INFO: 2018-08-31 14:34:19,567: root: Thread-3 started
+INFO: 2018-08-31 14:34:19,573: root: Thread-0 started
+INFO: 2018-08-31 14:34:19,586: root: Thread-2 started
+INFO: 2018-08-31 14:34:19,589: root: Thread-1 started
+INFO: 2018-08-31 14:34:19,621: root: Thread-0 started
+INFO: 2018-08-31 14:34:19,624: root: Thread-3 started
+INFO: 2018-08-31 14:34:19,627: root: Thread-2 started
+INFO: 2018-08-31 14:34:19,630: root: Thread-1 started
+INFO: 2018-08-31 14:34:19,710: root: Thread-3 started
+INFO: 2018-08-31 14:34:19,731: root: Thread-0 started
+INFO: 2018-08-31 14:34:19,731: root: Thread-1 started
+INFO: 2018-08-31 14:34:19,733: root: Thread-2 started
+INFO: 2018-08-31 14:34:19,834: root: Thread-3 started
+INFO: 2018-08-31 14:34:19,868: root: Thread-2 started
+INFO: 2018-08-31 14:34:19,875: root: Thread-0 started
+INFO: 2018-08-31 14:34:19,892: root: Thread-1 started
+INFO: 2018-08-31 14:34:20,013: root: Thread-3 started
+INFO: 2018-08-31 14:34:20,047: root: Thread-2 started
+INFO: 2018-08-31 14:34:20,070: root: Thread-0 started
+INFO: 2018-08-31 14:34:20,076: root: Thread-1 started
+INFO: 2018-08-31 14:34:20,187: root: Thread-3 started
+INFO: 2018-08-31 14:34:20,289: root: Thread-2 started
+INFO: 2018-08-31 14:34:20,296: root: Thread-1 started
+INFO: 2018-08-31 14:34:20,296: root: Thread-0 started
+INFO: 2018-08-31 14:34:20,608: root: Thread-3 started
+INFO: 2018-08-31 14:34:20,678: root: Thread-2 started
+INFO: 2018-08-31 14:34:20,679: root: Thread-1 started
+INFO: 2018-08-31 14:34:20,718: root: Thread-0 started
+INFO: 2018-08-31 14:34:20,876: root: Thread-3 started
+INFO: 2018-08-31 14:34:20,920: mongo_db: 0.7464690208435059 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:34:20,932: root: Thread-1 started
+INFO: 2018-08-31 14:34:20,938: root: Thread-2 started
+INFO: 2018-08-31 14:34:20,939: root: Thread-0 started
+INFO: 2018-08-31 14:34:20,966: root: Thread-3 started
+INFO: 2018-08-31 14:34:20,974: root: Thread-1 started
+INFO: 2018-08-31 14:34:20,975: root: Thread-0 started
+INFO: 2018-08-31 14:34:20,975: root: Thread-2 started
+INFO: 2018-08-31 14:34:21,078: root: Thread-0 started
+INFO: 2018-08-31 14:34:21,079: root: Thread-3 started
+INFO: 2018-08-31 14:34:21,079: root: Thread-1 started
+INFO: 2018-08-31 14:34:21,103: root: Thread-2 started
+INFO: 2018-08-31 14:34:21,229: root: Thread-0 started
+INFO: 2018-08-31 14:34:21,252: root: Thread-3 started
+INFO: 2018-08-31 14:34:21,259: root: Thread-2 started
+INFO: 2018-08-31 14:34:21,274: root: Thread-1 started
+INFO: 2018-08-31 14:34:21,291: root: Thread-0 started
+INFO: 2018-08-31 14:34:21,553: root: Thread-3 started
+INFO: 2018-08-31 14:34:21,572: root: Thread-0 started
+INFO: 2018-08-31 14:34:21,625: root: Thread-2 started
+INFO: 2018-08-31 14:34:21,638: root: Thread-1 started
+INFO: 2018-08-31 14:34:21,952: root: Thread-0 started
+INFO: 2018-08-31 14:34:21,973: root: Thread-1 started
+INFO: 2018-08-31 14:34:21,986: root: Thread-3 started
+INFO: 2018-08-31 14:34:22,022: root: Thread-2 started
+INFO: 2018-08-31 14:34:22,048: mongo_db: 0.7788479328155518 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:34:22,083: root: Thread-1 started
+INFO: 2018-08-31 14:34:22,086: root: Thread-0 started
+INFO: 2018-08-31 14:34:22,086: root: Thread-3 started
+INFO: 2018-08-31 14:34:22,090: root: Thread-2 started
+INFO: 2018-08-31 14:34:22,133: root: Thread-1 started
+INFO: 2018-08-31 14:34:22,134: root: Thread-3 started
+INFO: 2018-08-31 14:34:22,140: root: Thread-0 started
+INFO: 2018-08-31 14:34:22,140: root: Thread-2 started
+INFO: 2018-08-31 14:34:22,323: root: Thread-1 started
+INFO: 2018-08-31 14:34:22,324: root: Thread-2 started
+INFO: 2018-08-31 14:34:22,333: root: Thread-3 started
+INFO: 2018-08-31 14:34:22,334: root: Thread-0 started
+INFO: 2018-08-31 14:34:22,453: root: Thread-2 started
+INFO: 2018-08-31 14:34:22,476: root: Thread-3 started
+INFO: 2018-08-31 14:34:22,478: root: Thread-0 started
+INFO: 2018-08-31 14:34:22,483: root: Thread-1 started
+INFO: 2018-08-31 14:34:22,765: root: Thread-2 started
+INFO: 2018-08-31 14:34:22,765: root: Thread-0 started
+INFO: 2018-08-31 14:34:22,778: root: Thread-1 started
+INFO: 2018-08-31 14:34:22,786: root: Thread-3 started
+INFO: 2018-08-31 14:34:23,185: root: Thread-3 started
+INFO: 2018-08-31 14:34:23,185: root: Thread-0 started
+INFO: 2018-08-31 14:34:23,186: root: Thread-1 started
+INFO: 2018-08-31 14:34:23,191: root: Thread-2 started
+INFO: 2018-08-31 14:34:23,213: root: Thread-3 started
+INFO: 2018-08-31 14:34:23,216: root: Thread-1 started
+INFO: 2018-08-31 14:34:23,220: root: Thread-0 started
+INFO: 2018-08-31 14:34:23,225: mongo_db: 0.7617440223693848 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:34:23,249: root: Thread-2 started
+INFO: 2018-08-31 14:34:23,279: root: Thread-1 started
+INFO: 2018-08-31 14:34:23,285: root: Thread-0 started
+INFO: 2018-08-31 14:34:23,293: root: Thread-3 started
+INFO: 2018-08-31 14:34:23,319: root: Thread-2 started
+INFO: 2018-08-31 14:34:23,403: root: Thread-1 started
+INFO: 2018-08-31 14:34:23,405: root: Thread-0 started
+INFO: 2018-08-31 14:34:23,406: root: Thread-3 started
+INFO: 2018-08-31 14:34:23,520: root: Thread-2 started
+INFO: 2018-08-31 14:34:23,550: root: Thread-1 started
+INFO: 2018-08-31 14:34:23,580: root: Thread-3 started
+INFO: 2018-08-31 14:34:23,604: root: Thread-0 started
+INFO: 2018-08-31 14:34:23,676: root: Thread-2 started
+INFO: 2018-08-31 14:34:23,812: root: Thread-1 started
+INFO: 2018-08-31 14:34:23,921: root: Thread-3 started
+INFO: 2018-08-31 14:34:23,979: root: Thread-0 started
+INFO: 2018-08-31 14:34:24,115: root: Thread-2 started
+INFO: 2018-08-31 14:34:24,220: root: Thread-1 started
+INFO: 2018-08-31 14:34:24,296: root: Thread-3 started
+INFO: 2018-08-31 14:34:24,309: root: Thread-0 started
+INFO: 2018-08-31 14:34:24,314: root: Thread-2 started
+INFO: 2018-08-31 14:34:24,326: root: Thread-1 started
+INFO: 2018-08-31 14:34:24,328: root: Thread-3 started
+INFO: 2018-08-31 14:34:24,336: mongo_db: 0.7306981086730957 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:34:24,400: root: Thread-2 started
+INFO: 2018-08-31 14:34:24,404: root: Thread-0 started
+INFO: 2018-08-31 14:34:24,415: root: Thread-1 started
+INFO: 2018-08-31 14:34:24,416: root: Thread-3 started
+INFO: 2018-08-31 14:34:24,552: root: Thread-0 started
+INFO: 2018-08-31 14:34:24,566: root: Thread-2 started
+INFO: 2018-08-31 14:34:24,586: root: Thread-3 started
+INFO: 2018-08-31 14:34:24,589: root: Thread-1 started
+INFO: 2018-08-31 14:34:24,691: root: Thread-0 started
+INFO: 2018-08-31 14:34:24,710: root: Thread-2 started
+INFO: 2018-08-31 14:34:24,747: root: Thread-3 started
+INFO: 2018-08-31 14:34:24,753: root: Thread-1 started
+INFO: 2018-08-31 14:34:25,034: root: Thread-2 started
+INFO: 2018-08-31 14:34:25,061: root: Thread-0 started
+INFO: 2018-08-31 14:34:25,161: root: Thread-3 started
+INFO: 2018-08-31 14:34:25,169: root: Thread-1 started
+INFO: 2018-08-31 14:34:25,430: root: Thread-2 started
+INFO: 2018-08-31 14:34:25,436: root: Thread-0 started
+INFO: 2018-08-31 14:34:25,442: root: Thread-1 started
+INFO: 2018-08-31 14:34:25,446: root: Thread-3 started
+INFO: 2018-08-31 14:34:25,455: mongo_db: 0.75636887550354 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:34:25,486: root: Stopping thread...
+INFO: 2018-08-31 14:34:25,486: root: Stopping thread...
+INFO: 2018-08-31 14:34:25,490: root: Stopping thread...
+INFO: 2018-08-31 14:34:25,493: root: Stopping thread...
+INFO: 2018-08-31 14:34:25,496: root: Thread-0 stopped
+INFO: 2018-08-31 14:34:25,496: root: Thread-2 stopped
+INFO: 2018-08-31 14:34:25,496: root: Thread-1 stopped
+INFO: 2018-08-31 14:34:25,497: root: Thread-3 stopped
+INFO: 2018-08-31 14:34:54,103: root: Thread-0 started
+INFO: 2018-08-31 14:34:54,104: root: Thread-1 started
+INFO: 2018-08-31 14:34:54,104: root: Thread-2 started
+INFO: 2018-08-31 14:34:54,105: root: Thread-3 started
+INFO: 2018-08-31 14:34:54,134: root: Thread-0 started
+INFO: 2018-08-31 14:34:54,137: root: Thread-1 started
+INFO: 2018-08-31 14:34:54,140: root: Thread-3 started
+INFO: 2018-08-31 14:34:54,172: root: Thread-0 started
+INFO: 2018-08-31 14:34:54,172: root: Thread-2 started
+INFO: 2018-08-31 14:34:54,177: root: Thread-3 started
+INFO: 2018-08-31 14:34:54,178: root: Thread-1 started
+INFO: 2018-08-31 14:34:54,221: root: Thread-0 started
+INFO: 2018-08-31 14:34:54,225: root: Thread-1 started
+INFO: 2018-08-31 14:34:54,226: root: Thread-2 started
+INFO: 2018-08-31 14:34:54,227: root: Thread-3 started
+INFO: 2018-08-31 14:34:54,269: root: Thread-0 started
+INFO: 2018-08-31 14:34:54,272: root: Thread-2 started
+INFO: 2018-08-31 14:34:54,272: root: Thread-1 started
+INFO: 2018-08-31 14:34:54,275: root: Thread-3 started
+INFO: 2018-08-31 14:34:54,335: root: Thread-0 started
+INFO: 2018-08-31 14:34:54,340: root: Thread-2 started
+INFO: 2018-08-31 14:34:54,343: root: Thread-1 started
+INFO: 2018-08-31 14:34:54,354: root: Thread-3 started
+INFO: 2018-08-31 14:34:54,449: root: Thread-0 started
+INFO: 2018-08-31 14:34:54,459: root: Thread-3 started
+INFO: 2018-08-31 14:34:54,464: root: Thread-2 started
+INFO: 2018-08-31 14:34:54,466: root: Thread-1 started
+INFO: 2018-08-31 14:34:54,487: root: Thread-0 started
+INFO: 2018-08-31 14:34:54,495: root: Thread-3 started
+INFO: 2018-08-31 14:34:54,562: root: Thread-1 started
+INFO: 2018-08-31 14:34:54,563: root: Thread-2 started
+INFO: 2018-08-31 14:34:54,582: root: Thread-3 started
+INFO: 2018-08-31 14:34:54,602: root: Thread-0 started
+INFO: 2018-08-31 14:34:54,685: root: Thread-1 started
+INFO: 2018-08-31 14:34:54,700: root: Thread-3 started
+INFO: 2018-08-31 14:34:54,712: root: Thread-2 started
+INFO: 2018-08-31 14:34:54,723: root: Thread-0 started
+INFO: 2018-08-31 14:34:54,767: root: Thread-1 started
+INFO: 2018-08-31 14:34:54,778: root: Thread-3 started
+INFO: 2018-08-31 14:34:54,780: root: Thread-0 started
+INFO: 2018-08-31 14:34:54,782: root: Thread-2 started
+INFO: 2018-08-31 14:34:54,898: root: Thread-3 started
+INFO: 2018-08-31 14:34:54,903: root: Thread-1 started
+INFO: 2018-08-31 14:34:54,903: root: Thread-0 started
+INFO: 2018-08-31 14:34:54,905: root: Thread-2 started
+INFO: 2018-08-31 14:34:54,967: root: Thread-3 started
+INFO: 2018-08-31 14:34:54,971: root: Thread-1 started
+INFO: 2018-08-31 14:34:54,977: root: Thread-2 started
+INFO: 2018-08-31 14:34:54,978: root: Thread-0 started
+INFO: 2018-08-31 14:34:55,113: root: Thread-3 started
+INFO: 2018-08-31 14:34:55,115: root: Thread-2 started
+INFO: 2018-08-31 14:34:55,115: root: Thread-0 started
+INFO: 2018-08-31 14:34:55,116: root: Thread-1 started
+INFO: 2018-08-31 14:34:55,169: root: Thread-1 started
+INFO: 2018-08-31 14:34:55,170: root: Thread-3 started
+INFO: 2018-08-31 14:34:55,172: root: Thread-0 started
+INFO: 2018-08-31 14:34:55,174: root: Thread-2 started
+INFO: 2018-08-31 14:34:55,291: root: Thread-0 started
+INFO: 2018-08-31 14:34:55,306: root: Thread-2 started
+INFO: 2018-08-31 14:34:55,309: root: Thread-3 started
+INFO: 2018-08-31 14:34:55,318: root: Thread-1 started
+INFO: 2018-08-31 14:34:55,370: root: Thread-2 started
+INFO: 2018-08-31 14:34:55,371: root: Thread-0 started
+INFO: 2018-08-31 14:34:55,373: root: Thread-3 started
+INFO: 2018-08-31 14:34:55,373: root: Thread-1 started
+INFO: 2018-08-31 14:34:55,494: root: Thread-1 started
+INFO: 2018-08-31 14:34:55,508: root: Thread-3 started
+INFO: 2018-08-31 14:34:55,517: root: Thread-2 started
+INFO: 2018-08-31 14:34:55,519: root: Thread-0 started
+INFO: 2018-08-31 14:34:55,583: root: Thread-1 started
+INFO: 2018-08-31 14:34:55,587: root: Thread-3 started
+INFO: 2018-08-31 14:34:55,592: root: Thread-0 started
+INFO: 2018-08-31 14:34:55,593: root: Thread-2 started
+INFO: 2018-08-31 14:34:55,625: root: Thread-3 started
+INFO: 2018-08-31 14:34:55,629: root: Thread-0 started
+INFO: 2018-08-31 14:34:55,631: root: Thread-2 started
+INFO: 2018-08-31 14:34:55,631: root: Thread-1 started
+INFO: 2018-08-31 14:34:55,667: root: Thread-3 started
+INFO: 2018-08-31 14:34:55,668: root: Thread-1 started
+INFO: 2018-08-31 14:34:55,672: root: Thread-2 started
+INFO: 2018-08-31 14:34:55,674: root: Thread-0 started
+INFO: 2018-08-31 14:34:55,783: root: Thread-1 started
+INFO: 2018-08-31 14:34:55,804: root: Thread-3 started
+INFO: 2018-08-31 14:34:55,806: root: Thread-2 started
+INFO: 2018-08-31 14:34:55,814: root: Thread-0 started
+INFO: 2018-08-31 14:34:55,883: root: Thread-2 started
+INFO: 2018-08-31 14:34:55,884: root: Thread-1 started
+INFO: 2018-08-31 14:34:55,884: root: Thread-3 started
+INFO: 2018-08-31 14:34:55,892: root: Thread-0 started
+INFO: 2018-08-31 14:34:55,924: root: Thread-3 started
+INFO: 2018-08-31 14:34:55,924: root: Thread-2 started
+INFO: 2018-08-31 14:34:55,928: root: Thread-1 started
+INFO: 2018-08-31 14:34:55,932: root: Thread-0 started
+INFO: 2018-08-31 14:34:55,973: root: Thread-1 started
+INFO: 2018-08-31 14:34:55,974: root: Thread-2 started
+INFO: 2018-08-31 14:34:55,976: root: Thread-0 started
+INFO: 2018-08-31 14:34:55,976: root: Thread-3 started
+INFO: 2018-08-31 14:34:56,120: root: Thread-0 started
+INFO: 2018-08-31 14:34:56,121: root: Thread-1 started
+INFO: 2018-08-31 14:34:56,130: root: Thread-3 started
+INFO: 2018-08-31 14:34:56,135: root: Thread-2 started
+INFO: 2018-08-31 14:34:56,195: root: Thread-1 started
+INFO: 2018-08-31 14:34:56,202: root: Thread-0 started
+INFO: 2018-08-31 14:34:56,228: root: Thread-3 started
+INFO: 2018-08-31 14:34:56,231: root: Thread-2 started
+INFO: 2018-08-31 14:34:56,333: root: Thread-1 started
+INFO: 2018-08-31 14:34:56,383: root: Thread-0 started
+INFO: 2018-08-31 14:34:56,396: root: Thread-2 started
+INFO: 2018-08-31 14:34:56,422: root: Thread-3 started
+INFO: 2018-08-31 14:34:56,515: root: Thread-1 started
+INFO: 2018-08-31 14:34:56,710: root: Thread-0 started
+INFO: 2018-08-31 14:34:56,729: root: Thread-2 started
+INFO: 2018-08-31 14:34:56,803: root: Thread-1 started
+INFO: 2018-08-31 14:34:56,829: root: Thread-3 started
+INFO: 2018-08-31 14:34:57,025: root: Thread-0 started
+INFO: 2018-08-31 14:34:57,082: root: Thread-2 started
+INFO: 2018-08-31 14:34:57,178: root: Thread-3 started
+INFO: 2018-08-31 14:34:57,178: root: Thread-1 started
+INFO: 2018-08-31 14:34:57,194: root: Thread-0 started
+INFO: 2018-08-31 14:34:57,215: mongo_db: 0.7323260307312012 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:34:57,259: root: Thread-2 started
+INFO: 2018-08-31 14:34:57,266: root: Thread-3 started
+INFO: 2018-08-31 14:34:57,274: root: Thread-1 started
+INFO: 2018-08-31 14:34:57,310: root: Thread-0 started
+INFO: 2018-08-31 14:34:57,382: root: Thread-2 started
+INFO: 2018-08-31 14:34:57,386: root: Thread-3 started
+INFO: 2018-08-31 14:34:57,392: root: Thread-1 started
+INFO: 2018-08-31 14:34:57,437: root: Thread-0 started
+INFO: 2018-08-31 14:34:57,495: root: Thread-2 started
+INFO: 2018-08-31 14:34:57,506: root: Thread-3 started
+INFO: 2018-08-31 14:34:57,510: root: Thread-1 started
+INFO: 2018-08-31 14:34:57,570: root: Thread-0 started
+INFO: 2018-08-31 14:34:57,631: root: Thread-2 started
+INFO: 2018-08-31 14:34:57,636: root: Thread-3 started
+INFO: 2018-08-31 14:34:57,646: root: Thread-1 started
+INFO: 2018-08-31 14:34:57,729: root: Thread-0 started
+INFO: 2018-08-31 14:34:57,932: root: Thread-2 started
+INFO: 2018-08-31 14:34:57,959: root: Thread-3 started
+INFO: 2018-08-31 14:34:58,005: root: Thread-1 started
+INFO: 2018-08-31 14:34:58,154: root: Thread-0 started
+INFO: 2018-08-31 14:34:58,343: root: Thread-2 started
+INFO: 2018-08-31 14:34:58,348: root: Thread-1 started
+INFO: 2018-08-31 14:34:58,348: root: Thread-3 started
+INFO: 2018-08-31 14:34:58,367: root: Thread-0 started
+INFO: 2018-08-31 14:34:58,375: mongo_db: 0.7254011631011963 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:34:58,399: root: Thread-3 started
+INFO: 2018-08-31 14:34:58,399: root: Thread-1 started
+INFO: 2018-08-31 14:34:58,400: root: Thread-2 started
+INFO: 2018-08-31 14:34:58,410: root: Thread-0 started
+INFO: 2018-08-31 14:34:58,504: root: Thread-3 started
+INFO: 2018-08-31 14:34:58,507: root: Thread-1 started
+INFO: 2018-08-31 14:34:58,516: root: Thread-0 started
+INFO: 2018-08-31 14:34:58,516: root: Thread-2 started
+INFO: 2018-08-31 14:34:58,656: root: Thread-3 started
+INFO: 2018-08-31 14:34:58,691: root: Thread-2 started
+INFO: 2018-08-31 14:34:58,709: root: Thread-1 started
+INFO: 2018-08-31 14:34:58,710: root: Thread-0 started
+INFO: 2018-08-31 14:34:58,787: root: Thread-3 started
+INFO: 2018-08-31 14:34:58,825: root: Thread-2 started
+INFO: 2018-08-31 14:34:58,844: root: Thread-0 started
+INFO: 2018-08-31 14:34:58,879: root: Thread-1 started
+INFO: 2018-08-31 14:34:59,194: root: Thread-3 started
+INFO: 2018-08-31 14:34:59,230: root: Thread-2 started
+INFO: 2018-08-31 14:34:59,287: root: Thread-0 started
+INFO: 2018-08-31 14:34:59,305: root: Thread-1 started
+INFO: 2018-08-31 14:34:59,503: root: Thread-3 started
+INFO: 2018-08-31 14:34:59,507: root: Thread-2 started
+INFO: 2018-08-31 14:34:59,514: root: Thread-0 started
+INFO: 2018-08-31 14:34:59,517: root: Thread-1 started
+INFO: 2018-08-31 14:34:59,523: mongo_db: 0.7565329074859619 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:34:59,573: root: Thread-3 started
+INFO: 2018-08-31 14:34:59,606: root: Thread-2 started
+INFO: 2018-08-31 14:34:59,607: root: Thread-1 started
+INFO: 2018-08-31 14:34:59,611: root: Thread-0 started
+INFO: 2018-08-31 14:34:59,691: root: Thread-3 started
+INFO: 2018-08-31 14:34:59,731: root: Thread-2 started
+INFO: 2018-08-31 14:34:59,752: root: Thread-1 started
+INFO: 2018-08-31 14:34:59,757: root: Thread-0 started
+INFO: 2018-08-31 14:34:59,839: root: Thread-3 started
+INFO: 2018-08-31 14:34:59,892: root: Thread-2 started
+INFO: 2018-08-31 14:34:59,975: root: Thread-1 started
+INFO: 2018-08-31 14:35:00,004: root: Thread-0 started
+INFO: 2018-08-31 14:35:00,200: root: Thread-3 started
+INFO: 2018-08-31 14:35:00,353: root: Thread-2 started
+INFO: 2018-08-31 14:35:00,380: root: Thread-1 started
+INFO: 2018-08-31 14:35:00,426: root: Thread-0 started
+INFO: 2018-08-31 14:35:00,544: root: Thread-3 started
+INFO: 2018-08-31 14:35:00,575: root: Thread-2 started
+INFO: 2018-08-31 14:35:00,577: root: Thread-1 started
+INFO: 2018-08-31 14:35:00,580: root: Thread-0 started
+INFO: 2018-08-31 14:35:00,589: mongo_db: 0.7075281143188477 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:35:00,612: root: Thread-3 started
+INFO: 2018-08-31 14:35:00,629: root: Thread-2 started
+INFO: 2018-08-31 14:35:00,632: root: Thread-0 started
+INFO: 2018-08-31 14:35:00,634: root: Thread-1 started
+INFO: 2018-08-31 14:35:00,677: root: Thread-3 started
+INFO: 2018-08-31 14:35:00,776: root: Thread-2 started
+INFO: 2018-08-31 14:35:00,779: root: Thread-0 started
+INFO: 2018-08-31 14:35:00,802: root: Thread-1 started
+INFO: 2018-08-31 14:35:00,836: root: Thread-3 started
+INFO: 2018-08-31 14:35:00,910: root: Thread-2 started
+INFO: 2018-08-31 14:35:00,919: root: Thread-0 started
+INFO: 2018-08-31 14:35:00,953: root: Thread-1 started
+INFO: 2018-08-31 14:35:01,066: root: Thread-3 started
+INFO: 2018-08-31 14:35:01,179: root: Thread-2 started
+INFO: 2018-08-31 14:35:01,205: root: Thread-1 started
+INFO: 2018-08-31 14:35:01,240: root: Thread-0 started
+INFO: 2018-08-31 14:35:01,437: root: Thread-3 started
+INFO: 2018-08-31 14:35:01,629: root: Thread-2 started
+INFO: 2018-08-31 14:35:01,637: root: Thread-0 started
+INFO: 2018-08-31 14:35:01,640: root: Thread-1 started
+INFO: 2018-08-31 14:35:01,683: root: Thread-3 started
+INFO: 2018-08-31 14:35:01,703: mongo_db: 0.723613977432251 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:35:01,705: root: Thread-2 started
+INFO: 2018-08-31 14:35:01,705: root: Thread-1 started
+INFO: 2018-08-31 14:35:01,734: root: Stopping thread 0
+INFO: 2018-08-31 14:35:01,734: root: Thread-0 stopped
+INFO: 2018-08-31 14:35:01,754: root: Stopping thread 3
+INFO: 2018-08-31 14:35:01,754: root: Thread-3 stopped
+INFO: 2018-08-31 14:35:01,761: root: Stopping thread 1
+INFO: 2018-08-31 14:35:01,761: root: Thread-1 stopped
+INFO: 2018-08-31 14:35:01,762: root: Stopping thread 2
+INFO: 2018-08-31 14:35:01,762: root: Thread-2 stopped
+INFO: 2018-08-31 14:40:35,199: mysql_db: 0.7051169872283936 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:40:36,231: mysql_db: 0.6955075263977051 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:40:37,071: mysql_db: 0.55100417137146 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:40:37,918: mysql_db: 0.56709885597229 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:40:38,859: mysql_db: 0.6867399215698242 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:40:38,863: root: Thread-0 started
+INFO: 2018-08-31 14:40:38,864: root: Thread-1 started
+INFO: 2018-08-31 14:40:38,864: root: Thread-2 started
+INFO: 2018-08-31 14:40:38,865: root: Thread-3 started
+INFO: 2018-08-31 14:40:50,626: root: Thread-0 started
+INFO: 2018-08-31 14:40:50,626: root: Thread-1 started
+INFO: 2018-08-31 14:40:50,627: root: Thread-2 started
+INFO: 2018-08-31 14:40:50,627: root: Thread-3 started
+INFO: 2018-08-31 14:40:53,436: mysql_db: 0.502147912979126 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:40:54,302: mysql_db: 0.64752197265625 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:40:55,036: mysql_db: 0.44546031951904297 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:40:55,751: mysql_db: 0.49936509132385254 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:40:56,702: mysql_db: 0.6675596237182617 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:43:08,618: root: Thread-0 started
+INFO: 2018-08-31 14:43:08,619: root: Thread-1 started
+INFO: 2018-08-31 14:43:08,619: root: Thread-2 started
+INFO: 2018-08-31 14:43:08,620: root: Thread-3 started
+INFO: 2018-08-31 14:43:11,412: mysql_db: 0.45032238960266113 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:43:12,106: mysql_db: 0.4557840824127197 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:43:12,791: mysql_db: 0.460559606552124 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:43:13,947: mysql_db: 0.9125990867614746 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:43:14,700: mysql_db: 0.47488975524902344 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:43:28,517: root: Thread-0 started
+INFO: 2018-08-31 14:43:28,517: root: Thread-1 started
+INFO: 2018-08-31 14:43:28,518: root: Thread-2 started
+INFO: 2018-08-31 14:43:28,518: root: Thread-3 started
+INFO: 2018-08-31 14:43:31,323: mysql_db: 0.5164656639099121 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:43:32,086: mysql_db: 0.530022382736206 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:43:33,743: mysql_db: 1.3716669082641602 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:43:35,297: mysql_db: 0.8081991672515869 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:43:35,989: mysql_db: 0.4877920150756836 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:44:03,045: root: Thread-0 started
+INFO: 2018-08-31 14:44:03,045: root: Thread-1 started
+INFO: 2018-08-31 14:44:03,046: root: Thread-2 started
+INFO: 2018-08-31 14:44:03,046: root: Thread-3 started
+INFO: 2018-08-31 14:44:03,574: root: Thread-3 started
+INFO: 2018-08-31 14:44:04,211: root: Thread-1 started
+INFO: 2018-08-31 14:44:04,266: root: Thread-0 started
+INFO: 2018-08-31 14:44:04,286: root: Thread-3 started
+INFO: 2018-08-31 14:44:04,323: root: Thread-2 started
+INFO: 2018-08-31 14:44:05,081: root: Thread-3 started
+INFO: 2018-08-31 14:44:05,117: root: Thread-0 started
+INFO: 2018-08-31 14:44:05,277: root: Thread-2 started
+INFO: 2018-08-31 14:44:05,574: root: Thread-1 started
+INFO: 2018-08-31 14:44:05,723: root: Thread-1 started
+INFO: 2018-08-31 14:44:05,890: root: Thread-1 started
+INFO: 2018-08-31 14:44:05,957: root: Thread-1 started
+INFO: 2018-08-31 14:44:05,998: root: Thread-0 started
+INFO: 2018-08-31 14:44:06,022: root: Thread-1 started
+INFO: 2018-08-31 14:44:06,053: root: Thread-0 started
+INFO: 2018-08-31 14:44:06,084: root: Thread-1 started
+INFO: 2018-08-31 14:44:06,170: root: Thread-0 started
+INFO: 2018-08-31 14:44:06,268: root: Thread-1 started
+INFO: 2018-08-31 14:44:06,284: root: Thread-3 started
+INFO: 2018-08-31 14:44:06,312: root: Thread-0 started
+INFO: 2018-08-31 14:44:06,398: root: Thread-1 started
+INFO: 2018-08-31 14:44:06,419: root: Thread-0 started
+INFO: 2018-08-31 14:44:06,434: root: Thread-3 started
+INFO: 2018-08-31 14:44:06,507: root: Thread-2 started
+INFO: 2018-08-31 14:44:06,518: root: Thread-1 started
+INFO: 2018-08-31 14:44:06,536: root: Thread-3 started
+INFO: 2018-08-31 14:44:06,540: root: Thread-0 started
+INFO: 2018-08-31 14:44:06,579: root: Thread-2 started
+INFO: 2018-08-31 14:44:06,584: root: Thread-1 started
+INFO: 2018-08-31 14:44:06,598: root: Thread-3 started
+INFO: 2018-08-31 14:44:06,599: root: Thread-0 started
+INFO: 2018-08-31 14:44:06,718: root: Thread-1 started
+INFO: 2018-08-31 14:44:06,737: root: Thread-2 started
+INFO: 2018-08-31 14:44:06,802: root: Thread-0 started
+INFO: 2018-08-31 14:44:06,817: root: Thread-3 started
+INFO: 2018-08-31 14:44:06,888: root: Thread-0 started
+INFO: 2018-08-31 14:44:06,920: root: Thread-2 started
+INFO: 2018-08-31 14:44:06,934: root: Thread-3 started
+INFO: 2018-08-31 14:44:06,935: root: Thread-1 started
+INFO: 2018-08-31 14:44:07,020: root: Thread-3 started
+INFO: 2018-08-31 14:44:07,050: root: Thread-0 started
+INFO: 2018-08-31 14:44:07,051: root: Thread-2 started
+INFO: 2018-08-31 14:44:07,073: root: Thread-3 started
+INFO: 2018-08-31 14:44:07,112: root: Thread-0 started
+INFO: 2018-08-31 14:44:07,121: root: Thread-2 started
+INFO: 2018-08-31 14:44:07,194: root: Thread-1 started
+INFO: 2018-08-31 14:44:07,205: root: Thread-3 started
+INFO: 2018-08-31 14:44:07,247: root: Thread-0 started
+INFO: 2018-08-31 14:44:07,319: root: Thread-1 started
+INFO: 2018-08-31 14:44:07,323: root: Thread-3 started
+INFO: 2018-08-31 14:44:07,324: root: Thread-0 started
+INFO: 2018-08-31 14:44:07,331: root: Thread-2 started
+INFO: 2018-08-31 14:44:07,416: root: Thread-3 started
+INFO: 2018-08-31 14:44:07,431: root: Thread-2 started
+INFO: 2018-08-31 14:44:07,441: root: Thread-1 started
+INFO: 2018-08-31 14:44:07,442: root: Thread-0 started
+INFO: 2018-08-31 14:44:07,565: root: Thread-2 started
+INFO: 2018-08-31 14:44:07,570: root: Thread-1 started
+INFO: 2018-08-31 14:44:07,615: root: Thread-1 started
+INFO: 2018-08-31 14:44:07,618: root: Thread-2 started
+INFO: 2018-08-31 14:44:07,625: root: Thread-3 started
+INFO: 2018-08-31 14:44:07,635: root: Thread-0 started
+INFO: 2018-08-31 14:44:07,746: root: Thread-2 started
+INFO: 2018-08-31 14:44:07,748: root: Thread-1 started
+INFO: 2018-08-31 14:44:07,796: root: Thread-3 started
+INFO: 2018-08-31 14:44:07,834: root: Thread-0 started
+INFO: 2018-08-31 14:44:07,876: root: Thread-1 started
+INFO: 2018-08-31 14:44:07,893: root: Thread-2 started
+INFO: 2018-08-31 14:44:07,901: root: Thread-3 started
+INFO: 2018-08-31 14:44:07,923: root: Thread-1 started
+INFO: 2018-08-31 14:44:07,939: root: Thread-0 started
+INFO: 2018-08-31 14:44:08,022: root: Thread-3 started
+INFO: 2018-08-31 14:44:08,058: root: Thread-2 started
+INFO: 2018-08-31 14:44:08,093: root: Thread-1 started
+INFO: 2018-08-31 14:44:08,167: root: Thread-0 started
+INFO: 2018-08-31 14:44:08,172: root: Thread-3 started
+INFO: 2018-08-31 14:44:08,200: root: Thread-2 started
+INFO: 2018-08-31 14:44:08,242: root: Thread-3 started
+INFO: 2018-08-31 14:44:08,311: root: Thread-1 started
+INFO: 2018-08-31 14:44:08,327: root: Thread-3 started
+INFO: 2018-08-31 14:44:08,364: root: Thread-0 started
+INFO: 2018-08-31 14:44:08,386: root: Thread-2 started
+INFO: 2018-08-31 14:44:08,417: root: Thread-0 started
+INFO: 2018-08-31 14:44:08,424: root: Thread-1 started
+INFO: 2018-08-31 14:44:08,473: root: Thread-0 started
+INFO: 2018-08-31 14:44:08,501: root: Thread-3 started
+INFO: 2018-08-31 14:44:08,569: root: Thread-2 started
+INFO: 2018-08-31 14:44:08,578: root: Thread-1 started
+INFO: 2018-08-31 14:44:08,587: mysql_db: 2.904000997543335 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:44:08,590: root: Thread-3 started
+INFO: 2018-08-31 14:44:08,928: root: Thread-0 started
+INFO: 2018-08-31 14:44:09,634: root: Thread-1 started
+INFO: 2018-08-31 14:44:09,698: root: Thread-0 started
+INFO: 2018-08-31 14:44:09,716: root: Thread-2 started
+INFO: 2018-08-31 14:44:09,743: root: Thread-3 started
+INFO: 2018-08-31 14:44:09,745: root: Thread-1 started
+INFO: 2018-08-31 14:44:09,782: root: Thread-0 started
+INFO: 2018-08-31 14:44:09,782: root: Thread-2 started
+INFO: 2018-08-31 14:44:09,815: root: Thread-1 started
+INFO: 2018-08-31 14:44:09,824: root: Thread-3 started
+INFO: 2018-08-31 14:44:09,867: root: Thread-2 started
+INFO: 2018-08-31 14:44:09,905: root: Thread-0 started
+INFO: 2018-08-31 14:44:09,966: root: Thread-3 started
+INFO: 2018-08-31 14:44:10,007: root: Thread-1 started
+INFO: 2018-08-31 14:44:10,042: root: Thread-0 started
+INFO: 2018-08-31 14:44:10,045: root: Thread-2 started
+INFO: 2018-08-31 14:44:10,071: root: Thread-3 started
+INFO: 2018-08-31 14:44:10,171: root: Thread-1 started
+INFO: 2018-08-31 14:44:10,193: root: Thread-2 started
+INFO: 2018-08-31 14:44:10,195: root: Thread-0 started
+INFO: 2018-08-31 14:44:10,232: root: Thread-3 started
+INFO: 2018-08-31 14:44:10,245: root: Thread-1 started
+INFO: 2018-08-31 14:44:10,247: root: Thread-2 started
+INFO: 2018-08-31 14:44:10,265: root: Thread-0 started
+INFO: 2018-08-31 14:44:10,295: root: Thread-3 started
+INFO: 2018-08-31 14:44:10,415: root: Thread-1 started
+INFO: 2018-08-31 14:44:10,423: root: Thread-2 started
+INFO: 2018-08-31 14:44:10,442: root: Thread-0 started
+INFO: 2018-08-31 14:44:10,456: root: Thread-3 started
+INFO: 2018-08-31 14:44:10,474: root: Thread-2 started
+INFO: 2018-08-31 14:44:10,497: root: Thread-3 started
+INFO: 2018-08-31 14:44:10,511: root: Thread-0 started
+INFO: 2018-08-31 14:44:10,597: root: Thread-3 started
+INFO: 2018-08-31 14:44:10,616: root: Thread-0 started
+INFO: 2018-08-31 14:44:10,631: root: Thread-1 started
+INFO: 2018-08-31 14:44:10,646: root: Thread-2 started
+INFO: 2018-08-31 14:44:10,697: root: Thread-1 started
+INFO: 2018-08-31 14:44:10,706: root: Thread-0 started
+INFO: 2018-08-31 14:44:10,751: root: Thread-2 started
+INFO: 2018-08-31 14:44:10,787: root: Thread-3 started
+INFO: 2018-08-31 14:44:10,849: root: Thread-0 started
+INFO: 2018-08-31 14:44:10,877: root: Thread-1 started
+INFO: 2018-08-31 14:44:10,892: root: Thread-2 started
+INFO: 2018-08-31 14:44:10,935: root: Thread-3 started
+INFO: 2018-08-31 14:44:10,973: root: Thread-0 started
+INFO: 2018-08-31 14:44:10,995: root: Thread-2 started
+INFO: 2018-08-31 14:44:11,033: root: Thread-1 started
+INFO: 2018-08-31 14:44:11,045: root: Thread-3 started
+INFO: 2018-08-31 14:44:11,082: root: Thread-1 started
+INFO: 2018-08-31 14:44:11,093: root: Thread-2 started
+INFO: 2018-08-31 14:44:11,101: root: Thread-3 started
+INFO: 2018-08-31 14:44:11,181: root: Thread-2 started
+INFO: 2018-08-31 14:44:11,217: root: Thread-1 started
+INFO: 2018-08-31 14:44:11,244: root: Thread-0 started
+INFO: 2018-08-31 14:44:11,288: root: Thread-3 started
+INFO: 2018-08-31 14:44:11,331: root: Thread-1 started
+INFO: 2018-08-31 14:44:11,335: root: Thread-2 started
+INFO: 2018-08-31 14:44:11,345: root: Thread-0 started
+INFO: 2018-08-31 14:44:11,368: root: Thread-3 started
+INFO: 2018-08-31 14:44:11,546: root: Thread-0 started
+INFO: 2018-08-31 14:44:11,550: root: Thread-2 started
+INFO: 2018-08-31 14:44:11,552: root: Thread-3 started
+INFO: 2018-08-31 14:44:11,573: root: Thread-1 started
+INFO: 2018-08-31 14:44:11,595: root: Thread-0 started
+INFO: 2018-08-31 14:44:11,602: root: Thread-3 started
+INFO: 2018-08-31 14:44:11,606: root: Thread-2 started
+INFO: 2018-08-31 14:44:11,668: root: Thread-0 started
+INFO: 2018-08-31 14:44:11,683: root: Thread-3 started
+INFO: 2018-08-31 14:44:11,689: root: Thread-1 started
+INFO: 2018-08-31 14:44:11,711: root: Thread-2 started
+INFO: 2018-08-31 14:44:11,743: root: Thread-1 started
+INFO: 2018-08-31 14:44:11,859: root: Thread-1 started
+INFO: 2018-08-31 14:44:11,919: root: Thread-3 started
+INFO: 2018-08-31 14:44:11,929: root: Thread-0 started
+INFO: 2018-08-31 14:44:11,939: root: Thread-1 started
+INFO: 2018-08-31 14:44:11,942: root: Thread-2 started
+INFO: 2018-08-31 14:44:11,977: root: Thread-1 started
+INFO: 2018-08-31 14:44:12,020: root: Thread-1 started
+INFO: 2018-08-31 14:44:12,046: root: Thread-3 started
+INFO: 2018-08-31 14:44:12,062: root: Thread-0 started
+INFO: 2018-08-31 14:44:12,062: root: Thread-1 started
+INFO: 2018-08-31 14:44:12,081: root: Thread-2 started
+INFO: 2018-08-31 14:44:12,178: root: Thread-1 started
+INFO: 2018-08-31 14:44:12,214: root: Thread-2 started
+INFO: 2018-08-31 14:44:12,222: root: Thread-3 started
+INFO: 2018-08-31 14:44:12,235: root: Thread-0 started
+INFO: 2018-08-31 14:44:12,266: root: Thread-1 started
+INFO: 2018-08-31 14:44:12,281: root: Thread-2 started
+INFO: 2018-08-31 14:44:12,399: root: Thread-0 started
+INFO: 2018-08-31 14:44:12,421: root: Thread-1 started
+INFO: 2018-08-31 14:44:12,424: root: Thread-3 started
+INFO: 2018-08-31 14:44:12,430: root: Thread-2 started
+INFO: 2018-08-31 14:44:12,462: root: Thread-2 started
+INFO: 2018-08-31 14:44:12,546: root: Thread-0 started
+INFO: 2018-08-31 14:44:12,565: root: Thread-3 started
+INFO: 2018-08-31 14:44:12,623: root: Thread-0 started
+INFO: 2018-08-31 14:44:12,635: root: Thread-1 started
+INFO: 2018-08-31 14:44:12,641: root: Thread-2 started
+INFO: 2018-08-31 14:44:12,648: root: Thread-3 started
+INFO: 2018-08-31 14:44:12,692: root: Thread-0 started
+INFO: 2018-08-31 14:44:12,726: root: Thread-1 started
+INFO: 2018-08-31 14:44:12,729: root: Thread-2 started
+INFO: 2018-08-31 14:44:12,738: mysql_db: 3.6201279163360596 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:44:12,742: root: Thread-3 started
+INFO: 2018-08-31 14:44:12,884: root: Thread-0 started
+INFO: 2018-08-31 14:44:13,849: root: Thread-1 started
+INFO: 2018-08-31 14:44:14,079: root: Thread-1 started
+INFO: 2018-08-31 14:44:14,101: root: Thread-3 started
+INFO: 2018-08-31 14:44:14,157: root: Thread-1 started
+INFO: 2018-08-31 14:44:14,172: root: Thread-0 started
+INFO: 2018-08-31 14:44:14,179: root: Thread-2 started
+INFO: 2018-08-31 14:44:14,218: root: Thread-1 started
+INFO: 2018-08-31 14:44:14,267: root: Thread-1 started
+INFO: 2018-08-31 14:44:14,283: root: Thread-0 started
+INFO: 2018-08-31 14:44:14,469: root: Thread-3 started
+INFO: 2018-08-31 14:44:14,479: root: Thread-2 started
+INFO: 2018-08-31 14:44:14,485: root: Thread-0 started
+INFO: 2018-08-31 14:44:14,489: root: Thread-1 started
+INFO: 2018-08-31 14:44:14,598: root: Thread-2 started
+INFO: 2018-08-31 14:44:14,606: root: Thread-0 started
+INFO: 2018-08-31 14:44:14,612: root: Thread-3 started
+INFO: 2018-08-31 14:44:14,620: root: Thread-1 started
+INFO: 2018-08-31 14:44:14,656: root: Thread-2 started
+INFO: 2018-08-31 14:44:14,787: root: Thread-2 started
+INFO: 2018-08-31 14:44:14,798: root: Thread-3 started
+INFO: 2018-08-31 14:44:14,831: root: Thread-0 started
+INFO: 2018-08-31 14:44:14,833: root: Thread-1 started
+INFO: 2018-08-31 14:44:14,861: root: Thread-2 started
+INFO: 2018-08-31 14:44:14,873: root: Thread-3 started
+INFO: 2018-08-31 14:44:14,908: root: Thread-0 started
+INFO: 2018-08-31 14:44:14,937: root: Thread-1 started
+INFO: 2018-08-31 14:44:14,938: root: Thread-2 started
+INFO: 2018-08-31 14:44:14,979: root: Thread-0 started
+INFO: 2018-08-31 14:44:15,029: root: Thread-1 started
+INFO: 2018-08-31 14:44:15,109: root: Thread-3 started
+INFO: 2018-08-31 14:44:15,177: root: Thread-1 started
+INFO: 2018-08-31 14:44:15,181: root: Thread-2 started
+INFO: 2018-08-31 14:44:15,182: root: Thread-0 started
+INFO: 2018-08-31 14:44:15,206: root: Thread-3 started
+INFO: 2018-08-31 14:44:15,312: root: Thread-1 started
+INFO: 2018-08-31 14:44:15,319: root: Thread-0 started
+INFO: 2018-08-31 14:44:15,363: root: Thread-2 started
+INFO: 2018-08-31 14:44:15,366: root: Thread-3 started
+INFO: 2018-08-31 14:44:15,443: root: Thread-0 started
+INFO: 2018-08-31 14:44:15,451: root: Thread-3 started
+INFO: 2018-08-31 14:44:15,459: root: Thread-1 started
+INFO: 2018-08-31 14:44:15,503: root: Thread-0 started
+INFO: 2018-08-31 14:44:15,545: root: Thread-3 started
+INFO: 2018-08-31 14:44:15,578: root: Thread-2 started
+INFO: 2018-08-31 14:44:15,600: root: Thread-1 started
+INFO: 2018-08-31 14:44:15,678: root: Thread-0 started
+INFO: 2018-08-31 14:44:15,746: root: Thread-0 started
+INFO: 2018-08-31 14:44:15,789: root: Thread-1 started
+INFO: 2018-08-31 14:44:15,847: root: Thread-3 started
+INFO: 2018-08-31 14:44:15,850: root: Thread-2 started
+INFO: 2018-08-31 14:44:15,858: root: Thread-0 started
+INFO: 2018-08-31 14:44:15,878: root: Thread-1 started
+INFO: 2018-08-31 14:44:15,914: root: Thread-3 started
+INFO: 2018-08-31 14:44:15,939: root: Thread-1 started
+INFO: 2018-08-31 14:44:15,964: root: Thread-3 started
+INFO: 2018-08-31 14:44:15,984: root: Thread-1 started
+INFO: 2018-08-31 14:44:15,986: root: Thread-2 started
+INFO: 2018-08-31 14:44:16,026: root: Thread-0 started
+INFO: 2018-08-31 14:44:16,095: root: Thread-3 started
+INFO: 2018-08-31 14:44:16,150: root: Thread-2 started
+INFO: 2018-08-31 14:44:16,183: root: Thread-1 started
+INFO: 2018-08-31 14:44:16,192: root: Thread-0 started
+INFO: 2018-08-31 14:44:16,234: root: Thread-3 started
+INFO: 2018-08-31 14:44:16,299: root: Thread-1 started
+INFO: 2018-08-31 14:44:16,304: root: Thread-2 started
+INFO: 2018-08-31 14:44:16,334: root: Thread-2 started
+INFO: 2018-08-31 14:44:16,368: root: Thread-1 started
+INFO: 2018-08-31 14:44:16,381: root: Thread-0 started
+INFO: 2018-08-31 14:44:16,488: root: Thread-3 started
+INFO: 2018-08-31 14:44:16,522: root: Thread-2 started
+INFO: 2018-08-31 14:44:16,571: root: Thread-0 started
+INFO: 2018-08-31 14:44:16,595: root: Thread-1 started
+INFO: 2018-08-31 14:44:16,633: root: Thread-2 started
+INFO: 2018-08-31 14:44:16,639: root: Thread-3 started
+INFO: 2018-08-31 14:44:16,680: root: Thread-3 started
+INFO: 2018-08-31 14:44:16,687: root: Thread-0 started
+INFO: 2018-08-31 14:44:16,760: root: Thread-1 started
+INFO: 2018-08-31 14:44:16,805: root: Thread-3 started
+INFO: 2018-08-31 14:44:16,834: root: Thread-2 started
+INFO: 2018-08-31 14:44:16,846: mysql_db: 3.3042750358581543 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:44:16,860: root: Thread-0 started
+INFO: 2018-08-31 14:44:16,871: root: Thread-3 started
+INFO: 2018-08-31 14:44:16,872: root: Thread-1 started
+INFO: 2018-08-31 14:44:17,104: root: Thread-1 started
+INFO: 2018-08-31 14:44:17,579: root: Thread-2 started
+INFO: 2018-08-31 14:44:17,640: root: Thread-0 started
+INFO: 2018-08-31 14:44:17,652: root: Thread-1 started
+INFO: 2018-08-31 14:44:17,739: root: Thread-0 started
+INFO: 2018-08-31 14:44:17,782: root: Thread-1 started
+INFO: 2018-08-31 14:44:17,959: root: Thread-0 started
+INFO: 2018-08-31 14:44:18,030: root: Thread-1 started
+INFO: 2018-08-31 14:44:18,098: root: Thread-0 started
+INFO: 2018-08-31 14:44:18,147: root: Thread-1 started
+INFO: 2018-08-31 14:44:18,292: root: Thread-0 started
+INFO: 2018-08-31 14:44:18,296: root: Thread-1 started
+INFO: 2018-08-31 14:44:18,401: root: Thread-0 started
+INFO: 2018-08-31 14:44:18,467: root: Thread-1 started
+INFO: 2018-08-31 14:44:18,540: root: Thread-3 started
+INFO: 2018-08-31 14:44:18,567: root: Thread-0 started
+INFO: 2018-08-31 14:44:18,629: root: Thread-1 started
+INFO: 2018-08-31 14:44:18,659: root: Thread-0 started
+INFO: 2018-08-31 14:44:18,671: root: Thread-3 started
+INFO: 2018-08-31 14:44:18,765: root: Thread-1 started
+INFO: 2018-08-31 14:44:18,931: root: Thread-3 started
+INFO: 2018-08-31 14:44:18,938: root: Thread-1 started
+INFO: 2018-08-31 14:44:18,962: root: Thread-0 started
+INFO: 2018-08-31 14:44:19,063: root: Thread-2 started
+INFO: 2018-08-31 14:44:19,064: root: Thread-1 started
+INFO: 2018-08-31 14:44:19,087: root: Thread-0 started
+INFO: 2018-08-31 14:44:19,125: root: Thread-3 started
+INFO: 2018-08-31 14:44:19,132: root: Thread-2 started
+INFO: 2018-08-31 14:44:19,158: root: Thread-0 started
+INFO: 2018-08-31 14:44:19,169: root: Thread-1 started
+INFO: 2018-08-31 14:44:19,206: root: Thread-1 started
+INFO: 2018-08-31 14:44:19,210: root: Thread-0 started
+INFO: 2018-08-31 14:44:19,269: root: Thread-3 started
+INFO: 2018-08-31 14:44:19,304: root: Thread-0 started
+INFO: 2018-08-31 14:44:19,314: root: Thread-1 started
+INFO: 2018-08-31 14:44:19,425: root: Thread-2 started
+INFO: 2018-08-31 14:44:19,445: root: Thread-3 started
+INFO: 2018-08-31 14:44:19,455: root: Thread-1 started
+INFO: 2018-08-31 14:44:19,481: root: Thread-2 started
+INFO: 2018-08-31 14:44:19,582: root: Thread-3 started
+INFO: 2018-08-31 14:44:19,598: root: Thread-0 started
+INFO: 2018-08-31 14:44:19,599: root: Thread-1 started
+INFO: 2018-08-31 14:44:19,606: root: Thread-2 started
+INFO: 2018-08-31 14:44:19,647: root: Thread-3 started
+INFO: 2018-08-31 14:44:19,681: root: Thread-3 started
+INFO: 2018-08-31 14:44:19,764: root: Thread-0 started
+INFO: 2018-08-31 14:44:19,785: root: Thread-2 started
+INFO: 2018-08-31 14:44:19,789: root: Thread-1 started
+INFO: 2018-08-31 14:44:19,795: root: Thread-3 started
+INFO: 2018-08-31 14:44:19,854: root: Thread-0 started
+INFO: 2018-08-31 14:44:19,868: root: Thread-2 started
+INFO: 2018-08-31 14:44:19,873: root: Thread-3 started
+INFO: 2018-08-31 14:44:19,880: root: Thread-1 started
+INFO: 2018-08-31 14:44:19,939: root: Thread-3 started
+INFO: 2018-08-31 14:44:19,956: root: Thread-2 started
+INFO: 2018-08-31 14:44:20,025: root: Thread-0 started
+INFO: 2018-08-31 14:44:20,028: root: Thread-3 started
+INFO: 2018-08-31 14:44:20,097: root: Thread-2 started
+INFO: 2018-08-31 14:44:20,157: root: Thread-1 started
+INFO: 2018-08-31 14:44:20,218: root: Thread-0 started
+INFO: 2018-08-31 14:44:20,268: root: Thread-3 started
+INFO: 2018-08-31 14:44:20,275: root: Thread-1 started
+INFO: 2018-08-31 14:44:20,306: root: Thread-2 started
+INFO: 2018-08-31 14:44:20,363: root: Thread-2 started
+INFO: 2018-08-31 14:44:20,366: root: Thread-3 started
+INFO: 2018-08-31 14:44:20,369: root: Thread-1 started
+INFO: 2018-08-31 14:44:20,440: root: Thread-2 started
+INFO: 2018-08-31 14:44:20,440: root: Thread-3 started
+INFO: 2018-08-31 14:44:20,441: root: Thread-0 started
+INFO: 2018-08-31 14:44:20,508: root: Thread-0 started
+INFO: 2018-08-31 14:44:20,541: root: Thread-3 started
+INFO: 2018-08-31 14:44:20,568: root: Thread-1 started
+INFO: 2018-08-31 14:44:20,627: root: Thread-2 started
+INFO: 2018-08-31 14:44:20,650: root: Thread-0 started
+INFO: 2018-08-31 14:44:20,692: root: Thread-3 started
+INFO: 2018-08-31 14:44:20,697: root: Thread-1 started
+INFO: 2018-08-31 14:44:20,714: root: Thread-2 started
+INFO: 2018-08-31 14:44:20,720: root: Thread-0 started
+INFO: 2018-08-31 14:44:20,872: root: Thread-1 started
+INFO: 2018-08-31 14:44:20,876: root: Thread-3 started
+INFO: 2018-08-31 14:44:20,881: root: Thread-2 started
+INFO: 2018-08-31 14:44:20,888: root: Thread-0 started
+INFO: 2018-08-31 14:44:21,004: root: Thread-2 started
+INFO: 2018-08-31 14:44:21,004: root: Thread-0 started
+INFO: 2018-08-31 14:44:21,007: root: Thread-1 started
+INFO: 2018-08-31 14:44:21,061: root: Thread-3 started
+INFO: 2018-08-31 14:44:21,071: root: Thread-0 started
+INFO: 2018-08-31 14:44:21,112: root: Thread-0 started
+INFO: 2018-08-31 14:44:21,145: root: Thread-2 started
+INFO: 2018-08-31 14:44:21,153: root: Thread-3 started
+INFO: 2018-08-31 14:44:21,156: root: Thread-1 started
+INFO: 2018-08-31 14:44:21,173: root: Thread-0 started
+INFO: 2018-08-31 14:44:21,192: mysql_db: 3.4834859371185303 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:44:21,269: root: Thread-3 started
+INFO: 2018-08-31 14:44:21,283: root: Thread-2 started
+INFO: 2018-08-31 14:44:21,541: root: Thread-1 started
+INFO: 2018-08-31 14:44:21,723: root: Thread-2 started
+INFO: 2018-08-31 14:44:21,844: root: Thread-2 started
+INFO: 2018-08-31 14:44:22,026: root: Thread-2 started
+INFO: 2018-08-31 14:44:22,308: root: Thread-2 started
+INFO: 2018-08-31 14:44:22,498: root: Thread-1 started
+INFO: 2018-08-31 14:44:22,514: root: Thread-3 started
+INFO: 2018-08-31 14:44:22,516: root: Thread-2 started
+INFO: 2018-08-31 14:44:22,610: root: Thread-1 started
+INFO: 2018-08-31 14:44:22,624: root: Thread-2 started
+INFO: 2018-08-31 14:44:22,634: root: Thread-3 started
+INFO: 2018-08-31 14:44:22,672: root: Thread-0 started
+INFO: 2018-08-31 14:44:22,692: root: Thread-1 started
+INFO: 2018-08-31 14:44:22,705: root: Thread-2 started
+INFO: 2018-08-31 14:44:22,727: root: Thread-3 started
+INFO: 2018-08-31 14:44:22,773: root: Thread-0 started
+INFO: 2018-08-31 14:44:22,806: root: Thread-1 started
+INFO: 2018-08-31 14:44:22,881: root: Thread-2 started
+INFO: 2018-08-31 14:44:22,905: root: Thread-0 started
+INFO: 2018-08-31 14:44:22,908: root: Thread-3 started
+INFO: 2018-08-31 14:44:22,923: root: Thread-1 started
+INFO: 2018-08-31 14:44:23,001: root: Thread-2 started
+INFO: 2018-08-31 14:44:23,083: root: Thread-0 started
+INFO: 2018-08-31 14:44:23,093: root: Thread-1 started
+INFO: 2018-08-31 14:44:23,106: root: Thread-3 started
+INFO: 2018-08-31 14:44:23,149: root: Thread-1 started
+INFO: 2018-08-31 14:44:23,156: root: Thread-3 started
+INFO: 2018-08-31 14:44:23,170: root: Thread-2 started
+INFO: 2018-08-31 14:44:23,171: root: Thread-0 started
+INFO: 2018-08-31 14:44:23,207: root: Thread-1 started
+INFO: 2018-08-31 14:44:23,233: root: Thread-3 started
+INFO: 2018-08-31 14:44:23,273: root: Thread-2 started
+INFO: 2018-08-31 14:44:23,379: root: Thread-0 started
+INFO: 2018-08-31 14:44:23,381: root: Thread-1 started
+INFO: 2018-08-31 14:44:23,413: root: Thread-3 started
+INFO: 2018-08-31 14:44:23,516: root: Thread-2 started
+INFO: 2018-08-31 14:44:23,550: root: Thread-0 started
+INFO: 2018-08-31 14:44:23,558: root: Thread-1 started
+INFO: 2018-08-31 14:44:23,577: root: Thread-3 started
+INFO: 2018-08-31 14:44:23,607: root: Thread-2 started
+INFO: 2018-08-31 14:44:23,607: root: Thread-0 started
+INFO: 2018-08-31 14:44:23,617: root: Thread-1 started
+INFO: 2018-08-31 14:44:23,755: root: Thread-3 started
+INFO: 2018-08-31 14:44:23,768: root: Thread-2 started
+INFO: 2018-08-31 14:44:23,771: root: Thread-0 started
+INFO: 2018-08-31 14:44:23,777: root: Thread-1 started
+INFO: 2018-08-31 14:44:23,807: root: Thread-3 started
+INFO: 2018-08-31 14:44:23,831: root: Thread-2 started
+INFO: 2018-08-31 14:44:23,912: root: Thread-3 started
+INFO: 2018-08-31 14:44:23,951: root: Thread-1 started
+INFO: 2018-08-31 14:44:23,967: root: Thread-0 started
+INFO: 2018-08-31 14:44:23,975: root: Thread-2 started
+INFO: 2018-08-31 14:44:24,029: root: Thread-0 started
+INFO: 2018-08-31 14:44:24,033: root: Thread-1 started
+INFO: 2018-08-31 14:44:24,038: root: Thread-3 started
+INFO: 2018-08-31 14:44:24,098: root: Thread-2 started
+INFO: 2018-08-31 14:44:24,219: root: Thread-3 started
+INFO: 2018-08-31 14:44:24,284: root: Thread-0 started
+INFO: 2018-08-31 14:44:24,287: root: Thread-1 started
+INFO: 2018-08-31 14:44:24,295: root: Thread-2 started
+INFO: 2018-08-31 14:44:24,331: root: Thread-0 started
+INFO: 2018-08-31 14:44:24,349: root: Thread-1 started
+INFO: 2018-08-31 14:44:24,349: root: Thread-2 started
+INFO: 2018-08-31 14:44:24,375: root: Thread-3 started
+INFO: 2018-08-31 14:44:24,381: root: Thread-0 started
+INFO: 2018-08-31 14:44:24,426: root: Thread-1 started
+INFO: 2018-08-31 14:44:24,435: root: Thread-2 started
+INFO: 2018-08-31 14:44:24,531: root: Thread-3 started
+INFO: 2018-08-31 14:44:24,567: root: Thread-1 started
+INFO: 2018-08-31 14:44:24,616: root: Thread-0 started
+INFO: 2018-08-31 14:44:24,706: root: Thread-2 started
+INFO: 2018-08-31 14:44:24,717: root: Thread-1 started
+INFO: 2018-08-31 14:44:24,730: root: Thread-3 started
+INFO: 2018-08-31 14:44:24,868: root: Thread-3 started
+INFO: 2018-08-31 14:44:24,871: root: Thread-2 started
+INFO: 2018-08-31 14:44:24,876: root: Thread-1 started
+INFO: 2018-08-31 14:44:24,900: root: Thread-0 started
+INFO: 2018-08-31 14:44:24,953: root: Thread-3 started
+INFO: 2018-08-31 14:44:24,957: root: Thread-2 started
+INFO: 2018-08-31 14:44:24,996: root: Thread-1 started
+INFO: 2018-08-31 14:44:24,999: root: Thread-2 started
+INFO: 2018-08-31 14:44:25,018: root: Thread-0 started
+INFO: 2018-08-31 14:44:25,114: root: Thread-3 started
+INFO: 2018-08-31 14:44:25,134: root: Thread-1 started
+INFO: 2018-08-31 14:44:25,158: root: Thread-0 started
+INFO: 2018-08-31 14:44:25,197: root: Thread-2 started
+INFO: 2018-08-31 14:44:25,288: root: Thread-3 started
+INFO: 2018-08-31 14:44:25,299: mysql_db: 3.529362678527832 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:44:25,310: root: Stopping Thread-2
+INFO: 2018-08-31 14:44:25,311: root: Thread-2 stopped
+INFO: 2018-08-31 14:44:25,313: root: Stopping Thread-1
+INFO: 2018-08-31 14:44:25,314: root: Thread-1 stopped
+INFO: 2018-08-31 14:44:25,316: root: Stopping Thread-0
+INFO: 2018-08-31 14:44:25,317: root: Thread-0 stopped
+INFO: 2018-08-31 14:44:25,650: root: Stopping Thread-3
+INFO: 2018-08-31 14:44:25,651: root: Thread-3 stopped
+INFO: 2018-08-31 14:47:27,526: root: Thread-0 started
+INFO: 2018-08-31 14:47:27,526: root: Thread-1 started
+INFO: 2018-08-31 14:47:27,526: root: Thread-2 started
+INFO: 2018-08-31 14:47:27,527: root: Thread-3 started
+INFO: 2018-08-31 14:47:28,071: root: Thread-0 started
+INFO: 2018-08-31 14:47:28,413: root: Thread-3 started
+INFO: 2018-08-31 14:47:28,869: root: Thread-1 started
+INFO: 2018-08-31 14:47:29,360: root: Thread-2 started
+INFO: 2018-08-31 14:47:29,902: root: Thread-0 started
+INFO: 2018-08-31 14:47:30,233: root: Thread-3 started
+INFO: 2018-08-31 14:47:30,617: root: Thread-1 started
+INFO: 2018-08-31 14:47:30,869: root: Thread-2 started
+INFO: 2018-08-31 14:47:31,434: mysql_db: 0.6715619564056396 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:47:31,619: root: Thread-0 started
+INFO: 2018-08-31 14:47:32,140: root: Thread-3 started
+INFO: 2018-08-31 14:47:32,740: root: Thread-1 started
+INFO: 2018-08-31 14:47:33,150: root: Thread-2 started
+INFO: 2018-08-31 14:47:33,533: root: Thread-0 started
+INFO: 2018-08-31 14:47:33,881: root: Thread-1 started
+INFO: 2018-08-31 14:47:34,475: mysql_db: 0.7749044895172119 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:47:35,048: root: Thread-3 started
+INFO: 2018-08-31 14:47:35,251: root: Thread-2 started
+INFO: 2018-08-31 14:47:35,780: root: Thread-0 started
+INFO: 2018-08-31 14:47:36,161: root: Thread-1 started
+INFO: 2018-08-31 14:47:36,438: root: Thread-0 started
+INFO: 2018-08-31 14:47:37,083: mysql_db: 0.7671594619750977 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:47:37,440: root: Thread-3 started
+INFO: 2018-08-31 14:47:37,940: root: Thread-2 started
+INFO: 2018-08-31 14:47:38,630: root: Thread-1 started
+INFO: 2018-08-31 14:47:39,338: root: Thread-0 started
+INFO: 2018-08-31 14:47:39,703: root: Thread-2 started
+INFO: 2018-08-31 14:47:40,127: root: Thread-3 started
+INFO: 2018-08-31 14:47:40,850: root: Thread-1 started
+INFO: 2018-08-31 14:47:41,653: mysql_db: 1.1837265491485596 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:47:42,766: root: Thread-0 started
+INFO: 2018-08-31 14:47:43,401: root: Thread-2 started
+INFO: 2018-08-31 14:47:44,275: root: Thread-3 started
+INFO: 2018-08-31 14:47:44,734: root: Thread-1 started
+INFO: 2018-08-31 14:47:45,029: root: Thread-2 started
+INFO: 2018-08-31 14:47:45,288: root: Thread-0 started
+INFO: 2018-08-31 14:47:45,776: mysql_db: 0.5828137397766113 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:47:46,370: root: Stopping Thread-3
+INFO: 2018-08-31 14:47:46,371: root: Thread-3 stopped
+INFO: 2018-08-31 14:47:46,955: root: Stopping Thread-1
+INFO: 2018-08-31 14:47:46,955: root: Thread-1 stopped
+INFO: 2018-08-31 14:47:47,391: root: Stopping Thread-2
+INFO: 2018-08-31 14:47:47,391: root: Thread-2 stopped
+INFO: 2018-08-31 14:47:47,572: root: Stopping Thread-0
+INFO: 2018-08-31 14:47:47,572: root: Thread-0 stopped
+INFO: 2018-08-31 14:48:37,595: root: Thread-0 started
+INFO: 2018-08-31 14:48:37,597: root: Thread-1 started
+INFO: 2018-08-31 14:48:37,599: root: Thread-2 started
+INFO: 2018-08-31 14:48:37,600: root: Thread-3 started
+INFO: 2018-08-31 14:48:38,264: root: Thread-1 started
+INFO: 2018-08-31 14:48:38,464: root: Thread-0 started
+INFO: 2018-08-31 14:48:38,681: root: Thread-3 started
+INFO: 2018-08-31 14:48:38,942: root: Thread-2 started
+INFO: 2018-08-31 14:48:39,331: root: Thread-1 started
+INFO: 2018-08-31 14:48:39,473: root: Thread-0 started
+INFO: 2018-08-31 14:48:39,656: root: Thread-3 started
+INFO: 2018-08-31 14:48:40,049: root: Thread-2 started
+INFO: 2018-08-31 14:48:40,203: root: Thread-1 started
+INFO: 2018-08-31 14:48:40,435: root: Thread-0 started
+INFO: 2018-08-31 14:48:40,939: root: Thread-3 started
+INFO: 2018-08-31 14:48:42,882: mysql_db: 2.2323694229125977 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:48:43,763: root: Thread-2 started
+INFO: 2018-08-31 14:48:43,966: root: Thread-1 started
+INFO: 2018-08-31 14:48:44,595: root: Thread-0 started
+INFO: 2018-08-31 14:48:44,688: root: Thread-3 started
+INFO: 2018-08-31 14:48:45,049: root: Thread-1 started
+INFO: 2018-08-31 14:48:45,509: root: Thread-2 started
+INFO: 2018-08-31 14:48:46,038: mysql_db: 0.8660142421722412 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:48:46,616: root: Thread-3 started
+INFO: 2018-08-31 14:48:46,999: root: Thread-0 started
+INFO: 2018-08-31 14:48:47,148: root: Thread-2 started
+INFO: 2018-08-31 14:48:47,794: root: Thread-1 started
+INFO: 2018-08-31 14:48:48,211: root: Thread-3 started
+INFO: 2018-08-31 14:48:49,000: mysql_db: 1.0643336772918701 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:48:49,367: root: Thread-0 started
+INFO: 2018-08-31 14:48:49,970: root: Thread-2 started
+INFO: 2018-08-31 14:48:50,220: root: Thread-1 started
+INFO: 2018-08-31 14:48:50,324: root: Thread-3 started
+INFO: 2018-08-31 14:48:50,403: root: Thread-2 started
+INFO: 2018-08-31 14:48:50,719: root: Thread-0 started
+INFO: 2018-08-31 14:48:51,363: mysql_db: 0.8502130508422852 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:48:51,520: root: Thread-3 started
+INFO: 2018-08-31 14:48:52,081: root: Thread-1 started
+INFO: 2018-08-31 14:48:52,573: root: Thread-2 started
+INFO: 2018-08-31 14:48:52,697: root: Thread-0 started
+INFO: 2018-08-31 14:48:53,351: root: Thread-3 started
+INFO: 2018-08-31 14:48:53,714: root: Thread-1 started
+INFO: 2018-08-31 14:48:54,575: mysql_db: 1.0860157012939453 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:48:54,876: root: Stopping Thread-2
+INFO: 2018-08-31 14:48:54,876: root: Thread-2 stopped
+INFO: 2018-08-31 14:48:55,104: root: Stopping Thread-0
+INFO: 2018-08-31 14:48:55,105: root: Thread-0 stopped
+INFO: 2018-08-31 14:48:55,535: root: Stopping Thread-3
+INFO: 2018-08-31 14:48:55,536: root: Thread-3 stopped
+INFO: 2018-08-31 14:48:55,660: root: Stopping Thread-1
+INFO: 2018-08-31 14:48:55,660: root: Thread-1 stopped
+INFO: 2018-08-31 14:53:47,952: root: Thread-0 started
+INFO: 2018-08-31 14:53:47,953: root: Thread-1 started
+INFO: 2018-08-31 14:53:47,954: root: Thread-2 started
+INFO: 2018-08-31 14:53:47,954: root: Thread-3 started
+INFO: 2018-08-31 14:53:48,389: root: Thread-3 started
+INFO: 2018-08-31 14:53:48,591: root: Thread-1 started
+INFO: 2018-08-31 14:53:48,928: root: Thread-0 started
+INFO: 2018-08-31 14:53:49,322: root: Thread-2 started
+INFO: 2018-08-31 14:53:49,750: root: Thread-1 started
+INFO: 2018-08-31 14:53:49,936: root: Thread-3 started
+INFO: 2018-08-31 14:53:50,471: root: Thread-0 started
+INFO: 2018-08-31 14:53:50,728: root: Thread-2 started
+INFO: 2018-08-31 14:53:50,876: root: Thread-1 started
+INFO: 2018-08-31 14:53:51,031: root: Thread-3 started
+INFO: 2018-08-31 14:53:51,368: root: Thread-2 started
+INFO: 2018-08-31 14:53:51,996: mysql_db: 0.8162682056427002 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:53:52,520: root: Thread-0 started
+INFO: 2018-08-31 14:53:52,668: root: Thread-1 started
+INFO: 2018-08-31 14:53:52,985: root: Thread-3 started
+INFO: 2018-08-31 14:53:53,105: root: Thread-2 started
+INFO: 2018-08-31 14:53:53,437: root: Thread-1 started
+INFO: 2018-08-31 14:53:53,782: root: Thread-0 started
+INFO: 2018-08-31 14:53:54,106: root: Thread-2 started
+INFO: 2018-08-31 14:53:54,949: mysql_db: 0.993933916091919 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:53:55,255: root: Thread-3 started
+INFO: 2018-08-31 14:53:55,500: root: Thread-1 started
+INFO: 2018-08-31 14:53:55,640: root: Thread-0 started
+INFO: 2018-08-31 14:53:55,789: root: Thread-2 started
+INFO: 2018-08-31 14:53:55,865: root: Thread-3 started
+INFO: 2018-08-31 14:53:56,180: root: Thread-1 started
+INFO: 2018-08-31 14:53:56,500: root: Thread-0 started
+INFO: 2018-08-31 14:53:57,190: mysql_db: 0.9357435703277588 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:53:57,710: root: Thread-2 started
+INFO: 2018-08-31 14:53:57,927: root: Thread-3 started
+INFO: 2018-08-31 14:53:58,476: root: Thread-1 started
+INFO: 2018-08-31 14:53:58,571: root: Thread-0 started
+INFO: 2018-08-31 14:53:58,753: root: Thread-1 started
+INFO: 2018-08-31 14:53:58,869: root: Thread-3 started
+INFO: 2018-08-31 14:53:59,446: mysql_db: 0.5880498886108398 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-08-31 14:53:59,760: root: Thread-2 started
+INFO: 2018-08-31 14:53:59,819: root: Thread-0 started
+INFO: 2018-08-31 14:53:59,878: root: Thread-3 started
+INFO: 2018-08-31 14:54:00,104: root: Thread-1 started
+INFO: 2018-08-31 14:54:00,362: root: Thread-3 started
+INFO: 2018-08-31 14:54:00,859: mysql_db: 0.6566755771636963 seconds to bulk insert 4.89MB, indexed=False
