@@ -18,7 +18,7 @@ from pymongo import errors
 import os
 import config
 from multiprocessing.pool import ThreadPool
-
+import random
 
 logger = logging.getLogger(__name__)
 
@@ -82,7 +82,6 @@ def create_indexes(database):
     :return:
     """
 
-
     try:
         coll = database.get_collection(COLLECTION)
         coll.create_index([("id", pymongo.ASCENDING)], name='tweet_id_index')
@@ -107,7 +106,6 @@ def bulk_insert(path, indexed, drop_on_start, drop_on_exit=False, write_concern=
     :param write_concern:
     :return:
     """
-
 
     # check drop flag
     if drop_on_start: drop_database(DATABASE)
@@ -263,7 +261,6 @@ def insert_one(path, indexed, drop_on_start, drop_on_exit=False, write_concern=1
     for doc in d1:
         docs.append(json.loads(doc))
 
-
     d2 = open(DOCUMENT_SINGLE, 'r')
     single_doc = json.load(d2)
 
@@ -342,17 +339,28 @@ def scan():
 
 def simulation(write_concern=0):
     db = connect(HOST, PORT).get_database(DATABASE)
-    coll = db.get_collection(COLLECTION)
+    coll = db.get_collection(COLLECTION, write_concern=write_concern)
 
-    print('query')
+    find_queries = [{'lang': 'ru'}, {'lang': 'es'}, {'lang': 'en'}, {'truncated': 'true'}, {'truncated': 'false'}, ]
+    update_queries = ['true', 'false']
 
-    # QUERIES HERE
-    # bulk = coll.initialize_unordered_bulk_op()
-    # bulk.insert()
-    # bulk.find({'is_quote_status':'true'})
-    # bulk.find({'lang': 'en'}).update({'$set': {'test1': 'True'}})
-    # bulk.find({'lang': 'en'}).remove_one()
-    # bulk.execute(write_concern=write_concern)
+    id = 0
+    for i in range(len(find_queries)):
+        # find
+        random_find = find_queries[random.randrange(0, len(find_queries))]
+        coll.find(random_find).count()
+
+        # update
+        random_update = update_queries[random.randrange(0, len(update_queries))]
+        coll.update_one({"truncated": random_update}, {"$set": {"truncated": random_update}})
+
+        # insert
+        id += 1
+        coll.insert({"created_at":"test","id":id,"id_str":"test", "text":"test","truncated":'false'})
+
+
+
+
 
 
 
