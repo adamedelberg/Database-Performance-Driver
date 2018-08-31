@@ -150,7 +150,6 @@ def select(path, indexed):
 
 
 def bulk_insert_normalized(path, indexed=False, drop_on_start=True, drop_on_exit=False):
-
     delete_from_table('hashtags')
     delete_from_table('symbols')
     delete_from_table('media')
@@ -159,12 +158,12 @@ def bulk_insert_normalized(path, indexed=False, drop_on_start=True, drop_on_exit
     delete_from_table('user_mentions')
     delete_from_table('urls')
 
-    #conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    # conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     conn = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
 
     cursor = conn.cursor()
-    #sql = 'SET NAMES utf8mb4;'
-    #cursor.execute(sql)
+    # sql = 'SET NAMES utf8mb4;'
+    # cursor.execute(sql)
 
     tweet_stmts, user_stmts, hashtags_stmts, media_stmts, user_mention_stmts, url_stmts, symbols_stmts = get_normalized_statements()
 
@@ -242,9 +241,10 @@ def bulk_insert_normalized(path, indexed=False, drop_on_start=True, drop_on_exit
 
 
 def bulk_insert_universal(path, indexed=False, drop_on_start=True, drop_on_exit=False):
-
-    if indexed: table = 'universal_indexed'
-    else: table = 'universal'
+    if indexed:
+        table = 'universal_indexed'
+    else:
+        table = 'universal'
 
     statements = get_statements(table=table, path=path)
 
@@ -254,8 +254,8 @@ def bulk_insert_universal(path, indexed=False, drop_on_start=True, drop_on_exit=
 
     cursor = connector.cursor()
 
-    #sql = 'SET NAMES utf8mb4;'
-    #cursor.execute(sql)
+    # sql = 'SET NAMES utf8mb4;'
+    # cursor.execute(sql)
 
     execution_time = 0
 
@@ -786,15 +786,18 @@ def simulation():
     connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     cursor = connector.cursor()
 
-    languages = ['es','en','ru']
-    truncated = ['true','false']
+    languages = ['es', 'en', 'ru']
+    truncated = ['true', 'false']
     id = 0
 
-    for i in range (len(languages)):
-        sql_find="SELECT * FROM `universal` WHERE `tweets.lang` = '{}';".format(languages[random.randrange(0, len(languages))])
+    for i in range(len(languages)):
+        sql_find = "SELECT * FROM `universal` WHERE `tweets.lang` = '{}';".format(
+            languages[random.randrange(0, len(languages))])
         cursor.execute(sql_find)
-        sql_update="UPDATE `universal` SET `tweets.truncated` = '{}' WHERE `tweets.truncated` ='{}';".format(truncated[random.randrange(0,1)],truncated[random.randrange(0,1)])
+        sql_update = "UPDATE `universal` SET `tweets.truncated` = '{}' WHERE `tweets.truncated` ='{}';".format(
+            truncated[random.randrange(0, 1)], truncated[random.randrange(0, 1)])
         cursor.execute(sql_update)
-        id+=1
-        sql_insert = "INSERT INTO universal (`tweets.created_at`, `tweets.id`, `tweets.id_str`, `tweets.text`,`tweets.truncated`) VALUES ('test', {}, '{}','test', 'false');".format(id,id)
+        id += 1
+        sql_insert = "INSERT INTO universal (`tweets.created_at`, `tweets.id`, `tweets.id_str`, `tweets.text`,`tweets.truncated`) VALUES ('test', {}, '{}','test', 'false');".format(
+            id, id)
         cursor.execute(sql_insert)

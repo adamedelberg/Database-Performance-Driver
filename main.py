@@ -284,7 +284,8 @@ def start_threads(id, stop=False, database=1):
     logging.info("Thread-{} stopped".format(id))
 
 
-def simulate(database, target, exit_flag=False):
+def run_test(database, target, simulated=False):
+    exit_flag = simulated
 
     workers = []
 
@@ -350,11 +351,15 @@ if __name__ == "__main__":
     # test_mysql_db_scan()
 
 
-    # set exit_flag to false to run test simulated
-    exit_flag = False
 
-    #simulate(database=1, target=test_mongo_db_bulk_insert, exit_flag=exit_flag)
+    # set sim to false to run test simulated
 
-    simulate(database=2, target=test_mysql_db_bulk_insert_universal, exit_flag=exit_flag)
+    sim = False
+    database = 1
+    target = test_mongo_db_bulk_insert
+
+    run_test(database=database, target=target, simulated=sim)
+
+    #run_test(database=2, target=test_mysql_db_bulk_insert_universal, simulated=sim)
 
 
