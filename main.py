@@ -65,12 +65,12 @@ def log_res(tag, data):
 ############################################################
 
 
-def test_mongo_db_bulk_insert():
+def test_mongo_db_bulk_insert(iterations=ITERATIONS):
     # timing and metric variables
     times = []
 
     # perform multiple test iterations
-    for i in range(ITERATIONS):
+    for i in range(iterations):
         t, doc_size = mongo_db.bulk_insert(path=PATH, indexed=False, drop_on_start=True)
         times.append(t)
 
@@ -79,10 +79,10 @@ def test_mongo_db_bulk_insert():
     log_res(log.format(doc_size, statistics.mean(times)), times)
 
 
-def test_mongo_db_bulk_insert_collections():
+def test_mongo_db_bulk_insert_collections(iterations=ITERATIONS):
     times = []
 
-    for i in range(ITERATIONS):
+    for i in range(iterations):
         t, doc_size = mongo_db.bulk_insert_collections(path=PATH, indexed=False, drop_on_start=True)
         times.append(t)
 
@@ -90,10 +90,10 @@ def test_mongo_db_bulk_insert_collections():
     log_res(log, times)
 
 
-def test_mysql_db_bulk_insert_universal():
+def test_mysql_db_bulk_insert_universal(iterations=ITERATIONS):
     times = []
 
-    for runs in range(ITERATIONS):
+    for runs in range(iterations):
         t, size = mysql_db.bulk_insert_universal(path=PATH)
         times.append(t)
 
@@ -101,10 +101,10 @@ def test_mysql_db_bulk_insert_universal():
     log_res(log.format(size, statistics.mean(times)), times)
 
 
-def test_mysql_db_bulk_insert_normalized():
+def test_mysql_db_bulk_insert_normalized(iterations=ITERATIONS):
     times = []
 
-    for runs in range(ITERATIONS):
+    for runs in range(iterations):
         t, doc_size = mysql_db.bulk_insert_normalized(path=PATH)
         times.append(t)
 
@@ -112,12 +112,12 @@ def test_mysql_db_bulk_insert_normalized():
     log_res(log.format(doc_size, statistics.mean(times)), times)
 
 
-def test_mongo_db_bulk_insert_one():
+def test_mongo_db_bulk_insert_one(iterations=ITERATIONS):
     # timing and metric variables
     times = []
 
     # perform multiple test iterations
-    for i in range(ITERATIONS):
+    for i in range(iterations):
         t, doc_size = mongo_db.bulk_insert_one(path=PATH, drop_on_start=True)
         times.append(t)
 
@@ -126,12 +126,12 @@ def test_mongo_db_bulk_insert_one():
     log_res(log.format(doc_size, statistics.mean(times)), times)
 
 
-def test_mysql_db_bulk_insert_one():
+def test_mysql_db_bulk_insert_one(iterations=ITERATIONS):
     # timing and metric variables
     times = []
 
     # perform multiple test iterations
-    for i in range(ITERATIONS):
+    for i in range(iterations):
         t, doc_size = mysql_db.bulk_insert_one(path=PATH, indexed=False)
         times.append(t)
 
@@ -140,10 +140,10 @@ def test_mysql_db_bulk_insert_one():
     log_res(log.format(doc_size, statistics.mean(times)), times)
 
 
-def test_mongo_db_insert_one(indexed):
+def test_mongo_db_insert_one(indexed, iterations=ITERATIONS):
     times, bulk = [], []
 
-    for i in range(ITERATIONS):
+    for i in range(iterations):
         t, db_size, doc_size, bulk_insert_time = mongo_db.insert_one(indexed=indexed, drop_on_start=True,
                                                                      path=PATH)
         times.append(t), bulk.append(bulk_insert_time)
@@ -152,10 +152,10 @@ def test_mongo_db_insert_one(indexed):
     log_res(log.format(indexed, doc_size, db_size, statistics.mean(times), statistics.mean(bulk)), times)
 
 
-def test_mysql_db_insert_one(indexed):
+def test_mysql_db_insert_one(indexed, iterations=ITERATIONS):
     times, bulk = [], []
 
-    for runs in range(ITERATIONS):
+    for runs in range(iterations):
         t, db_size, doc_size, run = mysql_db.insert_one(indexed)
         times.append(t), bulk.append(run)
 
@@ -163,12 +163,12 @@ def test_mysql_db_insert_one(indexed):
     log_res(log.format(indexed, doc_size, db_size, statistics.mean(times), statistics.mean(bulk)), times)
 
 
-def test_mongo_db_find(indexed):
+def test_mongo_db_find(indexed, iterations=ITERATIONS):
     mongo_db.bulk_insert(path=PATH, indexed=indexed, drop_on_start=True, drop_on_exit=False)
 
     times = []
 
-    for i in range(ITERATIONS):
+    for i in range(iterations):
         t, count = mongo_db.find(indexed=indexed)
         times.append(t)
 
@@ -176,11 +176,11 @@ def test_mongo_db_find(indexed):
     log_res(log.format(indexed, count, statistics.mean(times)), times)
 
 
-def test_mysql_db_select(indexed):
+def test_mysql_db_select(indexed, iterations=ITERATIONS):
     mysql_db.bulk_insert_universal(path=PATH, indexed=indexed)
     times = []
 
-    for i in range(ITERATIONS):
+    for i in range(iterations):
         t, db_size = mysql_db.select(indexed=indexed, path=PATH)
         times.append(t)
 
@@ -188,7 +188,7 @@ def test_mysql_db_select(indexed):
     log_res(log.format(indexed, db_size, statistics.mean(times)), times)
 
 
-def test_mongo_db_scan():
+def test_mongo_db_scan(iterations=ITERATIONS):
     # repopulate database
     mongo_db.bulk_insert(path=PATH, indexed=False, drop_on_start=True, drop_on_exit=False)
 
@@ -197,7 +197,7 @@ def test_mongo_db_scan():
 
     times = []
 
-    for i in range(ITERATIONS):
+    for i in range(iterations):
         t, scanned = mongo_db.scan()
         times.append(t)
 
@@ -206,7 +206,7 @@ def test_mongo_db_scan():
     log_res(log.format(db_size, scanned, statistics.mean(times)), times)
 
 
-def test_mysql_db_scan():
+def test_mysql_db_scan(iterations=ITERATIONS):
     # repopulate database
     mysql_db.bulk_insert_universal(path=PATH, indexed=False)
 
@@ -215,7 +215,7 @@ def test_mysql_db_scan():
 
     times = []
 
-    for i in range(ITERATIONS):
+    for i in range(iterations):
         t, scanned = mysql_db.scan()
         times.append(t)
 
@@ -229,46 +229,22 @@ def test_mysql_db_scan():
 ############################################################
 
 
-
-
-
 def parse():
     parser = argparse.ArgumentParser(description='DBD - Database Benchmark Driver')
 
-    parser.add_argument('-t', '--test', help='Select a test to perform.', required=False, type=int,
-                        choices=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
+    parser.add_argument('-t', '--test', help='Select a test to perform.', required=False, type=int,  choices=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
 
-    parser.add_argument('-s', '--size', help='Select test data size.', required=False, type=int,
-                        choices=[5, 50, 100, 500, 1000, 2000])
+    parser.add_argument('-s', '--size', help='Select test data size.', required=False, type=int, choices=[5, 50, 100, 500, 1000, 2000])
 
-    parser.add_argument('-i', '--iterations', help='Number of test iterations to perform', type=int, required=False,
-                        default=10)
+    parser.add_argument('-i', '--iterations', help='Number of test iterations to perform', type=int, required=False, default=10)
 
-    parser.add_argument('-d', '--debug', help='Debugger verbosity.', required=False, default='v',
-                        choices=['v', 'vv', 'vvv'])
+    parser.add_argument('-si', '--simulated', help='Run database in simulated threaded environment', type=bool, required=False, default=False)
+
+    parser.add_argument('-th', '--threads', help='Number of threads for simulated envrionment', type=int, required=False, default=3)
+
+    parser.add_argument('-d', '--debug', help='Debugger verbosity.', required=False, default='v', choices=['v', 'vv', 'vvv'])
 
     return parser.parse_args()
-
-
-# def func(id, result_queue):
-#     while exit_flag:
-#         print("Thread", id)
-#         time.sleep(random.random() * 2)
-#         result_queue.put((id, 'done'))
-#
-# def main():
-#     q = queue.Queue()
-#     threads = [ threading.Thread(target=func, args=(i, q)) for i in range(THREADS)]
-#
-#     for th in threads:
-#         th.daemon = True
-#         th.start()
-#
-#     result1 = q.get()
-#     result2 = q.get()
-#
-#     print("Second result: {}".format(result1))
-#     print("Second result: {}".format(result2))
 
 
 def start_threads(id, stop=False, database=1):
@@ -284,22 +260,21 @@ def start_threads(id, stop=False, database=1):
     logging.info("Thread-{} stopped".format(id))
 
 
-def run_test(database, target, simulated=False):
-    exit_flag = simulated
+def run_test(database, target, threads, iterations=ITERATIONS, simulated=False):
+    exit_flag = not simulated
 
     workers = []
 
     if not exit_flag:
-        for id in range(THREADS):
-
+        for id in range(threads):
             tmp = threading.Thread(target=start_threads, args=(id, lambda: exit_flag, database))
             workers.append(tmp)
             tmp.daemon = True
             tmp.start()
 
-    time.sleep(2)
+    #time.sleep(2)
 
-    t = threading.Thread(target=target)
+    t = threading.Thread(target=target, args=[iterations])
     t.start()
     t.join()
 
@@ -310,24 +285,16 @@ def run_test(database, target, simulated=False):
 
 
 if __name__ == "__main__":
-
-
     args = parse()
 
-    # if args.test == 1: test_mongo_db_bulk_insert()
-    # if args.test == 2: test_mongo_db_insert_one(indexed=True)
-    # if args.test == 3: test_mongo_db_insert_one(indexed=False)
-    # if args.test == 4: test_mongo_db_find(indexed=True)
-    # if args.test == 5: test_mongo_db_find(indexed=False)
-    # if args.test == 6: test_mongo_db_scan()
-    # if args.test == 7: test_mysql_db_bulk_insert_universal()
-    # if args.test == 8: test_mysql_db_bulk_insert_normalized()
-    # if args.test == 9: test_mysql_db_insert_one(indexed=True)
-    # if args.test == 10: test_mysql_db_insert_one(indexed=False)
-    # if args.test == 11: test_mysql_db_select(indexed=True)
-    # if args.test == 12: test_mysql_db_select(indexed=False)
-    # if args.test == 13: test_mysql_db_scan()
-    # if args.test == 14: test_mongo_db_bulk_insert_collections()
+    # set simulation: True / False
+    sim = True
+    # set database: 1=MongoDB, 2=MySQL
+    database = 1
+    # set target test:
+    target = test_mongo_db_bulk_insert
+
+    run_test(database=database, target=target, simulated=sim, threads=3, iterations=3)
 
     # test_mongo_db_bulk_insert()
     # test_mongo_db_bulk_insert_collections()
@@ -349,17 +316,4 @@ if __name__ == "__main__":
 
     # test_mongo_db_scan()
     # test_mysql_db_scan()
-
-
-
-    # set sim to false to run test simulated
-
-    sim = False
-    database = 1
-    target = test_mongo_db_bulk_insert
-
-    run_test(database=database, target=target, simulated=sim)
-
-    #run_test(database=2, target=test_mysql_db_bulk_insert_universal, simulated=sim)
-
 
