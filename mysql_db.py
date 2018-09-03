@@ -49,7 +49,7 @@ def connect(host, port, user, password, database):
     return client
 
 
-# untested
+#TODO
 def create_schema():
     client = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     cursor = client.cursor()

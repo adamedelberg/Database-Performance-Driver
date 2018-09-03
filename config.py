@@ -37,7 +37,7 @@ password_mysql = 'passQ123'
 database = 'benchmark_db'
 indexed_database = 'benchmark_db_indexed'
 collection_database = 'benchmark_db_collection'
-collection = 'benchmark_coll'
+collection = 'tweets'
 
 # Test data paths
 document = '../parsed_data/e3-5MB.json'

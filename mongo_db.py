@@ -74,6 +74,30 @@ def drop_database(database):
         logger.warning("DROP ERROR: " + e)
 
 
+def drop_database_collections(database):
+    """
+    Safe drop database using remove
+
+    :param database:
+    :return:
+    """
+    try:
+        client = MongoClient(HOST, PORT)
+        db = client.get_database(database)
+        users = db.get_collection('users')
+        tweets = db.get_collection('tweets')
+
+        users.remove({})
+        tweets.remove({})
+
+        # connect(HOST, PORT).drop_database(database)
+        # client.drop_database(database)
+        logger.debug("DROPPED {}!".format(database))
+
+    except pymongo.errors as e:
+        logger.warning("DROP ERROR: " + e)
+
+
 def create_indexes(database):
     """
     Create indexes in given database
@@ -133,7 +157,7 @@ def bulk_insert(path, indexed, drop_on_start, drop_on_exit=False, write_concern=
         coll2.insert_many(docs)
 
     size = "{}MB".format(round(os.path.getsize(path) / 1024 / 1024, 2))
-    logger.info("{} seconds to bulk insert {}, indexed={}".format(run, size, indexed))
+    logger.info("{} seconds to bulk_insert {}, indexed={}".format(run, size, indexed))
 
     # check drop flag on exit
     if drop_on_exit: drop_database(DATABASE)
@@ -151,7 +175,7 @@ def bulk_insert_collections(path, indexed, drop_on_start, drop_on_exit=False, wr
     :param write_concern:
     :return:
     """
-    if drop_on_start: drop_database(DATABASE_COLLECTION)
+    if drop_on_start: drop_database_collections(DATABASE_COLLECTION)
 
     db = connect(HOST, PORT).get_database(DATABASE_COLLECTION)
     user_collection = db.get_collection('users', write_concern=pymongo.WriteConcern(w=write_concern))
@@ -184,7 +208,7 @@ def bulk_insert_collections(path, indexed, drop_on_start, drop_on_exit=False, wr
     execution_time += time.time() - start_time
 
     size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
-    logger.info("{} seconds to bulk insert into collections {}".format(execution_time, size))
+    logger.info("{} seconds to bulk_insert_collections {}".format(execution_time, size))
 
     if drop_on_exit: drop_database(DATABASE)
 
@@ -220,6 +244,55 @@ def bulk_insert_one(path, drop_on_start, drop_on_exit=False, write_concern=1):
     if drop_on_exit: drop_database(DATABASE)
 
     return run, size
+
+
+def bulk_insert_one_collections(path, drop_on_start, drop_on_exit=False, write_concern=1):
+    """
+
+    :param path:
+    :param drop_on_start:
+    :param drop_on_exit:
+    :param write_concern:
+    :return:
+    """
+
+    if drop_on_start: drop_database_collections(DATABASE_COLLECTION)
+
+    db = connect(HOST, PORT).get_database(DATABASE_COLLECTION)
+    user_collection = db.get_collection('users', write_concern=pymongo.WriteConcern(w=write_concern))
+    tweet_collection = db.get_collection('tweets', write_concern=pymongo.WriteConcern(w=write_concern))
+
+    execution_time = 0
+
+    document = open(path, 'r')
+
+    users = []
+    tweets = []
+
+    for doc in document:
+        d = json.loads(doc)
+        users.append(d['user'])
+        # add the user id to the tweet collection
+        d['user_id'] = d['user']['id']
+        del d['user']
+        tweets.append(d)
+
+
+    start_time = time.time()
+
+    for u in users:
+        user_collection.insert_one(u)
+    for t in tweets:
+        tweet_collection.insert_one(t)
+
+    execution_time += time.time() - start_time
+
+    size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
+    logger.info("{} seconds to bulk insert one into collections {}".format(execution_time, size))
+
+    if drop_on_exit: drop_database(DATABASE)
+
+    return execution_time, size
 
 
 def insert_one(path, indexed, drop_on_start, drop_on_exit=False, write_concern=1):
@@ -283,6 +356,87 @@ def insert_one(path, indexed, drop_on_start, drop_on_exit=False, write_concern=1
     return insert_one_time, doc_size, db_size, bulk_insert_time
 
 
+def insert_one_collections(path, indexed, drop_on_start, drop_on_exit=False, write_concern=1):
+    """
+    Inserts a single document to the benchmark_db database
+
+    :param path:
+    :param indexed:
+    :param drop_on_start:
+    :param drop_on_exit:
+    :param write_concern:
+    :return:
+
+       Parameters:
+           indexed          - insert with indexes
+           doc_path         - database document path
+           drop_on_start    - drop database before query
+           drop_on_exit     - drop database after query
+
+       Returns:
+           insert_one_time  - execution time for one insert
+           bulk_insert_time - execution time for bulk insert
+           doc_size         - size of the inserted document
+           db_size          - size of the database"""
+
+    if indexed:
+        create_indexes(DATABASE_COLLECTION)
+
+    if drop_on_start: drop_database_collections(DATABASE_COLLECTION)
+
+    db = connect(HOST, PORT).get_database(DATABASE_COLLECTION)
+    user_collection = db.get_collection('users', write_concern=pymongo.WriteConcern(w=write_concern))
+    tweet_collection = db.get_collection('tweets', write_concern=pymongo.WriteConcern(w=write_concern))
+
+    d1 = open(path, 'r')
+    docs = []
+
+    users = []
+    tweets = []
+
+    for doc in d1:
+        d = json.loads(doc)
+        users.append(d['user'])
+        # add the user id to the tweet collection
+        d['user_id'] = d['user']['id']
+        del d['user']
+        tweets.append(d)
+
+    start = time.time()
+
+    user_collection.insert_many(users)
+    tweet_collection.insert_many(tweets)
+
+    bulk_insert_time = time.time() - start
+
+    d2 = open(DOCUMENT_SINGLE, 'r')
+
+    for doc in d2:
+        d = json.loads(doc)
+        users.append(d['user'])
+        # add the user id to the tweet collection
+        d['user_id'] = d['user']['id']
+        del d['user']
+        tweets.append(d)
+
+    start = time.time()
+
+    user_collection.insert_one(users.pop())
+    tweet_collection.insert_one(tweets.pop())
+
+    insert_one_time = time.time() - start
+
+    doc_size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
+    db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
+
+    logger.info("{} seconds to insert one collections indexed={} db_size={} doc_size={}".format(insert_one_time, indexed, db_size,
+                                                                                    doc_size))
+
+    if drop_on_exit: drop_database(DATABASE_COLLECTION)
+
+    return insert_one_time, doc_size, db_size, bulk_insert_time
+
+
 def find(indexed):
     """
 
@@ -315,6 +469,39 @@ def find(indexed):
     return execution_time, count
 
 
+def find_collections(indexed):
+    """
+
+    :param indexed:
+    :return:
+    """
+
+    if indexed:
+        create_indexes(DATABASE_COLLECTION)
+
+    db = connect(HOST, PORT).get_database(DATABASE_COLLECTION)
+
+    user_collection = db.get_collection('users', write_concern=pymongo.WriteConcern())
+    tweet_collection = db.get_collection('tweets', write_concern=pymongo.WriteConcern())
+
+    execution_time = 0
+
+    for i in range(5):
+        count = 0
+
+        start_time = time.time()
+
+        count += user_collection.find({'location': 'London'}).count()
+        count += user_collection.find({'friends_count': {'$gt': 1000}}).count()
+        count += user_collection.find({'followers_count': {'$gt': 1000}}).count()
+
+        execution_time += time.time() - start_time
+
+    logger.info("{} seconds to find_collections {} with indexed={}".format(execution_time, count, indexed))
+
+    return execution_time, count
+
+
 def scan():
     """
 
@@ -333,6 +520,30 @@ def scan():
     scanned = collection.count()
 
     logger.info("{} seconds to scan {} objects".format(execution_time, scanned))
+
+    return execution_time, scanned
+
+
+def scan_collections():
+    """
+
+    :return:
+    """
+    db = connect(HOST, PORT).get_database(DATABASE_COLLECTION)
+
+    users = db.get_collection('users')
+    tweets = db.get_collection('tweets')
+    start_time = time.time()
+
+    users.find({}).count()
+    tweets.find({}).count()
+
+    execution_time = time.time() - start_time
+
+    scanned = users.count()
+    scanned+= tweets.count()
+
+    logger.info("{} seconds to scan_collections {} objects".format(execution_time, scanned))
 
     return execution_time, scanned
 
