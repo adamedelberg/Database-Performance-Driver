@@ -32019,3 +32019,47 @@ INFO: 2018-09-04 15:34:41,060: mysql_db: 0.011800050735473633 seconds to select_
 INFO: 2018-09-04 15:34:41,549: mysql_db: 0.007112741470336914 seconds to select_normalized 624 objects indexed=True, doc_size=4.89MB
 INFO: 2018-09-04 15:34:41,985: mysql_db: 0.005805015563964844 seconds to select_normalized 624 objects indexed=True, doc_size=4.89MB
 INFO: 2018-09-04 15:34:42,303: mysql_db: 0.004004001617431641 seconds to select_normalized 624 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 15:51:04,433: mongo_db: 72.11394000053406 seconds to bulk_insert 476.12MB, indexed=True
+INFO: 2018-09-04 15:51:08,225: mongo_db: 0.5882008075714111 seconds to find 43863 with indexed=True
+INFO: 2018-09-04 15:51:08,859: mongo_db: 0.6330289840698242 seconds to find 43863 with indexed=True
+INFO: 2018-09-04 15:51:09,454: mongo_db: 0.5935158729553223 seconds to find 43863 with indexed=True
+INFO: 2018-09-04 15:51:10,069: mongo_db: 0.6137964725494385 seconds to find 43863 with indexed=True
+INFO: 2018-09-04 15:51:10,659: mongo_db: 0.5888211727142334 seconds to find 43863 with indexed=True
+INFO: 2018-09-04 15:51:11,324: mongo_db: 0.662665605545044 seconds to find 43863 with indexed=True
+INFO: 2018-09-04 15:51:11,911: mongo_db: 0.5825450420379639 seconds to find 43863 with indexed=True
+INFO: 2018-09-04 15:51:12,499: mongo_db: 0.5868878364562988 seconds to find 43863 with indexed=True
+INFO: 2018-09-04 15:51:13,084: mongo_db: 0.5838541984558105 seconds to find 43863 with indexed=True
+INFO: 2018-09-04 15:51:13,680: mongo_db: 0.5950288772583008 seconds to find 43863 with indexed=True
+INFO: 2018-09-04 15:52:36,560: mongo_db: 61.02287721633911 seconds to bulk_insert_collections 476.12MB
+INFO: 2018-09-04 15:52:43,148: mongo_db: 0.09164118766784668 seconds to find_collections 43863 with indexed=True
+INFO: 2018-09-04 15:52:47,481: mongo_db: 0.11588430404663086 seconds to find_collections 43863 with indexed=True
+INFO: 2018-09-04 15:52:51,481: mongo_db: 0.10294532775878906 seconds to find_collections 43863 with indexed=True
+INFO: 2018-09-04 15:52:55,298: mongo_db: 0.08228564262390137 seconds to find_collections 43863 with indexed=True
+INFO: 2018-09-04 15:52:59,015: mongo_db: 0.11659049987792969 seconds to find_collections 43863 with indexed=True
+INFO: 2018-09-04 15:53:02,779: mongo_db: 0.09448528289794922 seconds to find_collections 43863 with indexed=True
+INFO: 2018-09-04 15:53:06,655: mongo_db: 0.10471677780151367 seconds to find_collections 43863 with indexed=True
+INFO: 2018-09-04 15:53:10,334: mongo_db: 0.10828065872192383 seconds to find_collections 43863 with indexed=True
+INFO: 2018-09-04 15:53:15,807: mongo_db: 0.11224126815795898 seconds to find_collections 43863 with indexed=True
+INFO: 2018-09-04 15:53:20,601: mongo_db: 0.07921004295349121 seconds to find_collections 43863 with indexed=True
+INFO: 2018-09-04 15:54:04,721: mysql_db: 40.841224908828735 seconds to bulk insert 476.12MB, indexed=True
+INFO: 2018-09-04 15:54:06,069: mysql_db: 0.25794410705566406 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:54:07,126: mysql_db: 0.10614943504333496 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:54:08,061: mysql_db: 0.16521692276000977 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:54:08,758: mysql_db: 0.10914278030395508 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:54:09,675: mysql_db: 0.11143231391906738 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:54:10,432: mysql_db: 0.11383295059204102 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:54:11,193: mysql_db: 0.11340856552124023 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:54:11,904: mysql_db: 0.11113500595092773 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:54:12,651: mysql_db: 0.10771608352661133 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:54:13,370: mysql_db: 0.10909366607666016 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:54:49,611: mysql_db: 17.92598009109497 seconds to bulk insert normalized 476.12MB
+INFO: 2018-09-04 15:54:51,737: mysql_db: 0.050241947174072266 seconds to select_normalized 20962 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:54:53,216: mysql_db: 0.05697011947631836 seconds to select_normalized 20962 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:54:54,722: mysql_db: 0.06833553314208984 seconds to select_normalized 20962 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:54:56,262: mysql_db: 0.05197024345397949 seconds to select_normalized 20962 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:54:57,566: mysql_db: 0.07610559463500977 seconds to select_normalized 20962 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:54:59,064: mysql_db: 0.04770803451538086 seconds to select_normalized 20962 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:55:00,210: mysql_db: 0.05420970916748047 seconds to select_normalized 20962 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:55:01,615: mysql_db: 0.09281396865844727 seconds to select_normalized 20962 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:55:02,902: mysql_db: 0.0891880989074707 seconds to select_normalized 20962 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:55:04,213: mysql_db: 0.09024214744567871 seconds to select_normalized 20962 objects indexed=True, doc_size=476.12MB

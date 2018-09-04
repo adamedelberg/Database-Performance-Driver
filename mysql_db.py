@@ -916,19 +916,19 @@ def get_bulk_insert_statement(table, path=DOCUMENT):
             tweet_id_str = str(data['id_str'])
             tweet_text = str(data['text']).replace("'", "\\'")
             tweet_source = str(data['source']).replace("\'", "\\'")
-            tweet_truncated = str(data['truncated'])
-            tweet_in_reply_to_status_id = str(data['in_reply_to_status_id'])
-            tweet_in_reply_to_status_id_str = str(data['in_reply_to_status_id_str'])
-            tweet_in_reply_to_user_id = str(data['in_reply_to_user_id'])
-            tweet_in_reply_to_user_id_str = str(data['in_reply_to_user_id_str'])
-            tweet_in_reply_to_screen_name = str(data['in_reply_to_screen_name'])
-            tweet_quote_count = str(data['quote_count'])
-            tweet_reply_count = str(data['reply_count'])
-            tweet_favorite_count = str(data['favorite_count'])
-            tweet_favorited = str(data['favorited'])
-            tweet_retweeted = str(data['retweeted'])
-            tweet_filter_level = str(data['filter_level'])
-            tweet_lang = str(data['lang'])
+            tweet_truncated = str(data['truncated']).replace("\'", "\\'")
+            tweet_in_reply_to_status_id = str(data['in_reply_to_status_id']).replace("\'", "\\'")
+            tweet_in_reply_to_status_id_str = str(data['in_reply_to_status_id_str']).replace("\'", "\\'")
+            tweet_in_reply_to_user_id = str(data['in_reply_to_user_id']).replace("\'", "\\'")
+            tweet_in_reply_to_user_id_str = str(data['in_reply_to_user_id_str']).replace("\'", "\\'")
+            tweet_in_reply_to_screen_name = str(data['in_reply_to_screen_name']).replace("\'", "\\'")
+            tweet_quote_count = str(data['quote_count']).replace("\'", "\\'")
+            tweet_reply_count = str(data['reply_count']).replace("\'", "\\'")
+            tweet_favorite_count = str(data['favorite_count']).replace("\'", "\\'")
+            tweet_favorited = str(data['favorited']).replace("\'", "\\'")
+            tweet_retweeted = str(data['retweeted']).replace("\'", "\\'")
+            tweet_filter_level = str(data['filter_level']).replace("\'", "\\'")
+            tweet_lang = str(data['lang']).replace("\'", "\\'")
             tweet_coordinates = data['coordinates']['coordinates'] if 'type' in data else None
             tweet_coordinates_type = data['coordinates']['type'] if 'type' in data else None
             place_country = str(data['place']['country']) if 'country' in data else None
@@ -955,36 +955,36 @@ def get_bulk_insert_statement(table, path=DOCUMENT):
             description = str(data['user']['description']).replace("\'", "\\""")
             description = description.replace("\\", "|")
             translator_type = str(data['user']['translator_type']).replace("\'", "\\'")
-            protected = str(data['user']['protected'])
-            verified = str(data['user']['verified'])
-            followers_count = str(data['user']['followers_count'])
-            friends_count = str(data['user']['friends_count'])
-            listed_count = str(data['user']['listed_count'])
-            favourites_count = str(data['user']['favourites_count'])
-            statuses_count = str(data['user']['statuses_count'])
-            user_created_at = str(data['user']['created_at'])
-            utc_offset = str(data['user']['utc_offset'])
+            protected = str(data['user']['protected']).replace("\'", "\\'")
+            verified = str(data['user']['verified']).replace("\'", "\\'")
+            followers_count = str(data['user']['followers_count']).replace("\'", "\\'")
+            friends_count = str(data['user']['friends_count']).replace("\'", "\\'")
+            listed_count = str(data['user']['listed_count']).replace("\'", "\\'")
+            favourites_count = str(data['user']['favourites_count']).replace("\'", "\\'")
+            statuses_count = str(data['user']['statuses_count']).replace("\'", "\\'")
+            user_created_at = str(data['user']['created_at']).replace("\'", "\\'")
+            utc_offset = str(data['user']['utc_offset']).replace("\'", "\\'")
             time_zone = str(data['user']['time_zone']).replace("\'", "\\'")
-            geo_enabled = str(data['user']['geo_enabled'])
-            user_lang = str(data['user']['lang'])
-            contributors_enabled = str(data['user']['contributors_enabled'])
-            is_translator = str(data['user']['is_translator'])
-            profile_background_color = str(data['user']['profile_background_color'])
-            profile_background_image_url = str(data['user']['profile_background_image_url'])
-            profile_background_image_url_https = str(data['user']['profile_background_image_url_https'])
-            profile_background_tile = str(data['user']['profile_background_tile'])
-            profile_image_url = str(data['user']['profile_image_url'])
-            profile_image_url_https = str(data['user']['profile_image_url_https'])
-            profile_link_color = str(data['user']['profile_link_color'])
-            profile_sidebar_border_color = str(data['user']['profile_sidebar_border_color'])
-            profile_sidebar_fill_color = str(data['user']['profile_sidebar_fill_color'])
-            profile_text_color = str(data['user']['profile_text_color'])
-            profile_use_background_image = str(data['user']['profile_use_background_image'])
-            default_profile = str(data['user']['default_profile'])
-            default_profile_image = str(data['user']['default_profile_image'])
-            following = str(data['user']['default_profile_image'])
-            follow_request_sent = str(data['user']['follow_request_sent'])
-            notifications = str(data['user']['notifications'])
+            geo_enabled = str(data['user']['geo_enabled']).replace("\'", "\\'")
+            user_lang = str(data['user']['lang']).replace("\'", "\\'")
+            contributors_enabled = str(data['user']['contributors_enabled']).replace("\'", "\\'")
+            is_translator = str(data['user']['is_translator']).replace("\'", "\\'")
+            profile_background_color = str(data['user']['profile_background_color']).replace("\'", "\\'")
+            profile_background_image_url = str(data['user']['profile_background_image_url']).replace("\'", "\\'")
+            profile_background_image_url_https = str(data['user']['profile_background_image_url_https']).replace("\'", "\\'")
+            profile_background_tile = str(data['user']['profile_background_tile']).replace("\'", "\\'")
+            profile_image_url = str(data['user']['profile_image_url']).replace("\'", "\\'")
+            profile_image_url_https = str(data['user']['profile_image_url_https']).replace("\'", "\\'")
+            profile_link_color = str(data['user']['profile_link_color']).replace("\'", "\\'")
+            profile_sidebar_border_color = str(data['user']['profile_sidebar_border_color']).replace("\'", "\\'")
+            profile_sidebar_fill_color = str(data['user']['profile_sidebar_fill_color']).replace("\'", "\\'")
+            profile_text_color = str(data['user']['profile_text_color']).replace("\'", "\\'")
+            profile_use_background_image = str(data['user']['profile_use_background_image']).replace("\'", "\\'")
+            default_profile = str(data['user']['default_profile']).replace("\'", "\\'")
+            default_profile_image = str(data['user']['default_profile_image']).replace("\'", "\\'")
+            following = str(data['user']['default_profile_image']).replace("\'", "\\'")
+            follow_request_sent = str(data['user']['follow_request_sent']).replace("\'", "\\'")
+            notifications = str(data['user']['notifications']).replace("\'", "\\'")
 
             # hashtag
 
@@ -996,8 +996,8 @@ def get_bulk_insert_statement(table, path=DOCUMENT):
 
             for hashtag in hashtag_text:
                 hashtag_id = data['id']
-                hashtag_htext = str(hashtag['text'])
-                hashtag_indices = str(hashtag['indices'])
+                hashtag_htext = str(hashtag['text']).replace("\'", "\\'")
+                hashtag_indices = str(hashtag['indices']).replace("\'", "\\'")
 
             # symbols
 
@@ -1009,8 +1009,8 @@ def get_bulk_insert_statement(table, path=DOCUMENT):
 
             for symbol in symbol_text:
                 symbol_id = 0
-                symbol_symbol_text = str(symbol['text'])
-                symbol_indices = str(symbol['indices'])
+                symbol_symbol_text = str(symbol['text']).replace("\'", "\\'")
+                symbol_indices = str(symbol['indices']).replace("\'", "\\'")
 
             # urls
 
@@ -1025,9 +1025,9 @@ def get_bulk_insert_statement(table, path=DOCUMENT):
             for url in url_text:
                 url_id = data['id']
                 url_url = str(url['url'])
-                url_display_url_ = str(url['display_url'])
-                url_expanded_url = str(url['expanded_url'])
-                url_indices = str(url['indices'])
+                url_display_url_ = str(url['display_url']).replace("\'", "\\'")
+                url_expanded_url = str(url['expanded_url']).replace("\'", "\\'")
+                url_indices = str(url['indices']).replace("\'", "\\'")
 
             # user mentions
 
@@ -1041,10 +1041,10 @@ def get_bulk_insert_statement(table, path=DOCUMENT):
 
             for user_mention in user_mention_text:
                 user_mention_name = str(user_mention['name']).replace("\'", "\\'")
-                user_mention_indices = str(user_mention['indices'])
+                user_mention_indices = str(user_mention['indices']).replace("\'", "\\'")
                 user_mention_screen_name = str(user_mention['screen_name']).replace("\'", "\\'")
-                user_mention_id = str(user_mention['id'])
-                user_mention_id_str = str(user_mention['id_str'])
+                user_mention_id = str(user_mention['id']).replace("\'", "\\'")
+                user_mention_id_str = str(user_mention['id_str']).replace("\'", "\\'")
 
             # media
 
@@ -1066,16 +1066,16 @@ def get_bulk_insert_statement(table, path=DOCUMENT):
 
                 for media in media_text:
                     media_tweet_id = data['id']
-                    media_type = str(media['type'])
+                    media_type = str(media['type']).replace("\'", "\\'")
                     media_sizes = None
-                    media_indices = str(media['indices'])
-                    media_media = str(media['url'])
-                    media_media_url = str(media['media_url'])
-                    media_display_url = str(media['display_url'])
-                    media_id = str(media['id'])
-                    media_id_str = str(media['id_str'])
-                    media_expanded_url = str(media['expanded_url'])
-                    media_media_url_https = str(media['media_url_https'])
+                    media_indices = str(media['indices']).replace("\'", "\\'")
+                    media_media = str(media['url']).replace("\'", "\\'")
+                    media_media_url = str(media['media_url']).replace("\'", "\\'")
+                    media_display_url = str(media['display_url']).replace("\'", "\\'")
+                    media_id = str(media['id']).replace("\'", "\\'")
+                    media_id_str = str(media['id_str']).replace("\'", "\\'")
+                    media_expanded_url = str(media['expanded_url']).replace("\'", "\\'")
+                    media_media_url_https = str(media['media_url_https']).replace("\'", "\\'")
 
 
             values +=("(0," \
@@ -1134,12 +1134,12 @@ def get_normalized_statements(path=DOCUMENT):
             t_id_str = str(data['id_str'])
             text = str(data['text']).replace("'", "\\'")
             source = str(data['source']).replace("\'", "\\'")
-            truncated = str(data['truncated'])
-            in_reply_to_status_id = str(data['in_reply_to_status_id'])
-            in_reply_to_status_id_str = str(data['in_reply_to_status_id_str'])
-            in_reply_to_user_id = str(data['in_reply_to_user_id'])
-            in_reply_to_user_id_str = str(data['in_reply_to_user_id_str'])
-            in_reply_to_screen_name = str(data['in_reply_to_screen_name'])
+            truncated = str(data['truncated']).replace("\'", "\\'")
+            in_reply_to_status_id = str(data['in_reply_to_status_id']).replace("\'", "\\'")
+            in_reply_to_status_id_str = str(data['in_reply_to_status_id_str']).replace("\'", "\\'")
+            in_reply_to_user_id = str(data['in_reply_to_user_id']).replace("\'", "\\'")
+            in_reply_to_user_id_str = str(data['in_reply_to_user_id_str']).replace("\'", "\\'")
+            in_reply_to_screen_name = str(data['in_reply_to_screen_name']).replace("\'", "\\'")
 
             if in_reply_to_user_id == 'None': in_reply_to_user_id = 0
             if in_reply_to_status_id == 'None': in_reply_to_status_id = 0
@@ -1147,11 +1147,11 @@ def get_normalized_statements(path=DOCUMENT):
             user_id = str(data['user']['id'])
             quote_count = str(data['quote_count'])
             reply_count = str(data['reply_count'])
-            favorite_count = str(data['favorite_count'])
-            favorited = str(data['favorited'])
-            retweeted = str(data['retweeted'])
-            filter_level = str(data['filter_level'])
-            lang = str(data['lang'])
+            favorite_count = str(data['favorite_count']).replace("\'", "\\'")
+            favorited = str(data['favorited']).replace("\'", "\\'")
+            retweeted = str(data['retweeted']).replace("\'", "\\'")
+            filter_level = str(data['filter_level']).replace("\'", "\\'")
+            lang = str(data['lang']).replace("\'", "\\'")
             tweet_coordinates = data['coordinates']['coordinates'] if 'type' in data else None
             tweet_coordinates_type = data['coordinates']['type'] if 'type' in data else None
             place_country = str(data['place']['country']) if 'country' in data else None
@@ -1192,36 +1192,36 @@ def get_normalized_statements(path=DOCUMENT):
             description = str(data['user']['description']).replace("\'", "\\""")
             description = description.replace("\\", "|")
             translator_type = str(data['user']['translator_type']).replace("\'", "\\'")
-            protected = str(data['user']['protected'])
-            verified = str(data['user']['verified'])
-            followers_count = str(data['user']['followers_count'])
-            friends_count = str(data['user']['friends_count'])
-            listed_count = str(data['user']['listed_count'])
-            favourites_count = str(data['user']['favourites_count'])
-            statuses_count = str(data['user']['statuses_count'])
-            created_at = str(data['user']['created_at'])
-            utc_offset = str(data['user']['utc_offset'])
+            protected = str(data['user']['protected']).replace("\'", "\\'")
+            verified = str(data['user']['verified']).replace("\'", "\\'")
+            followers_count = str(data['user']['followers_count']).replace("\'", "\\'")
+            friends_count = str(data['user']['friends_count']).replace("\'", "\\'")
+            listed_count = str(data['user']['listed_count']).replace("\'", "\\'")
+            favourites_count = str(data['user']['favourites_count']).replace("\'", "\\'")
+            statuses_count = str(data['user']['statuses_count']).replace("\'", "\\'")
+            created_at = str(data['user']['created_at']).replace("\'", "\\'")
+            utc_offset = str(data['user']['utc_offset']).replace("\'", "\\'")
             time_zone = str(data['user']['time_zone']).replace("\'", "\\'")
-            geo_enabled = str(data['user']['geo_enabled'])
-            lang = str(data['user']['lang'])
-            contributors_enabled = str(data['user']['contributors_enabled'])
-            is_translator = str(data['user']['is_translator'])
-            profile_background_color = str(data['user']['profile_background_color'])
-            profile_background_image_url = str(data['user']['profile_background_image_url'])
-            profile_background_image_url_https = str(data['user']['profile_background_image_url_https'])
-            profile_background_tile = str(data['user']['profile_background_tile'])
-            profile_image_url = str(data['user']['profile_image_url'])
-            profile_image_url_https = str(data['user']['profile_image_url_https'])
-            profile_link_color = str(data['user']['profile_link_color'])
-            profile_sidebar_border_color = str(data['user']['profile_sidebar_border_color'])
-            profile_sidebar_fill_color = str(data['user']['profile_sidebar_fill_color'])
-            profile_text_color = str(data['user']['profile_text_color'])
-            profile_use_background_image = str(data['user']['profile_use_background_image'])
-            default_profile = str(data['user']['default_profile'])
-            default_profile_image = str(data['user']['default_profile_image'])
-            following = str(data['user']['default_profile_image'])
-            follow_request_sent = str(data['user']['follow_request_sent'])
-            notifications = str(data['user']['notifications'])
+            geo_enabled = str(data['user']['geo_enabled']).replace("\'", "\\'")
+            lang = str(data['user']['lang']).replace("\'", "\\'")
+            contributors_enabled = str(data['user']['contributors_enabled']).replace("\'", "\\'")
+            is_translator = str(data['user']['is_translator']).replace("\'", "\\'")
+            profile_background_color = str(data['user']['profile_background_color']).replace("\'", "\\'")
+            profile_background_image_url = str(data['user']['profile_background_image_url']).replace("\'", "\\'")
+            profile_background_image_url_https = str(data['user']['profile_background_image_url_https']).replace("\'", "\\'")
+            profile_background_tile = str(data['user']['profile_background_tile']).replace("\'", "\\'")
+            profile_image_url = str(data['user']['profile_image_url']).replace("\'", "\\'")
+            profile_image_url_https = str(data['user']['profile_image_url_https']).replace("\'", "\\'")
+            profile_link_color = str(data['user']['profile_link_color']).replace("\'", "\\'")
+            profile_sidebar_border_color = str(data['user']['profile_sidebar_border_color']).replace("\'", "\\'")
+            profile_sidebar_fill_color = str(data['user']['profile_sidebar_fill_color']).replace("\'", "\\'")
+            profile_text_color = str(data['user']['profile_text_color']).replace("\'", "\\'")
+            profile_use_background_image = str(data['user']['profile_use_background_image']).replace("\'", "\\'")
+            default_profile = str(data['user']['default_profile']).replace("\'", "\\'")
+            default_profile_image = str(data['user']['default_profile_image']).replace("\'", "\\'")
+            following = str(data['user']['default_profile_image']).replace("\'", "\\'")
+            follow_request_sent = str(data['user']['follow_request_sent']).replace("\'", "\\'")
+            notifications = str(data['user']['notifications']).replace("\'", "\\'")
 
             user_stmts.append("INSERT IGNORE INTO users VALUES (" \
                               "'{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', " \
@@ -1242,8 +1242,8 @@ def get_normalized_statements(path=DOCUMENT):
 
             for hashtag in hashtag_text:
                 id = data['id']
-                hashtag_text = str(hashtag['text'])
-                indices_text = str(hashtag['indices'])
+                hashtag_text = str(hashtag['text']).replace("\'", "\\'")
+                indices_text = str(hashtag['indices']).replace("\'", "\\'")
 
                 hashtags_stmts.append(
                     "INSERT IGNORE into hashtags (id, hashtag, indices) VALUES ({}, '{}', '{}');".format(
@@ -1255,10 +1255,10 @@ def get_normalized_statements(path=DOCUMENT):
 
             for url in url_text:
                 id = data['id']
-                url_text = str(url['url'])
-                display_url_text = str(url['display_url'])
-                expanded_url_text = str(url['expanded_url'])
-                indices_text = str(url['indices'])
+                url_text = str(url['url']).replace("\'", "\\'")
+                display_url_text = str(url['display_url']).replace("\'", "\\'")
+                expanded_url_text = str(url['expanded_url']).replace("\'", "\\'")
+                indices_text = str(url['indices']).replace("\'", "\\'")
 
                 url_stmts.append("INSERT IGNORE into urls VALUES ({}, '{}', '{}', '{}', '{}');".format(
                     id, url_text, display_url_text, expanded_url_text, indices_text))
@@ -1269,8 +1269,8 @@ def get_normalized_statements(path=DOCUMENT):
 
             for symbol in symbol_text:
                 id = 0
-                symbol_text = str(symbol['text'])
-                indices_text = str(symbol['indices'])
+                symbol_text = str(symbol['text']).replace("\'", "\\'")
+                indices_text = str(symbol['indices']).replace("\'", "\\'")
 
                 symbols_stmts.append(
                     "INSERT IGNORE into symbols VALUES ({}, '{}', '{}');".format(id, symbol_text, indices_text))
@@ -1286,8 +1286,8 @@ def get_normalized_statements(path=DOCUMENT):
 
                 indices = str(user_mention['indices'])
                 screen_name = str(user_mention['screen_name']).replace("\'", "\\'")
-                u_id = str(user_mention['id'])
-                u_id_str = str(user_mention['id_str'])
+                u_id = str(user_mention['id']).replace("\'", "\\'")
+                u_id_str = str(user_mention['id_str']).replace("\'", "\\'")
 
                 user_mention_stmts.append(
                     "INSERT IGNORE into user_mentions VALUES ({}, '{}','{}','{}','{}','{}');".format(id, name, indices,
@@ -1302,16 +1302,16 @@ def get_normalized_statements(path=DOCUMENT):
 
                 for media in media_text:
                     id = data['id']
-                    type = str(media['type'])
+                    type = str(media['type']).replace("\'", "\\'")
                     sizes = 'None'
-                    indices = str(media['indices'])
-                    url = str(media['url'])
-                    media_url = str(media['media_url'])
-                    display_url = str(media['display_url'])
-                    m_id = str(media['id'])
-                    m_id_str = str(media['id_str'])
-                    expanded_url = str(media['expanded_url'])
-                    media_url_https = str(media['media_url_https'])
+                    indices = str(media['indices']).replace("\'", "\\'")
+                    url = str(media['url']).replace("\'", "\\'")
+                    media_url = str(media['media_url']).replace("\'", "\\'")
+                    display_url = str(media['display_url']).replace("\'", "\\'")
+                    m_id = str(media['id']).replace("\'", "\\'")
+                    m_id_str = str(media['id_str']).replace("\'", "\\'")
+                    expanded_url = str(media['expanded_url']).replace("\'", "\\'")
+                    media_url_https = str(media['media_url_https']).replace("\'", "\\'")
 
                     media_stmts.append(
                         "INSERT IGNORE into media VALUES ({}, '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}');".format(
@@ -1347,24 +1347,24 @@ def get_normalized_bulk_insert_statements(path=DOCUMENT):
             t_id_str = str(data['id_str'])
             text = str(data['text']).replace("'", "\\'")
             source = str(data['source']).replace("\'", "\\'")
-            truncated = str(data['truncated'])
-            in_reply_to_status_id = str(data['in_reply_to_status_id'])
-            in_reply_to_status_id_str = str(data['in_reply_to_status_id_str'])
-            in_reply_to_user_id = str(data['in_reply_to_user_id'])
-            in_reply_to_user_id_str = str(data['in_reply_to_user_id_str'])
-            in_reply_to_screen_name = str(data['in_reply_to_screen_name'])
+            truncated = str(data['truncated']).replace("\'", "\\'")
+            in_reply_to_status_id = str(data['in_reply_to_status_id']).replace("\'", "\\'")
+            in_reply_to_status_id_str = str(data['in_reply_to_status_id_str']).replace("\'", "\\'")
+            in_reply_to_user_id = str(data['in_reply_to_user_id']).replace("\'", "\\'")
+            in_reply_to_user_id_str = str(data['in_reply_to_user_id_str']).replace("\'", "\\'")
+            in_reply_to_screen_name = str(data['in_reply_to_screen_name']).replace("\'", "\\'")
 
             if in_reply_to_user_id == 'None': in_reply_to_user_id = 0
             if in_reply_to_status_id == 'None': in_reply_to_status_id = 0
 
-            user_id = str(data['user']['id'])
-            quote_count = str(data['quote_count'])
-            reply_count = str(data['reply_count'])
-            favorite_count = str(data['favorite_count'])
-            favorited = str(data['favorited'])
-            retweeted = str(data['retweeted'])
-            filter_level = str(data['filter_level'])
-            lang = str(data['lang'])
+            user_id = str(data['user']['id']).replace("\'", "\\'")
+            quote_count = str(data['quote_count']).replace("\'", "\\'")
+            reply_count = str(data['reply_count']).replace("\'", "\\'")
+            favorite_count = str(data['favorite_count']).replace("\'", "\\'")
+            favorited = str(data['favorited']).replace("\'", "\\'")
+            retweeted = str(data['retweeted']).replace("\'", "\\'")
+            filter_level = str(data['filter_level']).replace("\'", "\\'")
+            lang = str(data['lang']).replace("\'", "\\'")
             tweet_coordinates = data['coordinates']['coordinates'] if 'type' in data else None
             tweet_coordinates_type = data['coordinates']['type'] if 'type' in data else None
             place_country = str(data['place']['country']) if 'country' in data else None
@@ -1403,36 +1403,36 @@ def get_normalized_bulk_insert_statements(path=DOCUMENT):
             description = str(data['user']['description']).replace("\'", "\\""")
             description = description.replace("\\", "|")
             translator_type = str(data['user']['translator_type']).replace("\'", "\\'")
-            protected = str(data['user']['protected'])
-            verified = str(data['user']['verified'])
-            followers_count = str(data['user']['followers_count'])
-            friends_count = str(data['user']['friends_count'])
-            listed_count = str(data['user']['listed_count'])
-            favourites_count = str(data['user']['favourites_count'])
-            statuses_count = str(data['user']['statuses_count'])
-            created_at = str(data['user']['created_at'])
-            utc_offset = str(data['user']['utc_offset'])
+            protected = str(data['user']['protected']).replace("\'", "\\'")
+            verified = str(data['user']['verified']).replace("\'", "\\'")
+            followers_count = str(data['user']['followers_count']).replace("\'", "\\'")
+            friends_count = str(data['user']['friends_count']).replace("\'", "\\'")
+            listed_count = str(data['user']['listed_count']).replace("\'", "\\'")
+            favourites_count = str(data['user']['favourites_count']).replace("\'", "\\'")
+            statuses_count = str(data['user']['statuses_count']).replace("\'", "\\'")
+            created_at = str(data['user']['created_at']).replace("\'", "\\'")
+            utc_offset = str(data['user']['utc_offset']).replace("\'", "\\'")
             time_zone = str(data['user']['time_zone']).replace("\'", "\\'")
-            geo_enabled = str(data['user']['geo_enabled'])
-            lang = str(data['user']['lang'])
-            contributors_enabled = str(data['user']['contributors_enabled'])
-            is_translator = str(data['user']['is_translator'])
-            profile_background_color = str(data['user']['profile_background_color'])
-            profile_background_image_url = str(data['user']['profile_background_image_url'])
-            profile_background_image_url_https = str(data['user']['profile_background_image_url_https'])
-            profile_background_tile = str(data['user']['profile_background_tile'])
-            profile_image_url = str(data['user']['profile_image_url'])
-            profile_image_url_https = str(data['user']['profile_image_url_https'])
-            profile_link_color = str(data['user']['profile_link_color'])
-            profile_sidebar_border_color = str(data['user']['profile_sidebar_border_color'])
-            profile_sidebar_fill_color = str(data['user']['profile_sidebar_fill_color'])
-            profile_text_color = str(data['user']['profile_text_color'])
-            profile_use_background_image = str(data['user']['profile_use_background_image'])
-            default_profile = str(data['user']['default_profile'])
-            default_profile_image = str(data['user']['default_profile_image'])
-            following = str(data['user']['default_profile_image'])
-            follow_request_sent = str(data['user']['follow_request_sent'])
-            notifications = str(data['user']['notifications'])
+            geo_enabled = str(data['user']['geo_enabled']).replace("\'", "\\'")
+            lang = str(data['user']['lang']).replace("\'", "\\'")
+            contributors_enabled = str(data['user']['contributors_enabled']).replace("\'", "\\'")
+            is_translator = str(data['user']['is_translator']).replace("\'", "\\'")
+            profile_background_color = str(data['user']['profile_background_color']).replace("\'", "\\'")
+            profile_background_image_url = str(data['user']['profile_background_image_url']).replace("\'", "\\'")
+            profile_background_image_url_https = str(data['user']['profile_background_image_url_https']).replace("\'", "\\'")
+            profile_background_tile = str(data['user']['profile_background_tile']).replace("\'", "\\'")
+            profile_image_url = str(data['user']['profile_image_url']).replace("\'", "\\'")
+            profile_image_url_https = str(data['user']['profile_image_url_https']).replace("\'", "\\'")
+            profile_link_color = str(data['user']['profile_link_color']).replace("\'", "\\'")
+            profile_sidebar_border_color = str(data['user']['profile_sidebar_border_color']).replace("\'", "\\'")
+            profile_sidebar_fill_color = str(data['user']['profile_sidebar_fill_color']).replace("\'", "\\'")
+            profile_text_color = str(data['user']['profile_text_color']).replace("\'", "\\'")
+            profile_use_background_image = str(data['user']['profile_use_background_image']).replace("\'", "\\'")
+            default_profile = str(data['user']['default_profile']).replace("\'", "\\'")
+            default_profile_image = str(data['user']['default_profile_image']).replace("\'", "\\'")
+            following = str(data['user']['default_profile_image']).replace("\'", "\\'")
+            follow_request_sent = str(data['user']['follow_request_sent']).replace("\'", "\\'")
+            notifications = str(data['user']['notifications']).replace("\'", "\\'")
 
             user_values += "('{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', " \
                               "'{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}'" \
@@ -1452,8 +1452,8 @@ def get_normalized_bulk_insert_statements(path=DOCUMENT):
 
             for hashtag in hashtag_text:
                 id = data['id']
-                hashtag_text = str(hashtag['text'])
-                indices_text = str(hashtag['indices'])
+                hashtag_text = str(hashtag['text']).replace("\'", "\\'")
+                indices_text = str(hashtag['indices']).replace("\'", "\\'")
 
 
                 hashtag_values += "({}, '{}', '{}'),".format(id, hashtag_text, indices_text)
@@ -1465,9 +1465,9 @@ def get_normalized_bulk_insert_statements(path=DOCUMENT):
             for url in url_text:
                 id = data['id']
                 url_text = str(url['url'])
-                display_url_text = str(url['display_url'])
-                expanded_url_text = str(url['expanded_url'])
-                indices_text = str(url['indices'])
+                display_url_text = str(url['display_url']).replace("\'", "\\'")
+                expanded_url_text = str(url['expanded_url']).replace("\'", "\\'")
+                indices_text = str(url['indices']).replace("\'", "\\'")
 
 
                 url_values += "({}, '{}', '{}', '{}', '{}'),".format(id, url_text, display_url_text, expanded_url_text, indices_text)
@@ -1477,8 +1477,8 @@ def get_normalized_bulk_insert_statements(path=DOCUMENT):
 
             for symbol in symbol_text:
                 id = 0
-                symbol_text = str(symbol['text'])
-                indices_text = str(symbol['indices'])
+                symbol_text = str(symbol['text']).replace("\'", "\\'")
+                indices_text = str(symbol['indices']).replace("\'", "\\'")
 
 
                 symbol_values += "({}, '{}', '{}'),".format(id, symbol_text, indices_text)
@@ -1493,8 +1493,8 @@ def get_normalized_bulk_insert_statements(path=DOCUMENT):
 
                 indices = str(user_mention['indices'])
                 screen_name = str(user_mention['screen_name']).replace("\'", "\\'")
-                u_id = str(user_mention['id'])
-                u_id_str = str(user_mention['id_str'])
+                u_id = str(user_mention['id']).replace("\'", "\\'")
+                u_id_str = str(user_mention['id_str']).replace("\'", "\\'")
 
 
 
@@ -1509,16 +1509,16 @@ def get_normalized_bulk_insert_statements(path=DOCUMENT):
 
                 for media in media_text:
                     id = data['id']
-                    type = str(media['type'])
+                    type = str(media['type']).replace("\'", "\\'")
                     sizes = 'None'
-                    indices = str(media['indices'])
-                    url = str(media['url'])
-                    media_url = str(media['media_url'])
-                    display_url = str(media['display_url'])
-                    m_id = str(media['id'])
-                    m_id_str = str(media['id_str'])
-                    expanded_url = str(media['expanded_url'])
-                    media_url_https = str(media['media_url_https'])
+                    indices = str(media['indices']).replace("\'", "\\'")
+                    url = str(media['url']).replace("\'", "\\'")
+                    media_url = str(media['media_url']).replace("\'", "\\'")
+                    display_url = str(media['display_url']).replace("\'", "\\'")
+                    m_id = str(media['id']).replace("\'", "\\'")
+                    m_id_str = str(media['id_str']).replace("\'", "\\'")
+                    expanded_url = str(media['expanded_url']).replace("\'", "\\'")
+                    media_url_https = str(media['media_url_https']).replace("\'", "\\'")
 
 
                     media_values += "({}, '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}'),".format(
