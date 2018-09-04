@@ -31596,3 +31596,47 @@ INFO: 2018-09-04 14:37:30,562: mysql_db: 0.0014736652374267578 seconds to select
 INFO: 2018-09-04 14:37:30,880: mysql_db: 0.005750894546508789 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
 INFO: 2018-09-04 14:37:31,184: mysql_db: 0.0011510848999023438 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
 INFO: 2018-09-04 14:37:31,371: mysql_db: 0.0012700557708740234 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:51:36,615: mysql_db: 0 seconds to bulk insert 476.12MB, indexed=True
+INFO: 2018-09-04 14:51:37,104: mysql_db: 0.0031189918518066406 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:51:37,427: mysql_db: 0.0012669563293457031 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:51:37,799: mysql_db: 0.0011501312255859375 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:51:38,125: mysql_db: 0.002611398696899414 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:51:38,435: mysql_db: 0.001039743423461914 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:51:38,760: mysql_db: 0.0069925785064697266 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:51:39,022: mysql_db: 0.006541013717651367 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:51:39,306: mysql_db: 0.004779338836669922 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:51:39,564: mysql_db: 0.010015010833740234 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:51:39,846: mysql_db: 0.0011990070343017578 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:54:00,461: mysql_db: 0 seconds to bulk insert 476.12MB, indexed=True
+INFO: 2018-09-04 14:54:00,979: mysql_db: 0.03245830535888672 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:54:01,276: mysql_db: 0.002601146697998047 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:54:01,538: mysql_db: 0.0028848648071289062 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:54:01,814: mysql_db: 0.006461381912231445 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:54:02,099: mysql_db: 0.0032186508178710938 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:54:02,354: mysql_db: 0.004349946975708008 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:54:02,652: mysql_db: 0.0010919570922851562 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:54:02,915: mysql_db: 0.0025267601013183594 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:54:03,123: mysql_db: 0.003300189971923828 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:54:03,403: mysql_db: 0.0013852119445800781 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:58:27,625: mysql_db: 0 seconds to bulk insert 476.12MB, indexed=True
+INFO: 2018-09-04 14:58:28,362: mysql_db: 0.004185676574707031 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:58:28,702: mysql_db: 0.017421960830688477 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:58:29,010: mysql_db: 0.0043599605560302734 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:58:29,265: mysql_db: 0.0036249160766601562 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:58:29,518: mysql_db: 0.0011048316955566406 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:58:29,790: mysql_db: 0.004701375961303711 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:58:30,058: mysql_db: 0.031777381896972656 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:58:30,386: mysql_db: 0.0013027191162109375 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:58:30,627: mysql_db: 0.004024028778076172 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 14:58:31,009: mysql_db: 0.0011959075927734375 seconds to select_universal 0 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:00:03,602: mysql_db: 50.452255964279175 seconds to bulk insert 476.12MB, indexed=True
+INFO: 2018-09-04 15:00:05,135: mysql_db: 0.13095378875732422 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:00:06,045: mysql_db: 0.19849252700805664 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:00:06,699: mysql_db: 0.11841607093811035 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:00:07,433: mysql_db: 0.1193537712097168 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:00:08,199: mysql_db: 0.13279008865356445 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:00:08,990: mysql_db: 0.17742156982421875 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:00:09,671: mysql_db: 0.11744284629821777 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:00:10,418: mysql_db: 0.11867117881774902 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:00:11,113: mysql_db: 0.12346196174621582 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB
+INFO: 2018-09-04 15:00:11,769: mysql_db: 0.11422252655029297 seconds to select_universal 43911 objects indexed=True, doc_size=476.12MB

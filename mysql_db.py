@@ -147,7 +147,7 @@ def bulk_insert_universal(path, indexed, drop_on_start=True, drop_on_exit=False)
         remove_indexes()
 
 
-    get_bulk_insert_statement(table,path)
+#    get_bulk_insert_statement(table,path)
     if drop_on_start: delete_from_table(table=table)
 
     connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
@@ -414,6 +414,7 @@ def insert_one_universal(path, indexed, drop_on_start=True, drop_on_exit=False):
                                                                                     doc_size))
     return execution_time, db_size, doc_size
 
+
 def insert_one_normalized(path, indexed, drop_on_start=True, drop_on_exit=False):
     delete_from_table('hashtags')
     delete_from_table('symbols')
@@ -490,6 +491,7 @@ def insert_one_normalized(path, indexed, drop_on_start=True, drop_on_exit=False)
 
     return execution_time, db_size, doc_size
 
+
 def select_universal(path, indexed):
     conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     cursor = conn.cursor()
@@ -564,7 +566,6 @@ def select_normalized(path, indexed):
     logger.info("{} seconds to select_normalized {} objects indexed={}, doc_size={}".format(sql_time, num, indexed, size))
 
     return sql_time, size
-
 
 
 def scan_universal():
@@ -766,7 +767,7 @@ def get_statements(table, path=DOCUMENT):
             symbol_indices = None
 
             for symbol in symbol_text:
-                symbol_id = data['id']
+                symbol_id = 0
                 symbol_symbol_text = str(symbol['text'])
                 symbol_indices = str(symbol['indices'])
 
@@ -1003,7 +1004,7 @@ def get_bulk_insert_statement(table, path=DOCUMENT):
             symbol_indices = None
 
             for symbol in symbol_text:
-                symbol_id = data['id']
+                symbol_id = 0
                 symbol_symbol_text = str(symbol['text'])
                 symbol_indices = str(symbol['indices'])
 
@@ -1263,7 +1264,7 @@ def get_normalized_statements(path=DOCUMENT):
             symbol_text = data['entities']['symbols']
 
             for symbol in symbol_text:
-                id = data['id']
+                id = 0
                 symbol_text = str(symbol['text'])
                 indices_text = str(symbol['indices'])
 
@@ -1471,7 +1472,7 @@ def get_normalized_bulk_insert_statements(path=DOCUMENT):
             symbol_text = data['entities']['symbols']
 
             for symbol in symbol_text:
-                id = data['id']
+                id = 0
                 symbol_text = str(symbol['text'])
                 indices_text = str(symbol['indices'])
 
