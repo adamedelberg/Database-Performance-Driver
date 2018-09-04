@@ -31519,3 +31519,25 @@ INFO: 2018-09-04 13:19:44,288: mongo_db: 0.003164052963256836 seconds to scan_co
 INFO: 2018-09-04 13:19:44,293: mongo_db: 0.0033431053161621094 seconds to scan_collections 2000 objects
 INFO: 2018-09-04 13:19:44,298: mongo_db: 0.00325775146484375 seconds to scan_collections 2000 objects
 INFO: 2018-09-04 13:19:44,303: mongo_db: 0.003220081329345703 seconds to scan_collections 2000 objects
+INFO: 2018-09-04 13:23:06,371: mysql_db: 0.4001178741455078 seconds to bulk insert 4.89MB, indexed=True
+INFO: 2018-09-04 13:23:06,742: mysql_db: 0.004034280776977539 seconds to select_universal 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 13:23:07,034: mysql_db: 0.0027167797088623047 seconds to select_universal 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 13:23:07,295: mysql_db: 0.003820657730102539 seconds to select_universal 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 13:23:07,564: mysql_db: 0.0024907588958740234 seconds to select_universal 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 13:23:07,857: mysql_db: 0.0040624141693115234 seconds to select_universal 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 13:23:08,144: mysql_db: 0.0041599273681640625 seconds to select_universal 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 13:23:08,432: mysql_db: 0.008672952651977539 seconds to select_universal 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 13:23:08,702: mysql_db: 0.011276006698608398 seconds to select_universal 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 13:23:08,964: mysql_db: 0.0025997161865234375 seconds to select_universal 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 13:23:09,242: mysql_db: 0.0026192665100097656 seconds to select_universal 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 13:25:23,601: mongo_db: 0.9299190044403076 seconds to bulk_insert 4.89MB, indexed=True
+INFO: 2018-09-04 13:25:23,698: mongo_db: 0.05971121788024902 seconds to find 651 with indexed=True
+INFO: 2018-09-04 13:25:23,717: mongo_db: 0.01761603355407715 seconds to find 651 with indexed=True
+INFO: 2018-09-04 13:25:23,736: mongo_db: 0.01765131950378418 seconds to find 651 with indexed=True
+INFO: 2018-09-04 13:25:23,756: mongo_db: 0.017995119094848633 seconds to find 651 with indexed=True
+INFO: 2018-09-04 13:25:23,775: mongo_db: 0.017930269241333008 seconds to find 651 with indexed=True
+INFO: 2018-09-04 13:25:23,794: mongo_db: 0.017772436141967773 seconds to find 651 with indexed=True
+INFO: 2018-09-04 13:25:23,824: mongo_db: 0.02849102020263672 seconds to find 651 with indexed=True
+INFO: 2018-09-04 13:25:23,851: mongo_db: 0.022837162017822266 seconds to find 651 with indexed=True
+INFO: 2018-09-04 13:25:23,873: mongo_db: 0.020832300186157227 seconds to find 651 with indexed=True
+INFO: 2018-09-04 13:25:23,893: mongo_db: 0.01878213882446289 seconds to find 651 with indexed=True

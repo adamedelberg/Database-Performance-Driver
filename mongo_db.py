@@ -201,11 +201,9 @@ def bulk_insert(path, indexed, drop_on_start, drop_on_exit=False, write_concern=
     run = time.time() - start
 
     if indexed:
-        db2 = connect(HOST, PORT).get_database(DATABASE_INDEXED)
-        coll2 = db2.get_collection(COLLECTION)
-        drop_database(DATABASE_INDEXED)
-        create_indexes(db2)
-        coll2.insert_many(docs)
+        create_indexes()
+    else:
+        remove_indexes()
 
     size = "{}MB".format(round(os.path.getsize(path) / 1024 / 1024, 2))
     logger.info("{} seconds to bulk_insert {}, indexed={}".format(run, size, indexed))
@@ -233,9 +231,9 @@ def bulk_insert_collections(path, indexed, drop_on_start, drop_on_exit=False, wr
     tweet_collection = db.get_collection('tweets', write_concern=pymongo.WriteConcern(w=write_concern))
 
     if indexed:
-        #tweet_collection.create_index([("id", pymongo.ASCENDING)], name='tweet.id index', unique=True)
-        #user_collection.create_index([("id", pymongo.ASCENDING)], name='user.id index', unique=True)
         create_indexes()
+    else:
+        remove_indexes()
 
     execution_time = 0
 
