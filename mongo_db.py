@@ -98,27 +98,45 @@ def drop_database_collections(database):
         logger.warning("DROP ERROR: " + e)
 
 
-def create_indexes(database):
+def create_indexes():
     """
     Create indexes in given database
 
     :param database: the database where indexes will be created
     :return:
     """
+    remove_indexes()
+
     try:
-        coll = database.get_collection(COLLECTION)
+
+        client = MongoClient(HOST,PORT)
+        db = client.get_database(DATABASE)
+        coll = db.get_collection(COLLECTION)
+
         coll.create_index([("id", pymongo.ASCENDING)], name='tweetIdx')
         coll.create_index([("user.id", pymongo.ASCENDING)], name='user.idIdx')
         coll.create_index([("user.followers_count", pymongo.ASCENDING)], name='user.follower_countIdx')
         coll.create_index([("user.friends_count", pymongo.ASCENDING)], name='user.friends_countIdx')
         coll.create_index([("location", pymongo.ASCENDING)], name='locationIdx')
-    except pymongo.errors.CollectionInvalid as code:
-        logger.warning("PyMongo Error: {}".format(code))
+
+        client = MongoClient(HOST, PORT)
+        db = client.get_database(DATABASE_COLLECTION)
+
+        tweet_coll = db.get_collection('tweets')
+        users_coll = db.get_collection('users')
+
+        tweet_coll.create_index([("id", pymongo.ASCENDING)], name='tweetIdx')
+        users_coll.create_index([("id", pymongo.ASCENDING)], name='userIdx')
+        users_coll.create_index([("followers_count", pymongo.ASCENDING)], name='follower_countIdx')
+        users_coll.create_index([("friends_count", pymongo.ASCENDING)], name='friends_countIdx')
+        users_coll.create_index([("location", pymongo.ASCENDING)], name='locationIdx')
+
     except pymongo.errors.PyMongoError as code:
         logger.warning("PyMongo Error: {}".format(code))
+        pass
 
 #TODO test
-def remove_indexes(database):
+def remove_indexes():
     """
     Removes indexes in given database
 
@@ -127,14 +145,29 @@ def remove_indexes(database):
     """
 
     try:
-        coll = database.get_collection(COLLECTION)
-        coll.dropIndex('tweetIdx')
-        coll.dropIndex('user.idIdx')
-        coll.dropIndex('user.follower_countIdx')
-        coll.dropIndex('user.friends_countIdx')
-        coll.dropIndex('locationIdx')
+        client = MongoClient(HOST, PORT)
+        db = client.get_database(DATABASE)
+        coll = db.get_collection(COLLECTION)
+
+        coll.drop_index('tweetIdx')
+        coll.drop_index('user.idIdx')
+        coll.drop_index('user.follower_countIdx')
+        coll.drop_index('user.friends_countIdx')
+        coll.drop_index('locationIdx')
+
+        db = client.get_database(DATABASE_COLLECTION)
+        tweet_coll = db.get_collection('tweets')
+        users_coll = db.get_collection('users')
+
+        tweet_coll.drop_index('tweetIdx')
+        users_coll.drop_index('userIdx')
+        users_coll.drop_index('follower_countIdx')
+        users_coll.drop_index('friends_countIdx')
+        users_coll.drop_index('locationIdx')
+
     except pymongo.errors.PyMongoError as code:
         logger.warning("PyMongo Error: {}".format(code))
+        pass
 
 
 def bulk_insert(path, indexed, drop_on_start, drop_on_exit=False, write_concern=1):
@@ -200,8 +233,9 @@ def bulk_insert_collections(path, indexed, drop_on_start, drop_on_exit=False, wr
     tweet_collection = db.get_collection('tweets', write_concern=pymongo.WriteConcern(w=write_concern))
 
     if indexed:
-        tweet_collection.create_index([("id", pymongo.ASCENDING)], name='tweet.id index', unique=True)
-        user_collection.create_index([("id", pymongo.ASCENDING)], name='user.id index', unique=True)
+        #tweet_collection.create_index([("id", pymongo.ASCENDING)], name='tweet.id index', unique=True)
+        #user_collection.create_index([("id", pymongo.ASCENDING)], name='user.id index', unique=True)
+        create_indexes()
 
     execution_time = 0
 
@@ -495,7 +529,7 @@ def find_collections(indexed):
     """
 
     if indexed:
-        create_indexes(DATABASE_COLLECTION)
+        create_indexes()
 
     db = connect(HOST, PORT).get_database(DATABASE_COLLECTION)
 

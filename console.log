@@ -31378,3 +31378,68 @@ INFO: 2018-09-04 12:43:30,909: mysql_db:  0.08781790733337402 seconds to scan_no
 INFO: 2018-09-04 12:43:31,010: mysql_db:  0.09842705726623535 seconds to scan_normalized 1000 objects
 INFO: 2018-09-04 12:43:31,116: mysql_db:  0.10419201850891113 seconds to scan_normalized 1000 objects
 INFO: 2018-09-04 12:43:31,207: mysql_db:  0.0880119800567627 seconds to scan_normalized 1000 objects
+INFO: 2018-09-04 12:52:23,429: mysql_db: 0.40494799613952637 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:52:24,107: mysql_db: 0.36679816246032715 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:52:24,736: mysql_db: 0.3308849334716797 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:52:25,350: mysql_db: 0.3306140899658203 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:52:25,941: mysql_db: 0.325484037399292 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:53:50,797: mongo_db: 0.6473510265350342 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:53:51,555: mongo_db: 0.6251168251037598 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:53:52,257: mongo_db: 0.565861701965332 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:53:53,788: mongo_db: 1.2981467247009277 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:53:54,566: mongo_db: 0.6299548149108887 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:54:28,748: mongo_db: 0.593073844909668 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:54:29,450: mongo_db: 0.5576760768890381 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:54:30,294: mongo_db: 0.7033469676971436 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:54:31,064: mongo_db: 0.5931410789489746 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:54:32,166: mongo_db: 0.9468998908996582 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:54:32,866: mongo_db: 0.5661828517913818 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:54:33,586: mongo_db: 0.5530960559844971 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:54:34,286: mongo_db: 0.5606851577758789 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:54:35,156: mongo_db: 0.7213587760925293 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:54:35,825: mongo_db: 0.5384721755981445 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 12:54:51,856: mongo_db: 0.5641450881958008 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 12:54:52,855: mongo_db: 0.856126070022583 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 12:54:53,630: mongo_db: 0.6104021072387695 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 12:54:54,376: mongo_db: 0.5810468196868896 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 12:54:55,217: mongo_db: 0.6914589405059814 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 12:54:55,963: mongo_db: 0.5864148139953613 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 12:54:56,715: mongo_db: 0.6067428588867188 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 12:54:57,613: mongo_db: 0.755871057510376 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 12:54:58,384: mongo_db: 0.581840991973877 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 12:54:59,109: mongo_db: 0.5845649242401123 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 12:58:08,331: mongo_db: 0.6198899745941162 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 12:58:08,365: mongo_db: 0.023202180862426758 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 12:58:08,403: mongo_db: 0.034943580627441406 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 12:58:08,429: mongo_db: 0.024075984954833984 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 12:58:08,458: mongo_db: 0.02206730842590332 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 12:58:08,516: mongo_db: 0.05686616897583008 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 12:58:08,569: mongo_db: 0.04743146896362305 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 12:58:08,594: mongo_db: 0.02413320541381836 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 12:58:08,618: mongo_db: 0.02255558967590332 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 12:58:08,641: mongo_db: 0.02241802215576172 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 12:58:08,664: mongo_db: 0.02196526527404785 seconds to find_collections 651 with indexed=False
+WARNING: 2018-09-04 13:05:54,900: mongo_db: PyMongo Error: Index: { v: 2, key: { id: 1 }, name: "tweetIdx", ns: "benchmark_db_collection.tweets" } already exists with different options: { v: 2, unique: true, key: { id: 1 }, name: "tweet.id index", ns: "benchmark_db_collection.tweets" }
+WARNING: 2018-09-04 13:09:28,782: mongo_db: PyMongo Error: index not found with name [tweetIdx]
+WARNING: 2018-09-04 13:09:29,068: mongo_db: PyMongo Error: Index: { v: 2, key: { id: 1 }, name: "tweetIdx", ns: "benchmark_db_collection.tweets" } already exists with different options: { v: 2, unique: true, key: { id: 1 }, name: "tweet.id index", ns: "benchmark_db_collection.tweets" }
+WARNING: 2018-09-04 13:10:58,485: mongo_db: PyMongo Error: index not found with name [tweetIdx]
+WARNING: 2018-09-04 13:10:58,805: mongo_db: PyMongo Error: Index: { v: 2, key: { id: 1 }, name: "tweetIdx", ns: "benchmark_db_collection.tweets" } already exists with different options: { v: 2, unique: true, key: { id: 1 }, name: "tweet.id index", ns: "benchmark_db_collection.tweets" }
+WARNING: 2018-09-04 13:11:20,958: mongo_db: PyMongo Error: index not found with name [tweetIdx]
+WARNING: 2018-09-04 13:11:21,210: mongo_db: PyMongo Error: Index: { v: 2, key: { id: 1 }, name: "tweetIdx", ns: "benchmark_db_collection.tweets" } already exists with different options: { v: 2, unique: true, key: { id: 1 }, name: "tweet.id index", ns: "benchmark_db_collection.tweets" }
+WARNING: 2018-09-04 13:12:55,551: mongo_db: PyMongo Error: index not found with name [tweetIdx]
+WARNING: 2018-09-04 13:12:55,845: mongo_db: PyMongo Error: Index: { v: 2, key: { id: 1 }, name: "tweetIdx", ns: "benchmark_db_collection.tweets" } already exists with different options: { v: 2, unique: true, key: { id: 1 }, name: "tweet.id index", ns: "benchmark_db_collection.tweets" }
+WARNING: 2018-09-04 13:13:42,206: mongo_db: PyMongo Error: index not found with name [tweetIdx]
+WARNING: 2018-09-04 13:13:42,571: mongo_db: PyMongo Error: Index: { v: 2, key: { id: 1 }, name: "userIdx", ns: "benchmark_db_collection.users" } already exists with different options: { v: 2, unique: true, key: { id: 1 }, name: "user.id index", ns: "benchmark_db_collection.users" }
+WARNING: 2018-09-04 13:14:06,463: mongo_db: PyMongo Error: index not found with name [userIdx]
+INFO: 2018-09-04 13:14:08,098: mongo_db: 0.8073599338531494 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:14:22,996: mongo_db: 0.6613848209381104 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:14:23,652: mongo_db: 0.0397181510925293 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:14:24,282: mongo_db: 0.02557826042175293 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:14:24,890: mongo_db: 0.017650127410888672 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:14:25,586: mongo_db: 0.019989013671875 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:14:26,269: mongo_db: 0.018213987350463867 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:14:26,890: mongo_db: 0.01724529266357422 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:14:27,535: mongo_db: 0.019889116287231445 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:14:28,142: mongo_db: 0.017837047576904297 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:14:28,791: mongo_db: 0.017940044403076172 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:14:29,409: mongo_db: 0.02538895606994629 seconds to find_collections 651 with indexed=True

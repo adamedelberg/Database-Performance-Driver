@@ -215,6 +215,8 @@ def test_mongo_db_find_collections(indexed, iterations):
 
     log = 'mongo_db.find_collections: indexed={}, count= {}, time_mean={}'
     log_res(log.format(indexed, count, statistics.mean(times)), times)
+
+
 def test_mysql_db_select_universal(indexed, iterations):
     mysql_db.bulk_insert_universal(path=PATH, indexed=indexed)
     times = []
@@ -404,5 +406,5 @@ if __name__ == "__main__":
         test_mysql_db_scan_normalized               #19
     ]
 
-    run_test(database=database[0], target=test[19], simulated=False, threads=3, iterations=5, indexed=False)
+    run_test(database=database[0], target=test[13], simulated=False, threads=3, iterations=10, indexed=True)
 
