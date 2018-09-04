@@ -406,6 +406,7 @@ if __name__ == "__main__":
         test_mysql_db_scan_normalized               #19
     ]
 
-    #run_test(database=database[0], target=test[12], simulated=False, threads=3, iterations=10, indexed=True)
-
-    test_mysql_db_select_universal(True,10)
+    run_test(database=database[0], target=test[12], simulated=False, threads=3, iterations=10, indexed=True)
+    run_test(database=database[0], target=test[13], simulated=False, threads=3, iterations=10, indexed=True)
+    run_test(database=database[0], target=test[14], simulated=False, threads=3, iterations=10, indexed=True)
+    run_test(database=database[0], target=test[15], simulated=False, threads=3, iterations=10, indexed=True)
