@@ -167,7 +167,8 @@ def bulk_insert_universal(path, indexed, drop_on_start=True, drop_on_exit=False)
         execution_time += time.time() - start_time
     except pymysql.Error as code:
         logger.debug('PyMySQL Error: {}'.format(code))
-        pass
+        print(code)
+
 
     # for sql in statements:
     #
@@ -721,7 +722,7 @@ def get_statements(table, path=DOCUMENT):
             statuses_count = str(data['user']['statuses_count'])
             user_created_at = str(data['user']['created_at'])
             utc_offset = str(data['user']['utc_offset'])
-            time_zone = str(data['user']['time_zone'])
+            time_zone = str(data['user']['time_zone']).replace("\'", "\\'")
             geo_enabled = str(data['user']['geo_enabled'])
             user_lang = str(data['user']['lang'])
             contributors_enabled = str(data['user']['contributors_enabled'])
@@ -958,7 +959,7 @@ def get_bulk_insert_statement(table, path=DOCUMENT):
             statuses_count = str(data['user']['statuses_count'])
             user_created_at = str(data['user']['created_at'])
             utc_offset = str(data['user']['utc_offset'])
-            time_zone = str(data['user']['time_zone'])
+            time_zone = str(data['user']['time_zone']).replace("\'", "\\'")
             geo_enabled = str(data['user']['geo_enabled'])
             user_lang = str(data['user']['lang'])
             contributors_enabled = str(data['user']['contributors_enabled'])
@@ -1195,7 +1196,7 @@ def get_normalized_statements(path=DOCUMENT):
             statuses_count = str(data['user']['statuses_count'])
             created_at = str(data['user']['created_at'])
             utc_offset = str(data['user']['utc_offset'])
-            time_zone = str(data['user']['time_zone'])
+            time_zone = str(data['user']['time_zone']).replace("\'", "\\'")
             geo_enabled = str(data['user']['geo_enabled'])
             lang = str(data['user']['lang'])
             contributors_enabled = str(data['user']['contributors_enabled'])
@@ -1406,7 +1407,7 @@ def get_normalized_bulk_insert_statements(path=DOCUMENT):
             statuses_count = str(data['user']['statuses_count'])
             created_at = str(data['user']['created_at'])
             utc_offset = str(data['user']['utc_offset'])
-            time_zone = str(data['user']['time_zone'])
+            time_zone = str(data['user']['time_zone']).replace("\'", "\\'")
             geo_enabled = str(data['user']['geo_enabled'])
             lang = str(data['user']['lang'])
             contributors_enabled = str(data['user']['contributors_enabled'])
