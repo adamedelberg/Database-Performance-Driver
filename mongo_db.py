@@ -105,16 +105,34 @@ def create_indexes(database):
     :param database: the database where indexes will be created
     :return:
     """
+    try:
+        coll = database.get_collection(COLLECTION)
+        coll.create_index([("id", pymongo.ASCENDING)], name='tweetIdx')
+        coll.create_index([("user.id", pymongo.ASCENDING)], name='user.idIdx')
+        coll.create_index([("user.followers_count", pymongo.ASCENDING)], name='user.follower_countIdx')
+        coll.create_index([("user.friends_count", pymongo.ASCENDING)], name='user.friends_countIdx')
+        coll.create_index([("location", pymongo.ASCENDING)], name='locationIdx')
+    except pymongo.errors.CollectionInvalid as code:
+        logger.warning("PyMongo Error: {}".format(code))
+    except pymongo.errors.PyMongoError as code:
+        logger.warning("PyMongo Error: {}".format(code))
+
+#TODO test
+def remove_indexes(database):
+    """
+    Removes indexes in given database
+
+    :param database: the database where indexes will be created
+    :return:
+    """
 
     try:
         coll = database.get_collection(COLLECTION)
-        coll.create_index([("id", pymongo.ASCENDING)], name='tweet_id_index')
-        coll.create_index([("user.id", pymongo.ASCENDING)], name='user.id_index')
-        coll.create_index([("user.followers_count", pymongo.ASCENDING)], name='user.follower_count_index')
-        coll.create_index([("user.friends_count", pymongo.ASCENDING)], name='user.friends_count_index')
-        coll.create_index([("location", pymongo.ASCENDING)], name='location_index')
-    except pymongo.errors.CollectionInvalid as code:
-        logger.warning("PyMongo Error: {}".format(code))
+        coll.dropIndex('tweetIdx')
+        coll.dropIndex('user.idIdx')
+        coll.dropIndex('user.follower_countIdx')
+        coll.dropIndex('user.friends_countIdx')
+        coll.dropIndex('locationIdx')
     except pymongo.errors.PyMongoError as code:
         logger.warning("PyMongo Error: {}".format(code))
 

@@ -49,7 +49,7 @@ def connect(host, port, user, password, database):
     return client
 
 
-#TODO
+# TODO
 def create_schema():
     client = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     cursor = client.cursor()
@@ -62,6 +62,51 @@ def create_schema():
 
     finally:
         f.close()
+
+
+def create_indexes():
+    # remove any created indexes
+    remove_indexes()
+
+    conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    cursor = conn.cursor()
+
+    sqls = ['CREATE INDEX tweet_index ON tweets (`id`);',
+            'CREATE INDEX user_index ON users (`id`);',
+            'CREATE INDEX follower_index ON users (`followers_count`);',
+            'CREATE INDEX friend_index ON users (`friends_count`);',
+            'CREATE INDEX indx ON universal (`tweets.id`,`users.id`,`users.followers_count`,`users.friends_count`);']
+
+    try:
+        for sql in sqls:
+            cursor.execute(sql)
+    except Exception as code:
+        logger.debug('PyMySQL Error: {}'.format(code))
+        pass
+
+    cursor.close()
+    conn.commit()
+    conn.close()
+
+
+def remove_indexes():
+    conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    cursor = conn.cursor()
+    sqls = ['DROP INDEX tweet_index ON tweets;',
+            'DROP INDEX user_index ON users ;',
+            'DROP INDEX follower_index ON users;',
+            'DROP INDEX friend_index ON users ;',
+            'DROP INDEX indx ON universal;']
+    try:
+        for sql in sqls:
+            cursor.execute(sql)
+    except Exception as code:
+        logger.debug('PyMySQL Error: {}'.format(code))
+        pass
+
+    cursor.close()
+    conn.commit()
+    conn.close()
 
 
 def delete_from_table(table):
@@ -85,68 +130,55 @@ def delete_from_table(table):
     client.close()
 
 
-def scan():
-    """Scan from a table (default = universal)
-
-    Parameters:
-        table - an existing sql table in benchmark_db
-
-    Returns:
-
-    """
-    conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
-    cursor = conn.cursor()
-
-    sql = "SELECT * FROM universal;"
-
-    start_time = time.time()
-
-    cursor.execute(sql)
-
-    execution_time = time.time() - start_time
-
-    cursor.fetchall()
-
-    scanned = cursor.rowcount
-
-    logger.info(" %s seconds to scan %d objects from universal table", execution_time, scanned)
-
-    return execution_time, scanned
-
-
 # TODO: tidy
-def select(path, indexed):
-    conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
-    cursor = conn.cursor()
+
+
+def bulk_insert_universal(path, indexed=False, drop_on_start=True, drop_on_exit=False):
+    # if indexed:
+    ##    table = 'universal_indexed'
+    # else:
+    #    table = 'universal'
+
+    table = 'universal'
 
     if indexed:
-        sql1 = "SELECT COUNT(*) FROM universal_indexed where `users.location` = 'London';"
-        sql2 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.friends_count`>1000;"
-        sql3 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.followers_count`>1000;"
+        create_indexes()
     else:
-        sql1 = "SELECT COUNT(*) FROM universal WHERE `users.location` = 'London';"
-        sql2 = "SELECT COUNT(*) FROM universal WHERE `users.friends_count`>1000;"
-        sql3 = "SELECT COUNT(*) FROM universal WHERE `users.followers_count`>1000;"
+        remove_indexes()
 
-    num = 0
-    sql_time = 0
+    statements = get_statements(table=table, path=path)
 
-    for i in range(5):
-        start = time.time()
+    if drop_on_start: delete_from_table(table=table)
 
-        cursor.execute(sql1)
-        cursor.execute(sql2)
-        cursor.execute(sql3)
+    connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
 
-        sql_time += time.time() - start
+    cursor = connector.cursor()
 
-        res = cursor.fetchone()
-        for row in res: num += row
+    # sql = 'SET NAMES utf8mb4;'
+    # cursor.execute(sql)
 
-    size = "{}MB".format(round(os.path.getsize(path) / 1024 / 1024, 2))
-    logger.info("{} seconds to select {} objects indexed={}, doc_size={}".format(sql_time, num, indexed, size))
+    execution_time = 0
 
-    return sql_time, size
+    for sql in statements:
+
+        try:
+            start_time = time.time()
+            cursor.execute(sql)
+            execution_time += time.time() - start_time
+        except pymysql.Error as code:
+            logger.debug('PyMySQL Error: {}'.format(code))
+            pass
+
+    cursor.close()
+    connector.commit()
+    connector.close()
+
+    size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
+    logger.info("{} seconds to bulk insert {}, indexed={}".format(execution_time, size, indexed))
+
+    if drop_on_exit: delete_from_table(table=table)
+
+    return execution_time, size
 
 
 def bulk_insert_normalized(path, indexed=False, drop_on_start=True, drop_on_exit=False):
@@ -240,90 +272,7 @@ def bulk_insert_normalized(path, indexed=False, drop_on_start=True, drop_on_exit
     return run, size
 
 
-def bulk_insert_universal(path, indexed=False, drop_on_start=True, drop_on_exit=False):
-    if indexed:
-        table = 'universal_indexed'
-    else:
-        table = 'universal'
-
-    statements = get_statements(table=table, path=path)
-
-    if drop_on_start: delete_from_table(table=table)
-
-    connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
-
-    cursor = connector.cursor()
-
-    # sql = 'SET NAMES utf8mb4;'
-    # cursor.execute(sql)
-
-    execution_time = 0
-
-    for sql in statements:
-
-        try:
-            start_time = time.time()
-            cursor.execute(sql)
-            execution_time += time.time() - start_time
-        except pymysql.Error as code:
-            logger.debug('PyMySQL Error: {}'.format(code))
-            pass
-
-    cursor.close()
-    connector.commit()
-    connector.close()
-
-    size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
-    logger.info("{} seconds to bulk insert {}, indexed={}".format(execution_time, size, indexed))
-
-    if drop_on_exit: delete_from_table(table=table)
-
-    return execution_time, size
-
-
-def insert_one(indexed):
-    if indexed:
-        table = 'universal_indexed'
-    else:
-        table = 'universal'
-
-    stmts = get_statements(table=table)
-    delete_from_table(table=table)
-
-    connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
-
-    cursor = connector.cursor()
-    run = 0
-    for sql in stmts:
-        try:
-            start = time.time()
-            cursor.execute(sql)
-            run += time.time() - start
-        except Exception as e:
-            pass
-
-    stmts = get_statements(table=table, path=DOCUMENT_SINGLE)
-
-    start = time.time()
-    cursor.execute(stmts.pop())
-    run2 = time.time() - start
-
-    cursor.close()
-    connector.commit()
-    connector.close()
-
-    # logger.info("{} seconds to universal_insert_one_with_indexing".format(run2))
-    single_size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
-
-    db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
-
-    logger.info("{} seconds to universal insert one indexed={}, db_size={}, doc_size={}".format(run2, indexed, db_size,
-                                                                                                single_size))
-
-    return run2, single_size, db_size, run
-
-
-def bulk_insert_one(path, indexed=False):
+def bulk_insert_one_universal(path, indexed=False):
     if indexed:
         stmts = get_statements(table='universal_indexed', path=path)
         delete_from_table(table='universal_indexed')
@@ -358,6 +307,260 @@ def bulk_insert_one(path, indexed=False):
     size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
     logger.info("{} seconds to insert one universal {}".format(run, size))
     return run, size
+
+
+def bulk_insert_one_normalized(path, indexed=False):
+    delete_from_table('hashtags')
+    delete_from_table('symbols')
+    delete_from_table('media')
+    delete_from_table('tweets')
+    delete_from_table('users')
+    delete_from_table('user_mentions')
+    delete_from_table('urls')
+
+    # conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    conn = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+
+    cursor = conn.cursor()
+    # sql = 'SET NAMES utf8mb4;'
+    # cursor.execute(sql)
+
+    tweet_stmts, user_stmts, hashtags_stmts, media_stmts, user_mention_stmts, url_stmts, symbols_stmts = get_normalized_statements()
+
+    run = 0
+
+    for sql in tweet_stmts:
+        start = time.time()
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            print(sql)
+            pass
+        run += time.time() - start
+    for sql in user_stmts:
+        start = time.time()
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            print(sql)
+            pass
+        run += time.time() - start
+    for sql in hashtags_stmts:
+        start = time.time()
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            print(sql)
+
+            pass
+        run += time.time() - start
+    for sql in media_stmts:
+        start = time.time()
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            print(sql)
+
+            pass
+        run += time.time() - start
+    for sql in user_mention_stmts:
+        start = time.time()
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            print(sql)
+
+            pass
+        run += time.time() - start
+    for sql in url_stmts:
+        start = time.time()
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            print(sql)
+
+            pass
+        run += time.time() - start
+    for sql in symbols_stmts:
+        start = time.time()
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            print(sql)
+
+            pass
+        run += time.time() - start
+
+    cursor.close()
+    conn.commit()
+    conn.close()
+
+    size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
+    logger.info("{} seconds to bulk_insert_one_normalized {}".format(run, size))
+    return run, size
+
+
+
+
+def select_universal(path, indexed):
+    conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    cursor = conn.cursor()
+
+    if indexed:
+        create_indexes()
+    else:
+        remove_indexes()
+
+    # if indexed:
+    #    sql1 = "SELECT COUNT(*) FROM universal_indexed where `users.location` = 'London';"
+    #    sql2 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.friends_count`>1000;"
+    #    sql3 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.followers_count`>1000;"
+    # else:
+    #    sql1 = "SELECT COUNT(*) FROM universal WHERE `users.location` = 'London';"
+    #    sql2 = "SELECT COUNT(*) FROM universal WHERE `users.friends_count`>1000;"
+    #    sql3 = "SELECT COUNT(*) FROM universal WHERE `users.followers_count`>1000;"
+
+    sqls = ["SELECT COUNT(*) FROM universal WHERE `users.location` = 'London';",
+            "SELECT COUNT(*) FROM universal WHERE `users.friends_count`>1000;",
+            "SELECT COUNT(*) FROM universal WHERE `users.followers_count`>1000;"]
+
+    num = 0
+    sql_time = 0
+
+    for sql in sqls:
+        start = time.time()
+        cursor.execute(sql)
+        sql_time += time.time() - start
+        res = cursor.fetchone()
+        for row in res: num += row
+
+    size = "{}MB".format(round(os.path.getsize(path) / 1024 / 1024, 2))
+    logger.info("{} seconds to select_universal {} objects indexed={}, doc_size={}".format(sql_time, num, indexed, size))
+
+    return sql_time, size
+
+
+def select_normalized(path, indexed):
+    conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    cursor = conn.cursor()
+
+    if indexed:
+        create_indexes()
+    else:
+        remove_indexes()
+
+    # if indexed:
+    #    sql1 = "SELECT COUNT(*) FROM universal_indexed where `users.location` = 'London';"
+    #    sql2 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.friends_count`>1000;"
+    #    sql3 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.followers_count`>1000;"
+    # else:
+    #    sql1 = "SELECT COUNT(*) FROM universal WHERE `users.location` = 'London';"
+    #    sql2 = "SELECT COUNT(*) FROM universal WHERE `users.friends_count`>1000;"
+    #    sql3 = "SELECT COUNT(*) FROM universal WHERE `users.followers_count`>1000;"
+
+    sqls = ["SELECT COUNT(*) FROM users WHERE `location` = 'London';",
+            "SELECT COUNT(*) FROM users WHERE `friends_count`>1000;",
+            "SELECT COUNT(*) FROM users WHERE `followers_count`>1000;"]
+
+    num = 0
+    sql_time = 0
+
+    for sql in sqls:
+        start = time.time()
+        cursor.execute(sql)
+        sql_time += time.time() - start
+        res = cursor.fetchone()
+        for row in res: num += row
+
+    size = "{}MB".format(round(os.path.getsize(path) / 1024 / 1024, 2))
+    logger.info("{} seconds to select_normalized {} objects indexed={}, doc_size={}".format(sql_time, num, indexed, size))
+
+    return sql_time, size
+
+
+
+def scan_universal():
+    """Scan from a table (default = universal)
+
+    Parameters:
+        table - an existing sql table in benchmark_db
+
+    Returns:
+
+    """
+    conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    cursor = conn.cursor()
+
+    sql = "SELECT * FROM universal;"
+
+    start_time = time.time()
+
+    cursor.execute(sql)
+
+    execution_time = time.time() - start_time
+
+    cursor.fetchall()
+
+    scanned = cursor.rowcount
+
+    logger.info(" %s seconds to scan %d objects from universal table", execution_time, scanned)
+
+    return execution_time, scanned
+
+
+def scan_normalized():
+    """Scan from a table
+
+    Parameters:
+        table - an existing sql table in benchmark_db
+
+    Returns:
+
+    """
+    conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    cursor = conn.cursor()
+
+    scanned = 0
+
+    start_time = time.time()
+
+    sql = "SELECT * FROM users;"
+    cursor.execute(sql)
+    cursor.fetchall()
+    scanned += cursor.rowcount
+    sql = "SELECT * FROM tweets;"
+    cursor.execute(sql)
+    cursor.fetchall()
+    scanned += cursor.rowcount
+    sql = "SELECT * FROM hashtags;"
+    cursor.execute(sql)
+    cursor.fetchall()
+    scanned += cursor.rowcount
+    sql = "SELECT * FROM urls;"
+    cursor.execute(sql)
+    cursor.fetchall()
+    scanned += cursor.rowcount
+    sql = "SELECT * FROM symbols;"
+    cursor.execute(sql)
+    cursor.fetchall()
+    scanned += cursor.rowcount
+    sql = "SELECT * FROM media;"
+    cursor.execute(sql)
+    cursor.fetchall()
+    scanned += cursor.rowcount
+    sql = "SELECT * FROM user_mentions;"
+    cursor.execute(sql)
+    cursor.fetchall()
+    scanned += cursor.rowcount
+
+    execution_time = time.time() - start_time
+
+    # cursor.fetchall()
+    # scanned = cursor.rowcount
+
+    logger.info(" {} seconds to scan_normalized {} objects".format(execution_time, scanned))
+
+    return execution_time, scanned
 
 
 #############################

@@ -72,8 +72,6 @@ def test_mongo_db_bulk_insert(indexed, iterations=ITERATIONS):
     # log results
     log = 'mongo_db.bulk_insert: doc_size={}, time_mean={}'
     log_res(log.format(size, statistics.mean(times)), times)
-
-
 def test_mongo_db_bulk_insert_collections(indexed, iterations=ITERATIONS):
     times = []
 
@@ -83,8 +81,6 @@ def test_mongo_db_bulk_insert_collections(indexed, iterations=ITERATIONS):
 
     log = 'mongo_db.bulk_insert_collections: doc_size={}, time_mean={}'.format(doc_size, statistics.mean(times))
     log_res(log, times)
-
-
 def test_mysql_db_bulk_insert_universal(indexed, iterations=ITERATIONS):
     times = []
 
@@ -94,8 +90,6 @@ def test_mysql_db_bulk_insert_universal(indexed, iterations=ITERATIONS):
 
     log = 'mysql_db.bulk_insert_universal: doc_size={}, time_mean={}'
     log_res(log.format(size, statistics.mean(times)), times)
-
-
 def test_mysql_db_bulk_insert_normalized(indexed, iterations=ITERATIONS):
     times = []
 
@@ -119,8 +113,6 @@ def test_mongo_db_bulk_insert_one(indexed, iterations=ITERATIONS):
     # log results
     log = 'mongo_db.bulk_insert_one: doc_size={}, time_mean={}'
     log_res(log.format(doc_size, statistics.mean(times)), times)
-
-
 def test_mongo_db_bulk_insert_one_collections(indexed, iterations=ITERATIONS):
     # timing and metric variables
     times = []
@@ -133,15 +125,25 @@ def test_mongo_db_bulk_insert_one_collections(indexed, iterations=ITERATIONS):
     # log results
     log = 'mongo_db.bulk_insert_one_collections: doc_size={}, time_mean={}'
     log_res(log.format(doc_size, statistics.mean(times)), times)
-
-
-def test_mysql_db_bulk_insert_one(indexed, iterations=ITERATIONS):
+def test_mysql_db_bulk_insert_one_universal(indexed, iterations=ITERATIONS):
     # timing and metric variables
     times = []
 
     # perform multiple test iterations
     for i in range(iterations):
-        t, doc_size = mysql_db.bulk_insert_one(path=PATH, indexed=False)
+        t, doc_size = mysql_db.bulk_insert_one_universal(path=PATH, indexed=False)
+        times.append(t)
+
+    # log results
+    log = 'mysql_db.bulk_insert_one: doc_size={}, time_mean={}'
+    log_res(log.format(doc_size, statistics.mean(times)), times)
+def test_mysql_db_bulk_insert_one_normalized(indexed, iterations=ITERATIONS):
+    # timing and metric variables
+    times = []
+
+    # perform multiple test iterations
+    for i in range(iterations):
+        t, doc_size = mysql_db.bulk_insert_one_normalized(path=PATH, indexed=False)
         times.append(t)
 
     # log results
@@ -149,7 +151,7 @@ def test_mysql_db_bulk_insert_one(indexed, iterations=ITERATIONS):
     log_res(log.format(doc_size, statistics.mean(times)), times)
 
 
-def test_mongo_db_insert_one(indexed, iterations ):
+def test_mongo_db_insert_one(indexed, iterations):
     times, bulk = [], []
 
     for i in range(iterations):
@@ -159,8 +161,6 @@ def test_mongo_db_insert_one(indexed, iterations ):
 
     log = 'mongo_db.insert_one: indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
     log_res(log.format(indexed, doc_size, db_size, statistics.mean(times), statistics.mean(bulk)), times)
-
-
 def test_mongo_db_insert_one_collections(indexed, iterations ):
     times, bulk = [], []
 
@@ -170,13 +170,20 @@ def test_mongo_db_insert_one_collections(indexed, iterations ):
 
     log = 'mongo_db.insert_one_collections: indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
     log_res(log.format(indexed, doc_size, db_size, statistics.mean(times), statistics.mean(bulk)), times)
-
-
-def test_mysql_db_insert_one(indexed, iterations ):
+def test_mysql_db_insert_one_universal(indexed, iterations):
     times, bulk = [], []
 
     for runs in range(iterations):
         t, db_size, doc_size, run = mysql_db.insert_one(indexed)
+        times.append(t), bulk.append(run)
+
+    log = 'mysql_db.universal_insert_one: indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
+    log_res(log.format(indexed, doc_size, db_size, statistics.mean(times), statistics.mean(bulk)), times)
+def test_mysql_db_insert_one_normalized(indexed, iterations):
+    times, bulk = [], []
+
+    for runs in range(iterations):
+        t, db_size, doc_size, run = mysql_db.insert_one_normalized(indexed)
         times.append(t), bulk.append(run)
 
     log = 'mysql_db.universal_insert_one: indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
@@ -195,7 +202,6 @@ def test_mongo_db_find(indexed, iterations):
 
     log = 'mongo_db.find: indexed={}, count= {}, time_mean={}'
     log_res(log.format(indexed, count, statistics.mean(times)), times)
-
 def test_mongo_db_find_collections(indexed, iterations):
     mongo_db.bulk_insert_collections(path=PATH, indexed=indexed, drop_on_start=True, drop_on_exit=False)
 
@@ -208,20 +214,26 @@ def test_mongo_db_find_collections(indexed, iterations):
 
     log = 'mongo_db.find_collections: indexed={}, count= {}, time_mean={}'
     log_res(log.format(indexed, count, statistics.mean(times)), times)
-
-
-
-def test_mysql_db_select(indexed, iterations):
+def test_mysql_db_select_universal(indexed, iterations):
     mysql_db.bulk_insert_universal(path=PATH, indexed=indexed)
     times = []
 
     for i in range(iterations):
-        t, db_size = mysql_db.select(indexed=indexed, path=PATH)
+        t, db_size = mysql_db.select_universal(indexed=indexed, path=PATH)
         times.append(t)
 
     log = 'mysql_db.select: indexed={}, db_size= {}, time_mean={}'
     log_res(log.format(indexed, db_size, statistics.mean(times)), times)
+def test_mysql_db_select_normalized(indexed, iterations):
+    mysql_db.bulk_insert_normalized(path=PATH, indexed=indexed)
+    times = []
 
+    for i in range(iterations):
+        t, db_size = mysql_db.select_normalized(indexed=indexed, path=PATH)
+        times.append(t)
+
+    log = 'mysql_db.select: indexed={}, db_size= {}, time_mean={}'
+    log_res(log.format(indexed, db_size, statistics.mean(times)), times)
 
 def test_mongo_db_scan(indexed, iterations):
     # repopulate database
@@ -239,8 +251,6 @@ def test_mongo_db_scan(indexed, iterations):
     log = 'mongo_db.scan: db_size={}, scanned={}, time_mean={}'
     db_size = "{}MB".format(round(os.path.getsize(PATH) / 1024 / 1024, 2))
     log_res(log.format(db_size, scanned, statistics.mean(times)), times)
-
-
 def test_mongo_db_scan_collections(indexed, iterations):
     # repopulate database
     mongo_db.bulk_insert_collections(path=PATH, indexed=False, drop_on_start=True, drop_on_exit=False)
@@ -257,8 +267,6 @@ def test_mongo_db_scan_collections(indexed, iterations):
     log = 'mongo_db.scan_collections: db_size={}, scanned={}, time_mean={}'
     db_size = "{}MB".format(round(os.path.getsize(PATH) / 1024 / 1024, 2))
     log_res(log.format(db_size, scanned, statistics.mean(times)), times)
-
-
 def test_mysql_db_scan(indexed, iterations):
     # repopulate database
     mysql_db.bulk_insert_universal(path=PATH, indexed=False)
@@ -269,12 +277,29 @@ def test_mysql_db_scan(indexed, iterations):
     times = []
 
     for i in range(iterations):
-        t, scanned = mysql_db.scan()
+        t, scanned = mysql_db.scan_universal()
         times.append(t)
 
     log = 'mysql_db.scan: db_size={}, scanned={}, time_mean={}'
     db_size = "{}MB".format(round(os.path.getsize(PATH) / 1024 / 1024, 2))
     log_res(log.format(db_size, scanned, statistics.mean(times)), times)
+def test_mysql_db_scan_normalized(indexed, iterations):
+    # repopulate database
+    mysql_db.bulk_insert_normalized(path=PATH, indexed=False)
+
+    # wait until previous operation is complete
+    time.sleep(0.5)
+
+    times = []
+
+    for i in range(iterations):
+        t, scanned = mysql_db.scan_normalized()
+        times.append(t)
+
+    log = 'mysql_db.scan: db_size={}, scanned={}, time_mean={}'
+    db_size = "{}MB".format(round(os.path.getsize(PATH) / 1024 / 1024, 2))
+    log_res(log.format(db_size, scanned, statistics.mean(times)), times)
+
 
 
 ############################################################
@@ -351,7 +376,7 @@ if __name__ == "__main__":
     # set database: 1=MongoDB, 2=MySQL
     database = ['MongoDB', 'MySQL']
     # set target test:
-    target = [
+    test = [
         test_mongo_db_bulk_insert,                  #0
         test_mongo_db_bulk_insert_collections,      #1
 
@@ -361,24 +386,30 @@ if __name__ == "__main__":
         test_mongo_db_bulk_insert_one,              #4
         test_mongo_db_bulk_insert_one_collections,  #5
 
-        test_mysql_db_bulk_insert_one,              #6
+        test_mysql_db_bulk_insert_one_universal,    #6
+        test_mysql_db_bulk_insert_one_normalized,   #7
 
-        test_mongo_db_insert_one,                   #7
-        test_mongo_db_insert_one_collections,       #8
+        test_mongo_db_insert_one,                   #8
+        test_mongo_db_insert_one_collections,       #9
 
-        test_mysql_db_insert_one,                   #9
+        test_mysql_db_insert_one_universal,         #10
+        test_mysql_db_insert_one_normalized,
 
-        test_mongo_db_find,                         #10
-        test_mongo_db_find_collections,             #11
+        test_mongo_db_find,                         #11
+        test_mongo_db_find_collections,             #12
 
-        test_mysql_db_select,                       #12
+        test_mysql_db_select_universal,                       #13
+        test_mysql_db_select_normalized,
 
-        test_mongo_db_scan,                         #13
-        test_mongo_db_scan_collections,             #14
+        test_mongo_db_scan,                         #14
+        test_mongo_db_scan_collections,             #15
 
-        test_mysql_db_scan                          #15
+        test_mysql_db_scan,                          #16
+        test_mysql_db_scan_normalized
     ]
 
-    run_test(database=database[0], target=target[14], simulated=False, threads=3, iterations=5, indexed=False)
+    #run_test(database=database[0], target=target[14], simulated=False, threads=3, iterations=5, indexed=False)
 
 
+    mysql_db.select_universal(path=PATH, indexed=True)
+    mysql_db.select_normalized(PATH, True)

@@ -30972,3 +30972,134 @@ INFO: 2018-09-03 15:45:29,443: mongo_db: 0.003818988800048828 seconds to scan_co
 INFO: 2018-09-03 15:45:29,478: mongo_db: 0.03256106376647949 seconds to scan_collections 2000 objects
 INFO: 2018-09-03 15:45:29,484: mongo_db: 0.0036606788635253906 seconds to scan_collections 2000 objects
 INFO: 2018-09-03 15:45:29,489: mongo_db: 0.003329038619995117 seconds to scan_collections 2000 objects
+INFO: 2018-09-04 10:33:07,287: mongo_db: 1.0898690223693848 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 10:33:07,835: mongo_db: 0.011259078979492188 seconds to scan 1000 objects
+INFO: 2018-09-04 10:33:07,855: mongo_db: 0.0177919864654541 seconds to scan 1000 objects
+INFO: 2018-09-04 10:33:07,865: mongo_db: 0.007695198059082031 seconds to scan 1000 objects
+INFO: 2018-09-04 10:33:07,870: mongo_db: 0.0033197402954101562 seconds to scan 1000 objects
+INFO: 2018-09-04 10:33:07,874: mongo_db: 0.003155946731567383 seconds to scan 1000 objects
+INFO: 2018-09-04 10:36:41,374: mongo_db: 0.8049442768096924 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 10:36:41,896: mongo_db: 0.006304025650024414 seconds to scan 1000 objects
+INFO: 2018-09-04 10:36:41,902: mongo_db: 0.0030732154846191406 seconds to scan 1000 objects
+INFO: 2018-09-04 10:36:41,923: mongo_db: 0.020087003707885742 seconds to scan 1000 objects
+INFO: 2018-09-04 10:36:41,928: mongo_db: 0.0034978389739990234 seconds to scan 1000 objects
+INFO: 2018-09-04 10:36:41,933: mongo_db: 0.0030541419982910156 seconds to scan 1000 objects
+INFO: 2018-09-04 10:37:18,334: mongo_db: 1.0150659084320068 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 10:37:18,856: mongo_db: 0.004669189453125 seconds to scan 1000 objects
+INFO: 2018-09-04 10:37:18,876: mongo_db: 0.007689237594604492 seconds to scan 1000 objects
+INFO: 2018-09-04 10:37:18,881: mongo_db: 0.003181934356689453 seconds to scan 1000 objects
+INFO: 2018-09-04 10:37:18,887: mongo_db: 0.004384040832519531 seconds to scan 1000 objects
+INFO: 2018-09-04 10:37:18,893: mongo_db: 0.004469871520996094 seconds to scan 1000 objects
+INFO: 2018-09-04 10:39:28,718: mongo_db: 0.6475961208343506 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 10:39:29,237: mongo_db: 0.004091739654541016 seconds to scan 1000 objects
+INFO: 2018-09-04 10:39:29,249: mongo_db: 0.00873875617980957 seconds to scan 1000 objects
+INFO: 2018-09-04 10:39:29,253: mongo_db: 0.0028150081634521484 seconds to scan 1000 objects
+INFO: 2018-09-04 10:39:29,260: mongo_db: 0.004579067230224609 seconds to scan 1000 objects
+INFO: 2018-09-04 10:39:29,264: mongo_db: 0.0028731822967529297 seconds to scan 1000 objects
+INFO: 2018-09-04 10:40:49,146: mongo_db: 0.7119297981262207 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 10:40:49,666: mongo_db: 0.0035161972045898438 seconds to scan 1000 objects
+INFO: 2018-09-04 10:40:49,672: mongo_db: 0.0030651092529296875 seconds to scan 1000 objects
+INFO: 2018-09-04 10:40:49,692: mongo_db: 0.017838239669799805 seconds to scan 1000 objects
+INFO: 2018-09-04 10:40:49,698: mongo_db: 0.004561901092529297 seconds to scan 1000 objects
+INFO: 2018-09-04 10:40:49,703: mongo_db: 0.0030269622802734375 seconds to scan 1000 objects
+INFO: 2018-09-04 10:40:49,875: mysql_db: 0.12954330444335938 seconds to select 654 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-04 10:42:53,572: mongo_db: 0.7444868087768555 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 10:42:54,109: mongo_db: 0.0062978267669677734 seconds to scan 1000 objects
+INFO: 2018-09-04 10:42:54,131: mongo_db: 0.01841902732849121 seconds to scan 1000 objects
+INFO: 2018-09-04 10:42:54,157: mongo_db: 0.023898839950561523 seconds to scan 1000 objects
+INFO: 2018-09-04 10:42:54,162: mongo_db: 0.002981901168823242 seconds to scan 1000 objects
+INFO: 2018-09-04 10:42:54,167: mongo_db: 0.0039560794830322266 seconds to scan 1000 objects
+INFO: 2018-09-04 10:42:54,273: mysql_db: 0.028334856033325195 seconds to select 654 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-04 10:43:25,850: mongo_db: 0.7047779560089111 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 10:43:26,369: mongo_db: 0.0041179656982421875 seconds to scan 1000 objects
+INFO: 2018-09-04 10:43:26,390: mongo_db: 0.009802103042602539 seconds to scan 1000 objects
+INFO: 2018-09-04 10:43:26,394: mongo_db: 0.003201007843017578 seconds to scan 1000 objects
+INFO: 2018-09-04 10:43:26,401: mongo_db: 0.004582881927490234 seconds to scan 1000 objects
+INFO: 2018-09-04 10:43:26,405: mongo_db: 0.002864837646484375 seconds to scan 1000 objects
+INFO: 2018-09-04 10:43:27,035: mysql_db: 0.007972002029418945 seconds to select 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:43:56,017: mongo_db: 1.0054748058319092 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 10:43:56,548: mongo_db: 0.014806032180786133 seconds to scan 1000 objects
+INFO: 2018-09-04 10:43:56,576: mongo_db: 0.022555828094482422 seconds to scan 1000 objects
+INFO: 2018-09-04 10:43:56,580: mongo_db: 0.0028591156005859375 seconds to scan 1000 objects
+INFO: 2018-09-04 10:43:56,585: mongo_db: 0.002804994583129883 seconds to scan 1000 objects
+INFO: 2018-09-04 10:43:56,614: mongo_db: 0.027544021606445312 seconds to scan 1000 objects
+INFO: 2018-09-04 10:43:57,393: mysql_db: 0.009182929992675781 seconds to select 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:44:28,625: mongo_db: 0.9088451862335205 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 10:44:29,181: mongo_db: 0.003526926040649414 seconds to scan 1000 objects
+INFO: 2018-09-04 10:44:29,188: mongo_db: 0.004539012908935547 seconds to scan 1000 objects
+INFO: 2018-09-04 10:44:29,194: mongo_db: 0.004333972930908203 seconds to scan 1000 objects
+INFO: 2018-09-04 10:44:29,198: mongo_db: 0.002722024917602539 seconds to scan 1000 objects
+INFO: 2018-09-04 10:44:29,203: mongo_db: 0.003442049026489258 seconds to scan 1000 objects
+INFO: 2018-09-04 10:44:29,860: mysql_db: 0.004627227783203125 seconds to select 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:45:16,655: mongo_db: 0.7643499374389648 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 10:45:17,175: mongo_db: 0.003902912139892578 seconds to scan 1000 objects
+INFO: 2018-09-04 10:45:17,182: mongo_db: 0.004951953887939453 seconds to scan 1000 objects
+INFO: 2018-09-04 10:45:17,187: mongo_db: 0.003098011016845703 seconds to scan 1000 objects
+INFO: 2018-09-04 10:45:17,192: mongo_db: 0.003047943115234375 seconds to scan 1000 objects
+INFO: 2018-09-04 10:45:17,196: mongo_db: 0.002885103225708008 seconds to scan 1000 objects
+INFO: 2018-09-04 10:45:17,721: mysql_db: 0.004399299621582031 seconds to select 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:45:36,044: mongo_db: 0.620988130569458 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 10:45:36,245: mongo_db: 0.699444055557251 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 10:45:36,582: mongo_db: 0.00513911247253418 seconds to scan 2000 objects
+INFO: 2018-09-04 10:45:36,607: mongo_db: 0.020581960678100586 seconds to scan 2000 objects
+INFO: 2018-09-04 10:45:36,616: mongo_db: 0.006926059722900391 seconds to scan 2000 objects
+INFO: 2018-09-04 10:45:36,623: mongo_db: 0.0042378902435302734 seconds to scan 2000 objects
+INFO: 2018-09-04 10:45:36,627: mongo_db: 0.003242969512939453 seconds to scan 2000 objects
+INFO: 2018-09-04 10:45:36,765: mongo_db: 0.004041910171508789 seconds to scan 2000 objects
+INFO: 2018-09-04 10:45:36,784: mongo_db: 0.016730070114135742 seconds to scan 2000 objects
+INFO: 2018-09-04 10:45:36,790: mongo_db: 0.004380226135253906 seconds to scan 2000 objects
+INFO: 2018-09-04 10:45:36,797: mongo_db: 0.004269123077392578 seconds to scan 2000 objects
+INFO: 2018-09-04 10:45:36,805: mongo_db: 0.005861043930053711 seconds to scan 2000 objects
+WARNING: 2018-09-04 10:45:36,938: mysql_db: create
+INFO: 2018-09-04 10:45:36,943: mysql_db: 0.004689216613769531 seconds to select 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:45:37,156: mysql_db: 0.0070421695709228516 seconds to select 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:46:03,815: mongo_db: 0.7048859596252441 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 10:46:04,349: mongo_db: 0.010786056518554688 seconds to scan 1000 objects
+INFO: 2018-09-04 10:46:04,372: mongo_db: 0.017193078994750977 seconds to scan 1000 objects
+INFO: 2018-09-04 10:46:04,378: mongo_db: 0.00463104248046875 seconds to scan 1000 objects
+INFO: 2018-09-04 10:46:04,383: mongo_db: 0.0029518604278564453 seconds to scan 1000 objects
+INFO: 2018-09-04 10:46:04,387: mongo_db: 0.002763032913208008 seconds to scan 1000 objects
+INFO: 2018-09-04 10:46:04,849: mysql_db: 0.0030956268310546875 seconds to select 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:48:17,561: mongo_db: 0.8558552265167236 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 10:48:18,092: mongo_db: 0.011955022811889648 seconds to scan 1000 objects
+INFO: 2018-09-04 10:48:18,099: mongo_db: 0.0036132335662841797 seconds to scan 1000 objects
+INFO: 2018-09-04 10:48:18,106: mongo_db: 0.0028259754180908203 seconds to scan 1000 objects
+INFO: 2018-09-04 10:48:18,112: mongo_db: 0.003693103790283203 seconds to scan 1000 objects
+INFO: 2018-09-04 10:48:18,119: mongo_db: 0.004128932952880859 seconds to scan 1000 objects
+WARNING: 2018-09-04 10:48:18,468: mysql_db: create
+INFO: 2018-09-04 10:48:18,478: mysql_db: 0.01007986068725586 seconds to select 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:48:47,361: mongo_db: 0.7572572231292725 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 10:48:47,877: mongo_db: 0.003919124603271484 seconds to scan 1000 objects
+INFO: 2018-09-04 10:48:47,885: mongo_db: 0.0034008026123046875 seconds to scan 1000 objects
+INFO: 2018-09-04 10:48:47,901: mongo_db: 0.013584136962890625 seconds to scan 1000 objects
+INFO: 2018-09-04 10:48:47,908: mongo_db: 0.005334138870239258 seconds to scan 1000 objects
+INFO: 2018-09-04 10:48:47,912: mongo_db: 0.003131866455078125 seconds to scan 1000 objects
+INFO: 2018-09-04 10:48:48,580: mysql_db: 0.0024819374084472656 seconds to select 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:48:54,449: mongo_db: 0.6807229518890381 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-04 10:48:54,963: mongo_db: 0.0037298202514648438 seconds to scan 1000 objects
+INFO: 2018-09-04 10:48:54,984: mongo_db: 0.017010211944580078 seconds to scan 1000 objects
+INFO: 2018-09-04 10:48:54,992: mongo_db: 0.006719827651977539 seconds to scan 1000 objects
+INFO: 2018-09-04 10:48:55,002: mongo_db: 0.008075952529907227 seconds to scan 1000 objects
+INFO: 2018-09-04 10:48:55,006: mongo_db: 0.0029969215393066406 seconds to scan 1000 objects
+INFO: 2018-09-04 10:48:55,650: mysql_db: 0.009488344192504883 seconds to select 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:53:43,148: mysql_db: 2.252957582473755 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-04 10:53:43,472: mysql_db: 0.019186735153198242 seconds to select 624 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-04 10:53:43,485: mysql_db: 0.003289937973022461 seconds to select 624 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-04 10:53:43,516: mysql_db: 0.019492626190185547 seconds to select 624 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-04 10:53:43,538: mysql_db: 0.008016109466552734 seconds to select 624 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-04 10:53:43,564: mysql_db: 0.007038593292236328 seconds to select 624 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-04 10:53:43,864: mysql_db: 0.004171848297119141 seconds to select 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:54:09,987: mysql_db: 1.7039005756378174 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-04 10:54:10,147: mysql_db: 0.00423884391784668 seconds to select 624 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-04 10:54:10,165: mysql_db: 0.0031571388244628906 seconds to select 624 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-04 10:54:10,179: mysql_db: 0.0029425621032714844 seconds to select 624 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-04 10:54:10,192: mysql_db: 0.0030341148376464844 seconds to select 624 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-04 10:54:10,213: mysql_db: 0.005439043045043945 seconds to select 624 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-04 10:54:10,470: mysql_db: 0.003700733184814453 seconds to select 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:54:10,758: mysql_db: 0.012038707733154297 seconds to select 624 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:54:34,134: mysql_db: 0.0029113292694091797 seconds to select 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:54:34,505: mysql_db: 0.003464937210083008 seconds to select 624 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:54:48,503: mysql_db: 0.0062868595123291016 seconds to select 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:54:48,849: mysql_db: 0.005927324295043945 seconds to select 624 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:55:46,325: mysql_db: 0.002493619918823242 seconds to select 654 objects indexed=True, doc_size=4.89MB
+INFO: 2018-09-04 10:55:46,619: mysql_db: 0.007319927215576172 seconds to select 624 objects indexed=True, doc_size=4.89MB
