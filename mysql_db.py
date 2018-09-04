@@ -146,7 +146,6 @@ def bulk_insert_universal(path, indexed, drop_on_start=True, drop_on_exit=False)
     else:
         remove_indexes()
 
-    statements = get_statements(table=table, path=path)
 
     get_bulk_insert_statement(table,path)
     if drop_on_start: delete_from_table(table=table)
@@ -159,11 +158,16 @@ def bulk_insert_universal(path, indexed, drop_on_start=True, drop_on_exit=False)
     # cursor.execute(sql)
 
     execution_time = 0
-    start_time = time.time()
-    st = get_bulk_insert_statement(table,path)
-    insertst = "{};".format(st[0:-1])
-    cursor.execute(insertst)
-    execution_time += time.time() - start_time
+
+    try:
+        start_time = time.time()
+        st = get_bulk_insert_statement(table,path)
+        bulk_insert_statement = "{};".format(st[0:-1])
+        cursor.execute(bulk_insert_statement)
+        execution_time += time.time() - start_time
+    except pymysql.Error as code:
+        logger.debug('PyMySQL Error: {}'.format(code))
+        pass
 
     # for sql in statements:
     #
@@ -196,78 +200,35 @@ def bulk_insert_normalized(path, indexed=False, drop_on_start=True, drop_on_exit
     delete_from_table('user_mentions')
     delete_from_table('urls')
 
-    # conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
-    conn = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    #conn = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
 
     cursor = conn.cursor()
-    # sql = 'SET NAMES utf8mb4;'
-    # cursor.execute(sql)
 
-    tweet_stmts, user_stmts, hashtags_stmts, media_stmts, user_mention_stmts, url_stmts, symbols_stmts = get_normalized_statements()
+    tweet_stmts, user_stmts, hashtags_stmts, media_stmts, user_mention_stmts, url_stmts, symbols_stmts = get_normalized_bulk_insert_statements()
 
+    tweet_bulk_stmt = "{};".format(tweet_stmts[0:-1])
+    user_bulk_stmt = "{};".format(user_stmts[0:-1])
+    hashtags_bulk_stmt = "{};".format(hashtags_stmts[0:-1])
+    media_bulk_stmt = "{};".format(media_stmts[0:-1])
+    user_mention_bulk_stmt = "{};".format(user_mention_stmts[0:-1])
+    url_bulk_stmt = "{};".format(url_stmts[0:-1])
+    symbols_bulk_stmt = "{};".format(symbols_stmts[0:-1])
     run = 0
+    start = time.time()
+    try:
+        cursor.execute(tweet_bulk_stmt)
+        cursor.execute(user_bulk_stmt)
+        cursor.execute(hashtags_bulk_stmt)
+        cursor.execute(media_bulk_stmt)
+        cursor.execute(user_mention_bulk_stmt)
+        cursor.execute(url_bulk_stmt)
+        cursor.execute(symbols_bulk_stmt)
 
-    for sql in tweet_stmts:
-        start = time.time()
-        try:
-            cursor.execute(sql)
-        except Exception as e:
-            print(sql)
-            pass
-        run += time.time() - start
-    for sql in user_stmts:
-        start = time.time()
-        try:
-            cursor.execute(sql)
-        except Exception as e:
-            print(sql)
-            pass
-        run += time.time() - start
-    for sql in hashtags_stmts:
-        start = time.time()
-        try:
-            cursor.execute(sql)
-        except Exception as e:
-            print(sql)
+    except Exception as e:
+        pass
+    run += time.time() - start
 
-            pass
-        run += time.time() - start
-    for sql in media_stmts:
-        start = time.time()
-        try:
-            cursor.execute(sql)
-        except Exception as e:
-            print(sql)
-
-            pass
-        run += time.time() - start
-    for sql in user_mention_stmts:
-        start = time.time()
-        try:
-            cursor.execute(sql)
-        except Exception as e:
-            print(sql)
-
-            pass
-        run += time.time() - start
-    for sql in url_stmts:
-        start = time.time()
-        try:
-            cursor.execute(sql)
-        except Exception as e:
-            print(sql)
-
-            pass
-        run += time.time() - start
-    for sql in symbols_stmts:
-        start = time.time()
-        try:
-            cursor.execute(sql)
-        except Exception as e:
-            print(sql)
-
-            pass
-        run += time.time() - start
 
     cursor.close()
     conn.commit()
@@ -407,7 +368,124 @@ def bulk_insert_one_normalized(path, indexed=False):
 
 
 def insert_one_universal(path, indexed, drop_on_start=True, drop_on_exit=False):
-    print()
+    table = 'universal'
+
+    if indexed:
+        create_indexes()
+    else:
+        remove_indexes()
+
+    get_bulk_insert_statement(table, path)
+    if drop_on_start: delete_from_table(table=table)
+
+    connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+
+    cursor = connector.cursor()
+
+    # sql = 'SET NAMES utf8mb4;'
+    # cursor.execute(sql)
+
+    execution_time = 0
+
+    try:
+        st = get_bulk_insert_statement(table, path)
+        bulk_insert_statement = "{};".format(st[0:-1])
+        cursor.execute(bulk_insert_statement)
+    except pymysql.Error as code:
+        logger.debug('PyMySQL Error: {}'.format(code))
+        pass
+
+    try:
+        start_time = time.time()
+        st = get_bulk_insert_statement(table, DOCUMENT_SINGLE)
+        bulk_insert_statement = "{};".format(st[0:-1])
+        cursor.execute(bulk_insert_statement)
+        execution_time += time.time() - start_time
+    except pymysql.Error as code:
+        logger.debug('PyMySQL Error: {}'.format(code))
+        pass
+
+
+    doc_size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
+    db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
+
+    logger.info("{} seconds to insert_one_universal indexed={} db_size={} doc_size={}".format(execution_time, indexed, db_size,
+                                                                                    doc_size))
+
+
+def insert_one_normalized(path, indexed, drop_on_start=True, drop_on_exit=False):
+    delete_from_table('hashtags')
+    delete_from_table('symbols')
+    delete_from_table('media')
+    delete_from_table('tweets')
+    delete_from_table('users')
+    delete_from_table('user_mentions')
+    delete_from_table('urls')
+
+    conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    # conn = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+
+    cursor = conn.cursor()
+
+    tweet_stmts, user_stmts, hashtags_stmts, media_stmts, user_mention_stmts, url_stmts, symbols_stmts = get_normalized_bulk_insert_statements()
+
+    tweet_bulk_stmt = "{};".format(tweet_stmts[0:-1])
+    user_bulk_stmt = "{};".format(user_stmts[0:-1])
+    hashtags_bulk_stmt = "{};".format(hashtags_stmts[0:-1])
+    media_bulk_stmt = "{};".format(media_stmts[0:-1])
+    user_mention_bulk_stmt = "{};".format(user_mention_stmts[0:-1])
+    url_bulk_stmt = "{};".format(url_stmts[0:-1])
+    symbols_bulk_stmt = "{};".format(symbols_stmts[0:-1])
+
+    try:
+        cursor.execute(tweet_bulk_stmt)
+        cursor.execute(user_bulk_stmt)
+        cursor.execute(hashtags_bulk_stmt)
+        cursor.execute(media_bulk_stmt)
+        cursor.execute(user_mention_bulk_stmt)
+        cursor.execute(url_bulk_stmt)
+        cursor.execute(symbols_bulk_stmt)
+
+    except Exception as e:
+        pass
+
+    execution_time = 0
+
+    try:
+        start_time = time.time()
+
+        #st = get_normalized_bulk_insert_statements(DOCUMENT_SINGLE)
+        sql_tweets, sql_users, sql_hashtags, sql_media, sql_user_mentions, sql_urls, sql_symbols = get_normalized_statements()
+
+        try:
+            cursor.execute(sql_tweets)
+            cursor.execute(sql_users)
+            cursor.execute(sql_hashtags)
+            cursor.execute(sql_media)
+            cursor.execute(sql_user_mentions)
+            cursor.execute(sql_urls)
+            cursor.execute(sql_symbols)
+
+        except Exception as e:
+            pass
+
+        #bulk_insert_statement = "{};".format(st[0:-1])
+
+        #cursor.execute(bulk_insert_statement)
+
+        execution_time += time.time() - start_time
+
+
+    except pymysql.Error as code:
+        logger.debug('PyMySQL Error: {}'.format(code))
+        pass
+
+
+    doc_size = "{}MB".format(round(os.path.getsize(DOCUMENT_SINGLE) / 1024 / 1024, 2))
+    db_size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
+
+    logger.info("{} seconds to insert_one_normzlized indexed={} db_size={} doc_size={}".format(execution_time, indexed, db_size,
+                                                                                    doc_size))
 
 
 
@@ -1235,6 +1313,221 @@ def get_normalized_statements(path=DOCUMENT):
                             media_url_https))
 
     return tweet_stmts, user_stmts, hashtags_stmts, media_stmts, user_mention_stmts, url_stmts, symbols_stmts
+
+
+def get_normalized_bulk_insert_statements(path=DOCUMENT):
+
+
+    tweet_values=""
+    user_values=""
+    media_values=""
+    user_mention_values=""
+    url_values=""
+    symbol_values=""
+    hashtag_values=""
+
+
+    document = io.open(path, 'r')
+
+    with document as json_docs:
+        for data in json_docs:
+
+            data = json.loads(data)
+
+            # tweet
+
+            created_at = str(data['created_at'])
+            t_id = str(data['id'])
+            t_id_str = str(data['id_str'])
+            text = str(data['text']).replace("'", "\\'")
+            source = str(data['source']).replace("\'", "\\'")
+            truncated = str(data['truncated'])
+            in_reply_to_status_id = str(data['in_reply_to_status_id'])
+            in_reply_to_status_id_str = str(data['in_reply_to_status_id_str'])
+            in_reply_to_user_id = str(data['in_reply_to_user_id'])
+            in_reply_to_user_id_str = str(data['in_reply_to_user_id_str'])
+            in_reply_to_screen_name = str(data['in_reply_to_screen_name'])
+
+            if in_reply_to_user_id == 'None': in_reply_to_user_id = 0
+            if in_reply_to_status_id == 'None': in_reply_to_status_id = 0
+
+            user_id = str(data['user']['id'])
+            quote_count = str(data['quote_count'])
+            reply_count = str(data['reply_count'])
+            favorite_count = str(data['favorite_count'])
+            favorited = str(data['favorited'])
+            retweeted = str(data['retweeted'])
+            filter_level = str(data['filter_level'])
+            lang = str(data['lang'])
+            tweet_coordinates = data['coordinates']['coordinates'] if 'type' in data else None
+            tweet_coordinates_type = data['coordinates']['type'] if 'type' in data else None
+            place_country = str(data['place']['country']) if 'country' in data else None
+            place_country_code = str(data['place']['country_code']) if 'country' in data else None
+            place_full_name = str(data['place']['full_name']) if 'country' in data else None
+            place_id = str(data['place']['id']) if 'country' in data else 0
+            place_name = str(data['place']['name']) if 'country' in data else None
+            place_place_type = str(data['place']['place_type']) if 'country' in data else None
+            place_url = str(data['place']['url']) if 'country' in data else None
+            quoted_status_id = str(data['quoted_status_id']) if 'quoted_status_id' in data else 0
+            quoted_status_id_str = str(data['quoted_status_id_str']) if 'quoted_status_id' in data else None
+            quoted_status = str(data['quoted_status']['text']).replace("\'", "\\'") if 'quoted_status' in data else None
+            possibly_sensitive = str(data['possibly_sensitive']) if 'possibly_sensitive' in data else None
+            retweeted_status = str(data['retweeted_status']['id']) if 'retweeted_status' in data else None
+
+
+            tweet_values +="('{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', " \
+                            "'{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', " \
+                            "'{}', '{}', '{}', '{}', '{}', '{}', '{}'),".format(
+                created_at, t_id, t_id_str, text, source, truncated, in_reply_to_status_id, in_reply_to_status_id_str,
+                in_reply_to_user_id, in_reply_to_user_id_str, in_reply_to_screen_name, user_id, tweet_coordinates,
+                tweet_coordinates_type, place_country, place_country_code, place_full_name, place_id, place_name,
+                place_place_type, place_url, quote_count, reply_count, favorite_count, favorited, retweeted,
+                filter_level, lang, quoted_status_id, quoted_status_id_str, quoted_status, possibly_sensitive,
+                retweeted_status
+            )
+
+            # user table
+
+            u_id = str(data['user']['id'])
+            u_id_str = str(data['user']['id_str'])
+            name = str(data['user']['name']).replace("\'", "\\'")
+            screen_name = str(data['user']['screen_name']).replace("\'", "\\'")
+            location = str(data['user']['location']).replace("\'", "\\'")
+            url = str(data['user']['url']).replace("\'", "\\'")
+            description = str(data['user']['description']).replace("\'", "\\""")
+            description = description.replace("\\", "|")
+            translator_type = str(data['user']['translator_type']).replace("\'", "\\'")
+            protected = str(data['user']['protected'])
+            verified = str(data['user']['verified'])
+            followers_count = str(data['user']['followers_count'])
+            friends_count = str(data['user']['friends_count'])
+            listed_count = str(data['user']['listed_count'])
+            favourites_count = str(data['user']['favourites_count'])
+            statuses_count = str(data['user']['statuses_count'])
+            created_at = str(data['user']['created_at'])
+            utc_offset = str(data['user']['utc_offset'])
+            time_zone = str(data['user']['time_zone'])
+            geo_enabled = str(data['user']['geo_enabled'])
+            lang = str(data['user']['lang'])
+            contributors_enabled = str(data['user']['contributors_enabled'])
+            is_translator = str(data['user']['is_translator'])
+            profile_background_color = str(data['user']['profile_background_color'])
+            profile_background_image_url = str(data['user']['profile_background_image_url'])
+            profile_background_image_url_https = str(data['user']['profile_background_image_url_https'])
+            profile_background_tile = str(data['user']['profile_background_tile'])
+            profile_image_url = str(data['user']['profile_image_url'])
+            profile_image_url_https = str(data['user']['profile_image_url_https'])
+            profile_link_color = str(data['user']['profile_link_color'])
+            profile_sidebar_border_color = str(data['user']['profile_sidebar_border_color'])
+            profile_sidebar_fill_color = str(data['user']['profile_sidebar_fill_color'])
+            profile_text_color = str(data['user']['profile_text_color'])
+            profile_use_background_image = str(data['user']['profile_use_background_image'])
+            default_profile = str(data['user']['default_profile'])
+            default_profile_image = str(data['user']['default_profile_image'])
+            following = str(data['user']['default_profile_image'])
+            follow_request_sent = str(data['user']['follow_request_sent'])
+            notifications = str(data['user']['notifications'])
+
+            user_values += "('{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', " \
+                              "'{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}'" \
+                              "'{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}'),".format(
+                u_id, u_id_str, name, screen_name, location, url, description, translator_type, protected,
+                verified, followers_count, friends_count, listed_count, favourites_count, statuses_count,
+                created_at, utc_offset, time_zone, geo_enabled, lang, contributors_enabled, is_translator,
+                profile_background_color, profile_background_image_url, profile_background_image_url_https,
+                profile_background_tile, profile_image_url, profile_image_url_https, profile_link_color,
+                profile_sidebar_border_color, profile_sidebar_fill_color, profile_text_color,
+                profile_use_background_image, default_profile, default_profile_image, following, follow_request_sent,
+                notifications)
+
+            # hashtag
+
+            hashtag_text = data['entities']['hashtags']
+
+            for hashtag in hashtag_text:
+                id = data['id']
+                hashtag_text = str(hashtag['text'])
+                indices_text = str(hashtag['indices'])
+
+
+                hashtag_values += "({}, '{}', '{}'),".format(id, hashtag_text, indices_text)
+
+            # urls
+
+            url_text = data['entities']['urls']
+
+            for url in url_text:
+                id = data['id']
+                url_text = str(url['url'])
+                display_url_text = str(url['display_url'])
+                expanded_url_text = str(url['expanded_url'])
+                indices_text = str(url['indices'])
+
+
+                url_values += "({}, '{}', '{}', '{}', '{}'),".format(id, url_text, display_url_text, expanded_url_text, indices_text)
+            # symbols
+
+            symbol_text = data['entities']['symbols']
+
+            for symbol in symbol_text:
+                id = data['id']
+                symbol_text = str(symbol['text'])
+                indices_text = str(symbol['indices'])
+
+
+                symbol_values += "({}, '{}', '{}'),".format(id, symbol_text, indices_text)
+            # user mentions
+            user_mention_text = data['entities']['user_mentions']
+
+            for user_mention in user_mention_text:
+                id = data['id']
+                name = str(user_mention['name']).replace("\'", "\\'")
+
+                # print(name.replace("\\","|"))
+
+                indices = str(user_mention['indices'])
+                screen_name = str(user_mention['screen_name']).replace("\'", "\\'")
+                u_id = str(user_mention['id'])
+                u_id_str = str(user_mention['id_str'])
+
+
+
+                user_mention_values += "({}, '{}','{}','{}','{}','{}'),".format(id, name, indices,screen_name, u_id,
+                                                                                                     u_id_str)
+
+            # media
+
+            if 'media' in data['entities']:
+
+                media_text = data['entities']['media']
+
+                for media in media_text:
+                    id = data['id']
+                    type = str(media['type'])
+                    sizes = 'None'
+                    indices = str(media['indices'])
+                    url = str(media['url'])
+                    media_url = str(media['media_url'])
+                    display_url = str(media['display_url'])
+                    m_id = str(media['id'])
+                    m_id_str = str(media['id_str'])
+                    expanded_url = str(media['expanded_url'])
+                    media_url_https = str(media['media_url_https'])
+
+
+                    media_values += "({}, '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}'),".format(
+                            id, type, sizes, indices, url, media_url, display_url, m_id, m_id_str, expanded_url,
+                            media_url_https)
+
+    sql_tweets = "INSERT INTO tweets VALUES {}".format(tweet_values)
+    sql_users =  "INSERT INTO users VALUES {}".format(user_values)
+    sql_user_mentions = "INSERT INTO user_mentions VALUES {}".format(user_mention_values)
+    sql_hashtags = "INSERT INTO hashtags VALUES {}".format(hashtag_values)
+    sql_urls = "INSERT INTO urls VALUES {}".format(url_values)
+    sql_media = "INSERT INTO media VALUES {}".format(media_values)
+    sql_symbols = "INSERT INTO symbols VALUES {}".format(symbol_values)
+
+    return sql_tweets, sql_users,  sql_hashtags, sql_media, sql_user_mentions, sql_urls,  sql_symbols
 
 
 def simulation():
