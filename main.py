@@ -171,23 +171,24 @@ def test_mongo_db_insert_one_collections(indexed, iterations ):
     log = 'mongo_db.insert_one_collections: indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
     log_res(log.format(indexed, doc_size, db_size, statistics.mean(times), statistics.mean(bulk)), times)
 def test_mysql_db_insert_one_universal(indexed, iterations):
-    times, bulk = [], []
+    times = []
 
     for runs in range(iterations):
-        t, db_size, doc_size, run = mysql_db.insert_one_universal(indexed)
-        times.append(t), bulk.append(run)
+        t, db_size, doc_size = mysql_db.insert_one_universal(path=PATH, indexed=indexed)
+        times.append(t)
 
-    log = 'mysql_db.universal_insert_one: indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
-    log_res(log.format(indexed, doc_size, db_size, statistics.mean(times), statistics.mean(bulk)), times)
+    log = 'mysql_db.universal_insert_one: indexed={}, db_size= {}, doc_size={}, time_mean={}'
+    log_res(log.format(indexed, doc_size, db_size, statistics.mean(times)), times)
+
 def test_mysql_db_insert_one_normalized(indexed, iterations):
-    times, bulk = [], []
+    times = []
 
     for runs in range(iterations):
-        t, db_size, doc_size, run = mysql_db.insert_one_normalized(indexed)
-        times.append(t), bulk.append(run)
+        t, db_size, doc_size = mysql_db.insert_one_normalized(path=PATH,indexed=indexed)
+        times.append(t)
 
-    log = 'mysql_db.universal_insert_one: indexed={}, db_size= {}, doc_size={}, time_mean={}, insert_time={}'
-    log_res(log.format(indexed, doc_size, db_size, statistics.mean(times), statistics.mean(bulk)), times)
+    log = 'mysql_db.universal_insert_one_normalized: indexed={}, db_size= {}, doc_size={}, time_mean={}'
+    log_res(log.format(indexed, doc_size, db_size, statistics.mean(times)), times)
 
 
 def test_mongo_db_find(indexed, iterations):
@@ -399,11 +400,9 @@ if __name__ == "__main__":
 
         test_mongo_db_scan,                         #16
         test_mongo_db_scan_collections,             #17
-        test_mysql_db_scan_universal,                         #18
+        test_mysql_db_scan_universal,               #18
         test_mysql_db_scan_normalized               #19
     ]
 
-    #run_test(database=database[0], target=target[14], simulated=False, threads=3, iterations=5, indexed=False)
+    run_test(database=database[0], target=test[19], simulated=False, threads=3, iterations=5, indexed=False)
 
-    mysql_db.insert_one_universal(PATH, True)
-    mysql_db.insert_one_normalized(PATH,True)

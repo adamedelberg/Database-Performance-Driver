@@ -411,7 +411,7 @@ def insert_one_universal(path, indexed, drop_on_start=True, drop_on_exit=False):
 
     logger.info("{} seconds to insert_one_universal indexed={} db_size={} doc_size={}".format(execution_time, indexed, db_size,
                                                                                     doc_size))
-
+    return execution_time, db_size, doc_size
 
 def insert_one_normalized(path, indexed, drop_on_start=True, drop_on_exit=False):
     delete_from_table('hashtags')
@@ -487,7 +487,7 @@ def insert_one_normalized(path, indexed, drop_on_start=True, drop_on_exit=False)
     logger.info("{} seconds to insert_one_normzlized indexed={} db_size={} doc_size={}".format(execution_time, indexed, db_size,
                                                                                     doc_size))
 
-
+    return execution_time, db_size, doc_size
 
 def select_universal(path, indexed):
     conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
