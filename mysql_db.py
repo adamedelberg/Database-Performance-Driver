@@ -133,7 +133,7 @@ def delete_from_table(table):
 # TODO: tidy
 
 
-def bulk_insert_universal(path, indexed=False, drop_on_start=True, drop_on_exit=False):
+def bulk_insert_universal(path, indexed, drop_on_start=True, drop_on_exit=False):
     # if indexed:
     ##    table = 'universal_indexed'
     # else:
@@ -148,6 +148,7 @@ def bulk_insert_universal(path, indexed=False, drop_on_start=True, drop_on_exit=
 
     statements = get_statements(table=table, path=path)
 
+    get_bulk_insert_statement(table,path)
     if drop_on_start: delete_from_table(table=table)
 
     connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
@@ -158,16 +159,21 @@ def bulk_insert_universal(path, indexed=False, drop_on_start=True, drop_on_exit=
     # cursor.execute(sql)
 
     execution_time = 0
+    start_time = time.time()
+    st = get_bulk_insert_statement(table,path)
+    insertst = "{};".format(st[0:-1])
+    cursor.execute(insertst)
+    execution_time += time.time() - start_time
 
-    for sql in statements:
-
-        try:
-            start_time = time.time()
-            cursor.execute(sql)
-            execution_time += time.time() - start_time
-        except pymysql.Error as code:
-            logger.debug('PyMySQL Error: {}'.format(code))
-            pass
+    # for sql in statements:
+    #
+    #     try:
+    #         start_time = time.time()
+    #         cursor.execute(sql)
+    #         execution_time += time.time() - start_time
+    #     except pymysql.Error as code:
+    #         logger.debug('PyMySQL Error: {}'.format(code))
+    #         pass
 
     cursor.close()
     connector.commit()
@@ -272,7 +278,7 @@ def bulk_insert_normalized(path, indexed=False, drop_on_start=True, drop_on_exit
     return run, size
 
 
-def bulk_insert_one_universal(path, indexed=False):
+def bulk_insert_one_universal(path, indexed):
     if indexed:
         stmts = get_statements(table='universal_indexed', path=path)
         delete_from_table(table='universal_indexed')
@@ -399,6 +405,9 @@ def bulk_insert_one_normalized(path, indexed=False):
     logger.info("{} seconds to bulk_insert_one_normalized {}".format(run, size))
     return run, size
 
+
+def insert_one_universal(path, indexed, drop_on_start=True, drop_on_exit=False):
+    print()
 
 
 
@@ -570,6 +579,8 @@ def scan_normalized():
 
 def get_statements(table, path=DOCUMENT):
     document = io.open(path, 'r')
+
+    values = []
 
     stmts = []
 
@@ -772,7 +783,248 @@ def get_statements(table, path=DOCUMENT):
                 profile_use_background_image, protected, screen_name, statuses_count, time_zone, translator_type,
                 user_url, utc_offset, verified))
 
+            values.append("(0," \
+                         "'{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}'," \
+                         "'{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}'," \
+                         "'{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}'," \
+                         "'{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}'," \
+                         "'{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}');".format(
+
+                hashtag_htext, hashtag_id, hashtag_indices, media_display_url, media_expanded_url, media_tweet_id,
+                media_indices, media_id, media_id_str, media_media, media_media_url, media_media_url_https,
+                media_sizes, media_type, symbol_id, symbol_indices, symbol_symbol_text, tweet_coordinates,
+                tweet_coordinates_type, tweet_created_at, tweet_favorite_count, tweet_favorited, tweet_filter_level,
+                tweet_id, tweet_id_str, tweet_in_reply_to_screen_name, tweet_in_reply_to_status_id,
+                tweet_in_reply_to_status_id_str, tweet_in_reply_to_user_id, tweet_in_reply_to_user_id_str, tweet_lang,
+                place_country, place_country_code, place_full_name, place_id, place_name, place_place_type, place_url,
+                possibly_sensitive, tweet_quote_count, quoted_status, quoted_status_id, quoted_status_id_str,
+                tweet_reply_count, tweet_retweeted, retweeted_status, tweet_source, tweet_text, tweet_truncated,
+                user_id, url_display_url_, url_expanded_url, url_id, url_indices, url_url, user_mention_id,
+                user_mention_indices, user_mention_name, user_mention_screen_name, user_mention_id, user_mention_id_str,
+                contributors_enabled, user_created_at, default_profile, default_profile_image, description,
+                favourites_count, follow_request_sent, followers_count, following, friends_count, geo_enabled,
+                user_id, user_id_str, is_translator, user_lang, listed_count, location, name, notifications,
+                profile_background_color, profile_background_image_url, profile_background_image_url_https,
+                profile_background_tile, profile_image_url, profile_image_url_https, profile_link_color,
+                profile_sidebar_border_color, profile_sidebar_fill_color, profile_text_color,
+                profile_use_background_image, protected, screen_name, statuses_count, time_zone, translator_type,
+                user_url, utc_offset, verified))
+
+
     return stmts
+
+
+def get_bulk_insert_statement(table, path=DOCUMENT):
+    document = io.open(path, 'r')
+
+    values = ""
+
+    stmts = []
+
+    with document as json_docs:
+        for data in json_docs:
+            data = json.loads(data)
+
+            # tweet
+
+            tweet_created_at = str(data['created_at'])
+            tweet_id = str(data['id'])
+            tweet_id_str = str(data['id_str'])
+            tweet_text = str(data['text']).replace("'", "\\'")
+            tweet_source = str(data['source']).replace("\'", "\\'")
+            tweet_truncated = str(data['truncated'])
+            tweet_in_reply_to_status_id = str(data['in_reply_to_status_id'])
+            tweet_in_reply_to_status_id_str = str(data['in_reply_to_status_id_str'])
+            tweet_in_reply_to_user_id = str(data['in_reply_to_user_id'])
+            tweet_in_reply_to_user_id_str = str(data['in_reply_to_user_id_str'])
+            tweet_in_reply_to_screen_name = str(data['in_reply_to_screen_name'])
+            tweet_quote_count = str(data['quote_count'])
+            tweet_reply_count = str(data['reply_count'])
+            tweet_favorite_count = str(data['favorite_count'])
+            tweet_favorited = str(data['favorited'])
+            tweet_retweeted = str(data['retweeted'])
+            tweet_filter_level = str(data['filter_level'])
+            tweet_lang = str(data['lang'])
+            tweet_coordinates = data['coordinates']['coordinates'] if 'type' in data else None
+            tweet_coordinates_type = data['coordinates']['type'] if 'type' in data else None
+            place_country = str(data['place']['country']) if 'country' in data else None
+            place_country_code = str(data['place']['country_code']) if 'country' in data else None
+            place_full_name = str(data['place']['full_name']) if 'country' in data else None
+            place_id = str(data['place']['id']) if 'country' in data else None
+            place_name = str(data['place']['name']) if 'country' in data else None
+            place_place_type = str(data['place']['place_type']) if 'country' in data else None
+            place_url = str(data['place']['url']) if 'country' in data else None
+            quoted_status_id = str(data['quoted_status_id']) if 'quoted_status_id' in data else None
+            quoted_status_id_str = str(data['quoted_status_id_str']) if 'quoted_status_id' in data else None
+            quoted_status = str(data['quoted_status']['text']).replace("\'", "\\'") if 'quoted_status' in data else None
+            possibly_sensitive = str(data['possibly_sensitive']) if 'possibly_sensitive' in data else None
+            retweeted_status = str(data['retweeted_status']['id']) if 'retweeted_status' in data else None
+
+            # user
+
+            user_id = str(data['user']['id'])
+            user_id_str = str(data['user']['id_str'])
+            name = str(data['user']['name']).replace("\'", "\\'")
+            screen_name = str(data['user']['screen_name']).replace("\'", "\\'")
+            location = str(data['user']['location']).replace("\'", "\\'")
+            user_url = str(data['user']['url']).replace("\'", "\\'")
+            description = str(data['user']['description']).replace("\'", "\\""")
+            description = description.replace("\\", "|")
+            translator_type = str(data['user']['translator_type']).replace("\'", "\\'")
+            protected = str(data['user']['protected'])
+            verified = str(data['user']['verified'])
+            followers_count = str(data['user']['followers_count'])
+            friends_count = str(data['user']['friends_count'])
+            listed_count = str(data['user']['listed_count'])
+            favourites_count = str(data['user']['favourites_count'])
+            statuses_count = str(data['user']['statuses_count'])
+            user_created_at = str(data['user']['created_at'])
+            utc_offset = str(data['user']['utc_offset'])
+            time_zone = str(data['user']['time_zone'])
+            geo_enabled = str(data['user']['geo_enabled'])
+            user_lang = str(data['user']['lang'])
+            contributors_enabled = str(data['user']['contributors_enabled'])
+            is_translator = str(data['user']['is_translator'])
+            profile_background_color = str(data['user']['profile_background_color'])
+            profile_background_image_url = str(data['user']['profile_background_image_url'])
+            profile_background_image_url_https = str(data['user']['profile_background_image_url_https'])
+            profile_background_tile = str(data['user']['profile_background_tile'])
+            profile_image_url = str(data['user']['profile_image_url'])
+            profile_image_url_https = str(data['user']['profile_image_url_https'])
+            profile_link_color = str(data['user']['profile_link_color'])
+            profile_sidebar_border_color = str(data['user']['profile_sidebar_border_color'])
+            profile_sidebar_fill_color = str(data['user']['profile_sidebar_fill_color'])
+            profile_text_color = str(data['user']['profile_text_color'])
+            profile_use_background_image = str(data['user']['profile_use_background_image'])
+            default_profile = str(data['user']['default_profile'])
+            default_profile_image = str(data['user']['default_profile_image'])
+            following = str(data['user']['default_profile_image'])
+            follow_request_sent = str(data['user']['follow_request_sent'])
+            notifications = str(data['user']['notifications'])
+
+            # hashtag
+
+            hashtag_text = data['entities']['hashtags']
+
+            hashtag_id = 0
+            hashtag_htext = None
+            hashtag_indices = None
+
+            for hashtag in hashtag_text:
+                hashtag_id = data['id']
+                hashtag_htext = str(hashtag['text'])
+                hashtag_indices = str(hashtag['indices'])
+
+            # symbols
+
+            symbol_text = data['entities']['symbols']
+
+            symbol_id = None
+            symbol_symbol_text = None
+            symbol_indices = None
+
+            for symbol in symbol_text:
+                symbol_id = data['id']
+                symbol_symbol_text = str(symbol['text'])
+                symbol_indices = str(symbol['indices'])
+
+            # urls
+
+            url_text = data['entities']['urls']
+
+            url_id = 0
+            url_url = None
+            url_display_url_ = None
+            url_expanded_url = None
+            url_indices = None
+
+            for url in url_text:
+                url_id = data['id']
+                url_url = str(url['url'])
+                url_display_url_ = str(url['display_url'])
+                url_expanded_url = str(url['expanded_url'])
+                url_indices = str(url['indices'])
+
+            # user mentions
+
+            user_mention_text = data['entities']['user_mentions']
+
+            user_mention_name = None
+            user_mention_indices = None
+            user_mention_screen_name = None
+            user_mention_id = 0
+            user_mention_id_str = None
+
+            for user_mention in user_mention_text:
+                user_mention_name = str(user_mention['name']).replace("\'", "\\'")
+                user_mention_indices = str(user_mention['indices'])
+                user_mention_screen_name = str(user_mention['screen_name']).replace("\'", "\\'")
+                user_mention_id = str(user_mention['id'])
+                user_mention_id_str = str(user_mention['id_str'])
+
+            # media
+
+            media_tweet_id = 0
+            media_type = None
+            media_media = None
+            media_sizes = None
+            media_indices = None
+            media_media_url = None
+            media_display_url = None
+            media_id = 0
+            media_id_str = None
+            media_expanded_url = None
+            media_media_url_https = None
+
+            if 'media' in data['entities']:
+
+                media_text = data['entities']['media']
+
+                for media in media_text:
+                    media_tweet_id = data['id']
+                    media_type = str(media['type'])
+                    media_sizes = None
+                    media_indices = str(media['indices'])
+                    media_media = str(media['url'])
+                    media_media_url = str(media['media_url'])
+                    media_display_url = str(media['display_url'])
+                    media_id = str(media['id'])
+                    media_id_str = str(media['id_str'])
+                    media_expanded_url = str(media['expanded_url'])
+                    media_media_url_https = str(media['media_url_https'])
+
+
+            values +=("(0," \
+                         "'{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}'," \
+                         "'{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}'," \
+                         "'{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}'," \
+                         "'{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}'," \
+                         "'{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}'),".format(
+
+                hashtag_htext, hashtag_id, hashtag_indices, media_display_url, media_expanded_url, media_tweet_id,
+                media_indices, media_id, media_id_str, media_media, media_media_url, media_media_url_https,
+                media_sizes, media_type, symbol_id, symbol_indices, symbol_symbol_text, tweet_coordinates,
+                tweet_coordinates_type, tweet_created_at, tweet_favorite_count, tweet_favorited, tweet_filter_level,
+                tweet_id, tweet_id_str, tweet_in_reply_to_screen_name, tweet_in_reply_to_status_id,
+                tweet_in_reply_to_status_id_str, tweet_in_reply_to_user_id, tweet_in_reply_to_user_id_str, tweet_lang,
+                place_country, place_country_code, place_full_name, place_id, place_name, place_place_type, place_url,
+                possibly_sensitive, tweet_quote_count, quoted_status, quoted_status_id, quoted_status_id_str,
+                tweet_reply_count, tweet_retweeted, retweeted_status, tweet_source, tweet_text, tweet_truncated,
+                user_id, url_display_url_, url_expanded_url, url_id, url_indices, url_url, user_mention_id,
+                user_mention_indices, user_mention_name, user_mention_screen_name, user_mention_id, user_mention_id_str,
+                contributors_enabled, user_created_at, default_profile, default_profile_image, description,
+                favourites_count, follow_request_sent, followers_count, following, friends_count, geo_enabled,
+                user_id, user_id_str, is_translator, user_lang, listed_count, location, name, notifications,
+                profile_background_color, profile_background_image_url, profile_background_image_url_https,
+                profile_background_tile, profile_image_url, profile_image_url_https, profile_link_color,
+                profile_sidebar_border_color, profile_sidebar_fill_color, profile_text_color,
+                profile_use_background_image, protected, screen_name, statuses_count, time_zone, translator_type,
+                user_url, utc_offset, verified))
+
+
+    sql = "INSERT INTO universal VALUES {}".format(values)
+
+    return sql
 
 
 def get_normalized_statements(path=DOCUMENT):

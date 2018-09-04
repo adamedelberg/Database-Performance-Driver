@@ -410,6 +410,4 @@ if __name__ == "__main__":
 
     #run_test(database=database[0], target=target[14], simulated=False, threads=3, iterations=5, indexed=False)
 
-
-    mysql_db.select_universal(path=PATH, indexed=True)
-    mysql_db.select_normalized(PATH, True)
+    test_mysql_db_bulk_insert_universal(indexed=False)
