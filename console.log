@@ -31443,3 +31443,79 @@ INFO: 2018-09-04 13:14:27,535: mongo_db: 0.019889116287231445 seconds to find_co
 INFO: 2018-09-04 13:14:28,142: mongo_db: 0.017837047576904297 seconds to find_collections 651 with indexed=True
 INFO: 2018-09-04 13:14:28,791: mongo_db: 0.017940044403076172 seconds to find_collections 651 with indexed=True
 INFO: 2018-09-04 13:14:29,409: mongo_db: 0.02538895606994629 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:14:49,706: mongo_db: 1.0092473030090332 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:14:49,729: mongo_db: 0.01208806037902832 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:14:49,743: mongo_db: 0.012562274932861328 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:14:49,757: mongo_db: 0.012303829193115234 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:14:49,771: mongo_db: 0.012838125228881836 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:14:49,796: mongo_db: 0.01296687126159668 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:14:49,810: mongo_db: 0.012439966201782227 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:14:49,823: mongo_db: 0.01222085952758789 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:14:49,836: mongo_db: 0.011983156204223633 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:14:49,850: mongo_db: 0.012260913848876953 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:14:49,865: mongo_db: 0.014281511306762695 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:14:56,977: mongo_db: 0.7317872047424316 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:14:57,599: mongo_db: 0.04113173484802246 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:14:58,223: mongo_db: 0.03659415245056152 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:14:58,893: mongo_db: 0.01689291000366211 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:14:59,502: mongo_db: 0.025075435638427734 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:15:00,163: mongo_db: 0.05320477485656738 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:15:01,025: mongo_db: 0.017462491989135742 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:15:01,655: mongo_db: 0.017308950424194336 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:15:02,345: mongo_db: 0.017414093017578125 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:15:02,949: mongo_db: 0.03238320350646973 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:15:03,555: mongo_db: 0.017362356185913086 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:15:12,270: mongo_db: 0.761991024017334 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:15:12,306: mongo_db: 0.012420177459716797 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:15:12,319: mongo_db: 0.012109994888305664 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:15:12,333: mongo_db: 0.012816429138183594 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:15:12,348: mongo_db: 0.013007879257202148 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:15:12,363: mongo_db: 0.013947725296020508 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:15:12,385: mongo_db: 0.013158082962036133 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:15:12,399: mongo_db: 0.01298832893371582 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:15:12,413: mongo_db: 0.01244211196899414 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:15:12,427: mongo_db: 0.013228416442871094 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:15:12,441: mongo_db: 0.012784004211425781 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-04 13:18:14,268: mongo_db: 1.0112860202789307 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:18:16,125: mongo_db: 0.019196033477783203 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:18:18,014: mongo_db: 0.027332782745361328 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:18:19,885: mongo_db: 0.057021141052246094 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:18:21,442: mongo_db: 0.027073144912719727 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:18:22,552: mongo_db: 0.03141641616821289 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:18:24,148: mongo_db: 0.017931699752807617 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:18:25,214: mongo_db: 0.022101640701293945 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:18:26,349: mongo_db: 0.01852869987487793 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:18:27,406: mongo_db: 0.023412704467773438 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:18:28,508: mongo_db: 0.03704714775085449 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:18:52,527: mongo_db: 0.7489230632781982 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:18:53,577: mongo_db: 0.7903900146484375 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:18:54,850: mongo_db: 1.074937105178833 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:18:55,822: mongo_db: 0.7271111011505127 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:18:57,079: mongo_db: 0.7254459857940674 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:18:57,996: mongo_db: 0.7258167266845703 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:18:59,292: mongo_db: 0.8332760334014893 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:19:00,358: mongo_db: 0.9065799713134766 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:19:01,397: mongo_db: 0.703416109085083 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:19:02,362: mongo_db: 0.7025890350341797 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:19:25,644: mongo_db: 0.6419329643249512 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:19:26,317: mongo_db: 0.0170440673828125 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:19:27,012: mongo_db: 0.04041552543640137 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:19:27,842: mongo_db: 0.052095890045166016 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:19:28,874: mongo_db: 0.023075342178344727 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:19:29,600: mongo_db: 0.020273208618164062 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:19:30,252: mongo_db: 0.023057222366333008 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:19:30,990: mongo_db: 0.030988454818725586 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:19:31,929: mongo_db: 0.04110002517700195 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:19:32,561: mongo_db: 0.03854107856750488 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:19:33,368: mongo_db: 0.04564237594604492 seconds to find_collections 651 with indexed=True
+INFO: 2018-09-04 13:19:43,727: mongo_db: 0.6144990921020508 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-04 13:19:44,248: mongo_db: 0.0043332576751708984 seconds to scan_collections 2000 objects
+INFO: 2018-09-04 13:19:44,262: mongo_db: 0.0038139820098876953 seconds to scan_collections 2000 objects
+INFO: 2018-09-04 13:19:44,267: mongo_db: 0.00357818603515625 seconds to scan_collections 2000 objects
+INFO: 2018-09-04 13:19:44,272: mongo_db: 0.0034182071685791016 seconds to scan_collections 2000 objects
+INFO: 2018-09-04 13:19:44,277: mongo_db: 0.0032281875610351562 seconds to scan_collections 2000 objects
+INFO: 2018-09-04 13:19:44,282: mongo_db: 0.0034019947052001953 seconds to scan_collections 2000 objects
+INFO: 2018-09-04 13:19:44,288: mongo_db: 0.003164052963256836 seconds to scan_collections 2000 objects
+INFO: 2018-09-04 13:19:44,293: mongo_db: 0.0033431053161621094 seconds to scan_collections 2000 objects
+INFO: 2018-09-04 13:19:44,298: mongo_db: 0.00325775146484375 seconds to scan_collections 2000 objects
+INFO: 2018-09-04 13:19:44,303: mongo_db: 0.003220081329345703 seconds to scan_collections 2000 objects
