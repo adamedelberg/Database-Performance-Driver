@@ -217,6 +217,7 @@ def bulk_insert_normalized(path, indexed=False, drop_on_start=True, drop_on_exit
     symbols_bulk_stmt = "{};".format(symbols_stmts[0:-1])
     run = 0
     start = time.time()
+
     try:
         cursor.execute(tweet_bulk_stmt)
         cursor.execute(user_bulk_stmt)
@@ -225,14 +226,17 @@ def bulk_insert_normalized(path, indexed=False, drop_on_start=True, drop_on_exit
         cursor.execute(user_mention_bulk_stmt)
         cursor.execute(url_bulk_stmt)
         cursor.execute(symbols_bulk_stmt)
-
     except Exception as e:
         pass
+
     run += time.time() - start
 
-
     cursor.close()
-    conn.commit()
+    try:
+        conn.commit()
+    except Exception as e:
+        pass
+
     conn.close()
 
     size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
@@ -1521,13 +1525,13 @@ def get_normalized_bulk_insert_statements(path=DOCUMENT):
                             id, type, sizes, indices, url, media_url, display_url, m_id, m_id_str, expanded_url,
                             media_url_https)
 
-    sql_tweets = "INSERT INTO tweets VALUES {}".format(tweet_values)
-    sql_users =  "INSERT INTO users VALUES {}".format(user_values)
-    sql_user_mentions = "INSERT INTO user_mentions VALUES {}".format(user_mention_values)
-    sql_hashtags = "INSERT INTO hashtags VALUES {}".format(hashtag_values)
-    sql_urls = "INSERT INTO urls VALUES {}".format(url_values)
-    sql_media = "INSERT INTO media VALUES {}".format(media_values)
-    sql_symbols = "INSERT INTO symbols VALUES {}".format(symbol_values)
+    sql_tweets = "INSERT IGNORE INTO tweets VALUES {}".format(tweet_values)
+    sql_users =  "INSERT IGNORE INTO users VALUES {}".format(user_values)
+    sql_user_mentions = "INSERT IGNORE INTO user_mentions VALUES {}".format(user_mention_values)
+    sql_hashtags = "INSERT IGNORE INTO hashtags VALUES {}".format(hashtag_values)
+    sql_urls = "INSERT IGNORE INTO urls VALUES {}".format(url_values)
+    sql_media = "INSERT IGNORE INTO media VALUES {}".format(media_values)
+    sql_symbols = "INSERT IGNORE INTO symbols VALUES {}".format(symbol_values)
 
     return sql_tweets, sql_users,  sql_hashtags, sql_media, sql_user_mentions, sql_urls,  sql_symbols
 

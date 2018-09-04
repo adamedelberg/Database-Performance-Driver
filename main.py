@@ -225,8 +225,9 @@ def test_mysql_db_select_universal(indexed, iterations):
         t, db_size = mysql_db.select_universal(indexed=indexed, path=PATH)
         times.append(t)
 
-    log = 'mysql_db.select: indexed={}, db_size= {}, time_mean={}'
+    log = 'mysql_db.select_universal: indexed={}, db_size= {}, time_mean={}'
     log_res(log.format(indexed, db_size, statistics.mean(times)), times)
+
 def test_mysql_db_select_normalized(indexed, iterations):
     mysql_db.bulk_insert_normalized(path=PATH, indexed=indexed)
     times = []
@@ -235,8 +236,9 @@ def test_mysql_db_select_normalized(indexed, iterations):
         t, db_size = mysql_db.select_normalized(indexed=indexed, path=PATH)
         times.append(t)
 
-    log = 'mysql_db.select: indexed={}, db_size= {}, time_mean={}'
+    log = 'mysql_db.select_normalized: indexed={}, db_size= {}, time_mean={}'
     log_res(log.format(indexed, db_size, statistics.mean(times)), times)
+
 
 def test_mongo_db_scan(indexed, iterations):
     # repopulate database
