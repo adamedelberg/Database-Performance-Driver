@@ -61,17 +61,23 @@ def drop_database(database):
     :return:
     """
     try:
-        client = MongoClient(HOST, PORT)
-        db = client.get_database(database)
+        db = MongoClient(HOST, PORT).get_database(database)
         coll = db.get_collection(COLLECTION)
+
         coll.remove({})
 
-        # connect(HOST, PORT).drop_database(database)
-        # client.drop_database(database)
-        logger.debug("DROPPED {}!".format(database))
+        db = MongoClient(HOST, PORT).get_database(DATABASE_COLLECTION)
+        users = db.get_collection('users')
+        tweets = db.get_collection('tweets')
 
-    except pymongo.errors as e:
-        logger.warning("DROP ERROR: " + e)
+        users.remove({})
+        tweets.remove({})
+
+        logger.debug("DROPPED {}!".format(database))
+        logger.debug("DROPPED {}!".format(DATABASE_COLLECTION))
+
+    except pymongo.errors as code:
+        logger.warning("MongoDB Error: {}".format(code))
 
 
 def drop_database_collections(database):
@@ -94,8 +100,8 @@ def drop_database_collections(database):
         # client.drop_database(database)
         logger.debug("DROPPED {}!".format(database))
 
-    except pymongo.errors as e:
-        logger.warning("DROP ERROR: " + e)
+    except pymongo.errors as code:
+        logger.warning("MongoDB Error: {}".format(code))
 
 
 def create_indexes():
@@ -166,7 +172,7 @@ def remove_indexes():
         users_coll.drop_index('locationIdx')
 
     except pymongo.errors.PyMongoError as code:
-        logger.warning("PyMongo Error: {}".format(code))
+        logger.debug("PyMongo Error: {}".format(code))
         pass
 
 
@@ -184,6 +190,9 @@ def bulk_insert(path, indexed, drop_on_start, drop_on_exit=False, write_concern=
 
     # check drop flag
     if drop_on_start: drop_database(DATABASE)
+
+    if indexed: create_indexes()
+    else: remove_indexes()
 
     # connect to correct database:
     db = connect(HOST, PORT).get_database(DATABASE)
@@ -230,10 +239,8 @@ def bulk_insert_collections(path, indexed, drop_on_start, drop_on_exit=False, wr
     user_collection = db.get_collection('users', write_concern=pymongo.WriteConcern(w=write_concern))
     tweet_collection = db.get_collection('tweets', write_concern=pymongo.WriteConcern(w=write_concern))
 
-    if indexed:
-        create_indexes()
-    else:
-        remove_indexes()
+    if indexed: create_indexes()
+    else: remove_indexes()
 
     execution_time = 0
 
@@ -368,12 +375,10 @@ def insert_one(path, indexed, drop_on_start, drop_on_exit=False, write_concern=1
            doc_size         - size of the inserted document
            db_size          - size of the database"""
 
-    if indexed:
-        database = DATABASE_INDEXED
-    else:
-        database = DATABASE
+    if indexed: create_indexes()
+    else: remove_indexes()
 
-    if drop_on_start: drop_database(database)
+    if drop_on_start: drop_database(DATABASE)
 
     db = connect(HOST, PORT).get_database(DATABASE)
     coll = db.get_collection(COLLECTION, write_concern=pymongo.WriteConcern(w=write_concern))
@@ -401,7 +406,7 @@ def insert_one(path, indexed, drop_on_start, drop_on_exit=False, write_concern=1
     logger.info("{} seconds to insert one indexed={} db_size={} doc_size={}".format(insert_one_time, indexed, db_size,
                                                                                     doc_size))
 
-    if drop_on_exit: drop_database(database)
+    if drop_on_exit: drop_database(DATABASE)
 
     return insert_one_time, doc_size, db_size, bulk_insert_time
 
@@ -429,8 +434,8 @@ def insert_one_collections(path, indexed, drop_on_start, drop_on_exit=False, wri
            doc_size         - size of the inserted document
            db_size          - size of the database"""
 
-    if indexed:
-        create_indexes(DATABASE_COLLECTION)
+    if indexed: create_indexes()
+    else: remove_indexes()
 
     if drop_on_start: drop_database_collections(DATABASE_COLLECTION)
 
@@ -495,10 +500,11 @@ def find(indexed):
     """
 
     if indexed:
-        db = connect(HOST, PORT).get_database(DATABASE)
+        create_indexes()
     else:
-        db = connect(HOST, PORT).get_database(DATABASE_INDEXED)
+        remove_indexes()
 
+    db = connect(HOST, PORT).get_database(DATABASE)
     collection = db.get_collection(COLLECTION)
 
     execution_time = 0

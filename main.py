@@ -222,22 +222,22 @@ def test_mysql_db_select_universal(indexed, iterations):
     times = []
 
     for i in range(iterations):
-        t, db_size = mysql_db.select_universal(indexed=indexed, path=PATH)
+        t, count = mysql_db.select_universal(indexed=indexed, path=PATH)
         times.append(t)
 
-    log = 'mysql_db.select_universal: indexed={}, db_size= {}, time_mean={}'
-    log_res(log.format(indexed, db_size, statistics.mean(times)), times)
+    log = 'mysql_db.select_universal: indexed={}, count= {}, time_mean={}'
+    log_res(log.format(indexed, count, statistics.mean(times)), times)
 
 def test_mysql_db_select_normalized(indexed, iterations):
     mysql_db.bulk_insert_normalized(path=PATH, indexed=indexed)
     times = []
 
     for i in range(iterations):
-        t, db_size = mysql_db.select_normalized(indexed=indexed, path=PATH)
+        t, count = mysql_db.select_normalized(indexed=indexed, path=PATH)
         times.append(t)
 
-    log = 'mysql_db.select_normalized: indexed={}, db_size= {}, time_mean={}'
-    log_res(log.format(indexed, db_size, statistics.mean(times)), times)
+    log = 'mysql_db.select_normalized: indexed={}, count= {}, time_mean={}'
+    log_res(log.format(indexed, count, statistics.mean(times)), times)
 
 
 def test_mongo_db_scan(indexed, iterations):
@@ -285,7 +285,7 @@ def test_mysql_db_scan_universal(indexed, iterations):
         t, scanned = mysql_db.scan_universal()
         times.append(t)
 
-    log = 'mysql_db.scan: db_size={}, scanned={}, time_mean={}'
+    log = 'mysql_db.scan_universal: db_size={}, scanned={}, time_mean={}'
     db_size = "{}MB".format(round(os.path.getsize(PATH) / 1024 / 1024, 2))
     log_res(log.format(db_size, scanned, statistics.mean(times)), times)
 def test_mysql_db_scan_normalized(indexed, iterations):
@@ -301,7 +301,7 @@ def test_mysql_db_scan_normalized(indexed, iterations):
         t, scanned = mysql_db.scan_normalized()
         times.append(t)
 
-    log = 'mysql_db.scan: db_size={}, scanned={}, time_mean={}'
+    log = 'mysql_db.scan_normalized: db_size={}, scanned={}, time_mean={}'
     db_size = "{}MB".format(round(os.path.getsize(PATH) / 1024 / 1024, 2))
     log_res(log.format(db_size, scanned, statistics.mean(times)), times)
 
@@ -408,7 +408,17 @@ if __name__ == "__main__":
         test_mysql_db_scan_normalized               #19
     ]
 
-    run_test(database=database[0], target=test[12], simulated=False, threads=3, iterations=10, indexed=True)
-    run_test(database=database[0], target=test[13], simulated=False, threads=3, iterations=10, indexed=True)
-    run_test(database=database[0], target=test[14], simulated=False, threads=3, iterations=10, indexed=True)
-    run_test(database=database[0], target=test[15], simulated=False, threads=3, iterations=10, indexed=True)
+    #run_test(database=database[0], target=test[12], simulated=False, threads=3, iterations=10, indexed=True)
+    #run_test(database=database[0], target=test[13], simulated=False, threads=3, iterations=10, indexed=True)
+    #run_test(database=database[0], target=test[14], simulated=False, threads=3, iterations=10, indexed=True)
+    #run_test(database=database[0], target=test[15], simulated=False, threads=3, iterations=10, indexed=True)
+
+    #run_test(database=database[0], target=test[16], simulated=False, threads=3, iterations=10, indexed=False)
+    #run_test(database=database[0], target=test[17], simulated=False, threads=3, iterations=10, indexed=False)
+  #  run_test(database=database[0], target=test[18], simulated=False, threads=3, iterations=10, indexed=False)
+   # run_test(database=database[0], target=test[19], simulated=False, threads=3, iterations=10, indexed=False)
+
+    for i in range (19):
+        print(test[i])
+        run_test(database=database[0], target=test[i], simulated=False, threads=3, iterations=1, indexed=False)
+        print()

@@ -123,8 +123,9 @@ def delete_from_table(table):
     sql = 'DELETE from {};'.format(table)
     try:
         cursor.execute(sql)
-    except Exception as err:
-        print(err)
+    except Exception as code:
+        logger.warning('PyMySQL Error: {}'.format(code))
+
     client.commit()
     cursor.close()
     client.close()
@@ -193,16 +194,18 @@ def bulk_insert_universal(path, indexed, drop_on_start=True, drop_on_exit=False)
 
 
 def bulk_insert_normalized(path, indexed=False, drop_on_start=True, drop_on_exit=False):
-    delete_from_table('hashtags')
-    delete_from_table('symbols')
-    delete_from_table('media')
-    delete_from_table('tweets')
-    delete_from_table('users')
-    delete_from_table('user_mentions')
-    delete_from_table('urls')
 
-    conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
-    #conn = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    if drop_on_start:
+        delete_from_table('hashtags')
+        delete_from_table('symbols')
+        delete_from_table('media')
+        delete_from_table('tweets')
+        delete_from_table('users')
+        delete_from_table('user_mentions')
+        delete_from_table('urls')
+
+    #conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    conn = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
 
     cursor = conn.cursor()
 
@@ -306,7 +309,7 @@ def bulk_insert_one_normalized(path, indexed=False):
         try:
             cursor.execute(sql)
         except Exception as e:
-            print(sql)
+            print(e)
             pass
         run += time.time() - start
     for sql in user_stmts:
@@ -314,7 +317,7 @@ def bulk_insert_one_normalized(path, indexed=False):
         try:
             cursor.execute(sql)
         except Exception as e:
-            print(sql)
+            print(e)
             pass
         run += time.time() - start
     for sql in hashtags_stmts:
@@ -322,7 +325,7 @@ def bulk_insert_one_normalized(path, indexed=False):
         try:
             cursor.execute(sql)
         except Exception as e:
-            print(sql)
+            print(e)
 
             pass
         run += time.time() - start
@@ -331,7 +334,7 @@ def bulk_insert_one_normalized(path, indexed=False):
         try:
             cursor.execute(sql)
         except Exception as e:
-            print(sql)
+            print(e)
 
             pass
         run += time.time() - start
@@ -340,7 +343,7 @@ def bulk_insert_one_normalized(path, indexed=False):
         try:
             cursor.execute(sql)
         except Exception as e:
-            print(sql)
+            print(e)
 
             pass
         run += time.time() - start
@@ -349,7 +352,7 @@ def bulk_insert_one_normalized(path, indexed=False):
         try:
             cursor.execute(sql)
         except Exception as e:
-            print(sql)
+            print(e)
 
             pass
         run += time.time() - start
@@ -358,7 +361,7 @@ def bulk_insert_one_normalized(path, indexed=False):
         try:
             cursor.execute(sql)
         except Exception as e:
-            print(sql)
+            print(e)
 
             pass
         run += time.time() - start
@@ -428,8 +431,8 @@ def insert_one_normalized(path, indexed, drop_on_start=True, drop_on_exit=False)
     delete_from_table('user_mentions')
     delete_from_table('urls')
 
-    conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
-    # conn = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    #conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
+    conn = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
 
     cursor = conn.cursor()
 
@@ -460,7 +463,6 @@ def insert_one_normalized(path, indexed, drop_on_start=True, drop_on_exit=False)
     try:
         start_time = time.time()
 
-        #st = get_normalized_bulk_insert_statements(DOCUMENT_SINGLE)
         sql_tweets, sql_users, sql_hashtags, sql_media, sql_user_mentions, sql_urls, sql_symbols = get_normalized_statements()
 
         try:
@@ -518,7 +520,7 @@ def select_universal(path, indexed):
             "SELECT COUNT(*) FROM universal WHERE `users.friends_count`>1000;",
             "SELECT COUNT(*) FROM universal WHERE `users.followers_count`>1000;"]
 
-    num = 0
+    count = 0
     sql_time = 0
 
     for sql in sqls:
@@ -526,12 +528,12 @@ def select_universal(path, indexed):
         cursor.execute(sql)
         sql_time += time.time() - start
         res = cursor.fetchone()
-        for row in res: num += row
+        for row in res: count += row
 
     size = "{}MB".format(round(os.path.getsize(path) / 1024 / 1024, 2))
-    logger.info("{} seconds to select_universal {} objects indexed={}, doc_size={}".format(sql_time, num, indexed, size))
+    logger.info("{} seconds to select_universal {} objects indexed={}, doc_size={}".format(sql_time, count, indexed, size))
 
-    return sql_time, size
+    return sql_time, count
 
 
 def select_normalized(path, indexed):
@@ -542,15 +544,6 @@ def select_normalized(path, indexed):
         create_indexes()
     else:
         remove_indexes()
-
-    # if indexed:
-    #    sql1 = "SELECT COUNT(*) FROM universal_indexed where `users.location` = 'London';"
-    #    sql2 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.friends_count`>1000;"
-    #    sql3 = "SELECT COUNT(*) FROM universal_indexed WHERE `users.followers_count`>1000;"
-    # else:
-    #    sql1 = "SELECT COUNT(*) FROM universal WHERE `users.location` = 'London';"
-    #    sql2 = "SELECT COUNT(*) FROM universal WHERE `users.friends_count`>1000;"
-    #    sql3 = "SELECT COUNT(*) FROM universal WHERE `users.followers_count`>1000;"
 
     sqls = ["SELECT COUNT(*) FROM users WHERE `location` = 'London';",
             "SELECT COUNT(*) FROM users WHERE `friends_count`>1000;",
@@ -569,7 +562,7 @@ def select_normalized(path, indexed):
     size = "{}MB".format(round(os.path.getsize(path) / 1024 / 1024, 2))
     logger.info("{} seconds to select_normalized {} objects indexed={}, doc_size={}".format(sql_time, num, indexed, size))
 
-    return sql_time, size
+    return sql_time, num
 
 
 def scan_universal():
@@ -1167,18 +1160,33 @@ def get_normalized_statements(path=DOCUMENT):
             possibly_sensitive = str(data['possibly_sensitive']) if 'possibly_sensitive' in data else None
             retweeted_status = str(data['retweeted_status']['id']) if 'retweeted_status' in data else None
 
+            try: media_id = str(data['entities']['media'][0]['id'])
+            except: media_id=0
+
+            try: user_mentions_id = str(data['entities']['user_mentions'][0]['id'])
+            except: user_mentions_id=0
+
+            try: urls_id= str(data['entities']['urls'][0]['id'])
+            except: urls_id = 0
+
+            try: hashtags_id = str(data['entities']['hashtags'][0]['id'])
+            except: hashtags_id=0
+
+            try: symbols_id = str(data['entities']['symbols'][0]['id'])
+            except: symbols_id = 0
+
             # note the IGNORE here - there might be duplicate tweets in the data source
 
             tweet_stmts.append("INSERT IGNORE INTO tweets VALUES (" \
                                "'{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', " \
                                "'{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', " \
-                               "'{}', '{}', '{}', '{}', '{}', '{}', '{}');".format(
+                               "'{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}');".format(
                 created_at, t_id, t_id_str, text, source, truncated, in_reply_to_status_id, in_reply_to_status_id_str,
                 in_reply_to_user_id, in_reply_to_user_id_str, in_reply_to_screen_name, user_id, tweet_coordinates,
                 tweet_coordinates_type, place_country, place_country_code, place_full_name, place_id, place_name,
                 place_place_type, place_url, quote_count, reply_count, favorite_count, favorited, retweeted,
                 filter_level, lang, quoted_status_id, quoted_status_id_str, quoted_status, possibly_sensitive,
-                retweeted_status
+                retweeted_status, media_id, user_mentions_id, urls_id, hashtags_id, symbols_id
             ))
 
             # user table
@@ -1380,16 +1388,40 @@ def get_normalized_bulk_insert_statements(path=DOCUMENT):
             possibly_sensitive = str(data['possibly_sensitive']) if 'possibly_sensitive' in data else None
             retweeted_status = str(data['retweeted_status']['id']) if 'retweeted_status' in data else None
 
+            try:
+                media_id = str(data['entities']['media'][0]['id'])
+            except:
+                media_id = 0
+
+            try:
+                user_mentions_id = str(data['entities']['user_mentions'][0]['id'])
+            except:
+                user_mentions_id = 0
+
+            try:
+                urls_id = str(data['entities']['urls'][0]['id'])
+            except:
+                urls_id = 0
+
+            try:
+                hashtags_id = str(data['entities']['hashtags'][0]['id'])
+            except:
+                hashtags_id = 0
+
+            try:
+                symbols_id = str(data['entities']['symbols'][0]['id'])
+            except:
+                symbols_id = 0
 
             tweet_values +="('{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', " \
                             "'{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', " \
-                            "'{}', '{}', '{}', '{}', '{}', '{}', '{}'),".format(
+                            "'{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}'),".format(
                 created_at, t_id, t_id_str, text, source, truncated, in_reply_to_status_id, in_reply_to_status_id_str,
                 in_reply_to_user_id, in_reply_to_user_id_str, in_reply_to_screen_name, user_id, tweet_coordinates,
                 tweet_coordinates_type, place_country, place_country_code, place_full_name, place_id, place_name,
                 place_place_type, place_url, quote_count, reply_count, favorite_count, favorited, retweeted,
                 filter_level, lang, quoted_status_id, quoted_status_id_str, quoted_status, possibly_sensitive,
-                retweeted_status
+                retweeted_status, media_id, user_mentions_id, urls_id, hashtags_id, symbols_id
             )
 
             # user table
