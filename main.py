@@ -415,10 +415,6 @@ if __name__ == "__main__":
 
     #run_test(database=database[0], target=test[16], simulated=False, threads=3, iterations=10, indexed=False)
     #run_test(database=database[0], target=test[17], simulated=False, threads=3, iterations=10, indexed=False)
-  #  run_test(database=database[0], target=test[18], simulated=False, threads=3, iterations=10, indexed=False)
-   # run_test(database=database[0], target=test[19], simulated=False, threads=3, iterations=10, indexed=False)
+    run_test(database=database[0], target=test[2], simulated=False, threads=3, iterations=10, indexed=False)
+    run_test(database=database[0], target=test[3], simulated=False, threads=3, iterations=10, indexed=False)
 
-    for i in range (19):
-        print(test[i])
-        run_test(database=database[0], target=test[i], simulated=False, threads=3, iterations=1, indexed=False)
-        print()

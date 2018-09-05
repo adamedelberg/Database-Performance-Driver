@@ -9,7 +9,6 @@ MongoDB Database Driver
 """
 
 import json
-import threading
 import time
 import logging
 import pymongo
@@ -17,7 +16,6 @@ from pymongo import MongoClient
 from pymongo import errors
 import os
 import config
-from multiprocessing.pool import ThreadPool
 import random
 
 logger = logging.getLogger(__name__)

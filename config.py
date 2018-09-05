@@ -40,12 +40,12 @@ collection_database = 'benchmark_db_collection'
 collection = 'tweets'
 
 # Test data paths
-document = '../parsed_data/e3-5MB.json'
-#document = '../parsed_data/e3-50MB.json'
-#document = '../parsed_data/e3-100MB.json'
-#document = '../parsed_data/e3-500MB.json'
-#document = '../parsed_data/e10-1GB.json'
-#document = '../parsed_data/big-5GB.json'
+document = '../parsed_data/5.json'
+#document = '../parsed_data/50.json'
+#document = '../parsed_data/100.json'
+#document = '../parsed_data/500.json'
+#document = '../parsed_data/1000.json'
+#document = '../parsed_data/2000.json'
 
 docs = [
     '../parsed_data/e3-5MB.json',
