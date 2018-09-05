@@ -9,16 +9,12 @@ import pymongo
 import logging
 
 # debugger level
-levels = [logging.INFO, logging.DEBUG, logging.WARNING]
-DEBUG_LEVEL = levels[0]
+DEBUG_LEVEL = logging.INFO
 
-iterations = 5
-threads = 4
+default_iterations = 5
+default_threads = 4
 
 #  MongoDB Configs
-host_mongo = '137.158.59.83'
-port_mongo = 27018
-
 host_mongo = 'localhost'
 port_mongo = 27017
 
@@ -46,14 +42,6 @@ document = '../parsed_data/5.json'
 #document = '../parsed_data/500.json'
 #document = '../parsed_data/1000.json'
 #document = '../parsed_data/2000.json'
-
-docs = [
-    '../parsed_data/e3-5MB.json',
-    '../parsed_data/e3-50MB.json',
-    '../parsed_data/e3-100MB.json',
-    '../parsed_data/e3-500MB.json',
-    '../parsed_data/e10-1GB.json',
-    '../parsed_data/big-5GB.json']
 
 
 # do not change unless necessary

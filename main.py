@@ -16,8 +16,8 @@ import argparse
 import threading
 import statistics
 
-ITERATIONS = config.iterations
-THREADS = config.threads
+ITERATIONS = config.default_iterations
+THREADS = config.default_threads
 
 DATABASE = config.database
 DATABASE_INDEXED = config.indexed_database
