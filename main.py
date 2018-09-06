@@ -415,6 +415,8 @@ if __name__ == "__main__":
 
     #run_test(database=database[0], target=test[16], simulated=False, threads=3, iterations=10, indexed=False)
     #run_test(database=database[0], target=test[17], simulated=False, threads=3, iterations=10, indexed=False)
-    run_test(database=database[0], target=test[2], simulated=False, threads=3, iterations=10, indexed=False)
-    run_test(database=database[0], target=test[3], simulated=False, threads=3, iterations=10, indexed=False)
+    run_test(database=database[0], target=test[4], simulated=False, threads=3, iterations=10, indexed=False)
+    run_test(database=database[0], target=test[5], simulated=False, threads=3, iterations=10, indexed=False)
+    run_test(database=database[0], target=test[6], simulated=False, threads=3, iterations=10, indexed=False)
+    run_test(database=database[0], target=test[7], simulated=False, threads=3, iterations=10, indexed=False)
 

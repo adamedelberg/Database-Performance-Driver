@@ -32726,3 +32726,43 @@ INFO: 2018-09-05 14:28:21,020: mysql_db: 0.17130804061889648 seconds to bulk ins
 INFO: 2018-09-05 14:28:21,555: mysql_db: 0.18059682846069336 seconds to bulk insert normalized 4.89MB
 INFO: 2018-09-05 14:28:22,085: mysql_db: 0.15453505516052246 seconds to bulk insert normalized 4.89MB
 INFO: 2018-09-05 14:28:22,584: mysql_db: 0.16707396507263184 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 12:42:48,189: mongo_db: 2.103822946548462 seconds to bulk insert one 4.89MB
+INFO: 2018-09-06 12:42:50,878: mongo_db: 2.644798994064331 seconds to bulk insert one 4.89MB
+INFO: 2018-09-06 12:42:52,714: mongo_db: 1.7655248641967773 seconds to bulk insert one 4.89MB
+INFO: 2018-09-06 12:42:54,145: mongo_db: 1.3893139362335205 seconds to bulk insert one 4.89MB
+INFO: 2018-09-06 12:42:56,058: mongo_db: 1.8765220642089844 seconds to bulk insert one 4.89MB
+INFO: 2018-09-06 12:42:57,865: mongo_db: 1.777867078781128 seconds to bulk insert one 4.89MB
+INFO: 2018-09-06 12:42:59,176: mongo_db: 1.2745699882507324 seconds to bulk insert one 4.89MB
+INFO: 2018-09-06 12:43:00,507: mongo_db: 1.2834491729736328 seconds to bulk insert one 4.89MB
+INFO: 2018-09-06 12:43:01,749: mongo_db: 1.1998248100280762 seconds to bulk insert one 4.89MB
+INFO: 2018-09-06 12:43:03,086: mongo_db: 1.3133561611175537 seconds to bulk insert one 4.89MB
+INFO: 2018-09-06 12:43:05,036: mongo_db: 1.8182032108306885 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-06 12:43:07,191: mongo_db: 1.9937899112701416 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-06 12:43:09,323: mongo_db: 1.9737930297851562 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-06 12:43:11,293: mongo_db: 1.781761884689331 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-06 12:43:13,226: mongo_db: 1.782102108001709 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-06 12:43:15,656: mongo_db: 2.2600302696228027 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-06 12:43:18,923: mongo_db: 3.038926839828491 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-06 12:43:23,016: mongo_db: 3.9128029346466064 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-06 12:43:25,218: mongo_db: 1.706587791442871 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-06 12:43:27,307: mongo_db: 1.9184699058532715 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-06 12:43:30,794: mysql_db: 2.8067057132720947 seconds to insert one universal 4.89MB
+INFO: 2018-09-06 12:43:32,847: mysql_db: 1.5873854160308838 seconds to insert one universal 4.89MB
+INFO: 2018-09-06 12:43:34,611: mysql_db: 1.4447367191314697 seconds to insert one universal 4.89MB
+INFO: 2018-09-06 12:43:36,611: mysql_db: 1.7484779357910156 seconds to insert one universal 4.89MB
+INFO: 2018-09-06 12:43:38,641: mysql_db: 1.7440760135650635 seconds to insert one universal 4.89MB
+INFO: 2018-09-06 12:43:40,768: mysql_db: 1.7969481945037842 seconds to insert one universal 4.89MB
+INFO: 2018-09-06 12:43:43,043: mysql_db: 1.8172967433929443 seconds to insert one universal 4.89MB
+INFO: 2018-09-06 12:43:44,686: mysql_db: 1.389744520187378 seconds to insert one universal 4.89MB
+INFO: 2018-09-06 12:43:46,015: mysql_db: 1.0913448333740234 seconds to insert one universal 4.89MB
+INFO: 2018-09-06 12:43:47,569: mysql_db: 1.2952697277069092 seconds to insert one universal 4.89MB
+INFO: 2018-09-06 12:43:50,770: mysql_db: 2.642000913619995 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-06 12:43:53,367: mysql_db: 1.9630045890808105 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-06 12:43:55,329: mysql_db: 1.6230251789093018 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-06 12:43:57,383: mysql_db: 1.5795440673828125 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-06 12:43:59,267: mysql_db: 1.5088186264038086 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-06 12:44:01,554: mysql_db: 1.5977754592895508 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-06 12:44:03,948: mysql_db: 2.0824365615844727 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-06 12:44:06,393: mysql_db: 2.1209278106689453 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-06 12:44:08,164: mysql_db: 1.424588680267334 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-06 12:44:09,777: mysql_db: 1.287377119064331 seconds to bulk_insert_one_normalized 4.89MB
