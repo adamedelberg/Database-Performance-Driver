@@ -87,7 +87,7 @@ def test_mysql_db_bulk_insert_universal(indexed, iterations=ITERATIONS):
     times = []
 
     for runs in range(iterations):
-        t, size = mysql_db.bulk_insert_universal(path=PATH, indexed=False)
+        t, size = mysql_db.bulk_insert_universal(path=PATH, drop_on_start=True, indexed=False)
         times.append(t)
 
     log = 'mysql_db.bulk_insert_universal: doc_size={}, time_mean={}'
@@ -96,7 +96,7 @@ def test_mysql_db_bulk_insert_normalized(indexed, iterations=ITERATIONS):
     times = []
 
     for runs in range(iterations):
-        t, doc_size = mysql_db.bulk_insert_normalized(path=PATH)
+        t, doc_size = mysql_db.bulk_insert_normalized(path=PATH, indexed=indexed, drop_on_start=True)
         times.append(t)
 
     log = 'mysql_db.bulk_insert_normalized: doc_size={}, time_mean={}'
@@ -220,7 +220,7 @@ def test_mongo_db_find_collections(indexed, iterations):
 
 
 def test_mysql_db_select_universal(indexed, iterations):
-    mysql_db.bulk_insert_universal(path=PATH, indexed=indexed)
+    mysql_db.bulk_insert_universal(path=PATH, indexed=indexed, drop_on_start=True)
     times = []
 
     for i in range(iterations):
@@ -231,7 +231,7 @@ def test_mysql_db_select_universal(indexed, iterations):
     log_res(log.format(indexed, count, statistics.mean(times)), times)
 
 def test_mysql_db_select_normalized(indexed, iterations):
-    mysql_db.bulk_insert_normalized(path=PATH, indexed=indexed)
+    mysql_db.bulk_insert_normalized(path=PATH, indexed=indexed, drop_on_start=True)
     times = []
 
     for i in range(iterations):
@@ -276,7 +276,7 @@ def test_mongo_db_scan_collections(indexed, iterations):
     log_res(log.format(db_size, scanned, statistics.mean(times)), times)
 def test_mysql_db_scan_universal(indexed, iterations):
     # repopulate database
-    mysql_db.bulk_insert_universal(path=PATH, indexed=False)
+    mysql_db.bulk_insert_universal(path=PATH, indexed=indexed, drop_on_start=True)
 
     # wait until previous operation is complete
     time.sleep(0.5)
@@ -292,7 +292,7 @@ def test_mysql_db_scan_universal(indexed, iterations):
     log_res(log.format(db_size, scanned, statistics.mean(times)), times)
 def test_mysql_db_scan_normalized(indexed, iterations):
     # repopulate database
-    mysql_db.bulk_insert_normalized(path=PATH, indexed=False)
+    mysql_db.bulk_insert_normalized(path=PATH, indexed=indexed, drop_on_start=True)
 
     # wait until previous operation is complete
     time.sleep(0.5)
@@ -420,8 +420,13 @@ if __name__ == "__main__":
     #run_test(database=database[0], target=test[16], simulated=False, threads=3, iterations=10, indexed=False)
     #run_test(database=database[0], target=test[17], simulated=False, threads=3, iterations=10, indexed=False)
 
-    run_test(database=database[0], target=test[4], simulated=False, threads=3, iterations=2, indexed=False)
-    run_test(database=database[0], target=test[5], simulated=False, threads=3, iterations=2, indexed=False)
-    run_test(database=database[0], target=test[6], simulated=False, threads=3, iterations=2, indexed=False)
-    run_test(database=database[0], target=test[7], simulated=False, threads=3, iterations=2, indexed=False)
+    #run_test(database=database[0], target=test[4], simulated=False, threads=3, iterations=2, indexed=False)
+    #run_test(database=database[0], target=test[5], simulated=False, threads=3, iterations=2, indexed=False)
+    #run_test(database=database[0], target=test[6], simulated=False, threads=3, iterations=2, indexed=False)
+    #run_test(database=database[0], target=test[7], simulated=False, threads=3, iterations=2, indexed=False)
+
+
+    # test every
+    for i in range (len(test)):
+        run_test(database=database[0], target=test[i], simulated=False, threads=3, iterations=2, indexed=False)
 

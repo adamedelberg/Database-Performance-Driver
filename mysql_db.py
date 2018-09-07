@@ -143,7 +143,7 @@ def delete_from_table(table):
 # TODO: tidy
 
 
-def bulk_insert_universal(path, indexed, drop_on_start=True, drop_on_exit=False):
+def bulk_insert_universal(path, indexed, drop_on_start, drop_on_exit=False):
     # if indexed:
     ##    table = 'universal_indexed'
     # else:
@@ -202,7 +202,7 @@ def bulk_insert_universal(path, indexed, drop_on_start=True, drop_on_exit=False)
     return execution_time, size
 
 
-def bulk_insert_normalized(path, indexed=False, drop_on_start=True, drop_on_exit=False):
+def bulk_insert_normalized(path, indexed, drop_on_start, drop_on_exit=False):
 
     if drop_on_start:
         delete_from_table('hashtags')
@@ -212,6 +212,9 @@ def bulk_insert_normalized(path, indexed=False, drop_on_start=True, drop_on_exit
         delete_from_table('users')
         delete_from_table('user_mentions')
         delete_from_table('urls')
+
+    if indexed: create_indexes()
+    else: remove_indexes()
 
     #conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     conn = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)

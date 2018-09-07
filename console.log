@@ -32917,3 +32917,374 @@ INFO: 2018-09-07 12:23:04,356: mongo_db: 2.3584036827087402 seconds to bulk inse
 INFO: 2018-09-07 12:23:08,209: mongo_db: 3.602689027786255 seconds to bulk insert one into collections 4.89MB
 INFO: 2018-09-07 12:23:09,559: mysql_db: 1.0410487651824951 seconds to insert one universal 4.89MB
 INFO: 2018-09-07 12:23:10,789: mysql_db: 0.9525392055511475 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 14:13:44,151: mongo_db: 1.6283860206604004 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 14:13:45,716: mongo_db: 1.527428150177002 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 14:13:47,746: mongo_db: 1.8800477981567383 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 14:13:49,810: mongo_db: 1.8573508262634277 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 14:13:51,270: mysql_db: 0.9560399055480957 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 14:13:52,267: mysql_db: 0.7603166103363037 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 14:13:54,474: mysql_db: 1.7864189147949219 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 14:13:58,592: mysql_db: 3.6902596950531006 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 14:15:15,994: mongo_db: 25.7708261013031 seconds to bulk insert one 98.08MB
+INFO: 2018-09-07 14:15:44,044: mongo_db: 27.37746500968933 seconds to bulk insert one 98.08MB
+INFO: 2018-09-07 14:16:20,867: mongo_db: 32.439398765563965 seconds to bulk insert one into collections 98.08MB
+INFO: 2018-09-07 14:16:54,962: mongo_db: 29.928056001663208 seconds to bulk insert one into collections 98.08MB
+INFO: 2018-09-07 14:17:16,903: mysql_db: 18.05954909324646 seconds to insert one universal 98.08MB
+INFO: 2018-09-07 14:17:33,697: mysql_db: 11.460866928100586 seconds to insert one universal 98.08MB
+INFO: 2018-09-07 14:18:03,125: mysql_db: 25.486274480819702 seconds to bulk_insert_one_normalized 98.08MB
+INFO: 2018-09-07 14:18:40,256: mysql_db: 31.13614583015442 seconds to bulk_insert_one_normalized 98.08MB
+INFO: 2018-09-07 15:57:53,106: mongo_db: 0.8931119441986084 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 15:57:53,948: mongo_db: 0.6578166484832764 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 15:57:55,159: mongo_db: 1.0149450302124023 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 15:57:56,054: mongo_db: 0.6925351619720459 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 15:58:10,050: mysql_db: 1.1330938339233398 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 15:58:14,295: mysql_db: 0.5500171184539795 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 15:58:17,761: mysql_db: 0.4776918888092041 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 15:58:18,533: mysql_db: 0.1906602382659912 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 15:58:20,405: mongo_db: 1.6704368591308594 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 15:58:22,077: mongo_db: 1.642784833908081 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 15:58:24,265: mongo_db: 2.0088307857513428 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 15:58:27,547: mongo_db: 3.113800048828125 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 15:58:28,771: mysql_db: 0.858252763748169 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 15:58:29,730: mysql_db: 0.5520496368408203 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 15:58:31,888: mysql_db: 1.7332887649536133 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 15:58:33,929: mysql_db: 1.7022340297698975 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 15:58:34,866: mongo_db: 0.0015921592712402344 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 15:58:35,619: mongo_db: 0.001589059829711914 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 15:58:36,472: mongo_db: 0.002101898193359375 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 15:58:37,264: mongo_db: 0.0023508071899414062 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 15:58:38,030: mysql_db: 0.0032198429107666016 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 15:58:38,563: mysql_db: 0.003520965576171875 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 15:58:39,370: mysql_db: 0.16031098365783691 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 15:58:40,022: mysql_db: 0.16458702087402344 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 15:58:40,838: mongo_db: 0.5880188941955566 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 15:58:40,945: mongo_db: 0.08154678344726562 seconds to find 651 with indexed=False
+INFO: 2018-09-07 15:58:40,987: mongo_db: 0.03366518020629883 seconds to find 651 with indexed=False
+INFO: 2018-09-07 15:58:41,835: mongo_db: 0.7055480480194092 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 15:58:41,869: mongo_db: 0.02403426170349121 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 15:58:41,932: mongo_db: 0.06181740760803223 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 15:58:42,887: mongo_db: 0.644416093826294 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 15:58:43,444: mongo_db: 0.027711153030395508 seconds to scan 1000 objects
+INFO: 2018-09-07 15:58:43,450: mongo_db: 0.003167867660522461 seconds to scan 1000 objects
+INFO: 2018-09-07 15:58:44,310: mongo_db: 0.707176923751831 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 15:58:44,845: mongo_db: 0.022516250610351562 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 15:58:44,854: mongo_db: 0.006694793701171875 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 15:59:53,452: mongo_db: 0.6610841751098633 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 15:59:54,316: mongo_db: 0.6651349067687988 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 15:59:55,455: mongo_db: 1.0131101608276367 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 15:59:56,238: mongo_db: 0.5995559692382812 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 15:59:56,704: mysql_db: 0.3876211643218994 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 15:59:57,116: mysql_db: 0.3390183448791504 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 15:59:57,574: mysql_db: 0.2133469581604004 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 15:59:58,111: mysql_db: 0.2127518653869629 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 15:59:59,519: mongo_db: 1.3650460243225098 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 16:00:00,773: mongo_db: 1.2314519882202148 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 16:00:02,834: mongo_db: 1.8600893020629883 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 16:00:04,823: mongo_db: 1.8474960327148438 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 16:00:05,492: mysql_db: 0.46016883850097656 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 16:00:06,180: mysql_db: 0.4746572971343994 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 16:00:07,935: mysql_db: 1.4754347801208496 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 16:00:09,727: mysql_db: 1.4592349529266357 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 16:00:10,452: mongo_db: 0.0018239021301269531 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:00:11,199: mongo_db: 0.0015749931335449219 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:00:11,970: mongo_db: 0.002218008041381836 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:00:12,785: mongo_db: 0.0023081302642822266 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:00:13,464: mysql_db: 0.003840923309326172 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:00:14,046: mysql_db: 0.0050051212310791016 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:00:14,786: mysql_db: 0.16999292373657227 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:00:15,483: mysql_db: 0.15602898597717285 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:00:16,302: mongo_db: 0.5431222915649414 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:00:16,359: mongo_db: 0.041797637939453125 seconds to find 651 with indexed=False
+INFO: 2018-09-07 16:00:16,395: mongo_db: 0.02874612808227539 seconds to find 651 with indexed=False
+INFO: 2018-09-07 16:00:17,130: mongo_db: 0.6212100982666016 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:00:17,184: mongo_db: 0.043589115142822266 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 16:00:17,208: mongo_db: 0.022503376007080078 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 16:00:17,945: mongo_db: 0.5790598392486572 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:00:18,463: mongo_db: 0.0052490234375 seconds to scan 1000 objects
+INFO: 2018-09-07 16:00:18,469: mongo_db: 0.003309011459350586 seconds to scan 1000 objects
+INFO: 2018-09-07 16:00:19,223: mongo_db: 0.6249630451202393 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:00:19,743: mongo_db: 0.00609588623046875 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 16:00:19,749: mongo_db: 0.0037491321563720703 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 16:02:09,911: mongo_db: 1.1292369365692139 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:02:11,497: mongo_db: 1.2548182010650635 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:02:12,678: mongo_db: 0.8856778144836426 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:02:13,662: mongo_db: 0.7691872119903564 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:02:14,229: mysql_db: 0.47353219985961914 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:02:14,690: mysql_db: 0.35001325607299805 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:02:16,437: mongo_db: 1.685534954071045 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 16:02:17,905: mongo_db: 1.4385828971862793 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 16:02:21,348: mongo_db: 3.327589750289917 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 16:02:23,361: mongo_db: 1.84735107421875 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 16:02:24,101: mysql_db: 0.5229992866516113 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 16:02:24,810: mysql_db: 0.5018420219421387 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 16:02:26,995: mysql_db: 1.924060583114624 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 16:02:30,182: mysql_db: 2.480112314224243 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 16:02:31,450: mongo_db: 0.0021479129791259766 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:02:32,221: mongo_db: 0.0015251636505126953 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:02:33,100: mongo_db: 0.003264904022216797 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:02:34,038: mongo_db: 0.0023009777069091797 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:02:35,395: mysql_db: 0.004831075668334961 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:02:36,452: mysql_db: 0.014476776123046875 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:02:37,515: mysql_db: 0.25885963439941406 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:02:38,209: mysql_db: 0.16126489639282227 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:02:39,108: mongo_db: 0.6341691017150879 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:02:39,181: mongo_db: 0.05885434150695801 seconds to find 651 with indexed=False
+INFO: 2018-09-07 16:02:39,230: mongo_db: 0.04015612602233887 seconds to find 651 with indexed=False
+INFO: 2018-09-07 16:02:40,085: mongo_db: 0.6773278713226318 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:02:40,119: mongo_db: 0.024631023406982422 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 16:02:40,171: mongo_db: 0.05122184753417969 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 16:02:41,123: mongo_db: 0.6555299758911133 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:02:41,649: mongo_db: 0.013993024826049805 seconds to scan 1000 objects
+INFO: 2018-09-07 16:02:41,656: mongo_db: 0.0032968521118164062 seconds to scan 1000 objects
+INFO: 2018-09-07 16:02:42,524: mongo_db: 0.7105128765106201 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:02:43,051: mongo_db: 0.011199951171875 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 16:02:43,058: mongo_db: 0.004987001419067383 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 16:03:01,176: mongo_db: 0.6668989658355713 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:03:01,927: mongo_db: 0.5958802700042725 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:03:02,643: mongo_db: 0.5968241691589355 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:03:03,464: mongo_db: 0.6661911010742188 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:03:03,867: mysql_db: 0.3668398857116699 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:03:04,317: mysql_db: 0.33307528495788574 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:03:04,907: mysql_db: 0.30024218559265137 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 16:03:05,457: mysql_db: 0.20228099822998047 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 16:03:06,912: mongo_db: 1.416874885559082 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 16:03:08,135: mongo_db: 1.191789150238037 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 16:03:10,094: mongo_db: 1.7410650253295898 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 16:03:11,989: mongo_db: 1.7521138191223145 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 16:03:12,656: mysql_db: 0.46432971954345703 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 16:03:13,390: mysql_db: 0.5332973003387451 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 16:03:15,206: mysql_db: 1.4550349712371826 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 16:03:17,112: mysql_db: 1.5698351860046387 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 16:03:17,828: mongo_db: 0.0016679763793945312 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:03:18,521: mongo_db: 0.0016939640045166016 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:03:19,255: mongo_db: 0.002033233642578125 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:03:20,025: mongo_db: 0.0022420883178710938 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:03:20,825: mysql_db: 0.0035538673400878906 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:03:21,368: mysql_db: 0.0038299560546875 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:03:22,035: mysql_db: 0.16036415100097656 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:03:22,656: mysql_db: 0.15587401390075684 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:03:23,451: mongo_db: 0.5533430576324463 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:03:23,499: mongo_db: 0.03364706039428711 seconds to find 651 with indexed=False
+INFO: 2018-09-07 16:03:23,535: mongo_db: 0.02978515625 seconds to find 651 with indexed=False
+INFO: 2018-09-07 16:03:24,274: mongo_db: 0.61946702003479 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:03:24,306: mongo_db: 0.021747827529907227 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 16:03:24,329: mongo_db: 0.021480560302734375 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 16:03:25,080: mongo_db: 0.6002862453460693 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:03:25,596: mongo_db: 0.0043010711669921875 seconds to scan 1000 objects
+INFO: 2018-09-07 16:03:25,601: mongo_db: 0.003683805465698242 seconds to scan 1000 objects
+INFO: 2018-09-07 16:03:26,342: mongo_db: 0.6229698657989502 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:03:26,878: mongo_db: 0.004853963851928711 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 16:03:26,885: mongo_db: 0.004214048385620117 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 16:03:49,710: mongo_db: 0.5215790271759033 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:03:50,449: mongo_db: 0.5548148155212402 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:03:51,179: mongo_db: 0.6028468608856201 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:03:51,948: mongo_db: 0.603651762008667 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:03:52,405: mysql_db: 0.41864490509033203 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:03:52,857: mysql_db: 0.3560750484466553 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:03:53,317: mysql_db: 0.2350170612335205 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 16:03:53,888: mysql_db: 0.23040199279785156 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 16:03:55,398: mongo_db: 1.4627749919891357 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 16:03:56,896: mongo_db: 1.4647369384765625 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 16:03:59,866: mongo_db: 2.85349702835083 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 16:04:02,016: mongo_db: 1.9925949573516846 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 16:04:02,835: mysql_db: 0.6210126876831055 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 16:04:03,691: mysql_db: 0.599755048751831 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 16:04:06,675: mysql_db: 2.680743455886841 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 16:04:09,739: mysql_db: 2.710350513458252 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 16:04:10,591: mongo_db: 0.0037910938262939453 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:04:12,199: mongo_db: 0.001811981201171875 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:04:13,764: mongo_db: 0.014627933502197266 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:04:14,788: mongo_db: 0.00215911865234375 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:04:15,588: mysql_db: 0.0037250518798828125 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:04:16,198: mysql_db: 0.0034630298614501953 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:04:16,995: mysql_db: 0.19081902503967285 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:04:17,638: mysql_db: 0.16364026069641113 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:04:18,524: mongo_db: 0.6314849853515625 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:04:18,591: mongo_db: 0.04216885566711426 seconds to find 651 with indexed=False
+INFO: 2018-09-07 16:04:18,629: mongo_db: 0.030942678451538086 seconds to find 651 with indexed=False
+INFO: 2018-09-07 16:04:19,460: mongo_db: 0.7014038562774658 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:04:19,516: mongo_db: 0.029401063919067383 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 16:04:19,567: mongo_db: 0.04983115196228027 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 16:04:20,634: mongo_db: 0.8083038330078125 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:04:21,166: mongo_db: 0.012064695358276367 seconds to scan 1000 objects
+INFO: 2018-09-07 16:04:21,204: mongo_db: 0.019635915756225586 seconds to scan 1000 objects
+INFO: 2018-09-07 16:04:22,633: mongo_db: 1.0598530769348145 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:04:23,197: mongo_db: 0.030249834060668945 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 16:04:23,213: mongo_db: 0.004080772399902344 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 16:04:23,581: mysql_db: 0.3399059772491455 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:04:24,320: mysql_db:  0.2285780906677246 seconds to scan 1000 objects from universal table
+INFO: 2018-09-07 16:04:24,565: mysql_db:  0.2407701015472412 seconds to scan 1000 objects from universal table
+INFO: 2018-09-07 16:04:29,314: mongo_db: 0.5423431396484375 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:04:30,083: mongo_db: 0.5418498516082764 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:04:30,825: mongo_db: 0.6110970973968506 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:04:31,745: mongo_db: 0.7142982482910156 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:04:32,233: mysql_db: 0.3218390941619873 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:04:32,663: mysql_db: 0.3341996669769287 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:04:33,128: mysql_db: 0.2505509853363037 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 16:04:33,595: mysql_db: 0.17967724800109863 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 16:04:35,076: mongo_db: 1.442920207977295 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 16:04:36,333: mongo_db: 1.2345271110534668 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 16:04:38,251: mongo_db: 1.7460038661956787 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 16:04:40,197: mongo_db: 1.8084120750427246 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 16:04:40,906: mysql_db: 0.5110223293304443 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 16:04:41,585: mysql_db: 0.4855172634124756 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 16:04:43,411: mysql_db: 1.5390241146087646 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 16:04:45,180: mysql_db: 1.4546542167663574 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 16:04:45,900: mongo_db: 0.0018870830535888672 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:04:46,607: mongo_db: 0.0016560554504394531 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:04:47,333: mongo_db: 0.002010345458984375 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:04:48,348: mongo_db: 0.0023047924041748047 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:04:49,098: mysql_db: 0.003480672836303711 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:04:49,635: mysql_db: 0.003590822219848633 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:04:50,393: mysql_db: 0.16834688186645508 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:04:51,065: mysql_db: 0.1776440143585205 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:04:51,845: mongo_db: 0.5678491592407227 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:04:51,930: mongo_db: 0.07077693939208984 seconds to find 651 with indexed=False
+INFO: 2018-09-07 16:04:51,969: mongo_db: 0.03308916091918945 seconds to find 651 with indexed=False
+INFO: 2018-09-07 16:04:52,974: mongo_db: 0.8350770473480225 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:04:53,012: mongo_db: 0.02650141716003418 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 16:04:53,070: mongo_db: 0.04492497444152832 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 16:04:53,955: mongo_db: 0.5772130489349365 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:04:54,491: mongo_db: 0.025433063507080078 seconds to scan 1000 objects
+INFO: 2018-09-07 16:04:54,498: mongo_db: 0.004130125045776367 seconds to scan 1000 objects
+INFO: 2018-09-07 16:04:55,476: mongo_db: 0.8056209087371826 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:04:56,003: mongo_db: 0.004801034927368164 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 16:04:56,046: mongo_db: 0.033503055572509766 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 16:04:56,451: mysql_db: 0.33225202560424805 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:04:57,292: mysql_db:  0.32700300216674805 seconds to scan 1000 objects from universal table
+INFO: 2018-09-07 16:04:57,522: mysql_db:  0.2254173755645752 seconds to scan 1000 objects from universal table
+INFO: 2018-09-07 16:05:20,738: mongo_db: 0.562432050704956 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:05:21,433: mongo_db: 0.5301830768585205 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:05:22,123: mongo_db: 0.5685760974884033 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:05:22,902: mongo_db: 0.5798459053039551 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:05:23,346: mysql_db: 0.3172638416290283 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:05:23,763: mysql_db: 0.3371293544769287 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:05:24,298: mysql_db: 0.3285799026489258 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 16:05:24,792: mysql_db: 0.19668006896972656 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 16:05:26,173: mongo_db: 1.3354642391204834 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 16:05:27,459: mongo_db: 1.25872802734375 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 16:05:29,367: mongo_db: 1.739771842956543 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 16:05:31,281: mongo_db: 1.7611958980560303 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 16:05:31,924: mysql_db: 0.453563928604126 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 16:05:32,577: mysql_db: 0.47486090660095215 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 16:05:34,364: mysql_db: 1.5078425407409668 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 16:05:36,145: mysql_db: 1.513718843460083 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 16:05:36,873: mongo_db: 0.0014858245849609375 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:05:37,533: mongo_db: 0.0017590522766113281 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:05:38,274: mongo_db: 0.0019271373748779297 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:05:39,029: mongo_db: 0.0022690296173095703 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:05:39,755: mysql_db: 0.003134012222290039 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:05:40,335: mysql_db: 0.003882884979248047 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:05:41,049: mysql_db: 0.1550900936126709 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:05:41,647: mysql_db: 0.1535320281982422 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:05:42,436: mongo_db: 0.544374942779541 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:05:42,486: mongo_db: 0.031183719635009766 seconds to find 651 with indexed=False
+INFO: 2018-09-07 16:05:42,537: mongo_db: 0.030014991760253906 seconds to find 651 with indexed=False
+INFO: 2018-09-07 16:05:43,479: mongo_db: 0.8210391998291016 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:05:43,512: mongo_db: 0.021914958953857422 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 16:05:43,550: mongo_db: 0.0371396541595459 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 16:05:44,309: mongo_db: 0.6003310680389404 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:05:44,850: mongo_db: 0.010707855224609375 seconds to scan 1000 objects
+INFO: 2018-09-07 16:05:44,866: mongo_db: 0.011192083358764648 seconds to scan 1000 objects
+INFO: 2018-09-07 16:05:45,604: mongo_db: 0.5917859077453613 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:05:46,132: mongo_db: 0.014418840408325195 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 16:05:46,138: mongo_db: 0.004173755645751953 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 16:05:46,558: mysql_db: 0.37110304832458496 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:05:47,311: mysql_db:  0.24576187133789062 seconds to scan 1000 objects from universal table
+INFO: 2018-09-07 16:05:47,554: mysql_db:  0.23772001266479492 seconds to scan 1000 objects from universal table
+INFO: 2018-09-07 16:05:48,197: mysql_db: 0.4236469268798828 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 16:05:48,933: mysql_db:  0.2204899787902832 seconds to scan_normalized 3205 objects
+INFO: 2018-09-07 16:05:49,075: mysql_db:  0.139570951461792 seconds to scan_normalized 3205 objects
+INFO: 2018-09-07 16:05:57,624: mongo_db: 0.5643882751464844 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:05:58,309: mongo_db: 0.5386719703674316 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:05:59,044: mongo_db: 0.5725011825561523 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:05:59,886: mongo_db: 0.6773669719696045 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:06:00,351: mysql_db: 0.34244203567504883 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:06:00,773: mysql_db: 0.3040940761566162 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:06:01,258: mysql_db: 0.17699384689331055 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 16:06:01,777: mysql_db: 0.19594717025756836 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 16:06:03,046: mongo_db: 1.2292861938476562 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 16:06:04,519: mongo_db: 1.4004409313201904 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 16:06:06,425: mongo_db: 1.7823169231414795 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 16:06:08,235: mongo_db: 1.6450238227844238 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 16:06:08,893: mysql_db: 0.4630279541015625 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 16:06:09,575: mysql_db: 0.4773404598236084 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 16:06:11,346: mysql_db: 1.5107951164245605 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 16:06:13,202: mysql_db: 1.5557239055633545 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 16:06:13,932: mongo_db: 0.0017940998077392578 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:06:14,629: mongo_db: 0.0016829967498779297 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:06:15,377: mongo_db: 0.0022199153900146484 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:06:16,163: mongo_db: 0.002056121826171875 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:06:16,889: mysql_db: 0.003648042678833008 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:06:17,414: mysql_db: 0.0037860870361328125 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:06:18,092: mysql_db: 0.169633150100708 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:06:18,704: mysql_db: 0.1556720733642578 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:06:19,503: mongo_db: 0.5971231460571289 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:06:19,564: mongo_db: 0.041399240493774414 seconds to find 651 with indexed=False
+INFO: 2018-09-07 16:06:19,623: mongo_db: 0.030600309371948242 seconds to find 651 with indexed=False
+INFO: 2018-09-07 16:06:20,353: mongo_db: 0.6008868217468262 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:06:20,396: mongo_db: 0.030646324157714844 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 16:06:20,419: mongo_db: 0.021741628646850586 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 16:06:20,920: mysql_db: 0.18831086158752441 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 16:06:20,948: mysql_db: 0.021935224533081055 seconds to select_normalized 624 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-07 16:06:20,957: mysql_db: 0.0026934146881103516 seconds to select_normalized 624 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-07 16:06:21,748: mongo_db: 0.6006109714508057 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:06:22,277: mongo_db: 0.0169370174407959 seconds to scan 1000 objects
+INFO: 2018-09-07 16:06:22,285: mongo_db: 0.003654003143310547 seconds to scan 1000 objects
+INFO: 2018-09-07 16:06:23,208: mongo_db: 0.798654317855835 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:06:23,731: mongo_db: 0.004783153533935547 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 16:06:23,737: mongo_db: 0.0044858455657958984 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 16:06:24,189: mysql_db: 0.36044907569885254 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:06:24,946: mysql_db:  0.24910998344421387 seconds to scan 1000 objects from universal table
+INFO: 2018-09-07 16:06:25,390: mysql_db:  0.420029878616333 seconds to scan 1000 objects from universal table
+INFO: 2018-09-07 16:06:25,982: mysql_db: 0.22268199920654297 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 16:06:26,657: mysql_db:  0.16187691688537598 seconds to scan_normalized 3205 objects
+INFO: 2018-09-07 16:06:26,809: mysql_db:  0.1500720977783203 seconds to scan_normalized 3205 objects
+INFO: 2018-09-07 16:06:35,381: mongo_db: 0.5411851406097412 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:06:36,110: mongo_db: 0.5520339012145996 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:06:36,863: mongo_db: 0.5760509967803955 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:06:37,688: mongo_db: 0.6747150421142578 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:06:38,186: mysql_db: 0.37883496284484863 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:06:38,650: mysql_db: 0.343292236328125 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:06:39,213: mysql_db: 0.25993990898132324 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 16:06:39,710: mysql_db: 0.20006275177001953 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 16:06:40,983: mongo_db: 1.232733964920044 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 16:06:42,416: mongo_db: 1.3601629734039307 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 16:06:44,305: mongo_db: 1.7777092456817627 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 16:06:46,293: mongo_db: 1.8538422584533691 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 16:06:46,982: mysql_db: 0.49567174911499023 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 16:06:47,641: mysql_db: 0.46005749702453613 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 16:06:49,374: mysql_db: 1.4173822402954102 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 16:06:51,173: mysql_db: 1.5133109092712402 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 16:06:51,890: mongo_db: 0.0015292167663574219 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:06:52,621: mongo_db: 0.0015857219696044922 seconds to insert one indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:06:53,357: mongo_db: 0.0019230842590332031 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:06:54,076: mongo_db: 0.0019271373748779297 seconds to insert one collections indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:06:54,795: mysql_db: 0.0034608840942382812 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:06:55,320: mysql_db: 0.0033617019653320312 seconds to insert_one_universal indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:06:55,972: mysql_db: 0.15964484214782715 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:06:56,590: mysql_db: 0.1522817611694336 seconds to insert_one_normzlized indexed=False db_size=4.89MB doc_size=0.01MB
+INFO: 2018-09-07 16:06:57,353: mongo_db: 0.5161159038543701 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:06:57,433: mongo_db: 0.06647253036499023 seconds to find 651 with indexed=False
+INFO: 2018-09-07 16:06:57,464: mongo_db: 0.026488304138183594 seconds to find 651 with indexed=False
+INFO: 2018-09-07 16:06:58,170: mongo_db: 0.5767302513122559 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:06:58,202: mongo_db: 0.02171039581298828 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 16:06:58,263: mongo_db: 0.059639692306518555 seconds to find_collections 651 with indexed=False
+INFO: 2018-09-07 16:06:58,637: mysql_db: 0.31841087341308594 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:06:58,649: mysql_db: 0.004813194274902344 seconds to select_universal 654 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-07 16:06:58,658: mysql_db: 0.0033979415893554688 seconds to select_universal 654 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-07 16:06:59,094: mysql_db: 0.19431400299072266 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 16:06:59,103: mysql_db: 0.0025949478149414062 seconds to select_normalized 624 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-07 16:06:59,112: mysql_db: 0.002749919891357422 seconds to select_normalized 624 objects indexed=False, doc_size=4.89MB
+INFO: 2018-09-07 16:06:59,818: mongo_db: 0.5221261978149414 seconds to bulk_insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:07:00,352: mongo_db: 0.004103899002075195 seconds to scan 1000 objects
+INFO: 2018-09-07 16:07:00,357: mongo_db: 0.003217935562133789 seconds to scan 1000 objects
+INFO: 2018-09-07 16:07:01,066: mongo_db: 0.5754430294036865 seconds to bulk_insert_collections 4.89MB
+INFO: 2018-09-07 16:07:01,585: mongo_db: 0.0037271976470947266 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 16:07:01,601: mongo_db: 0.004344940185546875 seconds to scan_collections 2000 objects
+INFO: 2018-09-07 16:07:02,035: mysql_db: 0.34531092643737793 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-07 16:07:02,762: mysql_db:  0.21902680397033691 seconds to scan 1000 objects from universal table
+INFO: 2018-09-07 16:07:02,999: mysql_db:  0.22220802307128906 seconds to scan 1000 objects from universal table
+INFO: 2018-09-07 16:07:03,532: mysql_db: 0.1803140640258789 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-07 16:07:04,173: mysql_db:  0.13363981246948242 seconds to scan_normalized 3205 objects
+INFO: 2018-09-07 16:07:04,335: mysql_db:  0.15950894355773926 seconds to scan_normalized 3205 objects
