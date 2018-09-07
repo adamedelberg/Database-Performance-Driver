@@ -135,7 +135,7 @@ def test_mysql_db_bulk_insert_one_universal(indexed, iterations=ITERATIONS):
         times.append(t)
 
     # log results
-    log = 'mysql_db.bulk_insert_one: doc_size={}, time_mean={}'
+    log = 'mysql_db.bulk_insert_one_universal: doc_size={}, time_mean={}'
     log_res(log.format(doc_size, statistics.mean(times)), times)
 def test_mysql_db_bulk_insert_one_normalized(indexed, iterations=ITERATIONS):
     # timing and metric variables
@@ -147,7 +147,7 @@ def test_mysql_db_bulk_insert_one_normalized(indexed, iterations=ITERATIONS):
         times.append(t)
 
     # log results
-    log = 'mysql_db.bulk_insert_one: doc_size={}, time_mean={}'
+    log = 'mysql_db.bulk_insert_one_normalized: doc_size={}, time_mean={}'
     log_res(log.format(doc_size, statistics.mean(times)), times)
 
 
