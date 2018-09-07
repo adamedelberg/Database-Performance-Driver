@@ -32766,3 +32766,68 @@ INFO: 2018-09-06 12:44:03,948: mysql_db: 2.0824365615844727 seconds to bulk_inse
 INFO: 2018-09-06 12:44:06,393: mysql_db: 2.1209278106689453 seconds to bulk_insert_one_normalized 4.89MB
 INFO: 2018-09-06 12:44:08,164: mysql_db: 1.424588680267334 seconds to bulk_insert_one_normalized 4.89MB
 INFO: 2018-09-06 12:44:09,777: mysql_db: 1.287377119064331 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-06 17:15:00,061: mysql_db: 0.9602398872375488 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:15:00,807: mysql_db: 0.5868110656738281 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:15:01,626: mysql_db: 0.6231660842895508 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:15:02,352: mysql_db: 0.5733420848846436 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:15:03,131: mysql_db: 0.6318049430847168 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:15:04,010: mysql_db: 0.7466681003570557 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:15:04,738: mysql_db: 0.5813930034637451 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:15:05,291: mysql_db: 0.44626522064208984 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:15:06,309: mysql_db: 0.8931162357330322 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:15:07,314: mysql_db: 0.9101579189300537 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:15:08,422: mysql_db: 0.41321396827697754 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:15:09,108: mysql_db: 0.26978182792663574 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:15:09,779: mysql_db: 0.2573051452636719 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:15:10,678: mysql_db: 0.367847204208374 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:15:11,977: mysql_db: 0.41622114181518555 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:15:12,976: mysql_db: 0.29355812072753906 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:15:13,586: mysql_db: 0.2002260684967041 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:15:14,198: mysql_db: 0.2312641143798828 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:15:14,826: mysql_db: 0.2353379726409912 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:15:15,487: mysql_db: 0.19234180450439453 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:16:19,118: mysql_db: 0.5835750102996826 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:16:19,959: mysql_db: 0.733508825302124 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:16:20,799: mysql_db: 0.26860785484313965 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:16:21,579: mysql_db: 0.2298738956451416 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:21:36,272: mysql_db: 0.8117330074310303 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:21:37,125: mysql_db: 0.664607048034668 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:21:38,224: mysql_db: 0.41889286041259766 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:21:38,984: mysql_db: 0.23901891708374023 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:23:45,702: mysql_db: 0.43178892135620117 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:23:46,285: mysql_db: 0.5134773254394531 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:23:46,878: mysql_db: 0.26453423500061035 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:23:47,454: mysql_db: 0.22576689720153809 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:24:42,287: mysql_db: 0.5519540309906006 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:24:42,802: mysql_db: 0.43976402282714844 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:24:43,592: mysql_db: 0.3597090244293213 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:24:44,163: mysql_db: 0.2484569549560547 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:26:14,020: mysql_db: 0.3573932647705078 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:26:14,589: mysql_db: 0.4861180782318115 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:26:15,233: mysql_db: 0.23562216758728027 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:26:15,803: mysql_db: 0.24180293083190918 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:31:10,645: mysql_db: 0.5562019348144531 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:31:11,376: mysql_db: 0.6366288661956787 seconds to bulk insert 4.89MB, indexed=False
+INFO: 2018-09-06 17:31:12,060: mysql_db: 0.28949713706970215 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:31:12,660: mysql_db: 0.2728250026702881 seconds to bulk insert normalized 4.89MB
+INFO: 2018-09-06 17:31:28,781: mysql_db: 1.4446494579315186 seconds to insert one universal 4.89MB
+INFO: 2018-09-06 17:31:30,364: mysql_db: 1.3213632106781006 seconds to insert one universal 4.89MB
+INFO: 2018-09-06 17:31:32,228: mysql_db: 1.5188181400299072 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-06 17:31:33,986: mysql_db: 1.4519822597503662 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 11:21:04,949: mysql_db: 0.9254698753356934 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 11:21:05,992: mysql_db: 0.8199930191040039 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 11:21:08,203: mysql_db: 1.7485976219177246 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 11:21:11,841: mysql_db: 3.2084901332855225 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 11:21:13,115: mysql_db: 0.8832926750183105 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 11:21:14,346: mysql_db: 0.860133171081543 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 11:21:16,722: mysql_db: 2.0273170471191406 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 11:21:19,493: mysql_db: 2.2940492630004883 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 11:21:30,984: mongo_db: 7.673702001571655 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 11:21:35,004: mongo_db: 2.533245086669922 seconds to bulk insert one 4.89MB
+INFO: 2018-09-07 11:21:37,700: mongo_db: 2.5391969680786133 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 11:21:40,500: mongo_db: 2.507267951965332 seconds to bulk insert one into collections 4.89MB
+INFO: 2018-09-07 11:21:41,428: mysql_db: 0.639854907989502 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 11:21:42,475: mysql_db: 0.8362727165222168 seconds to insert one universal 4.89MB
+INFO: 2018-09-07 11:21:44,305: mysql_db: 1.4864389896392822 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 11:21:45,966: mysql_db: 1.3392186164855957 seconds to bulk_insert_one_normalized 4.89MB
+INFO: 2018-09-07 11:58:09,006: mysql_db: Executing SQL script: schema.sql

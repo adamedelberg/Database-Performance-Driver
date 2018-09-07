@@ -408,6 +408,8 @@ if __name__ == "__main__":
         test_mysql_db_scan_normalized               #19
     ]
 
+    # mysql_db.create_schema()
+
     #run_test(database=database[0], target=test[12], simulated=False, threads=3, iterations=10, indexed=True)
     #run_test(database=database[0], target=test[13], simulated=False, threads=3, iterations=10, indexed=True)
     #run_test(database=database[0], target=test[14], simulated=False, threads=3, iterations=10, indexed=True)
@@ -415,8 +417,9 @@ if __name__ == "__main__":
 
     #run_test(database=database[0], target=test[16], simulated=False, threads=3, iterations=10, indexed=False)
     #run_test(database=database[0], target=test[17], simulated=False, threads=3, iterations=10, indexed=False)
-    run_test(database=database[0], target=test[4], simulated=False, threads=3, iterations=10, indexed=False)
-    run_test(database=database[0], target=test[5], simulated=False, threads=3, iterations=10, indexed=False)
-    run_test(database=database[0], target=test[6], simulated=False, threads=3, iterations=10, indexed=False)
-    run_test(database=database[0], target=test[7], simulated=False, threads=3, iterations=10, indexed=False)
+
+    run_test(database=database[0], target=test[4], simulated=False, threads=3, iterations=2, indexed=False)
+    run_test(database=database[0], target=test[5], simulated=False, threads=3, iterations=2, indexed=False)
+    run_test(database=database[0], target=test[6], simulated=False, threads=3, iterations=2, indexed=False)
+    run_test(database=database[0], target=test[7], simulated=False, threads=3, iterations=2, indexed=False)
 

@@ -13,6 +13,7 @@ import time
 import os
 import pymysql
 import mysql.connector
+import re
 
 import config
 
@@ -49,19 +50,27 @@ def connect(host, port, user, password, database):
     return client
 
 
-# TODO
-def create_schema():
-    client = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
-    cursor = client.cursor()
+def create_schema(sql_file='schema.sql'):
+    conn = pymysql.connect(user=USER, password=PASS, host=HOST, autocommit=False)
+    cursor = conn.cursor()
 
-    f = open('/schema/schema.sql', 'r')
+    logger.info('Executing SQL script: {}'.format(sql_file))
 
-    try:
-        sql = f.read()
-        cursor.execute(sql)
+    statement = ""
 
-    finally:
-        f.close()
+    for line in open(sql_file):
+        if re.match(r'--', line):  # ignore sql comment lines
+            continue
+        if not re.search(r'[^-;]+;', line):  # keep appending lines that don't end in ';'
+            statement = statement + line
+        else:  # when you get a line ending in ';' then exec statement and reset for next statement
+            statement = statement + line
+            try:
+                cursor.execute(statement)
+            except Exception as e:
+                #print ("\n[WARN] MySQLError during execute statement \n\tArgs: '%s'" % (str(e.args)))
+                logger.info('MySQLError: {}'.format(e.args))
+            statement = ""
 
 
 def create_indexes():
@@ -249,12 +258,10 @@ def bulk_insert_normalized(path, indexed=False, drop_on_start=True, drop_on_exit
 
 def bulk_insert_one_universal(path, indexed):
     if indexed:
-        stmts = get_statements(table='universal_indexed', path=path)
-        delete_from_table(table='universal_indexed')
+       create_indexes()
 
     else:
-        stmts = get_statements(table='universal', path=path)
-        delete_from_table('universal')
+       remove_indexes()
 
     connector = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     # connector = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
@@ -263,12 +270,13 @@ def bulk_insert_one_universal(path, indexed):
     sql = 'SET NAMES utf8mb4;'
     cursor.execute(sql)
 
+    stmts = get_statements('universal')
     run = 0
     for sql in stmts:
         start = time.time()
         try:
             cursor.execute(sql)
-            connector.commit()
+            #connector.commit()
         except Exception as e:
             pass
             # print(e)
@@ -1113,6 +1121,8 @@ def get_normalized_statements(path=DOCUMENT):
     symbols_stmts = []
     hashtags_stmts = []
 
+    id = 0
+
     document = io.open(path, 'r')
 
     with document as json_docs:
@@ -1160,20 +1170,21 @@ def get_normalized_statements(path=DOCUMENT):
             possibly_sensitive = str(data['possibly_sensitive']) if 'possibly_sensitive' in data else None
             retweeted_status = str(data['retweeted_status']['id']) if 'retweeted_status' in data else None
 
+
             try: media_id = str(data['entities']['media'][0]['id'])
-            except: media_id=0
+            except: media_id= None
 
             try: user_mentions_id = str(data['entities']['user_mentions'][0]['id'])
-            except: user_mentions_id=0
+            except: user_mentions_id=None
 
             try: urls_id= str(data['entities']['urls'][0]['id'])
-            except: urls_id = 0
+            except: urls_id = None
 
             try: hashtags_id = str(data['entities']['hashtags'][0]['id'])
-            except: hashtags_id=0
+            except: hashtags_id=None
 
             try: symbols_id = str(data['entities']['symbols'][0]['id'])
-            except: symbols_id = 0
+            except: symbols_id = None
 
             # note the IGNORE here - there might be duplicate tweets in the data source
 
