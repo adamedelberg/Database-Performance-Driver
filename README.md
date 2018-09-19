@@ -53,7 +53,7 @@ To perform database testing the following attributes are defined*:
 	6. Simulation Flag			choices={True/False} 
 	7. Debugger Verbosity			choices={v, vv, vvv} (increasing verbosity)
 
-***NOTE: Ommitting attributes will result in using DEFAULT settings.**
+***NOTE**: Ommitting attributes will result in using DEFAULT settings.
 **Figure is dependent on physical architecture (more than 50 threads has not been tested and may yeild unexpected results).
 
 ### The target tests **numbers** are defined as follows: 
