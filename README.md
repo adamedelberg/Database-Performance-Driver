@@ -1,7 +1,7 @@
 
 #  [DPD: Database Performance Driver Docs v1](github.com/driverport) ![CI status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
-DPD is a database performance benchmarking tool used to test the performance throughput of databases using 
+DPD is a database performance benchmarking tool used to test the performance throughput MongoDB and MySQL. 
 
 # Prerequisites
 
