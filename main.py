@@ -27,14 +27,14 @@ COLLECTION = config.collection
 PATH = config.document
 SINGLE = config.single
 DEBUG_LEVEL = config.DEBUG_LEVEL
-
+SCHEMA = config.schema
 # console logging
 logging_format = '%(levelname)s: %(asctime)s: %(name)s: %(message)s'
-logging.basicConfig(level=DEBUG_LEVEL, format=logging_format)
-handler = logging.FileHandler('console.log')
-handler.setFormatter(logging.Formatter(logging_format))
-logger = logging.getLogger()
-logger.addHandler(handler)
+#logging.basicConfig(level=logging.DEBUG, format=logging_format)
+#handler = logging.FileHandler('console.log')
+#handler.setFormatter(logging.Formatter(logging_format))
+#logger = logging.getLogger()
+#logger.addHandler(handler)
 
 
 def log_res(tag, data):
@@ -317,38 +317,42 @@ def test_mysql_db_scan_normalized(indexed, iterations):
 def parse():
     parser = argparse.ArgumentParser(description='DBD - Database Benchmark Driver')
 
-    parser.add_argument('-t', '--test', help='Select a test to perform.', required=False, type=int,
-                        choices=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
-
-    parser.add_argument('-s', '--size', help='Select test data size.', required=False, type=int,
-                        choices=[5, 50, 100, 500, 1000, 2000])
+    parser.add_argument('-t', '--test', help='Select a test to perform {0 - 19}.', required=False, type=int, default=0)
 
     parser.add_argument('-i', '--iterations', help='Number of test iterations to perform', type=int, required=False,
                         default=10)
 
+    parser.add_argument('-in', '--indexed', help='Use indexes.', type=bool, required=False,
+                        default=False)
+
     parser.add_argument('-si', '--simulated', help='Run database in simulated threaded environment', type=bool,
                         required=False, default=False)
 
-    parser.add_argument('-th', '--threads', help='Number of threads for simulated envrionment', type=int,
-                        required=False, default=3)
+    parser.add_argument('-d', '--database', help='Simulated Database {0 = MongoDB, 1 = MySQL}.', required=False, type=int,
+                        choices=[0,1], default=0)
 
-    parser.add_argument('-d', '--debug', help='Debugger verbosity.', required=False, default='v',
+    parser.add_argument('-th', '--threads', help='Number of threads for simulated environment', type=int,
+                        required=False, default=0)
+
+    parser.add_argument('-dbg', '--debug', help='Debugger verbosity.', required=False, default='v',
                         choices=['v', 'vv', 'vvv'])
+
+    parser.add_argument('-cs', '--create_schema', help='Create MySQL Schema. NOTE: Only use for new databases.', required=False, default=False, type=bool)
 
     return parser.parse_args()
 
 
-def start_threads(id, stop=False, database=1):
+def start_threads(id,stop, database):
     while True:
-        logging.info('Thread-{} started'.format(id))
+        logging.debug('Thread-{} started'.format(id))
         if database == 'MongoDB':
-            mongo_db.simulation(write_concern=0)
+            mongo_db.simulation()
         if database == 'MySQL':
             mysql_db.simulation()
         if stop():
             logging.info("Stopping Thread-{}".format(id))
             break
-    logging.info("Thread-{} stopped".format(id))
+    logging.debug("Thread-{} stopped".format(id))
 
 
 def run_test(database, target, threads, indexed=False, iterations=ITERATIONS, simulated=False):
@@ -371,7 +375,7 @@ def run_test(database, target, threads, indexed=False, iterations=ITERATIONS, si
     t.start()
     t.join()
 
-    exit_flag = True
+    exit_flag=True
 
     for worker in workers:
         worker.join()
@@ -380,9 +384,10 @@ def run_test(database, target, threads, indexed=False, iterations=ITERATIONS, si
 if __name__ == "__main__":
     args = parse()
 
-    # set database: 1=MongoDB, 2=MySQL
     database = ['MongoDB', 'MySQL']
-    # set target test:
+
+    # target test strings
+
     test = [
         test_mongo_db_bulk_insert,                  #0
         test_mongo_db_bulk_insert_collections,      #1
@@ -410,23 +415,30 @@ if __name__ == "__main__":
         test_mysql_db_scan_normalized               #19
     ]
 
-    # mysql_db.create_schema()
+    if args.debug is not None:
+        if args.debug == 'v':
+            logging.basicConfig(level=logging.WARN, format=logging_format)
+        if args.debug == 'vv':
+            logging.basicConfig(level=logging.INFO, format=logging_format)
+        if args.debug == 'vvv':
+            logging.basicConfig(level=logging.DEBUG, format=logging_format)
 
-    #run_test(database=database[0], target=test[12], simulated=False, threads=3, iterations=10, indexed=True)
-    #run_test(database=database[0], target=test[13], simulated=False, threads=3, iterations=10, indexed=True)
-    #run_test(database=database[0], target=test[14], simulated=False, threads=3, iterations=10, indexed=True)
-    #run_test(database=database[0], target=test[15], simulated=False, threads=3, iterations=10, indexed=True)
+    handler = logging.FileHandler('console.log')
+    handler.setFormatter(logging.Formatter(logging_format))
+    logger = logging.getLogger()
+    logger.addHandler(handler)
 
-    #run_test(database=database[0], target=test[16], simulated=False, threads=3, iterations=10, indexed=False)
-    #run_test(database=database[0], target=test[17], simulated=False, threads=3, iterations=10, indexed=False)
-
-    #run_test(database=database[0], target=test[4], simulated=False, threads=3, iterations=2, indexed=False)
-    #run_test(database=database[0], target=test[5], simulated=False, threads=3, iterations=2, indexed=False)
-    #run_test(database=database[0], target=test[6], simulated=False, threads=3, iterations=2, indexed=False)
-    #run_test(database=database[0], target=test[7], simulated=False, threads=3, iterations=2, indexed=False)
+    if args.create_schema is not None:
+        if args.create_schema == True:
+            mysql_db.create_schema(SCHEMA)
 
 
-    # test every
-    for i in range (len(test)):
-        run_test(database=database[0], target=test[i], simulated=False, threads=3, iterations=2, indexed=False)
+    run_test(database=database[args.database], target=test[args.test], threads=args.threads, indexed=args.indexed, iterations=args.iterations, simulated=args.simulated)
+
+    # NOT USED IN BENCHMARKING
+
+    # test every method
+
+    #for i in range (len(test)):
+        #run_test(database=database[0], target=test[i], simulated=False, threads=3, iterations=1, indexed=False)
 

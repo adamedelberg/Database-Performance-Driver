@@ -46,3 +46,7 @@ document = '../parsed_data/5.json'
 
 # do not change unless necessary
 single = '../parsed_data/single.json'
+
+
+# MySQL Schema Path
+schema = 'schema.sql'

@@ -512,9 +512,8 @@ def find(indexed):
 
         start_time = time.time()
 
-        count += collection.find({'user.location': 'London'}).count()
-        count += collection.find({'user.friends_count': {'$gt': 1000}}).count()
-        count += collection.find({'user.followers_count': {'$gt': 1000}}).count()
+
+        count+=collection.find({'$and' :[{'user.location': 'London'}, {'user.friends_count': {'$gt': 1000}}, {'user.followers_count': {'$gt': 1000}}]}).count()
 
         execution_time += time.time() - start_time
 
@@ -545,9 +544,11 @@ def find_collections(indexed):
 
         start_time = time.time()
 
-        count += user_collection.find({'location': 'London'}).count()
-        count += user_collection.find({'friends_count': {'$gt': 1000}}).count()
-        count += user_collection.find({'followers_count': {'$gt': 1000}}).count()
+        #count += user_collection.find({'location': 'London'}).count()
+        #count += user_collection.find({'friends_count': {'$gt': 1000}}).count()
+        #count += user_collection.find({'followers_count': {'$gt': 1000}}).count()
+
+        count +=user_collection.find({'$and' :[{'location': 'London'}, {'friends_count': {'$gt': 1000}}, {'followers_count': {'$gt': 1000}}]}).count()
 
         execution_time += time.time() - start_time
 
@@ -590,7 +591,10 @@ def scan_collections():
     start_time = time.time()
 
     users.find({}).count()
+
     tweets.find({}).count()
+
+    tweets.aggregate([{'$lookup': {'from': "users", 'localField': "user_id", 'foreignField': "id", 'as': "ids"}}])
 
     execution_time = time.time() - start_time
 

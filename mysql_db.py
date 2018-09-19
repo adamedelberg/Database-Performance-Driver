@@ -220,6 +220,7 @@ def bulk_insert_normalized(path, indexed, drop_on_start, drop_on_exit=False):
     conn = mysql.connector.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
 
     cursor = conn.cursor()
+    cursor.execute("SET NAMES utf8mb4")
 
     tweet_stmts, user_stmts, hashtags_stmts, media_stmts, user_mention_stmts, url_stmts, symbols_stmts = get_normalized_bulk_insert_statements()
 
@@ -230,28 +231,41 @@ def bulk_insert_normalized(path, indexed, drop_on_start, drop_on_exit=False):
     user_mention_bulk_stmt = "{};".format(user_mention_stmts[0:-1])
     url_bulk_stmt = "{};".format(url_stmts[0:-1])
     symbols_bulk_stmt = "{};".format(symbols_stmts[0:-1])
+
     run = 0
     start = time.time()
 
-    try:
-        cursor.execute(tweet_bulk_stmt)
-        cursor.execute(user_bulk_stmt)
-        cursor.execute(hashtags_bulk_stmt)
-        cursor.execute(media_bulk_stmt)
-        cursor.execute(user_mention_bulk_stmt)
-        cursor.execute(url_bulk_stmt)
-        cursor.execute(symbols_bulk_stmt)
-    except Exception as e:
-        pass
+    cursor.execute(user_bulk_stmt)
+    cursor.execute(hashtags_bulk_stmt)
+    cursor.execute(media_bulk_stmt)
+    cursor.execute(user_mention_bulk_stmt)
+    cursor.execute(url_bulk_stmt)
+    cursor.execute(tweet_bulk_stmt)
+
+    # cursor.execute(symbols_bulk_stmt)
+
 
     run += time.time() - start
 
-    cursor.close()
-    try:
-        conn.commit()
-    except Exception as e:
-        pass
+    #cursor.close()
+    #conn.commit()
 
+    #sql = "insert ignore into tweet_media (media_id, tweet) select tweets.media_id, media.id from tweets cross join media;"
+    #cursor.execute(sql)
+    #sql = "insert ignore into tweet_hashtags (hashtag_id, tweet) select tweets.hashtags_id, hashtags.id from tweets cross join hashtags;"
+    #cursor.execute(sql)
+    #sql = "insert ignore into tweet_symbols(symbol_id, tweet) select tweets.symbols_id, symbols.id from tweets cross join symbols;"
+    #cursor.execute(sql)
+    #sql = "insert ignore into tweet_urls(url_id, tweet) select tweets.urls_id, urls.id from tweets cross join urls;"
+    #cursor.execute(sql)
+    #sql = "insert ignore into tweet_urls(url_id, tweet) select tweets.urls_id, urls.id from tweets cross join urls;"
+    #cursor.execute(sql)
+    #sql="insert ignore into tweet_user_mentions(user_mention_id, tweet) select tweets.user_mentions_id, user_mentions.id from tweets cross join user_mentions;"
+    #cursor.execute(sql)
+
+    cursor.close()
+
+    conn.commit()
     conn.close()
 
     size = "{}MB".format(round(os.path.getsize(DOCUMENT) / 1024 / 1024, 2))
@@ -376,6 +390,20 @@ def bulk_insert_one_normalized(path, indexed=False):
 
             pass
         run += time.time() - start
+
+    # sql = "insert ignore into tweet_media (media_id, tweet) select tweets.media_id, media.id from tweets cross join media;"
+    # cursor.execute(sql)
+    # sql = "insert ignore into tweet_hashtags (hashtag_id, tweet) select tweets.hashtags_id, hashtags.id from tweets cross join hashtags;"
+    # cursor.execute(sql)
+    # sql = "insert ignore into tweet_symbols(symbol_id, tweet) select tweets.symbols_id, symbols.id from tweets cross join symbols;"
+    # cursor.execute(sql)
+    # sql = "insert ignore into tweet_urls(url_id, tweet) select tweets.urls_id, urls.id from tweets cross join urls;"
+    # cursor.execute(sql)
+    # sql = "insert ignore into tweet_urls(url_id, tweet) select tweets.urls_id, urls.id from tweets cross join urls;"
+    # cursor.execute(sql)
+    # sql = "insert ignore into tweet_user_mentions(user_mention_id, tweet) select tweets.user_mentions_id, user_mentions.id from tweets cross join user_mentions;"
+    # cursor.execute(sql)
+    # conn.close()
 
     cursor.close()
     conn.commit()
@@ -614,6 +642,11 @@ def scan_normalized():
     Returns:
 
     """
+
+    sql = 'SELECT * FROM  tweets, users, media, symbols, hashtags, user_mentions, urls ' \
+          'WHERE tweets.media_id = media.id  AND tweets.symbols_id = symbols.id  AND tweets.user_id= users.id  ' \
+          'AND tweets.hashtags_id=hashtags.id  AND tweets.user_mentions_id=user_mentions.id  AND tweets.urls_id=urls.id'
+
     conn = pymysql.connect(user=USER, password=PASS, host=HOST, db=DATABASE, autocommit=False)
     cursor = conn.cursor()
 
@@ -649,6 +682,8 @@ def scan_normalized():
     cursor.execute(sql)
     cursor.fetchall()
     scanned += cursor.rowcount
+
+
 
     execution_time = time.time() - start_time
 
@@ -1354,6 +1389,10 @@ def get_normalized_bulk_insert_statements(path=DOCUMENT):
     symbol_values=""
     hashtag_values=""
 
+    sym_id = 0
+    symbols_id=0
+    urls_id =0
+    hashtags_id =0
 
     document = io.open(path, 'r')
 
@@ -1403,29 +1442,34 @@ def get_normalized_bulk_insert_statements(path=DOCUMENT):
             retweeted_status = str(data['retweeted_status']['id']) if 'retweeted_status' in data else None
 
             try:
-                media_id = str(data['entities']['media'][0]['id'])
+                media_id = data['entities']['media'][0]['id']
             except:
-                media_id = 0
+                media_id =  media_id +1
+                media_id+=1
 
             try:
-                user_mentions_id = str(data['entities']['user_mentions'][0]['id'])
+                user_mentions_id = data['entities']['user_mentions'][0]['id']
             except:
-                user_mentions_id = 0
+                user_mentions_id = user_mentions_id +1
+                user_mentions_id+=1
 
             try:
-                urls_id = str(data['entities']['urls'][0]['id'])
+                urls_id = data['entities']['urls'][0]['id']
             except:
-                urls_id = 0
+                urls_id = urls_id+1
+                urls_id+=1
 
             try:
-                hashtags_id = str(data['entities']['hashtags'][0]['id'])
+                hashtags_id = data['entities']['hashtags'][0]['id']
             except:
-                hashtags_id = 0
+                hashtags_id = hashtags_id+1
+                hashtags_id+=1
 
             try:
-                symbols_id = str(data['entities']['symbols'][0]['id'])
+                symbols_id = data['entities']['symbols'][0]['id']
             except:
-                symbols_id = 0
+                symbols_id = symbols_id +1
+                symbols_id += 1
 
             tweet_values +="('{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', " \
                             "'{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}', " \
@@ -1437,6 +1481,7 @@ def get_normalized_bulk_insert_statements(path=DOCUMENT):
                 filter_level, lang, quoted_status_id, quoted_status_id_str, quoted_status, possibly_sensitive,
                 retweeted_status, media_id, user_mentions_id, urls_id, hashtags_id, symbols_id
             )
+
 
             # user table
 
@@ -1501,7 +1546,6 @@ def get_normalized_bulk_insert_statements(path=DOCUMENT):
                 hashtag_text = str(hashtag['text']).replace("\'", "\\'")
                 indices_text = str(hashtag['indices']).replace("\'", "\\'")
 
-
                 hashtag_values += "({}, '{}', '{}'),".format(id, hashtag_text, indices_text)
 
             # urls
@@ -1515,19 +1559,20 @@ def get_normalized_bulk_insert_statements(path=DOCUMENT):
                 expanded_url_text = str(url['expanded_url']).replace("\'", "\\'")
                 indices_text = str(url['indices']).replace("\'", "\\'")
 
-
                 url_values += "({}, '{}', '{}', '{}', '{}'),".format(id, url_text, display_url_text, expanded_url_text, indices_text)
+
             # symbols
 
             symbol_text = data['entities']['symbols']
-
             for symbol in symbol_text:
-                id = 0
+                id = sym_id
                 symbol_text = str(symbol['text']).replace("\'", "\\'")
                 indices_text = str(symbol['indices']).replace("\'", "\\'")
-
+                sym_id += 1
 
                 symbol_values += "({}, '{}', '{}'),".format(id, symbol_text, indices_text)
+
+
             # user mentions
             user_mention_text = data['entities']['user_mentions']
 
@@ -1577,7 +1622,11 @@ def get_normalized_bulk_insert_statements(path=DOCUMENT):
     sql_hashtags = "INSERT IGNORE INTO hashtags VALUES {}".format(hashtag_values)
     sql_urls = "INSERT IGNORE INTO urls VALUES {}".format(url_values)
     sql_media = "INSERT IGNORE INTO media VALUES {}".format(media_values)
-    sql_symbols = "INSERT IGNORE INTO symbols VALUES {}".format(symbol_values)
+
+    if len(symbol_values) is not 0:
+        sql_symbols = "INSERT INTO symbols VALUES {}".format(symbol_values)
+    else: sql_symbols = ""
+
 
     return sql_tweets, sql_users,  sql_hashtags, sql_media, sql_user_mentions, sql_urls,  sql_symbols
 
@@ -1589,6 +1638,8 @@ def simulation():
     languages = ['es', 'en', 'ru']
     truncated = ['true', 'false']
     id = 0
+
+    sql = "SELECT 8"
 
     for i in range(len(languages)):
         sql_find = "SELECT * FROM `universal` WHERE `tweets.lang` = '{}';".format(
