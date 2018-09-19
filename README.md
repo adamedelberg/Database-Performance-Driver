@@ -1,6 +1,8 @@
 
 #  [DPD: Database Performance Driver Docs v1](github.com/driverport) ![CI status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
+DPD is a database performance benchmarking tool used to test the performance throughput of databases using 
+
 # Prerequisites
 
 
@@ -10,8 +12,7 @@ The following libraries are required to be installed on **Python 3.6** (or highe
 
 Instances of MongoDB and MySQL are **required to be running** before any tests can be performed. 
 
-* Installation instructions for  MongoDB are availible at:
-https://docs.mongodb.com/manual/installation/
+* Installation instructions for  MongoDB are availible at: 			https://docs.mongodb.com/manual/installation/
 
 * MongoDB Sharding instructions are availible at: 
 https://docs.mongodb.com/manual/tutorial/deploy-shard-cluster
@@ -45,21 +46,22 @@ To create a 10 000 record dataset:
 To perform database testing the following attributes are defined*: 
 
 
-	1. Database				choices={0 = MongoDB, 1 = MySQL}
-	2. Target Test				choices={use number - see below}
+	1. Database						choices={0 = MongoDB, 1 = MySQL}
+	2. Target Test					choices={use number - see below}
 	3. Number of Threads			choices={<50 **} 
-	4. Indexed Flag				choices={True/False} 
-	5. Number of Test Iterations		choices={integer}
-	6. Simulation Flag			choices={True/False} 
+	4. Indexed Flag					choices={True/False} 
+	5. Number of Test Iterations	choices={integer}
+	6. Simulation Flag				choices={True/False} 
 	7. Debugger Verbosity			choices={v, vv, vvv} (increasing verbosity)
 
 ***NOTE**: Ommitting attributes will result in using DEFAULT settings.
+
 **Figure is dependent on physical architecture (more than 50 threads has not been tested and may yeild unexpected results).
 
 ### The target tests **numbers** are defined as follows: 
 |MongoDB|MySQL|
 |--|--|
-|**0:** bulk_insert|**1:** bulk_insert_universal| 
+|**0:** bulk_insert|**1:** bulk_insert_universal|
 |**2:** bulk_insert_collections|**3:** bulk_insert_normalized|
 |**4:** bulk_insert_one|**5:** insert_one_universal|
 |**6:** bulk_insert_one_collections|**7:** insert_one_normalized|
