@@ -31,7 +31,7 @@ Datasets paths are also configured in this class. **Please note that the databas
 
 ## Creating a Twitter dataset
 
-Any Twitter can be used with the current database configuration. Should you wish to use your own dataset, the data needs to be parsed. The json.tools.py class can be used to clean datasets and create custom length datafiles for testing. 
+Any Twitter can be used with the current database configuration. Should you wish to use your own dataset, the data needs to be parsed. The json_tools.py class can be used to clean datasets and create custom length datafiles for testing. 
 
 The following example illustrate how to create a dataset of 10 000 records from two Twitter JSON documents:
 
