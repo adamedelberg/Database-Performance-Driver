@@ -35,7 +35,7 @@ Any Twitter can be used with the current database configuration. Should you wish
 
 The following example illustrate how to create a dataset of 10 000 records from two Twitter JSON documents:
 
-	python3 json_tools --join # the files joined are specified in config.py
+	python3 json_tools --join <file1> <file2> ...
 
 To create a 10 000 record dataset:
 	
